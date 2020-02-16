@@ -1,8 +1,10 @@
 package com.xubo.application.panel;
 
+import com.xubo.application.ApplicationUtils;
 import com.xubo.application.ChineseMainFrame;
 import com.xubo.core.TestEngine;
 import com.xubo.data.book.Lesson;
+import com.xubo.data.character.Character;
 
 import javax.swing.*;
 import javax.swing.text.SimpleAttributeSet;
@@ -31,25 +33,26 @@ public class CharactersTestPanel extends JPanel {
     JButton endButton = new JButton("结束测试");
 
     boolean learn = false;
+    boolean record = false;
 
 
-    public CharactersTestPanel(List<Lesson> lessons, boolean shuffle, boolean learn, ChineseMainFrame mainFrame) {
+    public CharactersTestPanel(List<Lesson> lessons, boolean shuffle, boolean learn, boolean record, ChineseMainFrame mainFrame) {
 
-        this.testEngine = new TestEngine(lessons, shuffle);
+        this.testEngine = new TestEngine(lessons, shuffle, record);
         this.mainFrame = mainFrame;
         this.learn = learn;
+        this.record = record;
 
         initGui();
         setActions();
 
-        characterPane.setText(testEngine.nextCharacter().getText());
+        setNextCharacterToTest();
         updateStatistic();
 
     }
 
     private void initGui() {
         this.setLayout(new GridBagLayout());
-        this.setBackground(Color.RED);
 
         GridBagConstraints c = new GridBagConstraints();
         //row 1
@@ -213,9 +216,12 @@ public class CharactersTestPanel extends JPanel {
         }
 
         if (testEngine.hasNextCharacter()) {
-            characterPane.setText(testEngine.nextCharacter().getText());
+            Character character = testEngine.nextCharacter();
+            characterPane.setText(character.getText());
+            characterPane.setBackground(ApplicationUtils.getDisplayedColor(character, true));
         }
     }
+
 
     private void performNoMoreCharacterToTestActions() {
 

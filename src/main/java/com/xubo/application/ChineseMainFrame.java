@@ -38,8 +38,8 @@ public class ChineseMainFrame extends JFrame {
         revalidate();
     }
 
-    public void launchTest(List<Lesson> lessons, boolean shuffle, boolean learn) {
-        add(new CharactersTestPanel(lessons, shuffle, learn,this));
+    public void launchTest(List<Lesson> lessons, boolean shuffle, boolean learn, boolean record) {
+        add(new CharactersTestPanel(lessons, shuffle, learn,record, this));
         revalidate();
     }
 

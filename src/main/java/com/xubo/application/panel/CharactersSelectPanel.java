@@ -1,5 +1,6 @@
 package com.xubo.application.panel;
 
+import com.xubo.application.ApplicationUtils;
 import com.xubo.application.ChineseMainFrame;
 import com.xubo.data.ChineseData;
 import com.xubo.data.book.Book;
@@ -22,16 +23,20 @@ public class CharactersSelectPanel extends JPanel {
     JButton addButton = new JButton("添加");
     JButton removeButton = new JButton("移除");
     JLabel selectInfoLabel = new JLabel();
+    JLabel totalNumLabel = new JLabel();
     JButton startButton = new JButton("开始测试");
     JCheckBox randomCheckbox = new JCheckBox("打乱顺序");
     JCheckBox learnCheckbox = new JCheckBox("可以学习");
+    JCheckBox recordCheckbox = new JCheckBox("记录本次测试");
 
     JList<Book> bookList = new JList<>();
 
-    JList<Lesson> lessonList = new JList<>();
+    JList<DisplayedLesson> lessonList = new JList<>();
 
     DefaultListModel<SelectedLesson> selectedLessons = new DefaultListModel<>();
     JList<SelectedLesson> selectedList = new JList<>(selectedLessons);
+
+    long totalKnownNum;
 
     public CharactersSelectPanel(ChineseData data, ChineseMainFrame mainFrame) {
         this.mainFrame = mainFrame;
@@ -45,6 +50,15 @@ public class CharactersSelectPanel extends JPanel {
         bookList.setVisibleRowCount(options.length);
         bookList.setSelectedIndex(0);
 
+        totalKnownNum = data.getBooks().stream()
+                .flatMap(book -> book.getLessons().stream())
+                .flatMap(lesson -> lesson.getCharacters().stream())
+                .distinct()
+                .filter(c -> ApplicationUtils.getDisplayedColor(c, false) == ApplicationUtils.COLOR_KNOWN)
+                .count();
+
+        totalNumLabel.setText("识字数：" + totalKnownNum);
+
         updateStatistic();
     }
 
@@ -54,15 +68,16 @@ public class CharactersSelectPanel extends JPanel {
             JList<Book>  source = (JList<Book>) e.getSource();
             Book book = source.getSelectedValue();
 
-            Lesson[] lessons = book.getLessons().toArray(new Lesson[0]);
+
+            DisplayedLesson[] lessons = book.getLessons().stream().map(DisplayedLesson::new).toArray(DisplayedLesson[]::new);
             lessonList.setListData(lessons);
             lessonList.setVisibleRowCount(lessons.length);
             lessonList.setSelectedIndex(0);
         });
 
         addButton.addActionListener(e -> {
-            lessonList.getSelectedValuesList().forEach(lesson -> {
-                SelectedLesson selectedLesson = new SelectedLesson(lesson);
+            lessonList.getSelectedValuesList().forEach(displayedLesson -> {
+                SelectedLesson selectedLesson = new SelectedLesson(displayedLesson);
                 if (!selectedLessons.contains(selectedLesson)) {
                     selectedLessons.add(0, selectedLesson);
                 }
@@ -85,7 +100,7 @@ public class CharactersSelectPanel extends JPanel {
 
             if (!lessons.isEmpty()) {
                 mainFrame.remove(this);
-                mainFrame.launchTest(lessons, randomCheckbox.isSelected(), learnCheckbox.isSelected());
+                mainFrame.launchTest(lessons, randomCheckbox.isSelected(), learnCheckbox.isSelected(), recordCheckbox.isSelected());
             }
         });
     }
@@ -106,10 +121,18 @@ public class CharactersSelectPanel extends JPanel {
         selectedList.setFont(new Font(FONT_NAME, Font.PLAIN, 20));
 
         selectInfoLabel.setFont(new Font(FONT_NAME, Font.PLAIN, 20));
+
         randomCheckbox.setFont(new Font(FONT_NAME, Font.PLAIN, 20));
         randomCheckbox.setSelected(true);
+
         learnCheckbox.setFont(new Font(FONT_NAME, Font.PLAIN, 20));
         learnCheckbox.setSelected(true);
+
+        recordCheckbox.setFont(new Font(FONT_NAME, Font.PLAIN, 20));
+        recordCheckbox.setSelected(false);
+
+        totalNumLabel.setFont(new Font(FONT_NAME, Font.PLAIN, 24));
+        totalNumLabel.setForeground(new Color(0, 138, 0));
 
         GridBagConstraints c = new GridBagConstraints();
         //row 1
@@ -139,10 +162,18 @@ public class CharactersSelectPanel extends JPanel {
         c.weighty = 0.1;
 
         c.gridx = 0;
-        c.gridwidth = 6;
-        c.weightx = 6;
+        c.gridwidth = 1;
+        c.weightx = 1;
         c.fill = GridBagConstraints.BOTH;
         JPanel tmp = new JPanel();
+        tmp.add(totalNumLabel);
+        add(tmp, c);
+
+        c.gridx = 1;
+        c.gridwidth = 5;
+        c.weightx = 5;
+        c.fill = GridBagConstraints.BOTH;
+        tmp = new JPanel();
 
         JLabel guideLabel = new JLabel("请从上方的<书本|课文>列表中\n选择汉字到下方列表");
         guideLabel.setFont(new Font(FONT_NAME, Font.PLAIN, 20));
@@ -185,7 +216,9 @@ public class CharactersSelectPanel extends JPanel {
         c.gridwidth = 1;
         c.weightx = 1;
         c.fill = GridBagConstraints.BOTH;
-        add(new JPanel(), c);
+        tmp = new JPanel();
+        tmp.add(recordCheckbox);
+        add(tmp, c);
 
         c.gridx = 1;
         c.gridwidth = 1;
@@ -240,24 +273,33 @@ public class CharactersSelectPanel extends JPanel {
                 .sum();
 
         selectInfoLabel.setText("总计 " + sum + " 字");
+
     }
 
 
     private static class SelectedLesson {
 
-        private Lesson lesson;
+        private DisplayedLesson lesson;
 
-        public SelectedLesson(Lesson lesson) {
+        public SelectedLesson(DisplayedLesson lesson) {
             this.lesson = lesson;
         }
 
         public Lesson getLesson() {
-            return lesson;
+            return lesson.getLesson();
         }
 
         @Override
         public String toString() {
-            return "[" + lesson.getParentBook().getTitle() + "] " +  lesson.toString();
+
+            StringBuilder html = new StringBuilder();
+            html.append("<html>");
+            html.append("<span>[" + lesson.getLesson().getParentBook().getTitle() + "]&nbsp;</span>");
+            html.append(lesson.getHtmlContent());
+            html.append("</html>");
+
+            return html.toString();
+
         }
 
         @Override
@@ -270,8 +312,37 @@ public class CharactersSelectPanel extends JPanel {
 
         @Override
         public int hashCode() {
-
             return Objects.hash(lesson);
         }
     }
+
+    private static class DisplayedLesson {
+
+        private Lesson lesson;
+
+        public Lesson getLesson() {
+            return lesson;
+        }
+
+        public DisplayedLesson(Lesson lesson) {
+            this.lesson = lesson;
+        }
+
+        public String getHtmlContent() {
+            StringBuilder html = new StringBuilder();
+            html.append("<span>&lt;" + lesson.getTitle() + "&gt;&nbsp;</span>");
+            lesson.getCharacters().forEach(character -> {
+                String cssColor = ApplicationUtils.getCssColor(ApplicationUtils.getDisplayedColor(character, false));
+                html.append(String.format("<span style=\" color:%s; font-size:18px; \">&nbsp;%s&nbsp;</span>", cssColor, character.getText()));
+            });
+
+            return html.toString();
+        }
+
+        @Override
+        public String toString() {
+            return "<html>" + getHtmlContent() + "</html>";
+        }
+    }
+
 }

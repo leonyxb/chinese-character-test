@@ -21,8 +21,9 @@ public class TestEngine {
     Character currentTestCharacter;
 
     boolean shuffle;
+    boolean record;
 
-    public TestEngine(List<Lesson> lessons, boolean shuffle) {
+    public TestEngine(List<Lesson> lessons, boolean shuffle, boolean record) {
 
         Collections.reverse(lessons);
         this.characters = lessons.stream()
@@ -32,6 +33,7 @@ public class TestEngine {
         this.characters.forEach(character -> character.setStatus(CharacterStatus.NOT_TESTED));
 
         this.shuffle = shuffle;
+        this.record = record;
 
         prepareNextTestRound();
 
@@ -71,12 +73,20 @@ public class TestEngine {
     public void knowCurrentTestCharacter() {
         if (currentTestCharacter.getStatus() == CharacterStatus.NOT_TESTED) {
             currentTestCharacter.setStatus(CharacterStatus.KNOWN);
+            if (record) {
+                currentTestCharacter.addNewRecord(CharacterStatus.KNOWN);
+            }
         } else {
             currentTestCharacter.setStatus(CharacterStatus.LEARNED);
         }
     }
 
     public void doNotKnowCurrentTestCharacter() {
+        if (currentTestCharacter.getStatus() == CharacterStatus.NOT_TESTED) {
+            if (record) {
+                currentTestCharacter.addNewRecord(CharacterStatus.UNKNOWN);
+            }
+        }
         currentTestCharacter.setStatus(CharacterStatus.UNKNOWN);
     }
 
