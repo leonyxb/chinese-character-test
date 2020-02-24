@@ -18,25 +18,23 @@ import static java.util.stream.Collectors.toList;
 
 public class CharactersSelectPanel extends JPanel {
 
-    ChineseMainFrame mainFrame;
+    private ChineseMainFrame mainFrame;
 
-    JButton addButton = new JButton("添加");
-    JButton removeButton = new JButton("移除");
-    JLabel selectInfoLabel = new JLabel();
-    JLabel totalNumLabel = new JLabel();
-    JButton startButton = new JButton("开始测试");
-    JCheckBox randomCheckbox = new JCheckBox("打乱顺序");
-    JCheckBox learnCheckbox = new JCheckBox("可以学习");
-    JCheckBox recordCheckbox = new JCheckBox("记录本次测试");
+    private JButton addButton = new JButton("添加");
+    private JButton removeButton = new JButton("移除");
+    private JLabel selectInfoLabel = new JLabel();
+    private JLabel totalNumLabel = new JLabel();
+    private JButton startButton = new JButton("开始测试");
+    private JCheckBox randomCheckbox = new JCheckBox("打乱顺序");
+    private JCheckBox learnCheckbox = new JCheckBox("可以学习");
+    private JCheckBox recordCheckbox = new JCheckBox("记录本次测试");
 
-    JList<Book> bookList = new JList<>();
+    private JList<Book> bookList = new JList<>();
 
-    JList<DisplayedLesson> lessonList = new JList<>();
+    private JList<DisplayedLesson> lessonList = new JList<>();
 
-    DefaultListModel<SelectedLesson> selectedLessons = new DefaultListModel<>();
-    JList<SelectedLesson> selectedList = new JList<>(selectedLessons);
-
-    long totalKnownNum;
+    private DefaultListModel<SelectedLesson> selectedLessons = new DefaultListModel<>();
+    private JList<SelectedLesson> selectedList = new JList<>(selectedLessons);
 
     public CharactersSelectPanel(ChineseData data, ChineseMainFrame mainFrame) {
         this.mainFrame = mainFrame;
@@ -44,13 +42,15 @@ public class CharactersSelectPanel extends JPanel {
         initGui();
         setActions();
 
-        Book[] options = data.getBooks().toArray(new Book[0]);
+        Book[] options = data.getBooks().stream()
+                .filter(Book::display)
+                .toArray(Book[]::new);
 
         bookList.setListData(options);
         bookList.setVisibleRowCount(options.length);
         bookList.setSelectedIndex(0);
 
-        totalKnownNum = data.getBooks().stream()
+        long totalKnownNum = data.getBooks().stream()
                 .flatMap(book -> book.getLessons().stream())
                 .flatMap(lesson -> lesson.getCharacters().stream())
                 .distinct()

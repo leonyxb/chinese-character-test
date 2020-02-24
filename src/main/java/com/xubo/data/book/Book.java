@@ -7,5 +7,7 @@ public interface Book {
     String getTitle();
 
     List<Lesson> getLessons();
+    
+    boolean display();
 
 }

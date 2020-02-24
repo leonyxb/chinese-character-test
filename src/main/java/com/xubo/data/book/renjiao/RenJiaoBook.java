@@ -17,6 +17,8 @@ public class RenJiaoBook implements Book {
     private List<Lesson> lessons;
 
     private List<String> rawLines = new ArrayList<>();
+    
+    private boolean display;
 
     public RenJiaoBook(String title, List<String> rawLines) {
         this.rawLines.addAll(rawLines);
@@ -27,6 +29,7 @@ public class RenJiaoBook implements Book {
                 .replace("）", ")");
         this.lessons = buildLessons(rawLines.subList(1, rawLines.size()));
         this.num = lessons.stream().mapToLong(lesson -> lesson.getCharacters().size()).sum();
+        this.display = !subTitle.contains("生字表(二)");
     }
 
     private List<Lesson> buildLessons(List<String> rawLines) {
@@ -59,5 +62,10 @@ public class RenJiaoBook implements Book {
     @Override
     public String toString() {
         return getTitle();
+    }
+
+    @Override
+    public boolean display() {
+        return display;
     }
 }

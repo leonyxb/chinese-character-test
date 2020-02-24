@@ -18,22 +18,21 @@ import static com.xubo.application.ChineseMainFrame.FONT_NAME;
 
 public class CharactersTestPanel extends JPanel {
 
-    TestEngine testEngine;
+    private TestEngine testEngine;
 
-    ChineseMainFrame mainFrame;
+    private ChineseMainFrame mainFrame;
 
-    JTextPane characterPane = new JTextPane();
-    JTextArea correctCharactersArea = new JTextArea();
-    JTextArea incorrectCharactersArea = new JTextArea();
-    JTextArea statisticArea = new JTextArea();
+    private JTextPane characterPane = new JTextPane();
+    private JTextArea correctCharactersArea = new JTextArea();
+    private JTextArea incorrectCharactersArea = new JTextArea();
+    private JTextArea statisticArea = new JTextArea();
 
-    JButton knowButton = new JButton("认识");
-    JButton unknowButton = new JButton("不认识");
-    JButton learnButton = new JButton("学习");
-    JButton endButton = new JButton("结束测试");
+    private JButton knowButton = new JButton("认识");
+    private JButton unknowButton = new JButton("不认识");
+    private JButton learnButton = new JButton("学习");
+    private JButton endButton = new JButton("结束测试");
 
-    boolean learn = false;
-    boolean record = false;
+    private boolean learn;
 
 
     public CharactersTestPanel(List<Lesson> lessons, boolean shuffle, boolean learn, boolean record, ChineseMainFrame mainFrame) {
@@ -41,7 +40,6 @@ public class CharactersTestPanel extends JPanel {
         this.testEngine = new TestEngine(lessons, shuffle, record);
         this.mainFrame = mainFrame;
         this.learn = learn;
-        this.record = record;
 
         initGui();
         setActions();

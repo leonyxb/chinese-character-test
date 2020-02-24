@@ -44,7 +44,10 @@ public class CharactersLearnDialog extends JDialog {
 
         lines.add("<p style=\" font-weight:bold; color:blue; font-size:16px; font-family: 楷体\">出现位置：</p>");
 
-        character.getLessons().forEach(lesson -> {
+        character.getLessons()
+                .stream()
+                .filter(lesson -> lesson.getParentBook().display())
+                .forEach(lesson -> {
             lines.add(buildLessonHTML(lesson));
         });
         lines.add("<p><hr /></p>");

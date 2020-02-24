@@ -42,4 +42,9 @@ public class CommonBook implements Book {
     public String toString() {
         return getTitle();
     }
+
+    @Override
+    public boolean display() {
+        return true;
+    }
 }
