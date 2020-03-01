@@ -8,6 +8,7 @@ import com.xubo.data.dictionary.WordsRepository;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class CharacterFactory {
 
@@ -44,7 +45,7 @@ public class CharacterFactory {
     }
 
     private static void linkWords(Character character) {
-        List<String> words = wordsRepository.getWords(character.getText());
+        Set<String> words = wordsRepository.getWords(character.getText());
         if (words != null) {
             character.getWords().addAll(words);
         }

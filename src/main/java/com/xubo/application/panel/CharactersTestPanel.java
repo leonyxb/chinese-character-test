@@ -251,6 +251,7 @@ public class CharactersTestPanel extends JPanel {
             Character character = testEngine.nextCharacter();
             characterPane.setText(character.getText());
             characterPane.setBackground(ApplicationUtils.getDisplayedColor(character, true));
+            characterPane.revalidate();
             wordsList.setListData(character.getWords().toArray(new String[0]));
         }
     }
