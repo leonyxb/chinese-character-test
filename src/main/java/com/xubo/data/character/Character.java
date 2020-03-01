@@ -20,6 +20,8 @@ public class Character {
 
     private final CharacterTestRecords testRecord;
 
+    private final List<String> words = new ArrayList<>();
+
     CharacterStatus status;
 
     public Character(String text) {
@@ -46,6 +48,10 @@ public class Character {
 
     public List<DictionaryEntry> getDictionaryEntries() {
         return dictionaryEntries;
+    }
+
+    public List<String> getWords() {
+        return words;
     }
 
     public CharacterTestRecords getTestRecord() {

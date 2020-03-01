@@ -111,14 +111,14 @@ public class CharactersSelectPanel extends JPanel {
         this.setLayout(new GridBagLayout());
 
         bookList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-        bookList.setFont(new Font(FONT_NAME, Font.PLAIN, 20));
+        bookList.setFont(new Font(FONT_NAME, Font.PLAIN, 25));
 
         lessonList.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
-        lessonList.setFont(new Font(FONT_NAME, Font.PLAIN, 20));
+        lessonList.setFont(new Font(FONT_NAME, Font.PLAIN, 25));
 
         selectedList.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
         selectedList.setVisibleRowCount(-1);
-        selectedList.setFont(new Font(FONT_NAME, Font.PLAIN, 20));
+        selectedList.setFont(new Font(FONT_NAME, Font.PLAIN, 25));
 
         selectInfoLabel.setFont(new Font(FONT_NAME, Font.PLAIN, 20));
 
@@ -333,7 +333,7 @@ public class CharactersSelectPanel extends JPanel {
             html.append("<span>&lt;" + lesson.getTitle() + "&gt;&nbsp;</span>");
             lesson.getCharacters().forEach(character -> {
                 String cssColor = ApplicationUtils.getCssColor(ApplicationUtils.getDisplayedColor(character, false));
-                html.append(String.format("<span style=\" color:%s; font-size:18px; \">&nbsp;%s&nbsp;</span>", cssColor, character.getText()));
+                html.append(String.format("<span style=\" color:%s; font-size:20px; \">&nbsp;%s&nbsp;</span>", cssColor, character.getText()));
             });
 
             return html.toString();

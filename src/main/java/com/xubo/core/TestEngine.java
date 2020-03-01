@@ -103,14 +103,12 @@ public class TestEngine {
 
         int alreadyTested = knowWordsNum + unknowWordsNum + learnedNum;
 
-        message.append("共 " + characters.size() + " 字\n");
+        message.append("测试进度 " + alreadyTested + "/" + characters.size() + "\n");
         message.append("\n");
-        message.append("已测试 " + alreadyTested+ " 字\n");
         message.append("  - 认识   " + knowWordsNum + " 字\n");
         message.append("  - 不认识 " + unknowWordsNum + " 字\n");
         message.append("  - 通过学习认识 " + learnedNum + " 字\n");
         message.append("\n");
-        message.append("未测试 " + (characters.size() - alreadyTested) + " 字\n");
 
         return message.toString();
     }

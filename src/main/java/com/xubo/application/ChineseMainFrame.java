@@ -25,7 +25,7 @@ public class ChineseMainFrame extends JFrame {
         this.data = data;
 
         setTitle("识字测试");
-        setSize(1200, 800);
+        setSize(1400, 800);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setResizable(false);

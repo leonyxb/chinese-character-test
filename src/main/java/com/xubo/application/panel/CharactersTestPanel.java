@@ -23,6 +23,7 @@ public class CharactersTestPanel extends JPanel {
     private ChineseMainFrame mainFrame;
 
     private JTextPane characterPane = new JTextPane();
+    private JList<String> wordsList = new JList<>();
     private JTextArea correctCharactersArea = new JTextArea();
     private JTextArea incorrectCharactersArea = new JTextArea();
     private JTextArea statisticArea = new JTextArea();
@@ -50,17 +51,39 @@ public class CharactersTestPanel extends JPanel {
     }
 
     private void initGui() {
+
         this.setLayout(new GridBagLayout());
+
+        GridBagConstraints c = new GridBagConstraints();
+
+        c.gridwidth = 1;
+        c.weightx = 1;
+        c.fill = GridBagConstraints.BOTH;
+
+        c.gridy = 0;
+        c.weighty = 3;
+        add(buildShowPanel(), c);
+
+        c.gridy = 1;
+        c.weighty = 2;
+        add(buildHistoryPanel(), c);
+
+    }
+
+    private JPanel buildShowPanel() {
+
+        JPanel panel = new JPanel();
+        panel.setLayout(new GridBagLayout());
 
         GridBagConstraints c = new GridBagConstraints();
         //row 1
         c.gridy = 0;
+        c.weighty = 1;
+        c.fill = GridBagConstraints.BOTH;
 
         c.gridx = 0;
         c.gridwidth = 1;
         c.weightx = 1;
-        c.weighty = 2;
-        c.fill = GridBagConstraints.BOTH;
         characterPane.setEditable(false);
         characterPane.setFont(new Font(FONT_NAME, Font.PLAIN, 350));
         characterPane.setBackground(Color.LIGHT_GRAY);
@@ -70,54 +93,32 @@ public class CharactersTestPanel extends JPanel {
         SimpleAttributeSet center = new SimpleAttributeSet();
         StyleConstants.setAlignment(center, StyleConstants.ALIGN_CENTER);
         doc.setParagraphAttributes(0, doc.getLength(), center, false);
-        add(characterPane, c);
+        panel.add(characterPane, c);
 
         c.gridx = 1;
         c.gridwidth = 1;
-        c.weightx = 1;
-        c.weighty = 2;
+        c.weightx = 0.3;
         c.fill = GridBagConstraints.BOTH;
+        wordsList.setFont(new Font(FONT_NAME, Font.PLAIN, 50));
+        wordsList.setBackground(new Color(149, 149, 149));
+        wordsList.setVisibleRowCount(-1);
+        JScrollPane scrollPane = new JScrollPane(wordsList);
+        scrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
+        scrollPane.setPreferredSize(new Dimension(200, 400));
+        panel.add(scrollPane, c);
+
+        c.gridx = 2;
+        c.gridwidth = 1;
+        c.weightx = 1;
+        c.fill = GridBagConstraints.BOTH;
+        panel.add(buildActionSubPanel(), c);
+
+        return panel;
+    }
+
+    private JPanel buildActionSubPanel() {
         JPanel actionPanel = new JPanel();
         actionPanel.setBackground(Color.black);
-        add(actionPanel, c);
-
-        //row 2
-        c.gridy = 1;
-
-        c.gridx = 0;
-        c.gridwidth = 1;
-        c.weightx = 1;
-        c.weighty = 1;
-        c.fill = GridBagConstraints.BOTH;
-        correctCharactersArea.setEditable(false);
-        correctCharactersArea.setFont(new Font(FONT_NAME, Font.PLAIN, 24));
-        correctCharactersArea.setLineWrap(true);
-        correctCharactersArea.setWrapStyleWord(false);
-        correctCharactersArea.setForeground(new Color(48, 143, 4));
-
-
-        JScrollPane scrollPane1 = new JScrollPane(correctCharactersArea);
-        scrollPane1.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
-        scrollPane1.setPreferredSize(new Dimension(500, 150));
-        add(scrollPane1, c);
-
-
-        c.gridx = 1;
-        c.gridwidth = 1;
-        c.weightx = 1;
-        c.weighty = 1;
-        c.fill = GridBagConstraints.BOTH;
-        incorrectCharactersArea.setEditable(false);
-        incorrectCharactersArea.setFont(new Font(FONT_NAME, Font.PLAIN, 24));
-        incorrectCharactersArea.setLineWrap(true);
-        incorrectCharactersArea.setWrapStyleWord(false);
-        incorrectCharactersArea.setForeground(Color.RED);
-        JScrollPane scrollPane2 = new JScrollPane(incorrectCharactersArea);
-        scrollPane2.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
-        scrollPane2.setPreferredSize(new Dimension(500, 150));
-
-        add(scrollPane2, c);
-
 
         actionPanel.setLayout(new GridBagLayout());
         GridBagConstraints ac = new GridBagConstraints();
@@ -133,7 +134,6 @@ public class CharactersTestPanel extends JPanel {
         actionPanel.add(endButton, ac);
 
 
-
         //action row 2
         ac.gridy = 1;
 
@@ -141,7 +141,7 @@ public class CharactersTestPanel extends JPanel {
         ac.weighty = 1;
         ac.weightx = 1;
         ac.gridwidth = 3;
-        statisticArea.setFont(new Font(FONT_NAME, Font.PLAIN, 20));
+        statisticArea.setFont(new Font(FONT_NAME, Font.PLAIN, 25));
         statisticArea.setEditable(false);
         actionPanel.add(statisticArea, ac);
 
@@ -178,6 +178,40 @@ public class CharactersTestPanel extends JPanel {
         }
         actionPanel.add(learnButton, ac);
 
+        return actionPanel;
+    }
+
+    private JPanel buildHistoryPanel() {
+
+
+        JPanel panel = new JPanel();
+        panel.setLayout(new GridLayout(1, 2));
+
+        correctCharactersArea.setEditable(false);
+        correctCharactersArea.setFont(new Font(FONT_NAME, Font.PLAIN, 30));
+        correctCharactersArea.setLineWrap(true);
+        correctCharactersArea.setWrapStyleWord(false);
+        correctCharactersArea.setForeground(new Color(48, 143, 4));
+
+
+        JScrollPane scrollPane1 = new JScrollPane(correctCharactersArea);
+        scrollPane1.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
+        scrollPane1.setPreferredSize(new Dimension(500, 150));
+        panel.add(scrollPane1);
+
+
+        incorrectCharactersArea.setEditable(false);
+        incorrectCharactersArea.setFont(new Font(FONT_NAME, Font.PLAIN, 30));
+        incorrectCharactersArea.setLineWrap(true);
+        incorrectCharactersArea.setWrapStyleWord(false);
+        incorrectCharactersArea.setForeground(Color.RED);
+        JScrollPane scrollPane2 = new JScrollPane(incorrectCharactersArea);
+        scrollPane2.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
+        scrollPane2.setPreferredSize(new Dimension(500, 150));
+
+        panel.add(scrollPane2);
+
+        return panel;
     }
 
     private void setActions() {
@@ -217,9 +251,9 @@ public class CharactersTestPanel extends JPanel {
             Character character = testEngine.nextCharacter();
             characterPane.setText(character.getText());
             characterPane.setBackground(ApplicationUtils.getDisplayedColor(character, true));
+            wordsList.setListData(character.getWords().toArray(new String[0]));
         }
     }
-
 
     private void performNoMoreCharacterToTestActions() {
 
@@ -245,12 +279,10 @@ public class CharactersTestPanel extends JPanel {
         }
     }
 
-
     private void updateStatistic() {
         correctCharactersArea.setText(String.join(" ", testEngine.getKnownCharacters()));
         incorrectCharactersArea.setText(String.join(" ", testEngine.getUnknownCharacters()));
         statisticArea.setText(testEngine.statistic());
     }
-
 
 }

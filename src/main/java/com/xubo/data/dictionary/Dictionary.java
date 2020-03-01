@@ -2,7 +2,6 @@ package com.xubo.data.dictionary;
 
 import com.xubo.utils.ChineseResourceReader;
 
-import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
