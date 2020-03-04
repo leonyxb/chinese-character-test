@@ -14,8 +14,8 @@ public class WordsRepository {
     public WordsRepository() {
         rawLines = new ArrayList<>();
 
-        rawLines.addAll(ChineseResourceReader.readLines("/words/words1.txt", StandardCharsets.UTF_8.toString()));
-        rawLines.addAll(ChineseResourceReader.readLines("/words/words2.txt", StandardCharsets.UTF_8.toString()));
+        rawLines.addAll(ChineseResourceReader.readLines("/words/words_class_1.txt", StandardCharsets.UTF_8.toString()));
+        rawLines.addAll(ChineseResourceReader.readLines("/words/words_class_2.txt", StandardCharsets.UTF_8.toString()));
 
         rawLines.stream()
                 .map(String::trim)
@@ -23,7 +23,7 @@ public class WordsRepository {
                 .forEach(word -> {
                     word.chars().forEach(c -> {
                         String key = String.valueOf((char) c);
-                        this.words.putIfAbsent(key, new TreeSet<>());
+                        this.words.putIfAbsent(key, new LinkedHashSet<>());
                         this.words.get(key).add(word);
                     });
                 });
