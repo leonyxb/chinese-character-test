@@ -4,7 +4,6 @@ import com.xubo.data.book.Lesson;
 import com.xubo.data.character.Character;
 import com.xubo.data.dictionary.DictionaryEntry;
 import org.apache.commons.lang3.StringEscapeUtils;
-import org.apache.commons.lang3.StringUtils;
 
 import javax.swing.*;
 import java.awt.*;
@@ -14,11 +13,8 @@ import java.util.StringTokenizer;
 
 public class CharactersLearnDialog extends JDialog {
 
-    private Character character;
-
     public CharactersLearnDialog(Character character, JFrame owner) {
         super(owner);
-        this.character = character;
 
         this.setSize(1000, 600);
         this.setLocationRelativeTo(null);

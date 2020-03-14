@@ -24,7 +24,8 @@ public class CharactersSelectPanel extends JPanel {
     private JButton removeButton = new JButton("移除");
     private JLabel selectInfoLabel = new JLabel();
     private JLabel totalNumLabel = new JLabel();
-    private JButton startButton = new JButton("开始测试");
+    private JButton startButton = new JButton("测试");
+    private JButton displayButton = new JButton("浏览");
     private JCheckBox randomCheckbox = new JCheckBox("打乱顺序");
     private JCheckBox learnCheckbox = new JCheckBox("可以学习");
     private JCheckBox recordCheckbox = new JCheckBox("记录本次测试");
@@ -103,6 +104,17 @@ public class CharactersSelectPanel extends JPanel {
                 mainFrame.launchTest(lessons, randomCheckbox.isSelected(), learnCheckbox.isSelected(), recordCheckbox.isSelected());
             }
         });
+
+        displayButton.addActionListener(e -> {
+
+            List<Lesson> lessons = Collections.list(selectedLessons.elements()).stream()
+                    .map(SelectedLesson::getLesson)
+                    .collect(toList());
+
+            if (!lessons.isEmpty()) {
+                mainFrame.showCharacters(lessons, randomCheckbox.isSelected());
+            }
+        });
     }
 
 
@@ -133,6 +145,7 @@ public class CharactersSelectPanel extends JPanel {
 
         totalNumLabel.setFont(new Font(FONT_NAME, Font.PLAIN, 24));
         totalNumLabel.setForeground(new Color(0, 138, 0));
+
 
         GridBagConstraints c = new GridBagConstraints();
         //row 1
@@ -183,14 +196,21 @@ public class CharactersSelectPanel extends JPanel {
 
 
         c.gridx = 6;
-        c.gridwidth = 2;
-        c.weightx = 2;
+        c.gridwidth = 1;
+        c.weightx = 1;
+        c.fill = GridBagConstraints.BOTH;
+        add(new JPanel(), c);
+
+
+        c.gridx = 7;
+        c.gridwidth = 1;
+        c.weightx = 1;
         c.fill = GridBagConstraints.BOTH;
         add(addButton, c);
 
         c.gridx = 8;
-        c.gridwidth = 2;
-        c.weightx = 2;
+        c.gridwidth = 1;
+        c.weightx = 1;
         c.fill = GridBagConstraints.BOTH;
         add(removeButton, c);
 
@@ -243,20 +263,19 @@ public class CharactersSelectPanel extends JPanel {
         c.fill = GridBagConstraints.BOTH;
         add(new JPanel(), c);
 
-
         c.gridx = 6;
-        c.gridwidth = 1;
-        c.weightx = 1;
-        c.fill = GridBagConstraints.BOTH;
-        add(new JPanel(), c);
-
-        c.gridx = 7;
         c.gridwidth = 1;
         c.weightx = 1;
         c.fill = GridBagConstraints.BOTH;
         JPanel selectPanel = new JPanel();
         selectPanel.add(selectInfoLabel);
         add(selectPanel, c);
+
+        c.gridx = 7;
+        c.gridwidth = 1;
+        c.weightx = 1;
+        c.fill = GridBagConstraints.BOTH;
+        add(displayButton, c);
 
         c.gridx = 8;
         c.gridwidth = 2;

@@ -1,5 +1,6 @@
 package com.xubo.application;
 
+import com.xubo.application.panel.CharactersDisplayDialog;
 import com.xubo.application.panel.CharactersLearnDialog;
 import com.xubo.application.panel.CharactersSelectPanel;
 import com.xubo.application.panel.CharactersTestPanel;
@@ -46,6 +47,10 @@ public class ChineseMainFrame extends JFrame {
     public void showCharacterDetail(Character character) {
         characterDetails.putIfAbsent(character, new CharactersLearnDialog(character, this));
         characterDetails.get(character).setVisible(true);
+    }
+
+    public void showCharacters(List<Lesson> lessons, boolean shuffle) {
+        new CharactersDisplayDialog(lessons, shuffle, this).setVisible(true);
     }
 
 }
