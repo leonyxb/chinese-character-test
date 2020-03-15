@@ -1,4 +1,4 @@
-package com.xubo.data.dictionary;
+package com.xubo.data.word;
 
 import com.xubo.utils.ChineseResourceReader;
 
@@ -14,6 +14,7 @@ public class WordsRepository {
     public WordsRepository() {
         rawLines = new ArrayList<>();
 
+        rawLines.addAll(ChineseResourceReader.readLines("/words/words_priority.txt", StandardCharsets.UTF_8.toString()));
         rawLines.addAll(ChineseResourceReader.readLines("/words/words_class_1.txt", StandardCharsets.UTF_8.toString()));
         rawLines.addAll(ChineseResourceReader.readLines("/words/words_class_2.txt", StandardCharsets.UTF_8.toString()));
 

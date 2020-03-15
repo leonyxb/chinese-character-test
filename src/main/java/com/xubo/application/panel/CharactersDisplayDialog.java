@@ -23,7 +23,7 @@ public class CharactersDisplayDialog extends JDialog {
         super(owner);
         this.lessons = lessons;
 
-        this.setSize(1000 + 25, 600);
+        this.setSize(1000 + 25, 700);
         this.setLocationRelativeTo(null);
         this.setTitle("展示");
         this.setModal(true);

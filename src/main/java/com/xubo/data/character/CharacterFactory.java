@@ -3,7 +3,7 @@ package com.xubo.data.character;
 import com.xubo.data.book.Lesson;
 import com.xubo.data.dictionary.Dictionary;
 import com.xubo.data.dictionary.DictionaryEntry;
-import com.xubo.data.dictionary.WordsRepository;
+import com.xubo.data.word.WordsRepository;
 
 import java.util.HashMap;
 import java.util.List;
