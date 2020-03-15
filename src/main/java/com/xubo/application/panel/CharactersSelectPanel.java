@@ -141,7 +141,7 @@ public class CharactersSelectPanel extends JPanel {
         learnCheckbox.setSelected(true);
 
         recordCheckbox.setFont(new Font(FONT_NAME, Font.PLAIN, 20));
-        recordCheckbox.setSelected(false);
+        recordCheckbox.setSelected(true);
 
         totalNumLabel.setFont(new Font(FONT_NAME, Font.PLAIN, 24));
         totalNumLabel.setForeground(new Color(0, 138, 0));
