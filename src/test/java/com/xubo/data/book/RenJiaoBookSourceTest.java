@@ -23,5 +23,7 @@ public class RenJiaoBookSourceTest {
 
         CharacterTestRecords newRecords = new ObjectMapper().readValue(json, CharacterTestRecords.class);
         Assert.assertEquals(records.getName(), newRecords.getName());
+
+        json.delete();
     }
 }

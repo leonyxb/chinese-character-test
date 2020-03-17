@@ -103,7 +103,7 @@ public class TestEngine {
 
         int alreadyTested = knowWordsNum + unknowWordsNum + learnedNum;
 
-        message.append("测试进度 " + alreadyTested + "/" + characters.size() + "\n");
+        message.append("测试进度 " + (alreadyTested + 1) + "/" + characters.size() + "\n");
         message.append("\n");
         message.append("  - 认识   " + knowWordsNum + " 字\n");
         message.append("  - 不认识 " + unknowWordsNum + " 字\n");
