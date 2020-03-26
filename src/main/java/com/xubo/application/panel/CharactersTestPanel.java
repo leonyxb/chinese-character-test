@@ -11,6 +11,7 @@ import javax.swing.text.SimpleAttributeSet;
 import javax.swing.text.StyleConstants;
 import javax.swing.text.StyledDocument;
 import java.awt.*;
+import java.util.Collections;
 import java.util.List;
 
 import static com.xubo.application.ChineseMainFrame.FONT_NAME;
@@ -252,7 +253,7 @@ public class CharactersTestPanel extends JPanel {
             characterPane.setText(character.getText());
             characterPane.setBackground(ApplicationUtils.getDisplayedColor(character, true));
             characterPane.revalidate();
-            wordsList.setListData(character.getWords().toArray(new String[0]));
+            wordsList.setListData(getWordsToDisplay(character));
         }
     }
 
@@ -284,6 +285,12 @@ public class CharactersTestPanel extends JPanel {
         correctCharactersArea.setText(String.join(" ", testEngine.getKnownCharacters()));
         incorrectCharactersArea.setText(String.join(" ", testEngine.getUnknownCharacters()));
         statisticArea.setText(testEngine.statistic());
+    }
+
+    private String[] getWordsToDisplay(Character character) {
+        List<String> words = character.getWords();
+        Collections.shuffle(words);
+        return words.stream().limit(8).toArray(String[]::new);
     }
 
 }
