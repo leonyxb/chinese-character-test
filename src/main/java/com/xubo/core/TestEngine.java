@@ -20,7 +20,6 @@ public class TestEngine {
 
     Character currentTestCharacter;
 
-    boolean shuffle;
     boolean record;
 
     public TestEngine(List<Lesson> lessons, boolean shuffle, boolean record) {
@@ -28,11 +27,15 @@ public class TestEngine {
         Collections.reverse(lessons);
         this.characters = lessons.stream()
                 .flatMap(lesson -> lesson.getCharacters().stream())
+                .distinct()
                 .collect(toList());
 
         this.characters.forEach(character -> character.setStatus(CharacterStatus.NOT_TESTED));
 
-        this.shuffle = shuffle;
+        if (shuffle) {
+            Collections.shuffle(this.characters);
+        }
+
         this.record = record;
 
         prepareNextTestRound();
@@ -59,9 +62,6 @@ public class TestEngine {
                 .filter(character -> character.getStatus() == CharacterStatus.NOT_TESTED || character.getStatus() == CharacterStatus.UNKNOWN)
                 .collect(toList());
 
-        if (shuffle) {
-            Collections.shuffle(wordsToTest);
-        }
         return wordsToTest.iterator();
     }
 
@@ -102,8 +102,9 @@ public class TestEngine {
         int learnedNum = groupedWords.containsKey(CharacterStatus.LEARNED) ? groupedWords.get(CharacterStatus.LEARNED).size() : 0;
 
         int alreadyTested = knowWordsNum + unknowWordsNum + learnedNum;
+        int currentIndex = alreadyTested == characters.size() ? alreadyTested : alreadyTested + 1;
 
-        message.append("测试进度 " + (alreadyTested + 1) + "/" + characters.size() + "\n");
+        message.append("测试进度 " + currentIndex + "/" + characters.size() + "\n");
         message.append("\n");
         message.append("  - 认识   " + knowWordsNum + " 字\n");
         message.append("  - 不认识 " + unknowWordsNum + " 字\n");

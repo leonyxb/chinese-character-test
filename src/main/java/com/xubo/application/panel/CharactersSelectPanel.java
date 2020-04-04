@@ -81,6 +81,13 @@ public class CharactersSelectPanel extends JPanel {
                 SelectedLesson selectedLesson = new SelectedLesson(displayedLesson);
                 if (!selectedLessons.contains(selectedLesson)) {
                     selectedLessons.add(0, selectedLesson);
+                    selectedLesson.lesson.getLesson().getCharacters().forEach(
+                            c -> {
+                                if (c.getWords().size() == 0) {
+                                    System.out.println(c.getText() + " 没有关联词语");
+                                }
+                            }
+                    );
                 }
             });
             updateStatistic();
@@ -287,14 +294,14 @@ public class CharactersSelectPanel extends JPanel {
 
     private void updateStatistic() {
 
-        int sum = Collections.list(selectedLessons.elements()).stream()
-                .mapToInt(selectedLesson -> (selectedLesson.getLesson().getCharacters().size()))
-                .sum();
+        long count = Collections.list(selectedLessons.elements()).stream()
+                .flatMap(lesson -> lesson.getLesson().getCharacters().stream())
+                .distinct()
+                .count();
 
-        selectInfoLabel.setText("总计 " + sum + " 字");
+        selectInfoLabel.setText("总计 " + count + " 字");
 
     }
-
 
     private static class SelectedLesson {
 
