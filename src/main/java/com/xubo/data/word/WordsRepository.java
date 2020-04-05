@@ -17,8 +17,6 @@ public class WordsRepository {
         rawLines.addAll(ChineseResourceReader.readLines("/words/沪教版小学1-5年级词语表.txt", StandardCharsets.UTF_8.toString()));
         rawLines.addAll(ChineseResourceReader.readLines("/words/人教版小学语文一至六年级生字词语汇总.txt", StandardCharsets.UTF_8.toString()));
         rawLines.addAll(ChineseResourceReader.readLines("/words/手动添加.txt", StandardCharsets.UTF_8.toString()));
-        rawLines.addAll(ChineseResourceReader.readLines("/words/words_class_1.txt", StandardCharsets.UTF_8.toString()));
-        rawLines.addAll(ChineseResourceReader.readLines("/words/words_class_2.txt", StandardCharsets.UTF_8.toString()));
 
         List<String> wordsFound = rawLines.stream()
                 .map(String::trim)
@@ -28,6 +26,8 @@ public class WordsRepository {
                 .filter(WordsRepository::isValidWord)
                 .distinct()
                 .collect(Collectors.toList());
+
+        System.out.println("一共载入" + wordsFound.size() + "个词语");
 
         wordsFound.forEach(word -> {
             word.chars().forEach(c -> {
