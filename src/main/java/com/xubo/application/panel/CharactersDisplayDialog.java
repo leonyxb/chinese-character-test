@@ -1,5 +1,6 @@
 package com.xubo.application.panel;
 
+import com.xubo.application.ApplicationUtils;
 import com.xubo.data.book.Lesson;
 import com.xubo.data.character.Character;
 import com.xubo.data.dictionary.DictionaryEntry;
@@ -14,14 +15,11 @@ import java.util.stream.Collectors;
 import static com.xubo.application.ChineseMainFrame.FONT_NAME;
 
 public class CharactersDisplayDialog extends JDialog {
-    
-    Color knowColor = new Color(142, 196, 142);
 
-    private List<Lesson> lessons;
+    private static int SQUARE_SIDE_LENGTH = 100;
 
     public CharactersDisplayDialog(List<Lesson> lessons, boolean shuffle, JFrame owner) {
         super(owner);
-        this.lessons = lessons;
 
         this.setSize(1000 + 25, 700);
         this.setLocationRelativeTo(null);
@@ -32,45 +30,53 @@ public class CharactersDisplayDialog extends JDialog {
         JPanel contextPanel = new JPanel();
         contextPanel.setLayout(null);
         contextPanel.setBackground(Color.GRAY);
+
         List<Character> characters = lessons.stream()
                 .flatMap(lesson -> lesson.getCharacters().stream())
                 .collect(Collectors.toList());
-
-        Dimension insideDimension = this.getContentPane().getSize();
-        int squareSideLength = 100;
 
         if (shuffle) {
             Collections.shuffle(characters);
         }
 
-        contextPanel.setPreferredSize(new Dimension(insideDimension.width, (characters.size() / 10 + 1) * squareSideLength));
+        Dimension insideDimension = this.getContentPane().getSize();
+        contextPanel.setPreferredSize(new Dimension(insideDimension.width, (characters.size() / 10 + 1) * SQUARE_SIDE_LENGTH));
         for (int i = 0; i < characters.size(); i++) {
             Character c = characters.get(i);
-            JButton button = new JButton(c.getText());
-            int row = i / 10;
-            int col = i % 10; 
-            button.setBounds(col * squareSideLength, row * squareSideLength, squareSideLength, squareSideLength);
-            button.setFont(new Font(FONT_NAME, Font.PLAIN, 60));
-            button.setBackground(Color.LIGHT_GRAY);
-            button.setFocusPainted(false);
-            button.addActionListener(e -> {
-                Color currentColor = button.getBackground();
-                if (currentColor != knowColor) {
-                    button.setBackground(knowColor);
-                } else {
-                    button.setBackground(Color.LIGHT_GRAY);
-                }
-            });
-            button.setToolTipText(buildToolTipText(c));
+            JButton button = buildButton(i, c);
             contextPanel.add(button);
         }
-        
-        
 
         JScrollPane scrollPane = new JScrollPane(contextPanel);
         scrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
         scrollPane.getVerticalScrollBar().setUnitIncrement(30);
         this.add(scrollPane);
+    }
+
+    private JButton buildButton(int index, Character character) {
+        JButton button = new JButton(character.getText());
+        int row = index / 10;
+        int col = index % 10;
+        button.setBounds(
+                col * SQUARE_SIDE_LENGTH,
+                row * SQUARE_SIDE_LENGTH,
+                SQUARE_SIDE_LENGTH,
+                SQUARE_SIDE_LENGTH
+        );
+        button.setFont(new Font(FONT_NAME, Font.PLAIN, 60));
+        button.setBackground(Color.LIGHT_GRAY);
+        button.setBackground(ApplicationUtils.getDisplayedColor(character, true));
+        button.setFocusPainted(false);
+        button.addActionListener(e -> {
+            Color currentColor = button.getBackground();
+            if (currentColor != ApplicationUtils.COLOR_KNOWN_BACKGROUND) {
+                button.setBackground(ApplicationUtils.COLOR_KNOWN_BACKGROUND);
+            } else {
+                button.setBackground(Color.LIGHT_GRAY);
+            }
+        });
+        button.setToolTipText(buildToolTipText(character));
+        return button;
     }
 
     private String buildToolTipText(Character character) {

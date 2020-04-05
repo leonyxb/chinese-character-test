@@ -22,7 +22,7 @@ public class Character {
 
     private final List<String> words = new ArrayList<>();
 
-    CharacterStatus status;
+    private CharacterStatus status;
 
     public Character(String text) {
         this.text = text;
@@ -38,12 +38,12 @@ public class Character {
         return status;
     }
 
-    public List<Lesson> getLessons() {
-        return lessons;
-    }
-
     public void setStatus(CharacterStatus status) {
         this.status = status;
+    }
+
+    public List<Lesson> getLessons() {
+        return lessons;
     }
 
     public List<DictionaryEntry> getDictionaryEntries() {
@@ -91,4 +91,5 @@ public class Character {
         }
         return new File("records" + File.separator + text + ".json");
     }
+
 }

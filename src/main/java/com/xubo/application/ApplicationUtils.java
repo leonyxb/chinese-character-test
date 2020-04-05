@@ -12,6 +12,8 @@ public class ApplicationUtils {
 
     public static final Color COLOR_UNKNOWN = new Color(178, 0, 0);
     public static final Color COLOR_KNOWN = new Color(0, 138, 0);
+    public static final Color COLOR_KNOWN_BACKGROUND = new Color(142, 196, 142);
+    public static final Color COLOR_UNKNOWN_BACKGROUND = new Color(239, 166, 166);
 
     public static String getCssColor(Color color) {
         return String.format("rgb(%s, %s, %s)", color.getRed(), color.getGreen(), color.getBlue());
@@ -29,13 +31,13 @@ public class ApplicationUtils {
                         .count();
 
                 if (knownNum == 3) {
-                    return isBackground ? new Color(142, 196, 142) : COLOR_KNOWN;
+                    return isBackground ? COLOR_KNOWN_BACKGROUND : COLOR_KNOWN;
                 } else if (knownNum == 2) {
                     return isBackground ? new Color(191, 191, 72) : new Color(187, 209, 4);
                 } else if (knownNum == 1) {
                     return isBackground ? new Color(236, 190, 97) : new Color(236, 130, 4);
                 } else {
-                    return isBackground ? new Color(239, 166, 166) : COLOR_UNKNOWN;
+                    return isBackground ? COLOR_UNKNOWN_BACKGROUND : COLOR_UNKNOWN;
                 }
             }
         }
