@@ -14,6 +14,8 @@ public class ChineseMainFrame extends JFrame {
 
     public static final String FONT_NAME = "楷体";
 
+    public static final String FONT_NAME_PIN_YIN = "Arial";
+
     ChineseData data;
 
     Map<Character, CharactersLearnDialog> characterDetails = new HashMap<>();

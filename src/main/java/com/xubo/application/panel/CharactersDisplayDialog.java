@@ -7,12 +7,15 @@ import com.xubo.data.dictionary.DictionaryEntry;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
 import static com.xubo.application.ChineseMainFrame.FONT_NAME;
+import static com.xubo.application.ChineseMainFrame.FONT_NAME_PIN_YIN;
 
 public class CharactersDisplayDialog extends JDialog {
 
@@ -67,16 +70,62 @@ public class CharactersDisplayDialog extends JDialog {
         button.setBackground(Color.LIGHT_GRAY);
         button.setBackground(ApplicationUtils.getDisplayedColor(character, true));
         button.setFocusPainted(false);
-        button.addActionListener(e -> {
-            Color currentColor = button.getBackground();
-            if (currentColor != ApplicationUtils.COLOR_KNOWN_BACKGROUND) {
-                button.setBackground(ApplicationUtils.COLOR_KNOWN_BACKGROUND);
-            } else {
-                button.setBackground(Color.LIGHT_GRAY);
+        //button.setToolTipText(buildToolTipText(character));
+
+        JPopupMenu menu = getPinyinMenu(character);
+
+        button.addMouseListener(new MouseListener() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+                if (e.getButton() == e.BUTTON3) {
+                    menu.show(button, e.getX(), e.getY());
+                }
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+                if (e.getButton() == e.BUTTON1) {
+                    Color currentColor = button.getBackground();
+                    if (currentColor != ApplicationUtils.COLOR_KNOWN_BACKGROUND) {
+                        button.setBackground(ApplicationUtils.COLOR_KNOWN_BACKGROUND);
+                    } else {
+                        button.setBackground(Color.LIGHT_GRAY);
+                    }
+                } else if (e.getButton() == e.BUTTON3) {
+                    menu.setVisible(false);
+                }
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+
             }
         });
-        button.setToolTipText(buildToolTipText(character));
         return button;
+    }
+
+    private JPopupMenu getPinyinMenu(Character character) {
+        JPopupMenu menu = new JPopupMenu();
+        character.getDictionaryEntries()
+                .stream()
+                .map(DictionaryEntry::getPinyin)
+                .map(String::toLowerCase)
+                .distinct()
+                .forEach(py -> {
+                    JMenuItem menuItem = new JMenuItem("  " + py);
+                    menuItem.setFont(new Font(FONT_NAME_PIN_YIN, Font.PLAIN, 24));
+                    menu.add(menuItem);
+                });
+        return menu;
     }
 
     private String buildToolTipText(Character character) {
