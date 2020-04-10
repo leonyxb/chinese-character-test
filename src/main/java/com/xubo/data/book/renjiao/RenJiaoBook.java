@@ -51,7 +51,7 @@ public class RenJiaoBook implements Book {
 
     @Override
     public String getTitle() {
-        return title + " " + subTitle + " " + num + "字";
+        return title + " " + num + "字";
     }
 
     @Override

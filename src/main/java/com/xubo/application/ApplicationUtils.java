@@ -53,4 +53,7 @@ public class ApplicationUtils {
         return Collections.emptyList();
     }
 
+    public static boolean isKnown(Character character) {
+        return getDisplayedColor(character, false) == COLOR_KNOWN;
+    }
 }

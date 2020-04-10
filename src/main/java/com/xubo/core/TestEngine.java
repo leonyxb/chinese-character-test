@@ -1,5 +1,6 @@
 package com.xubo.core;
 
+import com.xubo.application.ApplicationUtils;
 import com.xubo.data.character.Character;
 import com.xubo.data.character.CharacterStatus;
 import com.xubo.data.book.Lesson;
@@ -22,19 +23,22 @@ public class TestEngine {
 
     boolean record;
 
-    public TestEngine(List<Lesson> lessons, boolean shuffle, boolean record) {
+    public TestEngine(List<Lesson> lessons, boolean shuffle, boolean record, boolean knownOnly) {
 
         Collections.reverse(lessons);
         this.characters = lessons.stream()
                 .flatMap(lesson -> lesson.getCharacters().stream())
                 .distinct()
+                .filter(character -> !knownOnly || !ApplicationUtils.isKnown(character))
                 .collect(toList());
-
-        this.characters.forEach(character -> character.setStatus(CharacterStatus.NOT_TESTED));
 
         if (shuffle) {
             Collections.shuffle(this.characters);
         }
+
+
+        this.characters.forEach(character -> character.setStatus(CharacterStatus.NOT_TESTED));
+
 
         this.record = record;
 

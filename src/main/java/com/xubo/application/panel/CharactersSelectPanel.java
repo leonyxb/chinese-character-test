@@ -5,6 +5,7 @@ import com.xubo.application.ChineseMainFrame;
 import com.xubo.data.ChineseData;
 import com.xubo.data.book.Book;
 import com.xubo.data.book.Lesson;
+import com.xubo.data.character.Character;
 
 import javax.swing.*;
 import java.awt.*;
@@ -26,8 +27,10 @@ public class CharactersSelectPanel extends JPanel {
     private JLabel totalNumLabel = new JLabel();
     private JButton startButton = new JButton("测试");
     private JButton displayButton = new JButton("浏览");
-    private JCheckBox randomCheckbox = new JCheckBox("打乱顺序");
-    private JCheckBox learnCheckbox = new JCheckBox("可以学习");
+    private JCheckBox randomCheckbox = new JCheckBox("打乱测试顺序");
+    private JCheckBox learnCheckbox = new JCheckBox("允许学习");
+    private JCheckBox testKnownOnlyCheckbox = new JCheckBox("仅测试不认识的字");
+
     private JCheckBox recordCheckbox = new JCheckBox("记录本次测试");
 
     private JList<Book> bookList = new JList<>();
@@ -55,10 +58,10 @@ public class CharactersSelectPanel extends JPanel {
                 .flatMap(book -> book.getLessons().stream())
                 .flatMap(lesson -> lesson.getCharacters().stream())
                 .distinct()
-                .filter(c -> ApplicationUtils.getDisplayedColor(c, false) == ApplicationUtils.COLOR_KNOWN)
+                .filter(ApplicationUtils::isKnown)
                 .count();
 
-        totalNumLabel.setText("识字数：" + totalKnownNum);
+        totalNumLabel.setText("总识字数：" + totalKnownNum);
 
         updateStatistic();
     }
@@ -108,7 +111,13 @@ public class CharactersSelectPanel extends JPanel {
 
             if (!lessons.isEmpty()) {
                 mainFrame.remove(this);
-                mainFrame.launchTest(lessons, randomCheckbox.isSelected(), learnCheckbox.isSelected(), recordCheckbox.isSelected());
+                mainFrame.launchTest(
+                        lessons,
+                        randomCheckbox.isSelected(),
+                        learnCheckbox.isSelected(),
+                        recordCheckbox.isSelected(),
+                        testKnownOnlyCheckbox.isSelected()
+                );
             }
         });
 
@@ -150,6 +159,9 @@ public class CharactersSelectPanel extends JPanel {
         recordCheckbox.setFont(new Font(FONT_NAME, Font.PLAIN, 20));
         recordCheckbox.setSelected(true);
 
+        testKnownOnlyCheckbox.setFont(new Font(FONT_NAME, Font.PLAIN, 20));
+        testKnownOnlyCheckbox.setSelected(false);
+
         totalNumLabel.setFont(new Font(FONT_NAME, Font.PLAIN, 24));
         totalNumLabel.setForeground(new Color(0, 138, 0));
 
@@ -160,17 +172,17 @@ public class CharactersSelectPanel extends JPanel {
         c.weighty = 1;
 
         c.gridx = 0;
-        c.gridwidth = 3;
-        c.weightx = 3;
+        c.gridwidth = 2;
+        c.weightx = 2;
         c.fill = GridBagConstraints.BOTH;
         JScrollPane scrollPane = new JScrollPane(bookList);
         scrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
         scrollPane.setPreferredSize(new Dimension(200, 300));
         add(scrollPane, c);
 
-        c.gridx = 3;
-        c.gridwidth = 7;
-        c.weightx = 7;
+        c.gridx = 2;
+        c.gridwidth = 8;
+        c.weightx = 8;
         c.fill = GridBagConstraints.BOTH;
         JScrollPane scrollPane2 = new JScrollPane(lessonList);
         scrollPane2.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
@@ -243,40 +255,31 @@ public class CharactersSelectPanel extends JPanel {
         c.gridwidth = 1;
         c.weightx = 1;
         c.fill = GridBagConstraints.BOTH;
-        tmp = new JPanel();
-        tmp.add(recordCheckbox);
-        add(tmp, c);
+        add(recordCheckbox, c);
 
         c.gridx = 1;
         c.gridwidth = 1;
         c.weightx = 1;
         c.fill = GridBagConstraints.BOTH;
-        tmp = new JPanel();
-        tmp.add(randomCheckbox);
-        add(tmp, c);
+        add(randomCheckbox, c);
 
         c.gridx = 2;
-        c.gridwidth = 2;
-        c.weightx = 2;
-        c.fill = GridBagConstraints.BOTH;
-        tmp = new JPanel();
-        tmp.add(learnCheckbox);
-        add(tmp, c);
-
-
-        c.gridx = 4;
-        c.gridwidth = 2;
-        c.weightx = 2;
-        c.fill = GridBagConstraints.BOTH;
-        add(new JPanel(), c);
-
-        c.gridx = 6;
         c.gridwidth = 1;
         c.weightx = 1;
         c.fill = GridBagConstraints.BOTH;
-        JPanel selectPanel = new JPanel();
-        selectPanel.add(selectInfoLabel);
-        add(selectPanel, c);
+        add(learnCheckbox, c);
+
+        c.gridx = 3;
+        c.gridwidth = 1;
+        c.weightx = 1;
+        c.fill = GridBagConstraints.BOTH;
+        add(testKnownOnlyCheckbox, c);
+
+        c.gridx = 4;
+        c.gridwidth = 3;
+        c.weightx = 3;
+        c.fill = GridBagConstraints.BOTH;
+        add(selectInfoLabel, c);
 
         c.gridx = 7;
         c.gridwidth = 1;
@@ -294,12 +297,14 @@ public class CharactersSelectPanel extends JPanel {
 
     private void updateStatistic() {
 
-        long count = Collections.list(selectedLessons.elements()).stream()
+        List<Character> selected = Collections.list(selectedLessons.elements()).stream()
                 .flatMap(lesson -> lesson.getLesson().getCharacters().stream())
                 .distinct()
-                .count();
+                .collect(toList());
 
-        selectInfoLabel.setText("总计 " + count + " 字");
+        long knownNum = selected.stream().filter(ApplicationUtils::isKnown).count();
+
+        selectInfoLabel.setText("<html>已选择 " + selected.size() + " 字<br/>其中已认识 " + knownNum + " 字</html>");
 
     }
 

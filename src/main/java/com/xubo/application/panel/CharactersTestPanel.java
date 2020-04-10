@@ -16,7 +16,9 @@ import java.util.List;
 
 import static com.xubo.application.ChineseMainFrame.FONT_NAME;
 
-
+/**
+ * 这个class暂时不用
+ */
 public class CharactersTestPanel extends JPanel {
 
     private TestEngine testEngine;
@@ -37,9 +39,9 @@ public class CharactersTestPanel extends JPanel {
     private boolean learn;
 
 
-    public CharactersTestPanel(List<Lesson> lessons, boolean shuffle, boolean learn, boolean record, ChineseMainFrame mainFrame) {
+    public CharactersTestPanel(List<Lesson> lessons, boolean shuffle, boolean learn, boolean record, boolean knownOnly, ChineseMainFrame mainFrame) {
 
-        this.testEngine = new TestEngine(lessons, shuffle, record);
+        this.testEngine = new TestEngine(lessons, shuffle, record, knownOnly);
         this.mainFrame = mainFrame;
         this.learn = learn;
 
@@ -156,6 +158,7 @@ public class CharactersTestPanel extends JPanel {
         knowButton.setBackground(new Color(4, 73, 18));
         knowButton.setForeground(Color.WHITE);
         knowButton.setFont(new Font(FONT_NAME, Font.PLAIN, 30));
+        knowButton.setFocusPainted(false);
         actionPanel.add(knowButton, ac);
 
         ac.gridx = 1;
@@ -164,6 +167,7 @@ public class CharactersTestPanel extends JPanel {
         unknowButton.setBackground(new Color(129, 15, 11));
         unknowButton.setForeground(Color.WHITE);
         unknowButton.setFont(new Font(FONT_NAME, Font.PLAIN, 30));
+        unknowButton.setFocusPainted(false);
         actionPanel.add(unknowButton, ac);
 
         ac.gridx = 2;
@@ -172,6 +176,7 @@ public class CharactersTestPanel extends JPanel {
         learnButton.setBackground(new Color(215, 96, 14));
         learnButton.setForeground(Color.WHITE);
         learnButton.setFont(new Font(FONT_NAME, Font.PLAIN, 30));
+        learnButton.setFocusPainted(false);
         if (learn) {
             learnButton.setEnabled(true);
         } else {

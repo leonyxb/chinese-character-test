@@ -1,9 +1,6 @@
 package com.xubo.application;
 
-import com.xubo.application.panel.CharactersDisplayDialog;
-import com.xubo.application.panel.CharactersLearnDialog;
-import com.xubo.application.panel.CharactersSelectPanel;
-import com.xubo.application.panel.CharactersTestPanel;
+import com.xubo.application.panel.*;
 import com.xubo.data.character.Character;
 import com.xubo.data.ChineseData;
 import com.xubo.data.book.Lesson;
@@ -39,8 +36,12 @@ public class ChineseMainFrame extends JFrame {
         revalidate();
     }
 
-    public void launchTest(List<Lesson> lessons, boolean shuffle, boolean learn, boolean record) {
-        add(new CharactersTestPanel(lessons, shuffle, learn,record, this));
+    public void launchTest(List<Lesson> lessons, boolean shuffle, boolean learn, boolean record, boolean knownOnly) {
+        //TestConfigDialog testConfigDialog = new TestConfigDialog(this);
+        //testConfigDialog.pack();
+        //testConfigDialog.setVisible(true);
+
+        add(new CharactersTestPanel(lessons, shuffle, learn,record, knownOnly, this));
         revalidate();
     }
 
@@ -50,7 +51,8 @@ public class ChineseMainFrame extends JFrame {
     }
 
     public void showCharacters(List<Lesson> lessons, boolean shuffle) {
-        new CharactersDisplayDialog(lessons, shuffle, this).setVisible(true);
+        CharactersDisplayDialog charactersDisplayDialog = new CharactersDisplayDialog(lessons, shuffle, this);
+        charactersDisplayDialog.setVisible(true);
     }
 
 }
