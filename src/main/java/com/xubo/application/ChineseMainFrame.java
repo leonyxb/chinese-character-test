@@ -38,12 +38,12 @@ public class ChineseMainFrame extends JFrame {
         revalidate();
     }
 
-    public void launchTest(List<Lesson> lessons, boolean shuffle, boolean learn, boolean record, boolean knownOnly) {
+    public void launchTest(List<Lesson> lessons, boolean shuffle, boolean learn, boolean record, boolean unknownOnly) {
         //TestConfigDialog testConfigDialog = new TestConfigDialog(this);
         //testConfigDialog.pack();
         //testConfigDialog.setVisible(true);
 
-        add(new CharactersTestPanel(lessons, shuffle, learn,record, knownOnly, this));
+        add(new CharactersTestPanel(lessons, shuffle, learn,record, unknownOnly, this));
         revalidate();
     }
 
@@ -52,8 +52,8 @@ public class ChineseMainFrame extends JFrame {
         characterDetails.get(character).setVisible(true);
     }
 
-    public void showCharacters(List<Lesson> lessons, boolean shuffle) {
-        CharactersDisplayDialog charactersDisplayDialog = new CharactersDisplayDialog(lessons, shuffle, this);
+    public void showCharacters(List<Lesson> lessons, boolean shuffle, boolean unknownOnly) {
+        CharactersDisplayDialog charactersDisplayDialog = new CharactersDisplayDialog(lessons, shuffle, unknownOnly, this);
         charactersDisplayDialog.setVisible(true);
     }
 

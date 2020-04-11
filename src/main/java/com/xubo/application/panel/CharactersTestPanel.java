@@ -39,9 +39,9 @@ public class CharactersTestPanel extends JPanel {
     private boolean learn;
 
 
-    public CharactersTestPanel(List<Lesson> lessons, boolean shuffle, boolean learn, boolean record, boolean knownOnly, ChineseMainFrame mainFrame) {
+    public CharactersTestPanel(List<Lesson> lessons, boolean shuffle, boolean learn, boolean record, boolean unknownOnly, ChineseMainFrame mainFrame) {
 
-        this.testEngine = new TestEngine(lessons, shuffle, record, knownOnly);
+        this.testEngine = new TestEngine(lessons, shuffle, record, unknownOnly);
         this.mainFrame = mainFrame;
         this.learn = learn;
 

@@ -21,9 +21,23 @@ public class CharactersDisplayDialog extends JDialog {
 
     private static int SQUARE_SIDE_LENGTH = 100;
 
-    public CharactersDisplayDialog(List<Lesson> lessons, boolean shuffle, JFrame owner) {
+    public CharactersDisplayDialog(List<Lesson> lessons, boolean shuffle, boolean unknownOnly, JFrame owner) {
         super(owner);
 
+        List<Character> characters = lessons.stream()
+                .flatMap(lesson -> lesson.getCharacters().stream())
+                .filter(character -> !unknownOnly || !ApplicationUtils.isKnown(character))
+                .distinct()
+                .collect(Collectors.toList());
+
+        if (shuffle) {
+            Collections.shuffle(characters);
+        }
+
+        display(characters);
+    }
+
+    private void display(List<Character> characters) {
         this.setSize(1000 + 25, 700);
         this.setLocationRelativeTo(null);
         this.setTitle("展示");
@@ -33,14 +47,6 @@ public class CharactersDisplayDialog extends JDialog {
         JPanel contextPanel = new JPanel();
         contextPanel.setLayout(null);
         contextPanel.setBackground(Color.GRAY);
-
-        List<Character> characters = lessons.stream()
-                .flatMap(lesson -> lesson.getCharacters().stream())
-                .collect(Collectors.toList());
-
-        if (shuffle) {
-            Collections.shuffle(characters);
-        }
 
         Dimension insideDimension = this.getContentPane().getSize();
         contextPanel.setPreferredSize(new Dimension(insideDimension.width, (characters.size() / 10 + 1) * SQUARE_SIDE_LENGTH));

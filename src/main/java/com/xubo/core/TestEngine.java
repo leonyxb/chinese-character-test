@@ -23,13 +23,13 @@ public class TestEngine {
 
     boolean record;
 
-    public TestEngine(List<Lesson> lessons, boolean shuffle, boolean record, boolean knownOnly) {
+    public TestEngine(List<Lesson> lessons, boolean shuffle, boolean record, boolean unknownOnly) {
 
         Collections.reverse(lessons);
         this.characters = lessons.stream()
                 .flatMap(lesson -> lesson.getCharacters().stream())
                 .distinct()
-                .filter(character -> !knownOnly || !ApplicationUtils.isKnown(character))
+                .filter(character -> !unknownOnly || !ApplicationUtils.isKnown(character))
                 .collect(toList());
 
         if (shuffle) {

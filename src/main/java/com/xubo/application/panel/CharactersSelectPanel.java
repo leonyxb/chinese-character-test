@@ -23,13 +23,14 @@ public class CharactersSelectPanel extends JPanel {
 
     private JButton addButton = new JButton("添加");
     private JButton removeButton = new JButton("移除");
+    private JButton removeAllButton = new JButton("全部移除");
     private JLabel selectInfoLabel = new JLabel();
     private JLabel totalNumLabel = new JLabel();
     private JButton startButton = new JButton("测试");
     private JButton displayButton = new JButton("浏览");
     private JCheckBox randomCheckbox = new JCheckBox("打乱测试顺序");
     private JCheckBox learnCheckbox = new JCheckBox("允许学习");
-    private JCheckBox testKnownOnlyCheckbox = new JCheckBox("仅测试不认识的字");
+    private JCheckBox testUnknownOnlyCheckbox = new JCheckBox("仅测试不认识的字");
 
     private JCheckBox recordCheckbox = new JCheckBox("记录本次测试");
 
@@ -103,6 +104,11 @@ public class CharactersSelectPanel extends JPanel {
             updateStatistic();
         });
 
+        removeAllButton.addActionListener(e -> {
+            ((DefaultListModel) selectedList.getModel()).removeAllElements();
+            updateStatistic();
+        });
+
         startButton.addActionListener(e -> {
 
             List<Lesson> lessons = Collections.list(selectedLessons.elements()).stream()
@@ -116,7 +122,7 @@ public class CharactersSelectPanel extends JPanel {
                         randomCheckbox.isSelected(),
                         learnCheckbox.isSelected(),
                         recordCheckbox.isSelected(),
-                        testKnownOnlyCheckbox.isSelected()
+                        testUnknownOnlyCheckbox.isSelected()
                 );
             }
         });
@@ -128,7 +134,7 @@ public class CharactersSelectPanel extends JPanel {
                     .collect(toList());
 
             if (!lessons.isEmpty()) {
-                mainFrame.showCharacters(lessons, randomCheckbox.isSelected());
+                mainFrame.showCharacters(lessons, randomCheckbox.isSelected(), testUnknownOnlyCheckbox.isSelected());
             }
         });
     }
@@ -159,8 +165,8 @@ public class CharactersSelectPanel extends JPanel {
         recordCheckbox.setFont(new Font(FONT_NAME, Font.PLAIN, 20));
         recordCheckbox.setSelected(true);
 
-        testKnownOnlyCheckbox.setFont(new Font(FONT_NAME, Font.PLAIN, 20));
-        testKnownOnlyCheckbox.setSelected(false);
+        testUnknownOnlyCheckbox.setFont(new Font(FONT_NAME, Font.PLAIN, 20));
+        testUnknownOnlyCheckbox.setSelected(false);
 
         totalNumLabel.setFont(new Font(FONT_NAME, Font.PLAIN, 24));
         totalNumLabel.setForeground(new Color(0, 138, 0));
@@ -213,25 +219,24 @@ public class CharactersSelectPanel extends JPanel {
         tmp.add(guideLabel);
         add(tmp, c);
 
-
         c.gridx = 6;
         c.gridwidth = 1;
         c.weightx = 1;
         c.fill = GridBagConstraints.BOTH;
-        add(new JPanel(), c);
+        add(addButton, c);
 
 
         c.gridx = 7;
         c.gridwidth = 1;
         c.weightx = 1;
         c.fill = GridBagConstraints.BOTH;
-        add(addButton, c);
+        add(removeButton, c);
 
         c.gridx = 8;
         c.gridwidth = 1;
         c.weightx = 1;
         c.fill = GridBagConstraints.BOTH;
-        add(removeButton, c);
+        add(removeAllButton, c);
 
 
         //row 3
@@ -273,7 +278,7 @@ public class CharactersSelectPanel extends JPanel {
         c.gridwidth = 1;
         c.weightx = 1;
         c.fill = GridBagConstraints.BOTH;
-        add(testKnownOnlyCheckbox, c);
+        add(testUnknownOnlyCheckbox, c);
 
         c.gridx = 4;
         c.gridwidth = 3;
