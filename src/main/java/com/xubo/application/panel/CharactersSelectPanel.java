@@ -197,16 +197,16 @@ public class CharactersSelectPanel extends JPanel {
         c.weighty = 1;
 
         c.gridx = 0;
-        c.gridwidth = 3;
-        c.weightx = 3;
+        c.gridwidth = 1;
+        c.weightx = 40;
         JScrollPane scrollPane = new JScrollPane(bookList);
         scrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
         scrollPane.setPreferredSize(new Dimension(200, 300));
         panel.add(scrollPane, c);
 
-        c.gridx = 3;
-        c.gridwidth = 7;
-        c.weightx = 7;
+        c.gridx = 1;
+        c.gridwidth = 1;
+        c.weightx = 60;
         JScrollPane scrollPane2 = new JScrollPane(lessonList);
         scrollPane2.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
         scrollPane2.setPreferredSize(new Dimension(700, 300));
