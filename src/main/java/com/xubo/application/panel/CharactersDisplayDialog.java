@@ -1,5 +1,6 @@
 package com.xubo.application.panel;
 
+import com.xubo.application.ApplicationConfig;
 import com.xubo.application.ApplicationUtils;
 import com.xubo.data.book.Lesson;
 import com.xubo.data.character.Character;
@@ -9,20 +10,36 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static com.xubo.application.ChineseMainFrame.FONT_NAME;
-import static com.xubo.application.ChineseMainFrame.FONT_NAME_PIN_YIN;
+import static com.xubo.application.ApplicationMainFrame.FONT_NAME_PIN_YIN;
 
 public class CharactersDisplayDialog extends JDialog {
 
-    private static int SQUARE_SIDE_LENGTH = 100;
+    private int boxHeight;
+    private int boxWidth;
+    private int boxNumPerRow;
+    private int fontSize;
 
-    public CharactersDisplayDialog(List<Lesson> lessons, boolean shuffle, boolean unknownOnly, JFrame owner) {
+    private ApplicationConfig config;
+
+    public CharactersDisplayDialog(List<Lesson> lessons, boolean shuffle, boolean unknownOnly, ApplicationConfig config, JFrame owner) {
         super(owner);
+
+        this.config = config;
+        if (config.getLanguage() == ApplicationConfig.ApplicationLanguage.CHINESE) {
+            boxHeight = 100;
+            boxWidth = 100;
+            boxNumPerRow = 10;
+            fontSize = 60;
+        } else {
+            boxHeight = 50;
+            boxWidth = 200;
+            boxNumPerRow = 5;
+            fontSize = 24;
+        }
 
         List<Character> characters = lessons.stream()
                 .flatMap(lesson -> lesson.getCharacters().stream())
@@ -49,7 +66,7 @@ public class CharactersDisplayDialog extends JDialog {
         contextPanel.setBackground(Color.GRAY);
 
         Dimension insideDimension = this.getContentPane().getSize();
-        contextPanel.setPreferredSize(new Dimension(insideDimension.width, (characters.size() / 10 + 1) * SQUARE_SIDE_LENGTH));
+        contextPanel.setPreferredSize(new Dimension(insideDimension.width, ((characters.size() - 1) / boxNumPerRow + 1) * boxHeight));
         for (int i = 0; i < characters.size(); i++) {
             Character c = characters.get(i);
             JButton button = buildButton(i, c);
@@ -64,15 +81,15 @@ public class CharactersDisplayDialog extends JDialog {
 
     private JButton buildButton(int index, Character character) {
         JButton button = new JButton(character.getText());
-        int row = index / 10;
-        int col = index % 10;
+        int row = index / boxNumPerRow;
+        int col = index % boxNumPerRow;
         button.setBounds(
-                col * SQUARE_SIDE_LENGTH,
-                row * SQUARE_SIDE_LENGTH,
-                SQUARE_SIDE_LENGTH,
-                SQUARE_SIDE_LENGTH
+                col * boxWidth,
+                row * boxHeight,
+                boxWidth,
+                boxHeight
         );
-        button.setFont(new Font(FONT_NAME, Font.PLAIN, 60));
+        button.setFont(new Font(config.getFontName(), Font.PLAIN, fontSize));
         button.setBackground(Color.LIGHT_GRAY);
         button.setBackground(ApplicationUtils.getDisplayedColor(character, true));
         button.setFocusPainted(false);
@@ -134,21 +151,4 @@ public class CharactersDisplayDialog extends JDialog {
         return menu;
     }
 
-    private String buildToolTipText(Character character) {
-        List<String> lines = new ArrayList<>();
-        lines.add("<html>");
-
-
-        character.getDictionaryEntries()
-                .stream()
-                .map(DictionaryEntry::getPinyin)
-                .map(String::toLowerCase)
-                .distinct()
-                .forEach(py -> {
-                    lines.add("<p style=\" color:blue; font-size:20px; \">" + py +"</p>");
-                });
-
-        lines.add("</html>");
-        return String.join("", lines);
-    }
 }

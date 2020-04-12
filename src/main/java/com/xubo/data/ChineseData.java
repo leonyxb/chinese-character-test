@@ -9,7 +9,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class ChineseData {
+public class ChineseData implements DataSource {
 
     private List<Book> books;
 

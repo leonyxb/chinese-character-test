@@ -1,6 +1,7 @@
 package com.xubo.application;
 
 import com.xubo.application.panel.*;
+import com.xubo.data.DataSource;
 import com.xubo.data.character.Character;
 import com.xubo.data.ChineseData;
 import com.xubo.data.book.Lesson;
@@ -10,19 +11,23 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ChineseMainFrame extends JFrame {
-
-    public static final String FONT_NAME = "楷体";
+public class ApplicationMainFrame extends JFrame {
 
     public static final String FONT_NAME_PIN_YIN = "Arial";
 
-    ChineseData data;
+    DataSource data;
+
+    ApplicationConfig config;
 
     Map<Character, CharactersLearnDialog> characterDetails = new HashMap<>();
 
-    public ChineseMainFrame(ChineseData data) {
+    CharactersSelectPanel charactersSelectPanel;
+
+    public ApplicationMainFrame(DataSource data, ApplicationConfig config) {
 
         this.data = data;
+        this.config = config;
+        this.charactersSelectPanel = new CharactersSelectPanel(data, this);
 
         setTitle("识字测试");
         setSize(1400, 800);
@@ -34,15 +39,12 @@ public class ChineseMainFrame extends JFrame {
     }
 
     public void selectCharacters() {
-        add(new CharactersSelectPanel(data, this));
+        add(charactersSelectPanel);
         revalidate();
+        repaint();
     }
 
     public void launchTest(List<Lesson> lessons, boolean shuffle, boolean learn, boolean record, boolean unknownOnly) {
-        //TestConfigDialog testConfigDialog = new TestConfigDialog(this);
-        //testConfigDialog.pack();
-        //testConfigDialog.setVisible(true);
-
         add(new CharactersTestPanel(lessons, shuffle, learn,record, unknownOnly, this));
         revalidate();
     }
@@ -53,8 +55,11 @@ public class ChineseMainFrame extends JFrame {
     }
 
     public void showCharacters(List<Lesson> lessons, boolean shuffle, boolean unknownOnly) {
-        CharactersDisplayDialog charactersDisplayDialog = new CharactersDisplayDialog(lessons, shuffle, unknownOnly, this);
+        CharactersDisplayDialog charactersDisplayDialog = new CharactersDisplayDialog(lessons, shuffle, unknownOnly, this.config, this);
         charactersDisplayDialog.setVisible(true);
     }
 
+    public ApplicationConfig getConfig() {
+        return config;
+    }
 }

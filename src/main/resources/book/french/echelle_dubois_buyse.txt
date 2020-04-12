@@ -1,0 +1,3726 @@
+1	CP	maison	Nom	nom féminin
+1	CP	papa	Nom	nom masculin
+1	CP	porte	Nom	nom féminin
+1	CP	rue	Nom	nom féminin
+2	CP	avec	Invariable	préposition
+2	CP	deux	Déterminant	adjectif numéral
+2	CP	terre	Nom	nom féminin
+3	CP	été	Nom	nom masculin
+3	CP	maman	Nom	nom féminin
+3	CP	pipe	Nom	nom féminin
+3	CP	pour	Invariable	préposition
+3	CP	table	Nom	nom féminin
+4	CP	école	Nom	nom féminin
+4	CP	jardin	Nom	nom masculin
+4	CP	mal	Invariable	adverbe
+5	CP	bébé	Nom	nom masculin
+5	CP	carte	Nom	nom féminin
+5	CP	cheminée	Nom	nom féminin
+5	CP	livre	Nom	nom masculin
+5	CP	nature	Nom	nom féminin
+5	CP	rouge	Adjectif	adjectif qualificatif
+5	CP	sucre	Nom	nom masculin
+5	CP	tête	Nom	nom féminin
+5	CP	vache	Nom	nom féminin
+6	CP	achat	Nom	nom masculin
+6	CP	barbe	Nom	nom féminin
+6	CP	classe	Nom	nom féminin
+6	CP	feu	Nom	nom masculin
+6	CP	lion	Nom	nom masculin
+6	CP	matin	Nom	nom masculin
+6	CP	revenir	Verbe	verbe 3ème group
+6	CP	rive	Nom	nom féminin
+6	CP	robe	Nom	nom féminin
+6	CP	soir	Nom	nom masculin
+6	CP	vendredi	Nom	nom masculin
+6	CP	vigne	Nom	nom féminin
+7	CP	branche	Nom	nom féminin
+7	CP	brique	Nom	nom féminin
+7	CP	chat	Nom	nom masculin
+7	CP	facteur	Nom	nom masculin
+7	CP	femme	Nom	nom féminin
+7	CP	fermier	Nom	nom masculin
+7	CP	homme	Nom	nom masculin
+7	CP	jeudi	Nom	nom masculin
+7	CP	lapin	Nom	nom masculin
+7	CP	lui	Pronom	pronom
+7	CP	lundi	Nom	nom masculin
+7	CP	mars	Nom	nom masculin
+7	CP	moulin	Nom	nom masculin
+7	CP	plante	Nom	nom féminin
+7	CP	poire	Nom	nom féminin
+7	CP	poste	Nom	nom masculin
+7	CP	route	Nom	nom féminin
+7	CP	soleil	Nom	nom masculin
+7	CP	sur	Invariable	préposition
+7	CP	triste	Adjectif	adjectif qualificatif
+8	CE1	animal	Nom	nom masculin
+8	CE1	arbre	Nom	nom masculin
+8	CE1	arme	Nom	nom féminin
+8	CE1	aube	Nom	nom féminin
+8	CE1	autour	Invariable	préposition
+8	CE1	avenir	Nom	nom masculin
+8	CE1	bouche	Nom	nom féminin
+8	CE1	brave	Adjectif	adjectif qualificatif
+8	CE1	chemin	Nom	nom masculin
+8	CE1	cheval	Nom	nom masculin
+8	CE1	culture	Nom	nom féminin
+8	CE1	devoir	Verbe	verbe 3ème group
+8	CE1	église	Nom	nom féminin
+8	CE1	enfant	Nom	nom masculin
+8	CE1	étude	Nom	nom féminin
+8	CE1	fête	Nom	nom féminin
+8	CE1	image	Nom	nom féminin
+8	CE1	louer	Verbe	verbe 1er group
+8	CE1	mardi	Nom	nom masculin
+8	CE1	même	Invariable	adverbe
+8	CE1	mort	Nom	nom masculin
+8	CE1	moustache	Nom	nom féminin
+8	CE1	niche	Nom	nom féminin
+8	CE1	ordre	Nom	nom masculin
+8	CE1	plume	Nom	nom féminin
+8	CE1	poupée	Nom	nom féminin
+8	CE1	pouvoir	Verbe	verbe 3ème group
+8	CE1	propre	Adjectif	adjectif qualificatif
+8	CE1	retenir	Verbe	verbe 3ème group
+8	CE1	rire	Verbe	verbe 3ème group
+8	CE1	sage	Adjectif	adjectif qualificatif
+8	CE1	solide	Adjectif	adjectif qualificatif
+8	CE1	soupe	Nom	nom féminin
+9	CE1	année	Nom	nom féminin
+9	CE1	article	Nom	nom masculin
+9	CE1	aviateur	Nom	nom masculin
+9	CE1	bonne	Nom	nom féminin
+9	CE1	café	Nom	nom masculin
+9	CE1	cage	Nom	nom féminin
+9	CE1	carton	Nom	nom masculin
+9	CE1	cave	Nom	nom féminin
+9	CE1	chaleur	Nom	nom féminin
+9	CE1	chambre	Nom	nom féminin
+9	CE1	chanteur	Nom	nom masculin
+9	CE1	charme	Nom	nom masculin
+9	CE1	coeur	Nom	nom masculin
+9	CE1	costume	Nom	nom masculin
+9	CE1	couche	Nom	nom féminin
+9	CE1	croix	Nom	nom féminin
+9	CE1	devenir	Verbe	verbe 3ème group
+9	CE1	douleur	Nom	nom féminin
+9	CE1	droite	Adjectif	adjectif qualificatif
+9	CE1	écriture	Nom	nom féminin
+9	CE1	famille	Nom	nom féminin
+9	CE1	fille	Nom	nom féminin
+9	CE1	fortune	Nom	nom féminin
+9	CE1	foudre	Nom	nom féminin
+9	CE1	journal	Nom	nom masculin
+9	CE1	lecture	Nom	nom féminin
+9	CE1	libre	Adjectif	adjectif qualificatif
+9	CE1	ligne	Nom	nom féminin
+9	CE1	lit	Nom	nom masculin
+9	CE1	maladie	Nom	nom féminin
+9	CE1	marbre	Nom	nom masculin
+9	CE1	marche	Nom	nom féminin
+9	CE1	marque	Nom	nom féminin
+9	CE1	mère	Nom	nom féminin
+9	CE1	midi	Nom	nom masculin
+9	CE1	morne	Adjectif	adjectif qualificatif
+9	CE1	octobre	Nom	nom masculin
+9	CE1	os	Nom	nom masculin
+9	CE1	pauvre	Adjectif	adjectif qualificatif
+9	CE1	plus	Invariable	adverbe
+9	CE1	pomme	Nom	nom féminin
+9	CE1	premier	Déterminant	adjectif numéral
+9	CE1	proverbe	Nom	nom masculin
+9	CE1	rédaction	Nom	nom féminin
+9	CE1	relire	Verbe	verbe 3ème group
+9	CE1	remise	Nom	nom féminin
+9	CE1	retour	Nom	nom masculin
+9	CE1	riche	Adjectif	adjectif qualificatif
+9	CE1	rude	Adjectif	adjectif qualificatif
+9	CE1	sable	Nom	nom masculin
+9	CE1	salade	Nom	nom féminin
+9	CE1	suite	Nom	nom féminin
+9	CE1	tasse	Nom	nom féminin
+9	CE1	tige	Nom	nom féminin
+9	CE1	voiture	Nom	nom féminin
+9	CE1	tuer	Verbe	verbe 1er group
+10	CE1	acte	Nom	nom masculin
+10	CE1	artiste	Nom	nom masculin
+10	CE1	astre	Nom	nom masculin
+10	CE1	blé	Nom	nom masculin
+10	CE1	boire	Verbe	verbe 3ème group
+10	CE1	bois	Nom	nom masculin
+10	CE1	bon	Adjectif	adjectif qualificatif
+10	CE1	bord	Nom	nom masculin
+10	CE1	cabine	Nom	nom féminin
+10	CE1	chasse	Nom	nom féminin
+10	CE1	chasseur	Nom	nom masculin
+10	CE1	chemise	Nom	nom féminin
+10	CE1	chercher	Verbe	verbe 1er group
+10	CE1	chevelure	Nom	nom féminin
+10	CE1	compagnon	Nom	nom masculin
+10	CE1	conduite	Nom	nom féminin
+10	CE1	confiture	Nom	nom féminin
+10	CE1	contenir	Verbe	verbe 3ème group
+10	CE1	convenir	Verbe	verbe 3ème group
+10	CE1	coucou	Nom	nom masculin
+10	CE1	coude	Nom	nom masculin
+10	CE1	courage	Nom	nom masculin
+10	CE1	dans	Invariable	préposition
+10	CE1	élève	Nom	nom masculin
+10	CE1	entre	Invariable	préposition
+10	CE1	étable	Nom	nom féminin
+10	CE1	établir	Verbe	verbe 2ème group
+10	CE1	fabrique	Nom	nom féminin
+10	CE1	faute	Nom	nom féminin
+10	CE1	fleuve	Nom	nom masculin
+10	CE1	fortement	Invariable	adverbe
+10	CE1	froid	Adjectif	adjectif qualificatif
+10	CE1	futur	Adjectif	adjectif qualificatif
+10	CE1	gros	Adjectif	adjectif qualificatif
+10	CE1	journée	Nom	nom féminin
+10	CE1	juste	Adjectif	adjectif qualificatif
+10	CE1	malade	Adjectif	adjectif qualificatif
+10	CE1	mariage	Nom	nom masculin
+10	CE1	matière	Nom	nom féminin
+10	CE1	mineur	Nom	nom masculin
+10	CE1	miracle	Nom	nom masculin
+10	CE1	moine	Nom	nom masculin
+10	CE1	monde	Nom	nom masculin
+10	CE1	musique	Nom	nom féminin
+10	CE1	neige	Nom	nom féminin
+10	CE1	oeuf	Nom	nom masculin
+10	CE1	orange	Adjectif	adjectif qualificatif
+10	CE1	pénible	Adjectif	adjectif qualificatif
+10	CE1	personne	Nom	nom féminin
+10	CE1	peur	Nom	nom féminin
+10	CE1	prince	Nom	nom masculin
+10	CE1	regarder	Verbe	verbe 1er group
+10	CE1	reste	Nom	nom masculin
+10	CE1	réunir	Verbe	verbe 2ème group
+10	CE1	ronde	Nom	nom féminin
+10	CE1	ruche	Nom	nom féminin
+10	CE1	sec	Adjectif	adjectif qualificatif
+10	CE1	semaine	Nom	nom féminin
+10	CE1	sol	Nom	nom masculin
+10	CE1	sortie	Nom	nom féminin
+10	CE1	survenir	Verbe	verbe 3ème group
+10	CE1	tartine	Nom	nom féminin
+10	CE1	toucher	Verbe	verbe 1er group
+10	CE1	vie	Nom	nom féminin
+10	CE1	visage	Nom	nom masculin
+10	CE1	visite	Nom	nom féminin
+10	CE1	visiteur	Nom	nom masculin
+10	CE1	voleur	Nom	nom masculin
+10	CE1	vue	Nom	nom féminin
+11	CE1	agréable	Adjectif	adjectif qualificatif
+11	CE1	ardeur	Nom	nom féminin
+11	CE1	armoire	Nom	nom féminin
+11	CE1	balle	Nom	nom féminin
+11	CE1	belge	Adjectif	adjectif qualificatif
+11	CE1	bonjour	Nom	nom masculin
+11	CE1	bordure	Nom	nom féminin
+11	CE1	bouton	Nom	nom masculin
+11	CE1	cahier	Nom	nom masculin
+11	CE1	calcul	Nom	nom masculin
+11	CE1	chanson	Nom	nom féminin
+11	CE1	charbon	Nom	nom masculin
+11	CE1	charge	Nom	nom féminin
+11	CE1	chien	Nom	nom masculin
+11	CE1	cloche	Nom	nom féminin
+11	CE1	coin	Nom	nom masculin
+11	CE1	comme	Invariable	conjonction
+11	CE1	contre	Invariable	préposition
+11	CE1	couleur	Nom	nom féminin
+11	CE1	coupe	Nom	nom féminin
+11	CE1	crime	Nom	nom masculin
+11	CE1	cuivre	Nom	nom masculin
+11	CE1	diable	Nom	nom masculin
+11	CE1	dictée	Nom	nom féminin
+11	CE1	directeur	Nom	nom masculin
+11	CE1	double	Adjectif	adjectif qualificatif
+11	CE1	ferme	Nom	nom féminin
+11	CE1	figure	Nom	nom féminin
+11	CE1	fromage	Nom	nom masculin
+11	CE1	grand	Adjectif	adjectif qualificatif
+11	CE1	jouer	Verbe	verbe 1er group
+11	CE1	lait	Nom	nom masculin
+11	CE1	large	Adjectif	adjectif qualificatif
+11	CE1	lire	Verbe	verbe 3ème group
+11	CE1	liste	Nom	nom féminin
+11	CE1	main	Nom	nom féminin
+11	CE1	matinée	Nom	nom féminin
+11	CE1	meuble	Nom	nom masculin
+11	CE1	mouton	Nom	nom masculin
+11	CE1	nuage	Nom	nom masculin
+11	CE1	oncle	Nom	nom masculin
+11	CE1	parent	Nom	nom masculin
+11	CE1	père	Nom	nom masculin
+11	CE1	perle	Nom	nom féminin
+11	CE1	piste	Nom	nom féminin
+11	CE1	planche	Nom	nom féminin
+11	CE1	plumier	Nom	nom masculin
+11	CE1	poche	Nom	nom féminin
+11	CE1	prison	Nom	nom féminin
+11	CE1	produire	Verbe	verbe 3ème group
+11	CE1	rage	Nom	nom féminin
+11	CE1	ramage	Nom	nom masculin
+11	CE1	reine	Nom	nom féminin
+11	CE1	remarque	Nom	nom féminin
+11	CE1	reproche	Nom	nom masculin
+11	CE1	revoir	Verbe	verbe 3ème group
+11	CE1	revue	Nom	nom féminin
+11	CE1	roi	Nom	nom masculin
+11	CE1	rose	Nom	nom féminin
+11	CE1	sac	Nom	nom masculin
+11	CE1	salutation	Nom	nom féminin
+11	CE1	singe	Nom	nom masculin
+11	CE1	sorte	Nom	nom féminin
+11	CE1	statue	Nom	nom féminin
+11	CE1	tarte	Nom	nom féminin
+11	CE1	tous	Déterminant	adjectif indéfini
+11	CE1	tout	Déterminant	adjectif indéfini
+11	CE1	usage	Nom	nom masculin
+11	CE1	usine	Nom	nom féminin
+11	CE1	vapeur	Nom	nom féminin
+11	CE1	village	Nom	nom masculin
+11	CE1	ville	Nom	nom féminin
+11	CE1	voici	Invariable	adverbe
+12	CE2	trois	Déterminant	adjectif numéral
+12	CE2	vite	Invariable	adverbe
+12	CE2	ange	Nom	nom masculin
+12	CE2	autre	Adjectif	adjectif qualificatif
+12	CE2	aveugle	Adjectif	adjectif qualificatif
+12	CE2	barque	Nom	nom féminin
+12	CE2	bec	Nom	nom masculin
+12	CE2	bille	Nom	nom féminin
+12	CE2	blancheur	Nom	nom féminin
+12	CE2	blanchir	Verbe	verbe 2ème group
+12	CE2	bleu	Adjectif	adjectif qualificatif
+12	CE2	borne	Nom	nom féminin
+12	CE2	brume	Nom	nom féminin
+12	CE2	cadre	Nom	nom masculin
+12	CE2	campagne	Nom	nom féminin
+12	CE2	canon	Nom	nom masculin
+12	CE2	chantre	Nom	nom masculin
+12	CE2	chapeau	Nom	nom masculin
+12	CE2	chaque	Déterminant	adjectif indéfini
+12	CE2	charitable	Adjectif	adjectif qualificatif
+12	CE2	chef	Nom	nom masculin
+12	CE2	cochon	Nom	nom masculin
+12	CE2	contenu	Nom	nom masculin
+12	CE2	corde	Nom	nom féminin
+12	CE2	coupable	Adjectif	adjectif qualificatif
+12	CE2	créature	Nom	nom féminin
+12	CE2	demain	Invariable	adverbe
+12	CE2	dent	Nom	nom féminin
+12	CE2	dernier	Adjectif	adjectif qualificatif
+12	CE2	dessin	Nom	nom masculin
+12	CE2	donc	Invariable	conjonction
+12	CE2	dormir	Verbe	verbe 3ème group
+12	CE2	écharpe	Nom	nom féminin
+12	CE2	écurie	Nom	nom féminin
+12	CE2	entier	Adjectif	adjectif qualificatif
+12	CE2	entretenir	Verbe	verbe 3ème group
+12	CE2	épargne	Nom	nom féminin
+12	CE2	épine	Nom	nom féminin
+12	CE2	fauve	Adjectif	adjectif qualificatif
+12	CE2	fer	Nom	nom masculin
+12	CE2	finir	Verbe	verbe 2ème group
+12	CE2	fleur	Nom	nom féminin
+12	CE2	fois	Nom	nom féminin
+12	CE2	force	Nom	nom féminin
+12	CE2	fruit	Nom	nom masculin
+12	CE2	garde	Nom	nom masculin
+12	CE2	gauche	Adjectif	adjectif qualificatif
+12	CE2	idée	Nom	nom féminin
+12	CE2	invisible	Adjectif	adjectif qualificatif
+12	CE2	jaune	Adjectif	adjectif qualificatif
+12	CE2	joue	Nom	nom féminin
+12	CE2	juillet	Nom	nom masculin
+12	CE2	labeur	Nom	nom masculin
+12	CE2	lac	Nom	nom masculin
+12	CE2	larme	Nom	nom féminin
+12	CE2	lettre	Nom	nom féminin
+12	CE2	lièvre	Nom	nom masculin
+12	CE2	linge	Nom	nom masculin
+12	CE2	liquide	Adjectif	adjectif qualificatif
+12	CE2	loup	Nom	nom masculin
+12	CE2	lueur	Nom	nom féminin
+12	CE2	madame	Nom	nom féminin
+12	CE2	magique	Adjectif	adjectif qualificatif
+12	CE2	maître	Nom	nom masculin
+12	CE2	malin	Adjectif	adjectif qualificatif
+12	CE2	mercredi	Nom	nom masculin
+12	CE2	mode	Nom	nom féminin
+12	CE2	moderne	Adjectif	adjectif qualificatif
+12	CE2	mot	Nom	nom masculin
+12	CE2	moteur	Nom	nom masculin
+12	CE2	murmure	Nom	nom masculin
+12	CE2	murmurer	Verbe	verbe 1er group
+12	CE2	nid	Nom	nom masculin
+12	CE2	nuisible	Adjectif	adjectif qualificatif
+12	CE2	odeur	Nom	nom féminin
+12	CE2	papier	Nom	nom masculin
+12	CE2	pardon	Nom	nom masculin
+12	CE2	parfait	Adjectif	adjectif qualificatif
+12	CE2	partie	Nom	nom féminin
+12	CE2	parvenir	Verbe	verbe 3ème group
+12	CE2	patte	Nom	nom féminin
+12	CE2	perche	Nom	nom féminin
+12	CE2	pluie	Nom	nom féminin
+12	CE2	pondre	Verbe	verbe 3ème group
+12	CE2	porteur	Nom	nom masculin
+12	CE2	poudre	Nom	nom féminin
+12	CE2	poule	Nom	nom féminin
+12	CE2	prendre	Verbe	verbe 3ème group
+12	CE2	proche	Adjectif	adjectif qualificatif
+12	CE2	profondeur	Nom	nom féminin
+12	CE2	punir	Verbe	verbe 2ème group
+12	CE2	rare	Adjectif	adjectif qualificatif
+12	CE2	rat	Nom	nom masculin
+12	CE2	redevenir	Verbe	verbe 3ème group
+12	CE2	regard	Nom	nom masculin
+12	CE2	rendre	Verbe	verbe 3ème group
+12	CE2	rien	Invariable	adverbe
+12	CE2	risque	Nom	nom masculin
+12	CE2	sabot	Nom	nom masculin
+12	CE2	sel	Nom	nom masculin
+12	CE2	signe	Nom	nom masculin
+12	CE2	singulier	Adjectif	adjectif qualificatif
+12	CE2	soldat	Nom	nom masculin
+12	CE2	sueur	Nom	nom féminin
+12	CE2	surprise	Nom	nom féminin
+12	CE2	tenue	Nom	nom féminin
+12	CE2	timide	Adjectif	adjectif qualificatif
+12	CE2	toile	Nom	nom féminin
+12	CE2	tombe	Nom	nom féminin
+12	CE2	tourner	Verbe	verbe 1er group
+12	CE2	valeur	Nom	nom féminin
+12	CE2	vase	Nom	nom masculin
+12	CE2	vaste	Adjectif	adjectif qualificatif
+12	CE2	vente	Nom	nom féminin
+12	CE2	véritable	Adjectif	adjectif qualificatif
+12	CE2	victime	Nom	nom féminin
+12	CE2	victoire	Nom	nom féminin
+12	CE2	vide	Adjectif	adjectif qualificatif
+12	CE2	vif	Adjectif	adjectif qualificatif
+12	CE2	visible	Adjectif	adjectif qualificatif
+12	CE2	volume	Nom	nom masculin
+13	CE2	bien	Invariable	adverbe
+13	CE2	dix	Déterminant	adjectif numéral
+13	CE2	abeille	Nom	nom féminin
+13	CE2	amateur	Nom	nom masculin
+13	CE2	amour	Nom	nom masculin
+13	CE2	âne	Nom	nom masculin
+13	CE2	ardoise	Nom	nom féminin
+13	CE2	avion	Nom	nom masculin
+13	CE2	avril	Nom	nom masculin
+13	CE2	bande	Nom	nom féminin
+13	CE2	barquette	Nom	nom féminin
+13	CE2	beau	Adjectif	adjectif qualificatif
+13	CE2	bise	Nom	nom féminin
+13	CE2	bondir	Verbe	verbe 2ème group
+13	CE2	botte	Nom	nom féminin
+13	CE2	boucle	Nom	nom féminin
+13	CE2	boule	Nom	nom féminin
+13	CE2	boutique	Nom	nom féminin
+13	CE2	bras	Nom	nom masculin
+13	CE2	brise	Nom	nom féminin
+13	CE2	canal	Nom	nom masculin
+13	CE2	canard	Nom	nom masculin
+13	CE2	carabine	Nom	nom féminin
+13	CE2	caverne	Nom	nom féminin
+13	CE2	chant	Nom	nom masculin
+13	CE2	chaudement	Invariable	adverbe
+13	CE2	chevalier	Nom	nom masculin
+13	CE2	clou	Nom	nom masculin
+13	CE2	combien	Invariable	adverbe
+13	CE2	commune	Nom	nom féminin
+13	CE2	compagne	Nom	nom féminin
+13	CE2	confrère	Nom	nom masculin
+13	CE2	corniche	Nom	nom féminin
+13	CE2	couper	Verbe	verbe 1er group
+13	CE2	couverture	Nom	nom féminin
+13	CE2	crier	Verbe	verbe 1er group
+13	CE2	décembre	Nom	nom masculin
+13	CE2	découverte	Nom	nom féminin
+13	CE2	dimanche	Nom	nom masculin
+13	CE2	dire	Verbe	verbe 3ème group
+13	CE2	division	Nom	nom féminin
+13	CE2	duc	Nom	nom masculin
+13	CE2	encre	Nom	nom féminin
+13	CE2	endormir	Verbe	verbe 3ème group
+13	CE2	entrée	Nom	nom féminin
+13	CE2	épreuve	Nom	nom féminin
+13	CE2	esclave	Nom	nom masculin
+13	CE2	estrade	Nom	nom féminin
+13	CE2	étalage	Nom	nom masculin
+13	CE2	faire	Verbe	verbe 3ème group
+13	CE2	fée	Nom	nom féminin
+13	CE2	feuille	Nom	nom féminin
+13	CE2	fleurette	Nom	nom féminin
+13	CE2	fondre	Verbe	verbe 3ème group
+13	CE2	formidable	Adjectif	adjectif qualificatif
+13	CE2	foule	Nom	nom féminin
+13	CE2	fumée	Nom	nom féminin
+13	CE2	fumer	Verbe	verbe 1er group
+13	CE2	garçon	Nom	nom masculin
+13	CE2	gloire	Nom	nom féminin
+13	CE2	grammaire	Nom	nom féminin
+13	CE2	grenier	Nom	nom masculin
+13	CE2	gris	Adjectif	adjectif qualificatif
+13	CE2	haut	Adjectif	adjectif qualificatif
+13	CE2	herbe	Nom	nom féminin
+13	CE2	insecte	Nom	nom masculin
+13	CE2	janvier	Nom	nom masculin
+13	CE2	jardinier	Nom	nom masculin
+13	CE2	joie	Nom	nom féminin
+13	CE2	joli	Adjectif	adjectif qualificatif
+13	CE2	jouet	Nom	nom masculin
+13	CE2	joueur	Nom	nom masculin
+13	CE2	jour	Nom	nom masculin
+13	CE2	juin	Nom	nom masculin
+13	CE2	lampe	Nom	nom féminin
+13	CE2	laver	Verbe	verbe 1er group
+13	CE2	légume	Nom	nom masculin
+13	CE2	lieu	Nom	nom masculin
+13	CE2	loin	Invariable	adverbe
+13	CE2	lune	Nom	nom féminin
+13	CE2	lunette	Nom	nom féminin
+13	CE2	machine	Nom	nom féminin
+13	CE2	magnifique	Adjectif	adjectif qualificatif
+13	CE2	marcher	Verbe	verbe 1er group
+13	CE2	mauve	Adjectif	adjectif qualificatif
+13	CE2	mélange	Nom	nom masculin
+13	CE2	mémoire	Nom	nom féminin
+13	CE2	menu	Nom	nom masculin
+13	CE2	merle	Nom	nom masculin
+13	CE2	miel	Nom	nom masculin
+13	CE2	ministre	Nom	nom masculin
+13	CE2	minuit	Nom	nom masculin
+13	CE2	misérable	Adjectif	adjectif qualificatif
+13	CE2	moudre	Verbe	verbe 3ème group
+13	CE2	mouvoir	Verbe	verbe 3ème group
+13	CE2	multitude	Nom	nom féminin
+13	CE2	nation	Nom	nom féminin
+13	CE2	navire	Nom	nom masculin
+13	CE2	nez	Nom	nom masculin
+13	CE2	nom	Nom	nom masculin
+13	CE2	offre	Nom	nom féminin
+13	CE2	or	Nom	nom masculin
+13	CE2	orage	Nom	nom masculin
+13	CE2	oreille	Nom	nom féminin
+13	CE2	ouverture	Nom	nom féminin
+13	CE2	patrie	Nom	nom féminin
+13	CE2	patron	Nom	nom masculin
+13	CE2	petit	Adjectif	adjectif qualificatif
+13	CE2	pie	Nom	nom féminin
+13	CE2	pied	Nom	nom masculin
+13	CE2	place	Nom	nom féminin
+13	CE2	plage	Nom	nom féminin
+13	CE2	plumage	Nom	nom masculin
+13	CE2	poitrine	Nom	nom féminin
+13	CE2	politique	Nom	nom féminin
+13	CE2	poulet	Nom	nom masculin
+13	CE2	pratique	Adjectif	adjectif qualificatif
+13	CE2	preuve	Nom	nom féminin
+13	CE2	prime	Nom	nom féminin
+13	CE2	problème	Nom	nom masculin
+13	CE2	procureur	Nom	nom masculin
+13	CE2	promenade	Nom	nom féminin
+13	CE2	provenir	Verbe	verbe 3ème group
+13	CE2	récolte	Nom	nom féminin
+13	CE2	redoutable	Adjectif	adjectif qualificatif
+13	CE2	renard	Nom	nom masculin
+13	CE2	rencontre	Nom	nom féminin
+13	CE2	reprise	Nom	nom féminin
+13	CE2	rétablir	Verbe	verbe 2ème group
+13	CE2	rivière	Nom	nom féminin
+13	CE2	robuste	Adjectif	adjectif qualificatif
+13	CE2	rosée	Nom	nom féminin
+13	CE2	sabre	Nom	nom masculin
+13	CE2	sacoche	Nom	nom féminin
+13	CE2	saint	Adjectif	adjectif qualificatif
+13	CE2	samedi	Nom	nom masculin
+13	CE2	sauvage	Adjectif	adjectif qualificatif
+13	CE2	serviteur	Nom	nom masculin
+13	CE2	siège	Nom	nom masculin
+13	CE2	soeur	Nom	nom féminin
+13	CE2	sombre	Adjectif	adjectif qualificatif
+13	CE2	sortir	Verbe	verbe 3ème group
+13	CE2	sous	Invariable	préposition
+13	CE2	soutenir	Verbe	verbe 3ème group
+13	CE2	spectateur	Nom	nom masculin
+13	CE2	suivre	Verbe	verbe 3ème group
+13	CE2	superbe	Adjectif	adjectif qualificatif
+13	CE2	tableau	Nom	nom masculin
+13	CE2	tablier	Nom	nom masculin
+13	CE2	terme	Nom	nom masculin
+13	CE2	tigre	Nom	nom masculin
+13	CE2	timbre	Nom	nom masculin
+13	CE2	tortue	Nom	nom féminin
+13	CE2	tour	Nom	nom masculin
+13	CE2	tranche	Nom	nom féminin
+13	CE2	trouble	Nom	nom masculin
+13	CE2	tulipe	Nom	nom féminin
+13	CE2	valise	Nom	nom féminin
+13	CE2	vendeur	Nom	nom masculin
+13	CE2	venir	Verbe	verbe 3ème group
+13	CE2	vent	Nom	nom masculin
+13	CE2	verdure	Nom	nom féminin
+13	CE2	verger	Nom	nom masculin
+13	CE2	vin	Nom	nom masculin
+13	CE2	vitre	Nom	nom féminin
+13	CE2	vitrine	Nom	nom féminin
+13	CE2	vivre	Verbe	verbe 3ème group
+13	CE2	voisin	Nom	nom masculin
+13	CE2	voisinage	Nom	nom masculin
+14	CE2	aussi	Invariable	adverbe
+14	CE2	douze	Déterminant	adjectif numéral
+14	CE2	quatre	Déterminant	adjectif numéral
+14	CE2	action	Nom	nom féminin
+14	CE2	adroit	Adjectif	adjectif qualificatif
+14	CE2	âme	Nom	nom féminin
+14	CE2	avant	Invariable	préposition
+14	CE2	avertir	Verbe	verbe 2ème group
+14	CE2	avoir	Nom	nom masculin
+14	CE2	bal	Nom	nom masculin
+14	CE2	banc	Nom	nom masculin
+14	CE2	banque	Nom	nom féminin
+14	CE2	bassin	Nom	nom masculin
+14	CE2	bataille	Nom	nom féminin
+14	CE2	bazar	Nom	nom masculin
+14	CE2	blouse	Nom	nom féminin
+14	CE2	boue	Nom	nom féminin
+14	CE2	boulanger	Nom	nom masculin
+14	CE2	boulangerie	Nom	nom féminin
+14	CE2	cadavre	Nom	nom masculin
+14	CE2	chacun	Pronom	pronom
+14	CE2	chapelle	Nom	nom féminin
+14	CE2	chocolat	Nom	nom masculin
+14	CE2	ciel	Nom	nom masculin
+14	CE2	clochette	Nom	nom féminin
+14	CE2	comble	Nom	nom masculin
+14	CE2	compliment	Nom	nom masculin
+14	CE2	conduire	Verbe	verbe 3ème group
+14	CE2	convenable	Adjectif	adjectif qualificatif
+14	CE2	corbeille	Nom	nom féminin
+14	CE2	coton	Nom	nom masculin
+14	CE2	coudre	Verbe	verbe 3ème group
+14	CE2	cour	Nom	nom féminin
+14	CE2	cousin	Nom	nom masculin
+14	CE2	couvrir	Verbe	verbe 3ème group
+14	CE2	cuisine	Nom	nom féminin
+14	CE2	dame	Nom	nom féminin
+14	CE2	date	Nom	nom féminin
+14	CE2	demande	Nom	nom féminin
+14	CE2	désagréable	Adjectif	adjectif qualificatif
+14	CE2	docteur	Nom	nom masculin
+14	CE2	doute	Nom	nom masculin
+14	CE2	durée	Nom	nom féminin
+14	CE2	eau	Nom	nom féminin
+14	CE2	écolier	Nom	nom masculin
+14	CE2	écrire	Verbe	verbe 3ème group
+14	CE2	encore	Invariable	adverbe
+14	CE2	engager	Verbe	verbe 1er group
+14	CE2	énorme	Adjectif	adjectif qualificatif
+14	CE2	escalier	Nom	nom masculin
+14	CE2	farine	Nom	nom féminin
+14	CE2	fatigue	Nom	nom féminin
+14	CE2	favorable	Adjectif	adjectif qualificatif
+14	CE2	fenêtre	Nom	nom féminin
+14	CE2	fidèle	Adjectif	adjectif qualificatif
+14	CE2	fils	Nom	nom masculin
+14	CE2	fin	Nom	nom féminin
+14	CE2	foin	Nom	nom masculin
+14	CE2	forgeron	Nom	nom masculin
+14	CE2	forme	Nom	nom féminin
+14	CE2	fort	Adjectif	adjectif qualificatif
+14	CE2	fou	Adjectif	adjectif qualificatif
+14	CE2	genre	Nom	nom masculin
+14	CE2	gerbe	Nom	nom féminin
+14	CE2	grandir	Verbe	verbe 2ème group
+14	CE2	grave	Adjectif	adjectif qualificatif
+14	CE2	grive	Nom	nom féminin
+14	CE2	groupe	Nom	nom masculin
+14	CE2	hier	Invariable	adverbe
+14	CE2	hiver	Nom	nom masculin
+14	CE2	inconnu	Nom	nom masculin
+14	CE2	industrie	Nom	nom féminin
+14	CE2	inspecteur	Nom	nom masculin
+14	CE2	instituteur	Nom	nom masculin
+14	CE2	intervenir	Verbe	verbe 3ème group
+14	CE2	jeune	Adjectif	adjectif qualificatif
+14	CE2	jouir	Verbe	verbe 2ème group
+14	CE2	joujou	Nom	nom masculin
+14	CE2	laboureur	Nom	nom masculin
+14	CE2	laine	Nom	nom féminin
+14	CE2	leçon	Nom	nom féminin
+14	CE2	limite	Nom	nom féminin
+14	CE2	lis	Nom	nom masculin
+14	CE2	long	Adjectif	adjectif qualificatif
+14	CE2	lys	Nom	nom masculin
+14	CE2	manger	Verbe	verbe 1er group
+14	CE2	mari	Nom	nom masculin
+14	CE2	marquer	Verbe	verbe 1er group
+14	CE2	matinal	Adjectif	adjectif qualificatif
+14	CE2	ménagerie	Nom	nom féminin
+14	CE2	menteur	Nom	nom masculin
+14	CE2	messe	Nom	nom féminin
+14	CE2	mois	Nom	nom masculin
+14	CE2	monstre	Nom	nom masculin
+14	CE2	motif	Nom	nom masculin
+14	CE2	mouvement	Nom	nom masculin
+14	CE2	multiple	Adjectif	adjectif qualificatif
+14	CE2	muraille	Nom	nom féminin
+14	CE2	naturellement	Invariable	adverbe
+14	CE2	noir	Adjectif	adjectif qualificatif
+14	CE2	nombre	Nom	nom masculin
+14	CE2	nord	Nom	nom masculin
+14	CE2	nuit	Nom	nom féminin
+14	CE2	outre	Invariable	préposition
+14	CE2	ouvrage	Nom	nom masculin
+14	CE2	ouvrier	Nom	nom masculin
+14	CE2	page	Nom	nom féminin
+14	CE2	paille	Nom	nom féminin
+14	CE2	paire	Nom	nom féminin
+14	CE2	partir	Verbe	verbe 3ème group
+14	CE2	pâte	Nom	nom féminin
+14	CE2	pays	Nom	nom masculin
+14	CE2	peau	Nom	nom féminin
+14	CE2	perte	Nom	nom féminin
+14	CE2	peuple	Nom	nom masculin
+14	CE2	plaque	Nom	nom féminin
+14	CE2	plat	Nom	nom masculin
+14	CE2	plonger	Verbe	verbe 1er group
+14	CE2	pointe	Nom	nom féminin
+14	CE2	politesse	Nom	nom féminin
+14	CE2	prairie	Nom	nom féminin
+14	CE2	pratiquer	Verbe	verbe 1er group
+14	CE2	presque	Invariable	adverbe
+14	CE2	prévoir	Verbe	verbe 3ème group
+14	CE2	prière	Nom	nom féminin
+14	CE2	production	Nom	nom féminin
+14	CE2	protecteur	Nom	nom masculin
+14	CE2	pur	Adjectif	adjectif qualificatif
+14	CE2	rame	Nom	nom féminin
+14	CE2	réduire	Verbe	verbe 3ème group
+14	CE2	régime	Nom	nom masculin
+14	CE2	relatif	Adjectif	adjectif qualificatif
+14	CE2	reprendre	Verbe	verbe 3ème group
+14	CE2	respiration	Nom	nom féminin
+14	CE2	roue	Nom	nom féminin
+14	CE2	ruelle	Nom	nom féminin
+14	CE2	sang	Nom	nom masculin
+14	CE2	savoir	Verbe	verbe 3ème group
+14	CE2	serviable	Adjectif	adjectif qualificatif
+14	CE2	seul	Adjectif	adjectif qualificatif
+14	CE2	si	Invariable	conjonction
+14	CE2	signature	Nom	nom féminin
+14	CE2	soulagement	Nom	nom masculin
+14	CE2	souvenir	Nom	nom masculin
+14	CE2	sport	Nom	nom masculin
+14	CE2	tache	Nom	nom féminin
+14	CE2	tirelire	Nom	nom féminin
+14	CE2	titre	Nom	nom masculin
+14	CE2	tordre	Verbe	verbe 3ème group
+14	CE2	train	Nom	nom masculin
+14	CE2	tribunal	Nom	nom masculin
+14	CE2	tricolore	Adjectif	adjectif qualificatif
+14	CE2	union	Nom	nom féminin
+14	CE2	utilité	Nom	nom féminin
+14	CE2	vendre	Verbe	verbe 3ème group
+14	CE2	vernir	Verbe	verbe 2ème group
+14	CE2	vieux	Adjectif	adjectif qualificatif
+14	CE2	violette	Nom	nom féminin
+14	CE2	voir	Verbe	verbe 3ème group
+14	CE2	voyageur	Nom	nom masculin
+15	CE2	cinq	Déterminant	adjectif numéral
+15	CE2	ici	Invariable	adverbe
+15	CE2	affaiblir	Verbe	verbe 2ème group
+15	CE2	agent	Nom	nom masculin
+15	CE2	aile	Nom	nom féminin
+15	CE2	air	Nom	nom masculin
+15	CE2	armée	Nom	nom féminin
+15	CE2	bain	Nom	nom masculin
+15	CE2	balcon	Nom	nom masculin
+15	CE2	besogne	Nom	nom féminin
+15	CE2	billet	Nom	nom masculin
+15	CE2	blanc	Adjectif	adjectif qualificatif
+15	CE2	bonheur	Nom	nom masculin
+15	CE2	bouquet	Nom	nom masculin
+15	CE2	bourse	Nom	nom féminin
+15	CE2	brochure	Nom	nom féminin
+15	CE2	brusque	Adjectif	adjectif qualificatif
+15	CE2	bureau	Nom	nom masculin
+15	CE2	calculer	Verbe	verbe 1er group
+15	CE2	camion	Nom	nom masculin
+15	CE2	capitaine	Nom	nom masculin
+15	CE2	car	Invariable	conjonction
+15	CE2	carnet	Nom	nom masculin
+15	CE2	charité	Nom	nom féminin
+15	CE2	chose	Nom	nom féminin
+15	CE2	cirque	Nom	nom masculin
+15	CE2	commun	Adjectif	adjectif qualificatif
+15	CE2	compagnie	Nom	nom féminin
+15	CE2	comparer	Verbe	verbe 1er group
+15	CE2	confondre	Verbe	verbe 3ème group
+15	CE2	contribuer	Verbe	verbe 1er group
+15	CE2	coq	Nom	nom masculin
+15	CE2	corbeau	Nom	nom masculin
+15	CE2	corne	Nom	nom féminin
+15	CE2	course	Nom	nom féminin
+15	CE2	coutume	Nom	nom féminin
+15	CE2	croire	Verbe	verbe 3ème group
+15	CE2	cuire	Verbe	verbe 3ème group
+15	CE2	demi	Nom	nom masculin
+15	CE2	dépenser	Verbe	verbe 1er group
+15	CE2	depuis	Invariable	préposition
+15	CE2	destination	Nom	nom féminin
+15	CE2	devant	Invariable	préposition
+15	CE2	dieu	Nom	nom masculin
+15	CE2	directement	Invariable	adverbe
+15	CE2	domestique	Adjectif	adjectif qualificatif
+15	CE2	douloureux	Adjectif	adjectif qualificatif
+15	CE2	doux	Adjectif	adjectif qualificatif
+15	CE2	échapper	Verbe	verbe 1er group
+15	CE2	échelle	Nom	nom féminin
+15	CE2	éclat	Nom	nom masculin
+15	CE2	écluse	Nom	nom féminin
+15	CE2	encrier	Nom	nom masculin
+15	CE2	enfin	Invariable	adverbe
+15	CE2	ensuite	Invariable	adverbe
+15	CE2	entreprendre	Verbe	verbe 3ème group
+15	CE2	entrevoir	Verbe	verbe 3ème group
+15	CE2	esprit	Nom	nom masculin
+15	CE2	éternel	Adjectif	adjectif qualificatif
+15	CE2	étoile	Nom	nom féminin
+15	CE2	étrange	Adjectif	adjectif qualificatif
+15	CE2	fauvette	Nom	nom féminin
+15	CE2	faveur	Nom	nom féminin
+15	CE2	fontaine	Nom	nom féminin
+15	CE2	forge	Nom	nom féminin
+15	CE2	four	Nom	nom masculin
+15	CE2	fournir	Verbe	verbe 2ème group
+15	CE2	franc	Adjectif	adjectif qualificatif
+15	CE2	frère	Nom	nom masculin
+15	CE2	fuite	Nom	nom féminin
+15	CE2	gamin	Nom	nom masculin
+15	CE2	gardien	Nom	nom masculin
+15	CE2	gare	Nom	nom féminin
+15	CE2	garnir	Verbe	verbe 2ème group
+15	CE2	gibier	Nom	nom masculin
+15	CE2	grandeur	Nom	nom féminin
+15	CE2	gras	Adjectif	adjectif qualificatif
+15	CE2	grenouille	Nom	nom féminin
+15	CE2	heure	Nom	nom féminin
+15	CE2	indigne	Adjectif	adjectif qualificatif
+15	CE2	inscrire	Verbe	verbe 3ème group
+15	CE2	instrument	Nom	nom masculin
+15	CE2	jambe	Nom	nom féminin
+15	CE2	journalier	Adjectif	adjectif qualificatif
+15	CE2	juge	Nom	nom masculin
+15	CE2	jusque	Invariable	préposition
+15	CE2	justement	Invariable	adverbe
+15	CE2	langue	Nom	nom féminin
+15	CE2	lever	Verbe	verbe 1er group
+15	CE2	liberté	Nom	nom féminin
+15	CE2	ligue	Nom	nom féminin
+15	CE2	livrer	Verbe	verbe 1er group
+15	CE2	locomotive	Nom	nom féminin
+15	CE2	lot	Nom	nom masculin
+15	CE2	lumière	Nom	nom féminin
+15	CE2	lutte	Nom	nom féminin
+15	CE2	mademoiselle	Nom	nom féminin
+15	CE2	mai	Nom	nom masculin
+15	CE2	mais	Invariable	conjonction
+15	CE2	mer	Nom	nom féminin
+15	CE2	merveille	Nom	nom féminin
+15	CE2	métier	Nom	nom masculin
+15	CE2	miette	Nom	nom féminin
+15	CE2	migrateur	Adjectif	adjectif qualificatif
+15	CE2	mine	Nom	nom féminin
+15	CE2	minute	Nom	nom féminin
+15	CE2	mirer	Verbe	verbe 1er group
+15	CE2	moineau	Nom	nom masculin
+15	CE2	moment	Nom	nom masculin
+15	CE2	montagne	Nom	nom féminin
+15	CE2	montre	Nom	nom féminin
+15	CE2	mortel	Adjectif	adjectif qualificatif
+15	CE2	mouche	Nom	nom féminin
+15	CE2	mouchoir	Nom	nom masculin
+15	CE2	munir	Verbe	verbe 2ème group
+15	CE2	mur	Nom	nom masculin
+15	CE2	nappe	Nom	nom féminin
+15	CE2	noble	Adjectif	adjectif qualificatif
+15	CE2	nul	Déterminant	adjectif indéfini
+15	CE2	objet	Nom	nom masculin
+15	CE2	obliger	Verbe	verbe 1er group
+15	CE2	oiseau	Nom	nom masculin
+15	CE2	ombrage	Nom	nom masculin
+15	CE2	onde	Nom	nom féminin
+15	CE2	oui	Invariable	adverbe
+15	CE2	panier	Nom	nom masculin
+15	CE2	parcourir	Verbe	verbe 3ème group
+15	CE2	parole	Nom	nom féminin
+15	CE2	partout	Invariable	adverbe
+15	CE2	pendant	Invariable	préposition
+15	CE2	pendre	Verbe	verbe 3ème group
+15	CE2	perdre	Verbe	verbe 3ème group
+15	CE2	périr	Verbe	verbe 2ème group
+15	CE2	pierre	Nom	nom féminin
+15	CE2	piété	Nom	nom féminin
+15	CE2	pitié	Nom	nom féminin
+15	CE2	plaisir	Nom	nom masculin
+15	CE2	poésie	Nom	nom féminin
+15	CE2	point	Nom	nom masculin
+15	CE2	poisson	Nom	nom masculin
+15	CE2	pompe	Nom	nom féminin
+15	CE2	postal	Adjectif	adjectif qualificatif
+15	CE2	pot	Nom	nom masculin
+15	CE2	pourquoi	Invariable	conjonction
+15	CE2	pourvoir	Verbe	verbe 3ème group
+15	CE2	produit	Nom	nom masculin
+15	CE2	proposition	Nom	nom féminin
+15	CE2	proprement	Invariable	adverbe
+15	CE2	puis	Invariable	adverbe
+15	CE2	puisque	Invariable	conjonction
+15	CE2	pupitre	Nom	nom masculin
+15	CE2	quelque	Déterminant	adjectif indéfini
+15	CE2	racine	Nom	nom féminin
+15	CE2	raison	Nom	nom féminin
+15	CE2	rarement	Invariable	adverbe
+15	CE2	religion	Nom	nom féminin
+15	CE2	rentrer	Verbe	verbe 1er group
+15	CE2	repas	Nom	nom masculin
+15	CE2	répondre	Verbe	verbe 3ème group
+15	CE2	réponse	Nom	nom féminin
+15	CE2	réunion	Nom	nom féminin
+15	CE2	revivre	Verbe	verbe 3ème group
+15	CE2	rocher	Nom	nom masculin
+15	CE2	sacré	Adjectif	adjectif qualificatif
+15	CE2	saison	Nom	nom féminin
+15	CE2	salle	Nom	nom féminin
+15	CE2	salon	Nom	nom masculin
+15	CE2	sapin	Nom	nom masculin
+15	CE2	satin	Nom	nom masculin
+15	CE2	série	Nom	nom féminin
+15	CE2	soie	Nom	nom féminin
+15	CE2	sot	Adjectif	adjectif qualificatif
+15	CE2	suave	Adjectif	adjectif qualificatif
+15	CE2	sud	Nom	nom masculin
+15	CE2	surtout	Invariable	adverbe
+15	CE2	tabac	Nom	nom masculin
+15	CE2	taille	Nom	nom féminin
+15	CE2	tante	Nom	nom féminin
+15	CE2	tenir	Verbe	verbe 3ème group
+15	CE2	toit	Nom	nom masculin
+15	CE2	tombeau	Nom	nom masculin
+15	CE2	tomber	Verbe	verbe 1er group
+15	CE2	tram	Nom	nom masculin
+15	CE2	tramway	Nom	nom masculin
+15	CE2	traverser	Verbe	verbe 1er group
+15	CE2	trésor	Nom	nom masculin
+15	CE2	tristement	Invariable	adverbe
+15	CE2	trou	Nom	nom masculin
+15	CE2	troupe	Nom	nom féminin
+15	CE2	unique	Adjectif	adjectif qualificatif
+15	CE2	utile	Adjectif	adjectif qualificatif
+15	CE2	vert	Adjectif	adjectif qualificatif
+15	CE2	vierge	Adjectif	adjectif qualificatif
+15	CE2	villa	Nom	nom féminin
+15	CE2	vitesse	Nom	nom féminin
+15	CE2	vivement	Invariable	adverbe
+15	CE2	volée	Nom	nom féminin
+15	CE2	wagon	Nom	nom masculin
+16	CM1	aboutir	Verbe	verbe 2ème group
+16	CM1	admirable	Adjectif	adjectif qualificatif
+16	CM1	âge	Nom	nom masculin
+16	CM1	aimer	Verbe	verbe 1er group
+16	CM1	aliment	Nom	nom masculin
+16	CM1	allée	Nom	nom féminin
+16	CM1	ami	Nom	nom masculin
+16	CM1	amusement	Nom	nom masculin
+16	CM1	avaler	Verbe	verbe 1er group
+16	CM1	avenue	Nom	nom féminin
+16	CM1	avouer	Verbe	verbe 1er group
+16	CM1	bas	Adjectif	adjectif qualificatif
+16	CM1	basse	Nom	nom féminin
+16	CM1	bêche	Nom	nom féminin
+16	CM1	bénédiction	Nom	nom féminin
+16	CM1	berger	Nom	nom masculin
+16	CM1	boeuf	Nom	nom masculin
+16	CM1	boisson	Nom	nom féminin
+16	CM1	bonté	Nom	nom féminin
+16	CM1	bouteille	Nom	nom féminin
+16	CM1	cabane	Nom	nom féminin
+16	CM1	cacher	Verbe	verbe 1er group
+16	CM1	cadeau	Nom	nom masculin
+16	CM1	caisse	Nom	nom féminin
+16	CM1	calme	Adjectif	adjectif qualificatif
+16	CM1	canif	Nom	nom masculin
+16	CM1	cantique	Nom	nom masculin
+16	CM1	capable	Adjectif	adjectif qualificatif
+16	CM1	cause	Nom	nom féminin
+16	CM1	chameau	Nom	nom masculin
+16	CM1	changement	Nom	nom masculin
+16	CM1	chaud	Adjectif	adjectif qualificatif
+16	CM1	chaumière	Nom	nom féminin
+16	CM1	choisir	Verbe	verbe 2ème group
+16	CM1	clairon	Nom	nom masculin
+16	CM1	comment	Invariable	conjonction
+16	CM1	continuer	Verbe	verbe 1er group
+16	CM1	cortège	Nom	nom masculin
+16	CM1	côté	Nom	nom masculin
+16	CM1	cou	Nom	nom masculin
+16	CM1	couler	Verbe	verbe 1er group
+16	CM1	coureur	Nom	nom masculin
+16	CM1	courir	Verbe	verbe 3ème group
+16	CM1	crise	Nom	nom féminin
+16	CM1	cultivateur	Nom	nom masculin
+16	CM1	curé	Nom	nom masculin
+16	CM1	dangereux	Adjectif	adjectif qualificatif
+16	CM1	découvrir	Verbe	verbe 3ème group
+16	CM1	demoiselle	Nom	nom féminin
+16	CM1	désireux	Adjectif	adjectif qualificatif
+16	CM1	désordre	Nom	nom masculin
+16	CM1	dévouement	Nom	nom masculin
+16	CM1	digne	Adjectif	adjectif qualificatif
+16	CM1	divin	Adjectif	adjectif qualificatif
+16	CM1	dos	Nom	nom masculin
+16	CM1	drapeau	Nom	nom masculin
+16	CM1	également	Invariable	adverbe
+16	CM1	électrique	Adjectif	adjectif qualificatif
+16	CM1	émouvoir	Verbe	verbe 3ème group
+16	CM1	enfermer	Verbe	verbe 1er group
+16	CM1	envie	Nom	nom féminin
+16	CM1	épaule	Nom	nom féminin
+16	CM1	époque	Nom	nom féminin
+16	CM1	espoir	Nom	nom masculin
+16	CM1	étage	Nom	nom masculin
+16	CM1	étendue	Nom	nom féminin
+16	CM1	étudiant	Nom	nom masculin
+16	CM1	explication	Nom	nom féminin
+16	CM1	farouche	Adjectif	adjectif qualificatif
+16	CM1	faucheur	Nom	nom masculin
+16	CM1	fixe	Adjectif	adjectif qualificatif
+16	CM1	foire	Nom	nom féminin
+16	CM1	fonction	Nom	nom féminin
+16	CM1	garniture	Nom	nom féminin
+16	CM1	gelée	Nom	nom féminin
+16	CM1	glace	Nom	nom féminin
+16	CM1	gorge	Nom	nom féminin
+16	CM1	gratitude	Nom	nom féminin
+16	CM1	grue	Nom	nom féminin
+16	CM1	guide	Nom	nom masculin
+16	CM1	hirondelle	Nom	nom féminin
+16	CM1	huit	Déterminant	adjectif numéral
+16	CM1	inférieur	Adjectif	adjectif qualificatif
+16	CM1	infirme	Adjectif	adjectif qualificatif
+16	CM1	infirmier	Nom	nom masculin
+16	CM1	injure	Nom	nom féminin
+16	CM1	intime	Adjectif	adjectif qualificatif
+16	CM1	invitation	Nom	nom féminin
+16	CM1	jamais	Invariable	adverbe
+16	CM1	jardinage	Nom	nom masculin
+16	CM1	jeunesse	Nom	nom féminin
+16	CM1	jugement	Nom	nom masculin
+16	CM1	lécher	Verbe	verbe 1er group
+16	CM1	lèvre	Nom	nom féminin
+16	CM1	lilas	Nom	nom masculin
+16	CM1	local	Nom	nom masculin
+16	CM1	loi	Nom	nom féminin
+16	CM1	marchand	Nom	nom masculin
+16	CM1	marchandise	Nom	nom féminin
+16	CM1	marché	Nom	nom masculin
+16	CM1	marteau	Nom	nom masculin
+16	CM1	méchant	Adjectif	adjectif qualificatif
+16	CM1	mélodie	Nom	nom féminin
+16	CM1	ménage	Nom	nom masculin
+16	CM1	ménager	Verbe	verbe 1er group
+16	CM1	mentir	Verbe	verbe 3ème group
+16	CM1	menuisier	Nom	nom masculin
+16	CM1	merci	Nom	nom masculin
+16	CM1	mesure	Nom	nom féminin
+16	CM1	minuscule	Adjectif	adjectif qualificatif
+16	CM1	misère	Nom	nom féminin
+16	CM1	modèle	Nom	nom masculin
+16	CM1	modeste	Adjectif	adjectif qualificatif
+16	CM1	mont	Nom	nom masculin
+16	CM1	monter	Verbe	verbe 1er group
+16	CM1	morceau	Nom	nom masculin
+16	CM1	mordre	Verbe	verbe 3ème group
+16	CM1	mousse	Nom	nom féminin
+16	CM1	muscle	Nom	nom masculin
+16	CM1	musée	Nom	nom masculin
+16	CM1	net	Adjectif	adjectif qualificatif
+16	CM1	neuf	Déterminant	adjectif numéral
+16	CM1	note	Nom	nom féminin
+16	CM1	nouveau	Adjectif	adjectif qualificatif
+16	CM1	ornement	Nom	nom masculin
+16	CM1	ours	Nom	nom masculin
+16	CM1	ouvrir	Verbe	verbe 3ème group
+16	CM1	panache	Nom	nom masculin
+16	CM1	pantalon	Nom	nom masculin
+16	CM1	paquet	Nom	nom masculin
+16	CM1	parfaitement	Invariable	adverbe
+16	CM1	parfum	Nom	nom masculin
+16	CM1	parler	Verbe	verbe 1er group
+16	CM1	part	Nom	nom féminin
+16	CM1	particulier	Adjectif	adjectif qualificatif
+16	CM1	passé	Nom	nom masculin
+16	CM1	pêcher	Verbe	verbe 1er group
+16	CM1	peine	Nom	nom féminin
+16	CM1	pendule	Nom	nom masculin
+16	CM1	péniblement	Invariable	adverbe
+16	CM1	pensée	Nom	nom féminin
+16	CM1	perfection	Nom	nom féminin
+16	CM1	pièce	Nom	nom féminin
+16	CM1	plaie	Nom	nom féminin
+16	CM1	porc	Nom	nom masculin
+16	CM1	port	Nom	nom masculin
+16	CM1	possible	Adjectif	adjectif qualificatif
+16	CM1	poursuite	Nom	nom féminin
+16	CM1	poutre	Nom	nom féminin
+16	CM1	préparation	Nom	nom féminin
+16	CM1	prévenir	Verbe	verbe 3ème group
+16	CM1	prise	Nom	nom féminin
+16	CM1	prix	Nom	nom masculin
+16	CM1	prochain	Adjectif	adjectif qualificatif
+16	CM1	promeneur	Nom	nom masculin
+16	CM1	promesse	Nom	nom féminin
+16	CM1	quarante	Déterminant	adjectif numéral
+16	CM1	quoi	Pronom	pronom
+16	CM1	raisin	Nom	nom masculin
+16	CM1	rapide	Adjectif	adjectif qualificatif
+16	CM1	rapidement	Invariable	adverbe
+16	CM1	récréation	Nom	nom féminin
+16	CM1	reculer	Verbe	verbe 1er group
+16	CM1	réfléchir	Verbe	verbe 2ème group
+16	CM1	refuge	Nom	nom masculin
+16	CM1	relativement	Invariable	adverbe
+16	CM1	remettre	Verbe	verbe 3ème group
+16	CM1	renouveau	Nom	nom masculin
+16	CM1	représentation	Nom	nom féminin
+16	CM1	réserve	Nom	nom féminin
+16	CM1	retrouver	Verbe	verbe 1er group
+16	CM1	rigole	Nom	nom féminin
+16	CM1	romain	Adjectif	adjectif qualificatif
+16	CM1	ronger	Verbe	verbe 1er group
+16	CM1	rougir	Verbe	verbe 2ème group
+16	CM1	rustique	Adjectif	adjectif qualificatif
+16	CM1	sagement	Invariable	adverbe
+16	CM1	sauver	Verbe	verbe 1er group
+16	CM1	secourir	Verbe	verbe 3ème group
+16	CM1	septembre	Nom	nom masculin
+16	CM1	servir	Verbe	verbe 3ème group
+16	CM1	s'évanouir	Verbe	verbe 2ème group
+16	CM1	silence	Nom	nom masculin
+16	CM1	simple	Adjectif	adjectif qualificatif
+16	CM1	soif	Nom	nom féminin
+16	CM1	soirée	Nom	nom féminin
+16	CM1	somme	Nom	nom féminin
+16	CM1	songer	Verbe	verbe 1er group
+16	CM1	sonner	Verbe	verbe 1er group
+16	CM1	sonore	Adjectif	adjectif qualificatif
+16	CM1	souper	Verbe	verbe 1er group
+16	CM1	spectacle	Nom	nom masculin
+16	CM1	suivant	Adjectif	adjectif qualificatif
+16	CM1	sujet	Nom	nom masculin
+16	CM1	surface	Nom	nom féminin
+16	CM1	tapage	Nom	nom masculin
+16	CM1	tapis	Nom	nom masculin
+16	CM1	tel	Adjectif	adjectif qualificatif
+16	CM1	tendrement	Invariable	adverbe
+16	CM1	tente	Nom	nom féminin
+16	CM1	travail	Nom	nom masculin
+16	CM1	travailler	Verbe	verbe 1er group
+16	CM1	travailleur	Nom	nom masculin
+16	CM1	trimestre	Nom	nom masculin
+16	CM1	vague	Nom	nom féminin
+16	CM1	veston	Nom	nom masculin
+16	CM1	viande	Nom	nom féminin
+16	CM1	voile	Nom	nom féminin
+16	CM1	volonté	Nom	nom féminin
+16	CM1	voltiger	Verbe	verbe 1er group
+16	CM1	voyage	Nom	nom masculin
+16	CM1	yeux	Nom	nom masculin
+17	CM1	acheter	Verbe	verbe 1er group
+17	CM1	actif	Adjectif	adjectif qualificatif
+17	CM1	adieu	Nom	nom masculin
+17	CM1	agréablement	Invariable	adverbe
+17	CM1	aide	Nom	nom féminin
+17	CM1	ajouter	Verbe	verbe 1er group
+17	CM1	aller	Verbe	verbe 3ème group
+17	CM1	approcher	Verbe	verbe 1er group
+17	CM1	après	Invariable	préposition
+17	CM1	aucun	Déterminant	adjectif indéfini
+17	CM1	auteur	Nom	nom masculin
+17	CM1	averse	Nom	nom féminin
+17	CM1	avis	Nom	nom masculin
+17	CM1	bavarder	Verbe	verbe 1er group
+17	CM1	bête	Nom	nom féminin
+17	CM1	beurre	Nom	nom masculin
+17	CM1	bientôt	Invariable	adverbe
+17	CM1	bonbon	Nom	nom masculin
+17	CM1	bougie	Nom	nom féminin
+17	CM1	brebis	Nom	nom féminin
+17	CM1	bref	Adjectif	adjectif qualificatif
+17	CM1	briser	Verbe	verbe 1er group
+17	CM1	bruit	Nom	nom masculin
+17	CM1	brun	Adjectif	adjectif qualificatif
+17	CM1	brutal	Adjectif	adjectif qualificatif
+17	CM1	capital	Nom	nom masculin
+17	CM1	carré	Adjectif	adjectif qualificatif
+17	CM1	cartable	Nom	nom masculin
+17	CM1	centime	Nom	nom masculin
+17	CM1	cercle	Nom	nom masculin
+17	CM1	chagrin	Nom	nom masculin
+17	CM1	chaise	Nom	nom féminin
+17	CM1	chanter	Verbe	verbe 1er group
+17	CM1	charmer	Verbe	verbe 1er group
+17	CM1	chaume	Nom	nom masculin
+17	CM1	cher	Adjectif	adjectif qualificatif
+17	CM1	chute	Nom	nom féminin
+17	CM1	client	Nom	nom masculin
+17	CM1	clocher	Nom	nom masculin
+17	CM1	colorer	Verbe	verbe 1er group
+17	CM1	comprendre	Verbe	verbe 3ème group
+17	CM1	consolation	Nom	nom féminin
+17	CM1	construction	Nom	nom féminin
+17	CM1	conte	Nom	nom masculin
+17	CM1	continuellement	Invariable	adverbe
+17	CM1	conversation	Nom	nom féminin
+17	CM1	copier	Verbe	verbe 1er group
+17	CM1	coucher	Verbe	verbe 1er group
+17	CM1	courageusement	Invariable	adverbe
+17	CM1	crépuscule	Nom	nom masculin
+17	CM1	cristal	Nom	nom masculin
+17	CM1	danger	Nom	nom masculin
+17	CM1	d'après	Invariable	préposition
+17	CM1	début	Nom	nom masculin
+17	CM1	dedans	Invariable	adverbe
+17	CM1	démarche	Nom	nom féminin
+17	CM1	dépendre	Verbe	verbe 3ème group
+17	CM1	déplaire	Verbe	verbe 3ème group
+17	CM1	désigner	Verbe	verbe 1er group
+17	CM1	détester	Verbe	verbe 1er group
+17	CM1	détruire	Verbe	verbe 3ème group
+17	CM1	dette	Nom	nom féminin
+17	CM1	dévouer	Verbe	verbe 1er group
+17	CM1	direction	Nom	nom féminin
+17	CM1	distribution	Nom	nom féminin
+17	CM1	diviser	Verbe	verbe 1er group
+17	CM1	domicile	Nom	nom masculin
+17	CM1	dont	Pronom	pronom
+17	CM1	drap	Nom	nom masculin
+17	CM1	droit	Adjectif	adjectif qualificatif
+17	CM1	duvet	Nom	nom masculin
+17	CM1	écouter	Verbe	verbe 1er group
+17	CM1	encourir	Verbe	verbe 3ème group
+17	CM1	énergie	Nom	nom féminin
+17	CM1	enfance	Nom	nom féminin
+17	CM1	entendre	Verbe	verbe 3ème group
+17	CM1	équipage	Nom	nom masculin
+17	CM1	escalader	Verbe	verbe 1er group
+17	CM1	estime	Nom	nom féminin
+17	CM1	étoffe	Nom	nom féminin
+17	CM1	étudier	Verbe	verbe 1er group
+17	CM1	fabriquer	Verbe	verbe 1er group
+17	CM1	fatiguer	Verbe	verbe 1er group
+17	CM1	fendre	Verbe	verbe 3ème group
+17	CM1	fourneau	Nom	nom masculin
+17	CM1	fourniture	Nom	nom féminin
+17	CM1	fureur	Nom	nom féminin
+17	CM1	fusil	Nom	nom masculin
+17	CM1	géographie	Nom	nom féminin
+17	CM1	gosse	Nom	nom masculin
+17	CM1	grain	Nom	nom masculin
+17	CM1	gravement	Invariable	adverbe
+17	CM1	gravure	Nom	nom féminin
+17	CM1	griffe	Nom	nom féminin
+17	CM1	grossir	Verbe	verbe 2ème group
+17	CM1	guerre	Nom	nom féminin
+17	CM1	habitation	Nom	nom féminin
+17	CM1	haie	Nom	nom féminin
+17	CM1	hauteur	Nom	nom féminin
+17	CM1	heureusement	Invariable	adverbe
+17	CM1	horloge	Nom	nom féminin
+17	CM1	huile	Nom	nom féminin
+17	CM1	illustre	Adjectif	adjectif qualificatif
+17	CM1	ingratitude	Nom	nom féminin
+17	CM1	insigne	Nom	nom masculin
+17	CM1	instruction	Nom	nom féminin
+17	CM1	introduction	Nom	nom féminin
+17	CM1	inutile	Adjectif	adjectif qualificatif
+17	CM1	ivre	Adjectif	adjectif qualificatif
+17	CM1	joyeux	Adjectif	adjectif qualificatif
+17	CM1	jurer	Verbe	verbe 1er group
+17	CM1	laitier	Nom	nom masculin
+17	CM1	largement	Invariable	adverbe
+17	CM1	lendemain	Nom	nom masculin
+17	CM1	lier	Verbe	verbe 1er group
+17	CM1	lisse	Adjectif	adjectif qualificatif
+17	CM1	lorsque	Invariable	conjonction
+17	CM1	louange	Nom	nom féminin
+17	CM1	lourd	Adjectif	adjectif qualificatif
+17	CM1	lugubre	Adjectif	adjectif qualificatif
+17	CM1	luire	Verbe	verbe 3ème group
+17	CM1	manque	Nom	nom masculin
+17	CM1	mauvais	Adjectif	adjectif qualificatif
+17	CM1	mécanique	Adjectif	adjectif qualificatif
+17	CM1	médaille	Nom	nom féminin
+17	CM1	médecin	Nom	nom masculin
+17	CM1	mener	Verbe	verbe 1er group
+17	CM1	métal	Nom	nom masculin
+17	CM1	meule	Nom	nom féminin
+17	CM1	militaire	Adjectif	adjectif qualificatif
+17	CM1	mille	Déterminant	adjectif numéral
+17	CM1	mobile	Adjectif	adjectif qualificatif
+17	CM1	modestie	Nom	nom féminin
+17	CM1	moindre	Adjectif	adjectif qualificatif
+17	CM1	morale	Nom	nom féminin
+17	CM1	moyen	Adjectif	adjectif qualificatif
+17	CM1	muet	Adjectif	adjectif qualificatif
+17	CM1	multicolore	Adjectif	adjectif qualificatif
+17	CM1	nager	Verbe	verbe 1er group
+17	CM1	natal	Adjectif	adjectif qualificatif
+17	CM1	normal	Adjectif	adjectif qualificatif
+17	CM1	novembre	Nom	nom masculin
+17	CM1	numéro	Nom	nom masculin
+17	CM1	oeuvre	Nom	nom féminin
+17	CM1	oie	Nom	nom féminin
+17	CM1	ombre	Nom	nom féminin
+17	CM1	onze	Déterminant	adjectif numéral
+17	CM1	osier	Nom	nom masculin
+17	CM1	pain	Nom	nom masculin
+17	CM1	palais	Nom	nom masculin
+17	CM1	pâle	Adjectif	adjectif qualificatif
+17	CM1	panorama	Nom	nom masculin
+17	CM1	parc	Nom	nom masculin
+17	CM1	parfois	Invariable	adverbe
+17	CM1	parquet	Nom	nom masculin
+17	CM1	pas	Nom	nom masculin
+17	CM1	pâtre	Nom	nom masculin
+17	CM1	paysage	Nom	nom masculin
+17	CM1	pelage	Nom	nom masculin
+17	CM1	pelouse	Nom	nom féminin
+17	CM1	personnage	Nom	nom masculin
+17	CM1	peuplier	Nom	nom masculin
+17	CM1	piano	Nom	nom masculin
+17	CM1	pinson	Nom	nom masculin
+17	CM1	plaine	Nom	nom féminin
+17	CM1	plaire	Verbe	verbe 3ème group
+17	CM1	plateau	Nom	nom masculin
+17	CM1	pleurer	Verbe	verbe 1er group
+17	CM1	poignée	Nom	nom féminin
+17	CM1	pointu	Adjectif	adjectif qualificatif
+17	CM1	poli	Adjectif	adjectif qualificatif
+17	CM1	police	Nom	nom féminin
+17	CM1	pont	Nom	nom masculin
+17	CM1	portée	Nom	nom féminin
+17	CM1	poumon	Nom	nom masculin
+17	CM1	présent	Adjectif	adjectif qualificatif
+17	CM1	profondément	Invariable	adverbe
+17	CM1	propreté	Nom	nom féminin
+17	CM1	propriété	Nom	nom féminin
+17	CM1	prudence	Nom	nom féminin
+17	CM1	punition	Nom	nom féminin
+17	CM1	purifier	Verbe	verbe 1er group
+17	CM1	ravin	Nom	nom masculin
+17	CM1	ravir	Verbe	verbe 2ème group
+17	CM1	rayon	Nom	nom masculin
+17	CM1	recherche	Nom	nom féminin
+17	CM1	recourir	Verbe	verbe 3ème group
+17	CM1	redire	Verbe	verbe 3ème group
+17	CM1	refrain	Nom	nom masculin
+17	CM1	régiment	Nom	nom masculin
+17	CM1	région	Nom	nom féminin
+17	CM1	réjouir	Verbe	verbe 2ème group
+17	CM1	remonter	Verbe	verbe 1er group
+17	CM1	remplir	Verbe	verbe 2ème group
+17	CM1	renouvellement	Nom	nom masculin
+17	CM1	répartir	Verbe	verbe 2ème group
+17	CM1	repentir	Verbe	verbe 3ème group
+17	CM1	repos	Nom	nom masculin
+17	CM1	respecter	Verbe	verbe 1er group
+17	CM1	respectueux	Adjectif	adjectif qualificatif
+17	CM1	rêve	Nom	nom masculin
+17	CM1	richesse	Nom	nom féminin
+17	CM1	riz	Nom	nom masculin
+17	CM1	rosier	Nom	nom masculin
+17	CM1	rouler	Verbe	verbe 1er group
+17	CM1	ruban	Nom	nom masculin
+17	CM1	ruine	Nom	nom masculin
+17	CM1	sacrifice	Nom	nom masculin
+17	CM1	sagesse	Nom	nom féminin
+17	CM1	sauter	Verbe	verbe 1er group
+17	CM1	savant	Nom	nom masculin
+17	CM1	savon	Nom	nom masculin
+17	CM1	secret	Nom	nom masculin
+17	CM1	seigneur	Nom	nom masculin
+17	CM1	semer	Verbe	verbe 1er group
+17	CM1	sentir	Verbe	verbe 3ème group
+17	CM1	servante	Nom	nom féminin
+17	CM1	service	Nom	nom masculin
+17	CM1	sinistre	Adjectif	adjectif qualificatif
+17	CM1	situation	Nom	nom féminin
+17	CM1	sobre	Adjectif	adjectif qualificatif
+17	CM1	soigneusement	Invariable	adverbe
+17	CM1	solitude	Nom	nom féminin
+17	CM1	soulager	Verbe	verbe 1er group
+17	CM1	soulier	Nom	nom masculin
+17	CM1	soupir	Nom	nom masculin
+17	CM1	sourd	Adjectif	adjectif qualificatif
+17	CM1	souris	Nom	nom féminin
+17	CM1	souvent	Invariable	adverbe
+17	CM1	souverain	Nom	nom masculin
+17	CM1	tailleur	Nom	nom masculin
+17	CM1	taire	Verbe	verbe 3ème group
+17	CM1	témoin	Nom	nom masculin
+17	CM1	tendre	Adjectif	adjectif qualificatif
+17	CM1	tendresse	Nom	nom féminin
+17	CM1	terreur	Nom	nom féminin
+17	CM1	terrible	Adjectif	adjectif qualificatif
+17	CM1	ton	Nom	nom masculin
+17	CM1	tonneau	Nom	nom masculin
+17	CM1	touffe	Nom	nom féminin
+17	CM1	tournée	Nom	nom féminin
+17	CM1	transformation	Nom	nom féminin
+17	CM1	trouver	Verbe	verbe 1er group
+17	CM1	unir	Verbe	verbe 2ème group
+17	CM1	valet	Nom	nom masculin
+17	CM1	valoir	Verbe	verbe 3ème group
+17	CM1	veille	Nom	nom féminin
+17	CM1	ventre	Nom	nom masculin
+17	CM1	vertu	Nom	nom féminin
+17	CM1	violet	Adjectif	adjectif qualificatif
+17	CM1	visiter	Verbe	verbe 1er group
+17	CM1	vivant	Adjectif	adjectif qualificatif
+17	CM1	vouloir	Verbe	verbe 3ème group
+18	CM1	acheteur	Nom	nom masculin
+18	CM1	agile	Adjectif	adjectif qualificatif
+18	CM1	aimable	Adjectif	adjectif qualificatif
+18	CM1	aise	Nom	nom féminin
+18	CM1	amicalement	Invariable	adverbe
+18	CM1	angle	Nom	nom masculin
+18	CM1	apprendre	Verbe	verbe 3ème group
+18	CM1	arbitre	Nom	nom masculin
+18	CM1	arbuste	Nom	nom masculin
+18	CM1	architecte	Nom	nom masculin
+18	CM1	ardent	Adjectif	adjectif qualificatif
+18	CM1	argent	Nom	nom masculin
+18	CM1	arracher	Verbe	verbe 1er group
+18	CM1	attaque	Nom	nom féminin
+18	CM1	auberge	Nom	nom féminin
+18	CM1	automobile	Nom	nom féminin
+18	CM1	autrefois	Invariable	adverbe
+18	CM1	autrement	Invariable	adverbe
+18	CM1	avantage	Nom	nom masculin
+18	CM1	aventure	Nom	nom féminin
+18	CM1	bagage	Nom	nom masculin
+18	CM1	battre	Verbe	verbe 3ème group
+18	CM1	beaucoup	Invariable	adverbe
+18	CM1	besoin	Nom	nom masculin
+18	CM1	bienfait	Nom	nom masculin
+18	CM1	bienfaiteur	Nom	nom masculin
+18	CM1	bloc	Nom	nom masculin
+18	CM1	bonsoir	Nom	nom masculin
+18	CM1	bosquet	Nom	nom masculin
+18	CM1	boucher	Verbe	verbe 1er group
+18	CM1	broyer	Verbe	verbe 1er group
+18	CM1	brusquement	Invariable	adverbe
+18	CM1	cadet	Adjectif	adjectif qualificatif
+18	CM1	celle-ci	Pronom	pronom
+18	CM1	celui-ci	Pronom	pronom
+18	CM1	cent	Déterminant	adjectif numéral
+18	CM1	cerisier	Nom	nom masculin
+18	CM1	ceux	Pronom	pronom
+18	CM1	chapitre	Nom	nom masculin
+18	CM1	charbonnage	Nom	nom masculin
+18	CM1	chauffeur	Nom	nom masculin
+18	CM1	chaussée	Nom	nom féminin
+18	CM1	chaussure	Nom	nom féminin
+18	CM1	cigarette	Nom	nom féminin
+18	CM1	cinéma	Nom	nom masculin
+18	CM1	cinquante	Déterminant	adjectif numéral
+18	CM1	circulation	Nom	nom féminin
+18	CM1	classique	Adjectif	adjectif qualificatif
+18	CM1	complet	Adjectif	adjectif qualificatif
+18	CM1	congé	Nom	nom masculin
+18	CM1	considérable	Adjectif	adjectif qualificatif
+18	CM1	consoler	Verbe	verbe 1er group
+18	CM1	constater	Verbe	verbe 1er group
+18	CM1	content	Adjectif	adjectif qualificatif
+18	CM1	contraire	Adjectif	adjectif qualificatif
+18	CM1	contrée	Nom	nom féminin
+18	CM1	conviction	Nom	nom féminin
+18	CM1	côte	Nom	nom féminin
+18	CM1	coup	Nom	nom masculin
+18	CM1	couteau	Nom	nom masculin
+18	CM1	couvercle	Nom	nom masculin
+18	CM1	crainte	Nom	nom féminin
+18	CM1	craquement	Nom	nom masculin
+18	CM1	créateur	Nom	nom masculin
+18	CM1	cuisinière	Nom	nom féminin
+18	CM1	cultiver	Verbe	verbe 1er group
+18	CM1	curieux	Adjectif	adjectif qualificatif
+18	CM1	danse	Nom	nom féminin
+18	CM1	déborder	Verbe	verbe 1er group
+18	CM1	défenseur	Nom	nom masculin
+18	CM1	délicat	Adjectif	adjectif qualificatif
+18	CM1	délivrer	Verbe	verbe 1er group
+18	CM1	dentelle	Nom	nom féminin
+18	CM1	dénudé	Adjectif	adjectif qualificatif
+18	CM1	désolation	Nom	nom féminin
+18	CM1	destinée	Nom	nom féminin
+18	CM1	détour	Nom	nom masculin
+18	CM1	diriger	Verbe	verbe 1er group
+18	CM1	disposition	Nom	nom féminin
+18	CM1	distraction	Nom	nom féminin
+18	CM1	distrait	Adjectif	adjectif qualificatif
+18	CM1	douceur	Nom	nom féminin
+18	CM1	douter	Verbe	verbe 1er group
+18	CM1	éblouir	Verbe	verbe 2ème group
+18	CM1	éclater	Verbe	verbe 1er group
+18	CM1	économie	Nom	nom féminin
+18	CM1	élégant	Adjectif	adjectif qualificatif
+18	CM1	endroit	Nom	nom masculin
+18	CM1	environ	Invariable	adverbe
+18	CM1	épanouir	Verbe	verbe 2ème group
+18	CM1	état	Nom	nom masculin
+18	CM1	être	Nom	nom masculin
+18	CM1	étroit	Adjectif	adjectif qualificatif
+18	CM1	exposition	Nom	nom féminin
+18	CM1	exprimer	Verbe	verbe 1er group
+18	CM1	facile	Adjectif	adjectif qualificatif
+18	CM1	faible	Adjectif	adjectif qualificatif
+18	CM1	faucher	Verbe	verbe 1er group
+18	CM1	femelle	Nom	nom féminin
+18	CM1	finalement	Invariable	adverbe
+18	CM1	forger	Verbe	verbe 1er group
+18	CM1	former	Verbe	verbe 1er group
+18	CM1	friandise	Nom	nom féminin
+18	CM1	fuir	Verbe	verbe 3ème group
+18	CM1	galerie	Nom	nom féminin
+18	CM1	garder	Verbe	verbe 1er group
+18	CM1	gazon	Nom	nom masculin
+18	CM1	généralement	Invariable	adverbe
+18	CM1	généreux	Adjectif	adjectif qualificatif
+18	CM1	grange	Nom	nom féminin
+18	CM1	graver	Verbe	verbe 1er group
+18	CM1	gravir	Verbe	verbe 2ème group
+18	CM1	gronder	Verbe	verbe 1er group
+18	CM1	hache	Nom	nom féminin
+18	CM1	heureux	Adjectif	adjectif qualificatif
+18	CM1	histoire	Nom	nom féminin
+18	CM1	honte	Nom	nom féminin
+18	CM1	indication	Nom	nom féminin
+18	CM1	infini	Adjectif	adjectif qualificatif
+18	CM1	instructif	Adjectif	adjectif qualificatif
+18	CM1	irriter	Verbe	verbe 1er group
+18	CM1	jambon	Nom	nom masculin
+18	CM1	jaunir	Verbe	verbe 2ème group
+18	CM1	jeu	Nom	nom masculin
+18	CM1	justice	Nom	nom féminin
+18	CM1	lin	Nom	nom masculin
+18	CM1	maigre	Adjectif	adjectif qualificatif
+18	CM1	maintenir	Verbe	verbe 3ème group
+18	CM1	malheureux	Adjectif	adjectif qualificatif
+18	CM1	mare	Nom	nom féminin
+18	CM1	maternel	Adjectif	adjectif qualificatif
+18	CM1	mélanger	Verbe	verbe 1er group
+18	CM1	mètre	Nom	nom masculin
+18	CM1	mettre	Verbe	verbe 3ème group
+18	CM1	moisson	Nom	nom féminin
+18	CM1	montrer	Verbe	verbe 1er group
+18	CM1	monument	Nom	nom masculin
+18	CM1	neiger	Verbe	verbe 1er group
+18	CM1	noisette	Nom	nom féminin
+18	CM1	nouvelle	Nom	nom féminin
+18	CM1	noyer	Verbe	verbe 1er group
+18	CM1	obéir	Verbe	verbe 2ème group
+18	CM1	ordinaire	Adjectif	adjectif qualificatif
+18	CM1	paix	Nom	nom féminin
+18	CM1	papillon	Nom	nom masculin
+18	CM1	parapluie	Nom	nom masculin
+18	CM1	partager	Verbe	verbe 1er group
+18	CM1	particulièrement	Invariable	adverbe
+18	CM1	peintre	Nom	nom masculin
+18	CM1	peinture	Nom	nom féminin
+18	CM1	planter	Verbe	verbe 1er group
+18	CM1	position	Nom	nom féminin
+18	CM1	pourpre	Adjectif	adjectif qualificatif
+18	CM1	poursuivre	Verbe	verbe 3ème group
+18	CM1	pourtant	Invariable	adverbe
+18	CM1	préparatif	Nom	nom masculin
+18	CM1	présenter	Verbe	verbe 1er group
+18	CM1	prétendre	Verbe	verbe 3ème group
+18	CM1	prier	Verbe	verbe 1er group
+18	CM1	princesse	Nom	nom féminin
+18	CM1	principe	Nom	nom masculin
+18	CM1	probablement	Invariable	adverbe
+18	CM1	prospérité	Nom	nom féminin
+18	CM1	protection	Nom	nom féminin
+18	CM1	puissance	Nom	nom féminin
+18	CM1	puissant	Adjectif	adjectif qualificatif
+18	CM1	qualité	Nom	nom féminin
+18	CM1	quand	Invariable	conjonction
+18	CM1	ramener	Verbe	verbe 1er group
+18	CM1	rapidité	Nom	nom féminin
+18	CM1	ravage	Nom	nom masculin
+18	CM1	rechercher	Verbe	verbe 1er group
+18	CM1	redoubler	Verbe	verbe 1er group
+18	CM1	redouter	Verbe	verbe 1er group
+18	CM1	regagner	Verbe	verbe 1er group
+18	CM1	relation	Nom	nom féminin
+18	CM1	renoncule	Nom	nom féminin
+18	CM1	rentrée	Nom	nom féminin
+18	CM1	réparer	Verbe	verbe 1er group
+18	CM1	replier	Verbe	verbe 1er group
+18	CM1	rester	Verbe	verbe 1er group
+18	CM1	retentir	Verbe	verbe 2ème group
+18	CM1	riant	Adjectif	adjectif qualificatif
+18	CM1	rideau	Nom	nom masculin
+18	CM1	roulotte	Nom	nom féminin
+18	CM1	royaume	Nom	nom masculin
+18	CM1	ruiner	Verbe	verbe 1er group
+18	CM1	sacrement	Nom	nom masculin
+18	CM1	sacrifier	Verbe	verbe 1er group
+18	CM1	salir	Verbe	verbe 2ème group
+18	CM1	saluer	Verbe	verbe 1er group
+18	CM1	sans	Invariable	préposition
+18	CM1	santé	Nom	nom féminin
+18	CM1	satisfaction	Nom	nom féminin
+18	CM1	satisfait	Adjectif	adjectif qualificatif
+18	CM1	seau	Nom	nom masculin
+18	CM1	secouer	Verbe	verbe 1er group
+18	CM1	s'envoler	Verbe	verbe 1er group
+18	CM1	signal	Nom	nom masculin
+18	CM1	simplement	Invariable	adverbe
+18	CM1	six	Déterminant	adjectif numéral
+18	CM1	soigner	Verbe	verbe 1er group
+18	CM1	soin	Nom	nom masculin
+18	CM1	soudain	Invariable	adverbe
+18	CM1	soulever	Verbe	verbe 1er group
+18	CM1	soupirer	Verbe	verbe 1er group
+18	CM1	souple	Adjectif	adjectif qualificatif
+18	CM1	source	Nom	nom féminin
+18	CM1	station	Nom	nom féminin
+18	CM1	subir	Verbe	verbe 2ème group
+18	CM1	subitement	Invariable	adverbe
+18	CM1	tas	Nom	nom masculin
+18	CM1	tempête	Nom	nom féminin
+18	CM1	temps	Nom	nom masculin
+18	CM1	tentation	Nom	nom féminin
+18	CM1	terrain	Nom	nom masculin
+18	CM1	tirer	Verbe	verbe 1er group
+18	CM1	trente	Déterminant	adjectif numéral
+18	CM1	tricot	Nom	nom masculin
+18	CM1	tristesse	Nom	nom féminin
+18	CM1	trop	Invariable	adverbe
+18	CM1	troupeau	Nom	nom masculin
+18	CM1	urgent	Adjectif	adjectif qualificatif
+18	CM1	vallée	Nom	nom féminin
+18	CM1	veau	Nom	nom masculin
+18	CM1	vider	Verbe	verbe 1er group
+18	CM1	vigoureux	Adjectif	adjectif qualificatif
+18	CM1	vol	Nom	nom masculin
+18	CM1	volet	Nom	nom masculin
+18	CM1	vôtre	Pronom	pronom
+18	CM1	zèle	Nom	nom masculin
+19	CM1	abriter	Verbe	verbe 1er group
+19	CM1	abuser	Verbe	verbe 1er group
+19	CM1	actuellement	Invariable	adverbe
+19	CM1	admiration	Nom	nom féminin
+19	CM1	adresse	Nom	nom féminin
+19	CM1	agitation	Nom	nom féminin
+19	CM1	amusant	Adjectif	adjectif qualificatif
+19	CM1	animation	Nom	nom féminin
+19	CM1	approche	Nom	nom féminin
+19	CM1	arrivée	Nom	nom féminin
+19	CM1	aspirer	Verbe	verbe 1er group
+19	CM1	atelier	Nom	nom masculin
+19	CM1	attendre	Verbe	verbe 3ème group
+19	CM1	attirer	Verbe	verbe 1er group
+19	CM1	attribuer	Verbe	verbe 1er group
+19	CM1	avance	Nom	nom féminin
+19	CM1	avoine	Nom	nom masculin
+19	CM1	ballon	Nom	nom masculin
+19	CM1	banane	Nom	nom féminin
+19	CM1	bandit	Nom	nom masculin
+19	CM1	bâton	Nom	nom masculin
+19	CM1	beauté	Nom	nom féminin
+19	CM1	bénir	Verbe	verbe 2ème group
+19	CM1	berceau	Nom	nom masculin
+19	CM1	bleuet	Nom	nom masculin
+19	CM1	bluet	Nom	nom masculin
+19	CM1	bonnet	Nom	nom masculin
+19	CM1	bouder	Verbe	verbe 1er group
+19	CM1	bout	Nom	nom masculin
+19	CM1	brin	Nom	nom masculin
+19	CM1	buisson	Nom	nom masculin
+19	CM1	but	Nom	nom masculin
+19	CM1	calice	Nom	nom masculin
+19	CM1	camarade	Nom	nom masculin
+19	CM1	caractère	Nom	nom masculin
+19	CM1	casquette	Nom	nom féminin
+19	CM1	causer	Verbe	verbe 1er group
+19	CM1	centaine	Nom	nom féminin
+19	CM1	centre	Nom	nom masculin
+19	CM1	cerise	Nom	nom féminin
+19	CM1	chance	Nom	nom féminin
+19	CM1	changer	Verbe	verbe 1er group
+19	CM1	charmant	Adjectif	adjectif qualificatif
+19	CM1	château	Nom	nom masculin
+19	CM1	chéri	Adjectif	adjectif qualificatif
+19	CM1	choc	Nom	nom masculin
+19	CM1	clair	Adjectif	adjectif qualificatif
+19	CM1	clé	Nom	nom féminin
+19	CM1	clef	Nom	nom féminin
+19	CM1	clément	Adjectif	adjectif qualificatif
+19	CM1	coiffure	Nom	nom féminin
+19	CM1	combat	Nom	nom masculin
+19	CM1	commerce	Nom	nom masculin
+19	CM1	communion	Nom	nom féminin
+19	CM1	conclure	Verbe	verbe 3ème group
+19	CM1	conformément	Invariable	adverbe
+19	CM1	conseil	Nom	nom masculin
+19	CM1	construire	Verbe	verbe 3ème group
+19	CM1	contrarier	Verbe	verbe 1er group
+19	CM1	coquet	Adjectif	adjectif qualificatif
+19	CM1	couloir	Nom	nom masculin
+19	CM1	courber	Verbe	verbe 1er group
+19	CM1	couvert	Nom	nom masculin
+19	CM1	crayon	Nom	nom masculin
+19	CM1	culotte	Nom	nom féminin
+19	CM1	décider	Verbe	verbe 1er group
+19	CM1	défaut	Nom	nom masculin
+19	CM1	défendre	Verbe	verbe 3ème group
+19	CM1	degré	Nom	nom masculin
+19	CM1	demeure	Nom	nom féminin
+19	CM1	démolir	Verbe	verbe 2ème group
+19	CM1	déplacer	Verbe	verbe 1er group
+19	CM1	dérober	Verbe	verbe 1er group
+19	CM1	désobéir	Verbe	verbe 2ème group
+19	CM1	détail	Nom	nom masculin
+19	CM1	deviner	Verbe	verbe 1er group
+19	CM1	disposer	Verbe	verbe 1er group
+19	CM1	distinction	Nom	nom féminin
+19	CM1	distraire	Verbe	verbe 3ème group
+19	CM1	distribuer	Verbe	verbe 1er group
+19	CM1	docile	Adjectif	adjectif qualificatif
+19	CM1	doigt	Nom	nom masculin
+19	CM1	dominer	Verbe	verbe 1er group
+19	CM1	donner	Verbe	verbe 1er group
+19	CM1	doucement	Invariable	adverbe
+19	CM1	douzaine	Nom	nom féminin
+19	CM1	drôle	Adjectif	adjectif qualificatif
+19	CM1	durer	Verbe	verbe 1er group
+19	CM1	écrit	Adjectif	adjectif qualificatif
+19	CM1	éducation	Nom	nom féminin
+19	CM1	empereur	Nom	nom masculin
+19	CM1	emplir	Verbe	verbe 2ème group
+19	CM1	enrichir	Verbe	verbe 2ème group
+19	CM1	enseigner	Verbe	verbe 1er group
+19	CM1	épée	Nom	nom féminin
+19	CM1	équilibre	Nom	nom masculin
+19	CM1	équipe	Nom	nom féminin
+19	CM1	étendre	Verbe	verbe 3ème group
+19	CM1	éternité	Nom	nom féminin
+19	CM1	expirer	Verbe	verbe 1er group
+19	CM1	facilement	Invariable	adverbe
+19	CM1	façon	Nom	nom féminin
+19	CM1	farce	Nom	nom féminin
+19	CM1	fermer	Verbe	verbe 1er group
+19	CM1	feuillage	Nom	nom masculin
+19	CM1	février	Nom	nom masculin
+19	CM1	fier	Verbe	verbe 1er group
+19	CM1	filet	Nom	nom masculin
+19	CM1	flacon	Nom	nom masculin
+19	CM1	flaque	Nom	nom féminin
+19	CM1	foi	Nom	nom féminin
+19	CM1	fossé	Nom	nom masculin
+19	CM1	fouet	Nom	nom masculin
+19	CM1	fragile	Adjectif	adjectif qualificatif
+19	CM1	franchement	Invariable	adverbe
+19	CM1	franchise	Nom	nom féminin
+19	CM1	fruitier	Adjectif	adjectif qualificatif
+19	CM1	gaz	Nom	nom masculin
+19	CM1	gendarme	Nom	nom masculin
+19	CM1	gens	Nom	nom masculin
+19	CM1	glissant	Adjectif	adjectif qualificatif
+19	CM1	griffer	Verbe	verbe 1er group
+19	CM1	grotte	Nom	nom féminin
+19	CM1	hâte	Nom	nom féminin
+19	CM1	humain	Adjectif	adjectif qualificatif
+19	CM1	humeur	Nom	nom féminin
+19	CM1	humide	Adjectif	adjectif qualificatif
+19	CM1	important	Adjectif	adjectif qualificatif
+19	CM1	instant	Nom	nom masculin
+19	CM1	instruire	Verbe	verbe 3ème group
+19	CM1	intérieur	Adjectif	adjectif qualificatif
+19	CM1	introduire	Verbe	verbe 3ème group
+19	CM1	ivresse	Nom	nom féminin
+19	CM1	jeter	Verbe	verbe 1er group
+19	CM1	juger	Verbe	verbe 1er group
+19	CM1	labourer	Verbe	verbe 1er group
+19	CM1	lamentable	Adjectif	adjectif qualificatif
+19	CM1	lent	Adjectif	adjectif qualificatif
+19	CM1	lentement	Invariable	adverbe
+19	CM1	libérer	Verbe	verbe 1er group
+19	CM1	lien	Nom	nom masculin
+19	CM1	localité	Nom	nom féminin
+19	CM1	loger	Verbe	verbe 1er group
+19	CM1	loisir	Nom	nom masculin
+19	CM1	luisant	Adjectif	adjectif qualificatif
+19	CM1	lutin	Nom	nom masculin
+19	CM1	magasin	Nom	nom masculin
+19	CM1	malgré	Invariable	préposition
+19	CM1	manche	Nom	nom féminin
+19	CM1	manteau	Nom	nom masculin
+19	CM1	manuel	Adjectif	adjectif qualificatif
+19	CM1	marin	Nom	nom masculin
+19	CM1	ménagère	Nom	nom féminin
+19	CM1	mendiant	Nom	nom masculin
+19	CM1	milieu	Nom	nom masculin
+19	CM1	mission	Nom	nom féminin
+19	CM1	montant	Nom	nom masculin
+19	CM1	mou	Adjectif	adjectif qualificatif
+19	CM1	mourir	Verbe	verbe 3ème group
+19	CM1	nombreux	Adjectif	adjectif qualificatif
+19	CM1	nourriture	Nom	nom féminin
+19	CM1	office	Nom	nom masculin
+19	CM1	offrir	Verbe	verbe 3ème group
+19	CM1	onduler	Verbe	verbe 1er group
+19	CM1	par	Invariable	préposition
+19	CM1	parure	Nom	nom féminin
+19	CM1	passage	Nom	nom masculin
+19	CM1	pêche	Nom	nom féminin
+19	CM1	peupler	Verbe	verbe 1er group
+19	CM1	pic	Nom	nom masculin
+19	CM1	pigeon	Nom	nom masculin
+19	CM1	piquer	Verbe	verbe 1er group
+19	CM1	poirier	Nom	nom masculin
+19	CM1	pommier	Nom	nom masculin
+19	CM1	porte-plume	Nom	nom masculin
+19	CM1	poser	Verbe	verbe 1er group
+19	CM1	pousser	Verbe	verbe 1er group
+19	CM1	poussin	Nom	nom masculin
+19	CM1	préparer	Verbe	verbe 1er group
+19	CM1	président	Nom	nom masculin
+19	CM1	prêtre	Nom	nom masculin
+19	CM1	principalement	Invariable	adverbe
+19	CM1	printemps	Nom	nom masculin
+19	CM1	prisonnier	Nom	nom masculin
+19	CM1	privation	Nom	nom féminin
+19	CM1	profit	Nom	nom masculin
+19	CM1	propriétaire	Nom	nom masculin
+19	CM1	quart	Nom	nom masculin
+19	CM1	question	Nom	nom féminin
+19	CM1	raconter	Verbe	verbe 1er group
+19	CM1	ralentir	Verbe	verbe 2ème group
+19	CM1	raser	Verbe	verbe 1er group
+19	CM1	recevoir	Verbe	verbe 3ème group
+19	CM1	reconduire	Verbe	verbe 3ème group
+19	CM1	recouvrir	Verbe	verbe 3ème group
+19	CM1	réellement	Invariable	adverbe
+19	CM1	règle	Nom	nom féminin
+19	CM1	régulier	Adjectif	adjectif qualificatif
+19	CM1	rejoindre	Verbe	verbe 3ème group
+19	CM1	religieux	Adjectif	adjectif qualificatif
+19	CM1	remercier	Verbe	verbe 1er group
+19	CM1	résolution	Nom	nom féminin
+19	CM1	retourner	Verbe	verbe 1er group
+19	CM1	reverdir	Verbe	verbe 2ème group
+19	CM1	rider	Verbe	verbe 1er group
+19	CM1	rond	Adjectif	adjectif qualificatif
+19	CM1	rouleau	Nom	nom masculin
+19	CM1	royal	Adjectif	adjectif qualificatif
+19	CM1	ruisseau	Nom	nom masculin
+19	CM1	salaire	Nom	nom masculin
+19	CM1	satisfaire	Verbe	verbe 3ème group
+19	CM1	saule	Nom	nom masculin
+19	CM1	savourer	Verbe	verbe 1er group
+19	CM1	scolaire	Adjectif	adjectif qualificatif
+19	CM1	sentier	Nom	nom masculin
+19	CM1	sept	Déterminant	adjectif numéral
+19	CM1	souffrir	Verbe	verbe 3ème group
+19	CM1	souriant	Adjectif	adjectif qualificatif
+19	CM1	sublime	Adjectif	adjectif qualificatif
+19	CM1	surgir	Verbe	verbe 2ème group
+19	CM1	surveiller	Verbe	verbe 1er group
+19	CM1	suspendre	Verbe	verbe 3ème group
+19	CM1	tâche	Nom	nom féminin
+19	CM1	tarder	Verbe	verbe 1er group
+19	CM1	température	Nom	nom féminin
+19	CM1	terminer	Verbe	verbe 1er group
+19	CM1	terrestre	Adjectif	adjectif qualificatif
+19	CM1	toilette	Nom	nom féminin
+19	CM1	traitement	Nom	nom masculin
+19	CM1	tranquille	Adjectif	adjectif qualificatif
+19	CM1	transport	Nom	nom masculin
+19	CM1	végétal	Adjectif	adjectif qualificatif
+19	CM1	vénérer	Verbe	verbe 1er group
+19	CM1	vérifier	Verbe	verbe 1er group
+19	CM1	verre	Nom	nom masculin
+19	CM1	veuf	Adjectif	adjectif qualificatif
+19	CM1	vingt	Déterminant	adjectif numéral
+20	CM2	abondance	Nom	nom féminin
+20	CM2	activer	Verbe	verbe 1er group
+20	CM2	activité	Nom	nom féminin
+20	CM2	adjectif numéral	Nom	nom masculin
+20	CM2	administration	Nom	nom féminin
+20	CM2	afin	Invariable	conjonction
+20	CM2	agir	Verbe	verbe 2ème group
+20	CM2	agrément	Nom	nom masculin
+20	CM2	alerte	Nom	nom féminin
+20	CM2	allonger	Verbe	verbe 1er group
+20	CM2	alors	Invariable	adverbe
+20	CM2	amuser	Verbe	verbe 1er group
+20	CM2	an	Nom	nom masculin
+20	CM2	appartement	Nom	nom masculin
+20	CM2	appartenir	Verbe	verbe 3ème group
+20	CM2	arriver	Verbe	verbe 1er group
+20	CM2	attentivement	Invariable	adverbe
+20	CM2	aurore	Nom	nom féminin
+20	CM2	autant	Invariable	adverbe
+20	CM2	autel	Nom	nom masculin
+20	CM2	autorité	Nom	nom féminin
+20	CM2	banquier	Nom	nom masculin
+20	CM2	barre	Nom	nom féminin
+20	CM2	bâtir	Verbe	verbe 2ème group
+20	CM2	blessure	Nom	nom féminin
+20	CM2	bonhomme	Nom	nom masculin
+20	CM2	bossu	Adjectif	adjectif qualificatif
+20	CM2	boucler	Verbe	verbe 1er group
+20	CM2	bourgeon	Nom	nom masculin
+20	CM2	brumeux	Adjectif	adjectif qualificatif
+20	CM2	cache-cache	Nom	nom masculin
+20	CM2	cadran	Nom	nom masculin
+20	CM2	calendrier	Nom	nom masculin
+20	CM2	calmer	Verbe	verbe 1er group
+20	CM2	caprice	Nom	nom masculin
+20	CM2	ceci	Pronom	pronom
+20	CM2	cela	Pronom	pronom
+20	CM2	centimètre	Nom	nom masculin
+20	CM2	chair	Nom	nom féminin
+20	CM2	charger	Verbe	verbe 1er group
+20	CM2	chasser	Verbe	verbe 1er group
+20	CM2	chausser	Verbe	verbe 1er group
+20	CM2	chérir	Verbe	verbe 2ème group
+20	CM2	chiffre	Nom	nom masculin
+20	CM2	choix	Nom	nom masculin
+20	CM2	cimetière	Nom	nom masculin
+20	CM2	claquer	Verbe	verbe 1er group
+20	CM2	coiffer	Verbe	verbe 1er group
+20	CM2	colère	Nom	nom féminin
+20	CM2	colline	Nom	nom féminin
+20	CM2	composition	Nom	nom féminin
+20	CM2	conférence	Nom	nom féminin
+20	CM2	constituer	Verbe	verbe 1er group
+20	CM2	convertir	Verbe	verbe 2ème group
+20	CM2	courageux	Adjectif	adjectif qualificatif
+20	CM2	courant	Adjectif	adjectif qualificatif
+20	CM2	couronne	Nom	nom féminin
+20	CM2	coussin	Nom	nom masculin
+20	CM2	couvent	Nom	nom féminin
+20	CM2	couver	Verbe	verbe 1er group
+20	CM2	craindre	Verbe	verbe 3ème group
+20	CM2	creux	Adjectif	adjectif qualificatif
+20	CM2	cri	Nom	nom masculin
+20	CM2	cuir	Nom	nom masculin
+20	CM2	déchirer	Verbe	verbe 1er group
+20	CM2	décorer	Verbe	verbe 1er group
+20	CM2	décourager	Verbe	verbe 1er group
+20	CM2	défense	Nom	nom féminin
+20	CM2	déjeuner	Verbe	verbe 1er group
+20	CM2	délice	Nom	nom masculin
+20	CM2	déranger	Verbe	verbe 1er group
+20	CM2	dernièrement	Invariable	adverbe
+20	CM2	dès	Invariable	préposition
+20	CM2	descendre	Verbe	verbe 3ème group
+20	CM2	désir	Nom	nom masculin
+20	CM2	désoler	Verbe	verbe 1er group
+20	CM2	dessiner	Verbe	verbe 1er group
+20	CM2	dessous	Invariable	préposition
+20	CM2	détourner	Verbe	verbe 1er group
+20	CM2	dur	Adjectif	adjectif qualificatif
+20	CM2	échanger	Verbe	verbe 1er group
+20	CM2	éléphant	Nom	nom masculin
+20	CM2	encourager	Verbe	verbe 1er group
+20	CM2	enlever	Verbe	verbe 1er group
+20	CM2	énormément	Invariable	adverbe
+20	CM2	enseignement	Nom	nom masculin
+20	CM2	épauler	Verbe	verbe 1er group
+20	CM2	éprouver	Verbe	verbe 1er group
+20	CM2	épuiser	Verbe	verbe 1er group
+20	CM2	espace	Nom	nom masculin
+20	CM2	estimer	Verbe	verbe 1er group
+20	CM2	étagère	Nom	nom féminin
+20	CM2	étonner	Verbe	verbe 1er group
+20	CM2	étourdi	Adjectif	adjectif qualificatif
+20	CM2	étranger	Adjectif	adjectif qualificatif
+20	CM2	eux	Pronom	pronom
+20	CM2	éviter	Verbe	verbe 1er group
+20	CM2	excuse	Nom	nom féminin
+20	CM2	expédition	Nom	nom féminin
+20	CM2	face	Nom	nom féminin
+20	CM2	faiblesse	Nom	nom féminin
+20	CM2	faim	Nom	nom féminin
+20	CM2	fameux	Adjectif	adjectif qualificatif
+20	CM2	favoriser	Verbe	verbe 1er group
+20	CM2	ferveur	Nom	nom féminin
+20	CM2	fêter	Verbe	verbe 1er group
+20	CM2	fièvre	Nom	nom féminin
+20	CM2	fil	Nom	nom masculin
+20	CM2	file	Nom	nom féminin
+20	CM2	fillette	Nom	nom féminin
+20	CM2	flamme	Nom	nom féminin
+20	CM2	flot	Nom	nom masculin
+20	CM2	foie	Nom	nom masculin
+20	CM2	forestier	Adjectif	adjectif qualificatif
+20	CM2	forêt	Nom	nom féminin
+20	CM2	fougère	Nom	nom féminin
+20	CM2	frais	Adjectif	adjectif qualificatif
+20	CM2	fraise	Nom	nom féminin
+20	CM2	franchir	Verbe	verbe 2ème group
+20	CM2	froment	Nom	nom masculin
+20	CM2	gagner	Verbe	verbe 1er group
+20	CM2	géant	Adjectif	adjectif qualificatif
+20	CM2	geler	Verbe	verbe 1er group
+20	CM2	général	Adjectif	adjectif qualificatif
+20	CM2	germer	Verbe	verbe 1er group
+20	CM2	geste	Nom	nom masculin
+20	CM2	giboulée	Nom	nom féminin
+20	CM2	gouvernement	Nom	nom masculin
+20	CM2	gouverner	Verbe	verbe 1er group
+20	CM2	graine	Nom	nom féminin
+20	CM2	grandiose	Adjectif	adjectif qualificatif
+20	CM2	grand-mère	Nom	nom féminin
+20	CM2	grappe	Nom	nom féminin
+20	CM2	grès	Nom	nom masculin
+20	CM2	habit	Nom	nom masculin
+20	CM2	île	Nom	nom féminin
+20	CM2	imagination	Nom	nom féminin
+20	CM2	imiter	Verbe	verbe 1er group
+20	CM2	imperméable	Adjectif	adjectif qualificatif
+20	CM2	imprudence	Nom	nom féminin
+20	CM2	imprudent	Adjectif	adjectif qualificatif
+20	CM2	incendie	Nom	nom masculin
+20	CM2	indispensable	Adjectif	adjectif qualificatif
+20	CM2	inerte	Adjectif	adjectif qualificatif
+20	CM2	infiniment	Invariable	adverbe
+20	CM2	inquiétude	Nom	nom féminin
+20	CM2	inspirer	Verbe	verbe 1er group
+20	CM2	intelligence	Nom	nom féminin
+20	CM2	joindre	Verbe	verbe 3ème group
+20	CM2	joyeusement	Invariable	adverbe
+20	CM2	léger	Adjectif	adjectif qualificatif
+20	CM2	lequel	Pronom	pronom
+20	CM2	leur	Pronom	pronom
+20	CM2	lisière	Nom	nom féminin
+20	CM2	longueur	Nom	nom féminin
+20	CM2	lui-même	Pronom	pronom
+20	CM2	maintenant	Invariable	adverbe
+20	CM2	malheur	Nom	nom masculin
+20	CM2	malheureusement	Invariable	adverbe
+20	CM2	manifester	Verbe	verbe 1er group
+20	CM2	marier	Verbe	verbe 1er group
+20	CM2	marquis	Nom	nom masculin
+20	CM2	masse	Nom	nom féminin
+20	CM2	massif	Adjectif	adjectif qualificatif
+20	CM2	mélodieux	Adjectif	adjectif qualificatif
+20	CM2	mensonge	Nom	nom masculin
+20	CM2	mien	Pronom	pronom
+20	CM2	mieux	Invariable	adverbe
+20	CM2	monotone	Adjectif	adjectif qualificatif
+20	CM2	moquer	Verbe	verbe 1er group
+20	CM2	moyenne	Nom	nom féminin
+20	CM2	ni	Invariable	conjonction
+20	CM2	obscurité	Nom	nom féminin
+20	CM2	observation	Nom	nom féminin
+20	CM2	obtenir	Verbe	verbe 3ème group
+20	CM2	océan	Nom	nom masculin
+20	CM2	officier	Nom	nom masculin
+20	CM2	outil	Nom	nom masculin
+20	CM2	parti	Nom	nom masculin
+20	CM2	passer	Verbe	verbe 1er group
+20	CM2	pavé	Nom	nom masculin
+20	CM2	péché	Nom	nom masculin
+20	CM2	pêcheur	Nom	nom masculin
+20	CM2	peindre	Verbe	verbe 3ème group
+20	CM2	pension	Nom	nom féminin
+20	CM2	période	Nom	nom féminin
+20	CM2	peser	Verbe	verbe 1er group
+20	CM2	pétale	Nom	nom masculin
+20	CM2	pieux	Adjectif	adjectif qualificatif
+20	CM2	placer	Verbe	verbe 1er group
+20	CM2	pleuvoir	Verbe	verbe 3ème group
+20	CM2	plier	Verbe	verbe 1er group
+20	CM2	poil	Nom	nom masculin
+20	CM2	pompier	Nom	nom masculin
+20	CM2	préserver	Verbe	verbe 1er group
+20	CM2	primaire	Adjectif	adjectif qualificatif
+20	CM2	proclamer	Verbe	verbe 1er group
+20	CM2	procurer	Verbe	verbe 1er group
+20	CM2	prodigieux	Adjectif	adjectif qualificatif
+20	CM2	profiter	Verbe	verbe 1er group
+20	CM2	promener	Verbe	verbe 1er group
+20	CM2	proposer	Verbe	verbe 1er group
+20	CM2	protéger	Verbe	verbe 1er group
+20	CM2	provision	Nom	nom féminin
+20	CM2	prudent	Adjectif	adjectif qualificatif
+20	CM2	radieux	Adjectif	adjectif qualificatif
+20	CM2	ranimer	Verbe	verbe 1er group
+20	CM2	récolter	Verbe	verbe 1er group
+20	CM2	refroidir	Verbe	verbe 2ème group
+20	CM2	régaler	Verbe	verbe 1er group
+20	CM2	régler	Verbe	verbe 1er group
+20	CM2	remplacer	Verbe	verbe 1er group
+20	CM2	remuer	Verbe	verbe 1er group
+20	CM2	répéter	Verbe	verbe 1er group
+20	CM2	représenter	Verbe	verbe 1er group
+20	CM2	respirer	Verbe	verbe 1er group
+20	CM2	retard	Nom	nom masculin
+20	CM2	retomber	Verbe	verbe 1er group
+20	CM2	revêtir	Verbe	verbe 3ème group
+20	CM2	rôle	Nom	nom masculin
+20	CM2	roux	Adjectif	adjectif qualificatif
+20	CM2	sale	Adjectif	adjectif qualificatif
+20	CM2	seconde	Nom	nom féminin
+20	CM2	selon	Invariable	préposition
+20	CM2	semblable	Adjectif	adjectif qualificatif
+20	CM2	sergent	Nom	nom masculin
+20	CM2	sérieux	Adjectif	adjectif qualificatif
+20	CM2	serviette	Nom	nom féminin
+20	CM2	seulement	Invariable	adverbe
+20	CM2	sève	Nom	nom féminin
+20	CM2	sien	Pronom	pronom
+20	CM2	signer	Verbe	verbe 1er group
+20	CM2	sitôt	Invariable	adverbe
+20	CM2	situer	Verbe	verbe 1er group
+20	CM2	solitaire	Adjectif	adjectif qualificatif
+20	CM2	son	Nom	nom masculin
+20	CM2	sou	Nom	nom masculin
+20	CM2	souffrance	Nom	nom féminin
+20	CM2	studieux	Adjectif	adjectif qualificatif
+20	CM2	stupéfaction	Nom	nom féminin
+20	CM2	suprême	Adjectif	adjectif qualificatif
+20	CM2	surprendre	Verbe	verbe 3ème group
+20	CM2	tambour	Nom	nom masculin
+20	CM2	tard	Invariable	adverbe
+20	CM2	téléphone	Nom	nom masculin
+20	CM2	témoigner	Verbe	verbe 1er group
+20	CM2	terrier	Nom	nom masculin
+20	CM2	tiède	Adjectif	adjectif qualificatif
+20	CM2	tôt	Invariable	adverbe
+20	CM2	trace	Nom	nom féminin
+20	CM2	transporter	Verbe	verbe 1er group
+20	CM2	très	Invariable	adverbe
+20	CM2	troubler	Verbe	verbe 1er group
+20	CM2	tuile	Nom	nom féminin
+20	CM2	vacances	Nom	nom féminin
+20	CM2	vélo	Nom	nom masculin
+20	CM2	velouté	Adjectif	adjectif qualificatif
+20	CM2	verser	Verbe	verbe 1er group
+20	CM2	vice	Nom	nom masculin
+20	CM2	vilain	Adjectif	adjectif qualificatif
+20	CM2	violence	Nom	nom féminin
+20	CM2	violent	Adjectif	adjectif qualificatif
+20	CM2	voyager	Verbe	verbe 1er group
+21	CM2	aborder	Verbe	verbe 1er group
+21	CM2	accident	Nom	nom masculin
+21	CM2	accorder	Verbe	verbe 1er group
+21	CM2	achever	Verbe	verbe 1er group
+21	CM2	admirer	Verbe	verbe 1er group
+21	CM2	adorer	Verbe	verbe 1er group
+21	CM2	adoucir	Verbe	verbe 2ème group
+21	CM2	adversaire	Nom	nom masculin
+21	CM2	affaire	Nom	nom féminin
+21	CM2	affiche	Nom	nom féminin
+21	CM2	agrémenter	Verbe	verbe 1er group
+21	CM2	aiguille	Nom	nom féminin
+21	CM2	allumette	Nom	nom féminin
+21	CM2	amener	Verbe	verbe 1er group
+21	CM2	amical	Adjectif	adjectif qualificatif
+21	CM2	anglais	Adjectif	adjectif qualificatif
+21	CM2	annonce	Nom	nom féminin
+21	CM2	apostolique	Adjectif	adjectif qualificatif
+21	CM2	apôtre	Nom	nom masculin
+21	CM2	application	Nom	nom féminin
+21	CM2	arrière	Nom	nom masculin
+21	CM2	art	Nom	nom masculin
+21	CM2	attentif	Adjectif	adjectif qualificatif
+21	CM2	attention	Nom	nom féminin
+21	CM2	aubépine	Nom	nom féminin
+21	CM2	aujourd'hui	Invariable	adverbe
+21	CM2	autoriser	Verbe	verbe 1er group
+21	CM2	balancer	Verbe	verbe 1er group
+21	CM2	bâtiment	Nom	nom masculin
+21	CM2	bienheureux	Adjectif	adjectif qualificatif
+21	CM2	bijou	Nom	nom masculin
+21	CM2	blond	Adjectif	adjectif qualificatif
+21	CM2	bouger	Verbe	verbe 1er group
+21	CM2	bourdonnement	Nom	nom masculin
+21	CM2	bravo	Nom	nom masculin
+21	CM2	broder	Verbe	verbe 1er group
+21	CM2	brouter	Verbe	verbe 1er group
+21	CM2	canne	Nom	nom féminin
+21	CM2	cas	Nom	nom masculin
+21	CM2	céleste	Adjectif	adjectif qualificatif
+21	CM2	champ	Nom	nom masculin
+21	CM2	chapelet	Nom	nom masculin
+21	CM2	chauffage	Nom	nom masculin
+21	CM2	chauffer	Verbe	verbe 1er group
+21	CM2	chèvre	Nom	nom féminin
+21	CM2	chiffon	Nom	nom masculin
+21	CM2	clairière	Nom	nom féminin
+21	CM2	clarté	Nom	nom féminin
+21	CM2	climat	Nom	nom masculin
+21	CM2	clouer	Verbe	verbe 1er group
+21	CM2	collection	Nom	nom féminin
+21	CM2	colonel	Nom	nom masculin
+21	CM2	commande	Nom	nom féminin
+21	CM2	commencement	Nom	nom masculin
+21	CM2	compliquer	Verbe	verbe 1er group
+21	CM2	confiance	Nom	nom féminin
+21	CM2	confier	Verbe	verbe 1er group
+21	CM2	congrès	Nom	nom masculin
+21	CM2	consentement	Nom	nom masculin
+21	CM2	conserver	Verbe	verbe 1er group
+21	CM2	contenter	Verbe	verbe 1er group
+21	CM2	coquille	Nom	nom féminin
+21	CM2	cordialement	Invariable	adverbe
+21	CM2	correction	Nom	nom féminin
+21	CM2	court	Adjectif	adjectif qualificatif
+21	CM2	danser	Verbe	verbe 1er group
+21	CM2	débiter	Verbe	verbe 1er group
+21	CM2	debout	Invariable	adverbe
+21	CM2	déclarer	Verbe	verbe 1er group
+21	CM2	défaire	Verbe	verbe 3ème group
+21	CM2	délicieux	Adjectif	adjectif qualificatif
+21	CM2	demander	Verbe	verbe 1er group
+21	CM2	déposer	Verbe	verbe 1er group
+21	CM2	dessert	Nom	nom masculin
+21	CM2	détacher	Verbe	verbe 1er group
+21	CM2	déterminer	Verbe	verbe 1er group
+21	CM2	deuil	Nom	nom masculin
+21	CM2	deuxième	Déterminant	adjectif numéral
+21	CM2	dévorer	Verbe	verbe 1er group
+21	CM2	différent	Adjectif	adjectif qualificatif
+21	CM2	diminuer	Verbe	verbe 1er group
+21	CM2	dîner	Verbe	verbe 1er group
+21	CM2	dispenser	Verbe	verbe 1er group
+21	CM2	disputer	Verbe	verbe 1er group
+21	CM2	dizaine	Nom	nom féminin
+21	CM2	doubler	Verbe	verbe 1er group
+21	CM2	durant	Invariable	préposition
+21	CM2	éclair	Nom	nom masculin
+21	CM2	éclore	Verbe	verbe 3ème group
+21	CM2	écouler	Verbe	verbe 1er group
+21	CM2	effort	Nom	nom masculin
+21	CM2	égarer	Verbe	verbe 1er group
+21	CM2	élargir	Verbe	verbe 2ème group
+21	CM2	électricité	Nom	nom féminin
+21	CM2	émerveiller	Verbe	verbe 1er group
+21	CM2	emporter	Verbe	verbe 1er group
+21	CM2	énergique	Adjectif	adjectif qualificatif
+21	CM2	enfoncer	Verbe	verbe 1er group
+21	CM2	engloutir	Verbe	verbe 2ème group
+21	CM2	ensemble	Invariable	adverbe
+21	CM2	entonner	Verbe	verbe 1er group
+21	CM2	envier	Verbe	verbe 1er group
+21	CM2	épais	Adjectif	adjectif qualificatif
+21	CM2	épouser	Verbe	verbe 1er group
+21	CM2	époux	Nom	nom masculin
+21	CM2	estomac	Nom	nom masculin
+21	CM2	étaler	Verbe	verbe 1er group
+21	CM2	étincelle	Nom	nom féminin
+21	CM2	exclamation	Nom	nom féminin
+21	CM2	exemple	Nom	nom masculin
+21	CM2	expliquer	Verbe	verbe 1er group
+21	CM2	extérieur	Adjectif	adjectif qualificatif
+21	CM2	fabrication	Nom	nom féminin
+21	CM2	facilité	Nom	nom féminin
+21	CM2	faciliter	Verbe	verbe 1er group
+21	CM2	fatal	Adjectif	adjectif qualificatif
+21	CM2	ferrer	Verbe	verbe 1er group
+21	CM2	ficelle	Nom	nom féminin
+21	CM2	figurer	Verbe	verbe 1er group
+21	CM2	fléau	Nom	nom masculin
+21	CM2	flocon	Nom	nom masculin
+21	CM2	fond	Nom	nom masculin
+21	CM2	fourrure	Nom	nom féminin
+21	CM2	foyer	Nom	nom masculin
+21	CM2	frémir	Verbe	verbe 2ème group
+21	CM2	front	Nom	nom masculin
+21	CM2	furieux	Adjectif	adjectif qualificatif
+21	CM2	grâce	Nom	nom féminin
+21	CM2	grille	Nom	nom féminin
+21	CM2	haine	Nom	nom féminin
+21	CM2	héroïque	Adjectif	adjectif qualificatif
+21	CM2	honteux	Adjectif	adjectif qualificatif
+21	CM2	humble	Adjectif	adjectif qualificatif
+21	CM2	illuminer	Verbe	verbe 1er group
+21	CM2	immobile	Adjectif	adjectif qualificatif
+21	CM2	indiquer	Verbe	verbe 1er group
+21	CM2	informer	Verbe	verbe 1er group
+21	CM2	intelligent	Adjectif	adjectif qualificatif
+21	CM2	intention	Nom	nom féminin
+21	CM2	inviter	Verbe	verbe 1er group
+21	CM2	invoquer	Verbe	verbe 1er group
+21	CM2	isoler	Verbe	verbe 1er group
+21	CM2	ivoire	Nom	nom masculin
+21	CM2	jadis	Invariable	adverbe
+21	CM2	kilomètre	Nom	nom masculin
+21	CM2	là	Invariable	adverbe
+21	CM2	las	Adjectif	adjectif qualificatif
+21	CM2	légèrement	Invariable	adverbe
+21	CM2	lenteur	Nom	nom féminin
+21	CM2	litière	Nom	nom féminin
+21	CM2	longer	Verbe	verbe 1er group
+21	CM2	manier	Verbe	verbe 1er group
+21	CM2	manière	Nom	nom féminin
+21	CM2	manquer	Verbe	verbe 1er group
+21	CM2	marchander	Verbe	verbe 1er group
+21	CM2	mécontent	Adjectif	adjectif qualificatif
+21	CM2	méditer	Verbe	verbe 1er group
+21	CM2	meilleur	Adjectif	adjectif qualificatif
+21	CM2	mélancolique	Adjectif	adjectif qualificatif
+21	CM2	membre	Nom	nom masculin
+21	CM2	menton	Nom	nom masculin
+21	CM2	merveilleusement	Invariable	adverbe
+21	CM2	mignon	Adjectif	adjectif qualificatif
+21	CM2	mince	Adjectif	adjectif qualificatif
+21	CM2	moqueur	Adjectif	adjectif qualificatif
+21	CM2	museau	Nom	nom masculin
+21	CM2	naissance	Nom	nom féminin
+21	CM2	noix	Nom	nom féminin
+21	CM2	nommer	Verbe	verbe 1er group
+21	CM2	nu	Adjectif	adjectif qualificatif
+21	CM2	nullement	Invariable	adverbe
+21	CM2	oranger	Nom	nom masculin
+21	CM2	organiser	Verbe	verbe 1er group
+21	CM2	orgue	Nom	nom masculin
+21	CM2	orphelin	Nom	nom masculin
+21	CM2	paisible	Adjectif	adjectif qualificatif
+21	CM2	pardonner	Verbe	verbe 1er group
+21	CM2	paroisse	Nom	nom féminin
+21	CM2	participer	Verbe	verbe 1er group
+21	CM2	patin	Nom	nom masculin
+21	CM2	patronage	Nom	nom masculin
+21	CM2	payer	Verbe	verbe 1er group
+21	CM2	pencher	Verbe	verbe 1er group
+21	CM2	pénitence	Nom	nom féminin
+21	CM2	percher	Verbe	verbe 1er group
+21	CM2	permettre	Verbe	verbe 3ème group
+21	CM2	personnel	Adjectif	adjectif qualificatif
+21	CM2	perspective	Nom	nom féminin
+21	CM2	pétrir	Verbe	verbe 2ème group
+21	CM2	plancher	Nom	nom masculin
+21	CM2	pleur	Nom	nom masculin
+21	CM2	poireau	Nom	nom masculin
+21	CM2	porter	Verbe	verbe 1er group
+21	CM2	portière	Nom	nom féminin
+21	CM2	portrait	Nom	nom masculin
+21	CM2	poteau	Nom	nom masculin
+21	CM2	préau	Nom	nom masculin
+21	CM2	préférence	Nom	nom féminin
+21	CM2	présence	Nom	nom féminin
+21	CM2	programme	Nom	nom masculin
+21	CM2	propos	Nom	nom masculin
+21	CM2	prouver	Verbe	verbe 1er group
+21	CM2	quatrième	Déterminant	adjectif numéral
+21	CM2	quel	Pronom	pronom
+21	CM2	race	Nom	nom féminin
+21	CM2	raide	Adjectif	adjectif qualificatif
+21	CM2	rameau	Nom	nom masculin
+21	CM2	réalité	Nom	nom féminin
+21	CM2	réconforter	Verbe	verbe 1er group
+21	CM2	refaire	Verbe	verbe 3ème group
+21	CM2	réfectoire	Nom	nom masculin
+21	CM2	refermer	Verbe	verbe 1er group
+21	CM2	refuser	Verbe	verbe 1er group
+21	CM2	règne	Nom	nom masculin
+21	CM2	régulièrement	Invariable	adverbe
+21	CM2	remarquer	Verbe	verbe 1er group
+21	CM2	remède	Nom	nom masculin
+21	CM2	rencontrer	Verbe	verbe 1er group
+21	CM2	renverser	Verbe	verbe 1er group
+21	CM2	reprocher	Verbe	verbe 1er group
+21	CM2	résoudre	Verbe	verbe 3ème group
+21	CM2	retraite	Nom	nom féminin
+21	CM2	rigoureux	Adjectif	adjectif qualificatif
+21	CM2	risquer	Verbe	verbe 1er group
+21	CM2	rompre	Verbe	verbe 3ème group
+21	CM2	roseau	Nom	nom masculin
+21	CM2	sanglot	Nom	nom masculin
+21	CM2	saut	Nom	nom masculin
+21	CM2	second	Adjectif	adjectif qualificatif
+21	CM2	s'écrier	Verbe	verbe 1er group
+21	CM2	séjour	Nom	nom masculin
+21	CM2	sembler	Verbe	verbe 1er group
+21	CM2	s'enfuir	Verbe	verbe 3ème group
+21	CM2	sentiment	Nom	nom masculin
+21	CM2	sérieusement	Invariable	adverbe
+21	CM2	serrure	Nom	nom féminin
+21	CM2	seuil	Nom	nom masculin
+21	CM2	sévir	Verbe	verbe 2ème group
+21	CM2	siècle	Nom	nom masculin
+21	CM2	signifier	Verbe	verbe 1er group
+21	CM2	sort	Nom	nom masculin
+21	CM2	sourire	Verbe	verbe 3ème group
+21	CM2	succès	Nom	nom masculin
+21	CM2	supérieur	Adjectif	adjectif qualificatif
+21	CM2	talent	Nom	nom masculin
+21	CM2	tant	Invariable	adverbe
+21	CM2	teinte	Nom	nom féminin
+21	CM2	thé	Nom	nom masculin
+21	CM2	toujours	Invariable	adverbe
+21	CM2	tourbillon	Nom	nom masculin
+21	CM2	transformer	Verbe	verbe 1er group
+21	CM2	troisième	Déterminant	adjectif numéral
+21	CM2	tromper	Verbe	verbe 1er group
+21	CM2	trouer	Verbe	verbe 1er group
+21	CM2	utiliser	Verbe	verbe 1er group
+21	CM2	varier	Verbe	verbe 1er group
+21	CM2	venger	Verbe	verbe 1er group
+21	CM2	vérité	Nom	nom féminin
+21	CM2	vicaire	Nom	nom masculin
+21	CM2	voler	Verbe	verbe 1er group
+22	CM2	abondant	Adjectif	adjectif qualificatif
+22	CM2	absolument	Invariable	adverbe
+22	CM2	acharner	Verbe	verbe 1er group
+22	CM2	actuel	Adjectif	adjectif qualificatif
+22	CM2	affection	Nom	nom féminin
+22	CM2	affreux	Adjectif	adjectif qualificatif
+22	CM2	aider	Verbe	verbe 1er group
+22	CM2	allumer	Verbe	verbe 1er group
+22	CM2	ancien	Adjectif	adjectif qualificatif
+22	CM2	apparence	Nom	nom féminin
+22	CM2	apparition	Nom	nom féminin
+22	CM2	appel	Nom	nom masculin
+22	CM2	araignée	Nom	nom féminin
+22	CM2	armer	Verbe	verbe 1er group
+22	CM2	arroser	Verbe	verbe 1er group
+22	CM2	assurer	Verbe	verbe 1er group
+22	CM2	attachement	Nom	nom masculin
+22	CM2	attaquer	Verbe	verbe 1er group
+22	CM2	auprès	Invariable	adverbe
+22	CM2	aussitôt	Invariable	adverbe
+22	CM2	autrui	Pronom	pronom
+22	CM2	avancer	Verbe	verbe 1er group
+22	CM2	aviser	Verbe	verbe 1er group
+22	CM2	baguette	Nom	nom féminin
+22	CM2	bétail	Nom	nom masculin
+22	CM2	bienvenue	Nom	nom féminin
+22	CM2	boiteux	Adjectif	adjectif qualificatif
+22	CM2	bond	Nom	nom masculin
+22	CM2	border	Verbe	verbe 1er group
+22	CM2	butiner	Verbe	verbe 1er group
+22	CM2	camp	Nom	nom masculin
+22	CM2	carotte	Nom	nom féminin
+22	CM2	carrière	Nom	nom féminin
+22	CM2	casser	Verbe	verbe 1er group
+22	CM2	cérémonie	Nom	nom féminin
+22	CM2	chêne	Nom	nom masculin
+22	CM2	chez	Invariable	préposition
+22	CM2	cité	Nom	nom féminin
+22	CM2	coffre	Nom	nom masculin
+22	CM2	coffret	Nom	nom masculin
+22	CM2	combler	Verbe	verbe 1er group
+22	CM2	commencer	Verbe	verbe 1er group
+22	CM2	consacrer	Verbe	verbe 1er group
+22	CM2	consulter	Verbe	verbe 1er group
+22	CM2	cordonnier	Nom	nom masculin
+22	CM2	corriger	Verbe	verbe 1er group
+22	CM2	couture	Nom	nom féminin
+22	CM2	creuser	Verbe	verbe 1er group
+22	CM2	crever	Verbe	verbe 1er group
+22	CM2	curiosité	Nom	nom féminin
+22	CM2	débarquer	Verbe	verbe 1er group
+22	CM2	déboucher	Verbe	verbe 1er group
+22	CM2	décéder	Verbe	verbe 1er group
+22	CM2	décharger	Verbe	verbe 1er group
+22	CM2	découper	Verbe	verbe 1er group
+22	CM2	décrire	Verbe	verbe 3ème group
+22	CM2	dégager	Verbe	verbe 1er group
+22	CM2	dehors	Invariable	adverbe
+22	CM2	déménager	Verbe	verbe 1er group
+22	CM2	demeurer	Verbe	verbe 1er group
+22	CM2	départ	Nom	nom masculin
+22	CM2	désastre	Nom	nom masculin
+22	CM2	description	Nom	nom féminin
+22	CM2	dessus	Invariable	adverbe
+22	CM2	discuter	Verbe	verbe 1er group
+22	CM2	disparition	Nom	nom féminin
+22	CM2	duquel	Pronom	pronom
+22	CM2	échantillon	Nom	nom masculin
+22	CM2	éclatant	Adjectif	adjectif qualificatif
+22	CM2	économiser	Verbe	verbe 1er group
+22	CM2	effacer	Verbe	verbe 1er group
+22	CM2	élever	Verbe	verbe 1er group
+22	CM2	embellir	Verbe	verbe 2ème group
+22	CM2	embrasser	Verbe	verbe 1er group
+22	CM2	émotion	Nom	nom féminin
+22	CM2	encadrer	Verbe	verbe 1er group
+22	CM2	enfouir	Verbe	verbe 2ème group
+22	CM2	enterrer	Verbe	verbe 1er group
+22	CM2	entièrement	Invariable	adverbe
+22	CM2	entrer	Verbe	verbe 1er group
+22	CM2	épouvantable	Adjectif	adjectif qualificatif
+22	CM2	erreur	Nom	nom féminin
+22	CM2	espérance	Nom	nom féminin
+22	CM2	étang	Nom	nom masculin
+22	CM2	évangile	Nom	nom masculin
+22	CM2	éveiller	Verbe	verbe 1er group
+22	CM2	exactement	Invariable	adverbe
+22	CM2	exactitude	Nom	nom féminin
+22	CM2	expédier	Verbe	verbe 1er group
+22	CM2	extrémité	Nom	nom féminin
+22	CM2	flotter	Verbe	verbe 1er group
+22	CM2	forcer	Verbe	verbe 1er group
+22	CM2	fouetter	Verbe	verbe 1er group
+22	CM2	frapper	Verbe	verbe 1er group
+22	CM2	frontière	Nom	nom féminin
+22	CM2	gant	Nom	nom masculin
+22	CM2	garantir	Verbe	verbe 2ème group
+22	CM2	gazouillement	Nom	nom masculin
+22	CM2	gentil	Adjectif	adjectif qualificatif
+22	CM2	giroflée	Nom	nom féminin
+22	CM2	glisser	Verbe	verbe 1er group
+22	CM2	gracieux	Adjectif	adjectif qualificatif
+22	CM2	grippe	Nom	nom féminin
+22	CM2	guérison	Nom	nom féminin
+22	CM2	hélas	Invariable	interjection
+22	CM2	hêtre	Nom	nom masculin
+22	CM2	honneur	Nom	nom masculin
+22	CM2	honorer	Verbe	verbe 1er group
+22	CM2	humidité	Nom	nom féminin
+22	CM2	hurler	Verbe	verbe 1er group
+22	CM2	idéal	Adjectif	adjectif qualificatif
+22	CM2	ignorer	Verbe	verbe 1er group
+22	CM2	implorer	Verbe	verbe 1er group
+22	CM2	imprimer	Verbe	verbe 1er group
+22	CM2	incliner	Verbe	verbe 1er group
+22	CM2	industriel	Adjectif	adjectif qualificatif
+22	CM2	inquiet	Adjectif	adjectif qualificatif
+22	CM2	interdire	Verbe	verbe 3ème group
+22	CM2	invention	Nom	nom féminin
+22	CM2	képi	Nom	nom masculin
+22	CM2	là-bas	Invariable	adverbe
+22	CM2	lanterne	Nom	nom féminin
+22	CM2	limiter	Verbe	verbe 1er group
+22	CM2	lointain	Adjectif	adjectif qualificatif
+22	CM2	longuement	Invariable	adverbe
+22	CM2	lutter	Verbe	verbe 1er group
+22	CM2	majesté	Nom	nom féminin
+22	CM2	mélancolie	Nom	nom féminin
+22	CM2	mériter	Verbe	verbe 1er group
+22	CM2	meunier	Nom	nom masculin
+22	CM2	monsieur	Nom	nom masculin
+22	CM2	musicien	Adjectif	adjectif qualificatif
+22	CM2	niveau	Nom	nom masculin
+22	CM2	non	Invariable	adverbe
+22	CM2	obéissant	Adjectif	adjectif qualificatif
+22	CM2	obstacle	Nom	nom masculin
+22	CM2	odorant	Adjectif	adjectif qualificatif
+22	CM2	opérer	Verbe	verbe 1er group
+22	CM2	ordinairement	Invariable	adverbe
+22	CM2	orner	Verbe	verbe 1er group
+22	CM2	ouate	Nom	nom féminin
+22	CM2	paradis	Nom	nom masculin
+22	CM2	parce que	Invariable	conjonction
+22	CM2	paresse	Nom	nom féminin
+22	CM2	passant	Nom	nom masculin
+22	CM2	passion	Nom	nom féminin
+22	CM2	plaindre	Verbe	verbe 3ème group
+22	CM2	plainte	Nom	nom féminin
+22	CM2	plaintif	Adjectif	adjectif qualificatif
+22	CM2	plan	Nom	nom masculin
+22	CM2	planer	Verbe	verbe 1er group
+22	CM2	plein	Adjectif	adjectif qualificatif
+22	CM2	plomb	Nom	nom masculin
+22	CM2	plutôt	Invariable	adverbe
+22	CM2	potager	Nom	nom masculin
+22	CM2	poussière	Nom	nom féminin
+22	CM2	précieux	Adjectif	adjectif qualificatif
+22	CM2	précipiter	Verbe	verbe 1er group
+22	CM2	presser	Verbe	verbe 1er group
+22	CM2	prêt	Adjectif	adjectif qualificatif
+22	CM2	printanier	Adjectif	adjectif qualificatif
+22	CM2	priver	Verbe	verbe 1er group
+22	CM2	proie	Nom	nom féminin
+22	CM2	prolonger	Verbe	verbe 1er group
+22	CM2	prononcer	Verbe	verbe 1er group
+22	CM2	provoquer	Verbe	verbe 1er group
+22	CM2	quatorze	Déterminant	adjectif numéral
+22	CM2	quinze	Déterminant	adjectif numéral
+22	CM2	quitter	Verbe	verbe 1er group
+22	CM2	rang	Nom	nom masculin
+22	CM2	rassurer	Verbe	verbe 1er group
+22	CM2	réaliser	Verbe	verbe 1er group
+22	CM2	réclamer	Verbe	verbe 1er group
+22	CM2	récompense	Nom	nom féminin
+22	CM2	reflet	Nom	nom masculin
+22	CM2	réformer	Verbe	verbe 1er group
+22	CM2	réfugier	Verbe	verbe 1er group
+22	CM2	regret	Nom	nom masculin
+22	CM2	remarquable	Adjectif	adjectif qualificatif
+22	CM2	renoncer	Verbe	verbe 1er group
+22	CM2	renseignement	Nom	nom masculin
+22	CM2	reporter	Verbe	verbe 1er group
+22	CM2	résister	Verbe	verbe 1er group
+22	CM2	respect	Nom	nom masculin
+22	CM2	retirer	Verbe	verbe 1er group
+22	CM2	rossignol	Nom	nom masculin
+22	CM2	sain	Adjectif	adjectif qualificatif
+22	CM2	savoureux	Adjectif	adjectif qualificatif
+22	CM2	sévèrement	Invariable	adverbe
+22	CM2	signaler	Verbe	verbe 1er group
+22	CM2	silencieusement	Invariable	adverbe
+22	CM2	silencieux	Adjectif	adjectif qualificatif
+22	CM2	sincère	Adjectif	adjectif qualificatif
+22	CM2	sinon	Invariable	conjonction
+22	CM2	sommet	Nom	nom masculin
+22	CM2	sonnette	Nom	nom féminin
+22	CM2	souhait	Nom	nom masculin
+22	CM2	soumettre	Verbe	verbe 3ème group
+22	CM2	spacieux	Adjectif	adjectif qualificatif
+22	CM2	spécialement	Invariable	adverbe
+22	CM2	succéder	Verbe	verbe 1er group
+22	CM2	surmonter	Verbe	verbe 1er group
+22	CM2	sursauter	Verbe	verbe 1er group
+22	CM2	trancher	Verbe	verbe 1er group
+22	CM2	tranquillement	Invariable	adverbe
+22	CM2	trembler	Verbe	verbe 1er group
+22	CM2	tricoter	Verbe	verbe 1er group
+22	CM2	trompette	Nom	nom féminin
+22	CM2	vaillant	Adjectif	adjectif qualificatif
+22	CM2	vaincre	Verbe	verbe 3ème group
+22	CM2	veiller	Verbe	verbe 1er group
+22	CM2	veine	Nom	nom féminin
+22	CM2	vigueur	Nom	nom féminin
+22	CM2	voiler	Verbe	verbe 1er group
+22	CM2	vraiment	Invariable	adverbe
+23	CM2	abattre	Verbe	verbe 3ème group
+23	CM2	absent	Adjectif	adjectif qualificatif
+23	CM2	absolu	Adjectif	adjectif qualificatif
+23	CM2	acclamer	Verbe	verbe 1er group
+23	CM2	accord	Nom	nom masculin
+23	CM2	accuser	Verbe	verbe 1er group
+23	CM2	acier	Nom	nom masculin
+23	CM2	adopter	Verbe	verbe 1er group
+23	CM2	adresser	Verbe	verbe 1er group
+23	CM2	aérer	Verbe	verbe 1er group
+23	CM2	affectueux	Adjectif	adjectif qualificatif
+23	CM2	allure	Nom	nom féminin
+23	CM2	alouette	Nom	nom féminin
+23	CM2	animer	Verbe	verbe 1er group
+23	CM2	apporter	Verbe	verbe 1er group
+23	CM2	après-midi	Nom	nom masculin
+23	CM2	arrêt	Nom	nom masculin
+23	CM2	arrondissement	Nom	nom masculin
+23	CM2	assidu	Adjectif	adjectif qualificatif
+23	CM2	assister	Verbe	verbe 1er group
+23	CM2	aumône	Nom	nom féminin
+23	CM2	auquel	Pronom	pronom
+23	CM2	automne	Nom	nom masculin
+23	CM2	azuré	Adjectif	adjectif qualificatif
+23	CM2	baisser	Verbe	verbe 1er group
+23	CM2	barrière	Nom	nom féminin
+23	CM2	betterave	Nom	nom féminin
+23	CM2	bière	Nom	nom féminin
+23	CM2	boueux	Adjectif	adjectif qualificatif
+23	CM2	brindille	Nom	nom féminin
+23	CM2	brouillard	Nom	nom masculin
+23	CM2	brut	Adjectif	adjectif qualificatif
+23	CM2	carreau	Nom	nom masculin
+23	CM2	cendre	Nom	nom féminin
+23	CM2	cerf	Nom	nom masculin
+23	CM2	certain	Adjectif	adjectif qualificatif
+23	CM2	cesser	Verbe	verbe 1er group
+23	CM2	circuler	Verbe	verbe 1er group
+23	CM2	colonial	Adjectif	adjectif qualificatif
+23	CM2	comparaison	Nom	nom féminin
+23	CM2	complètement	Invariable	adverbe
+23	CM2	composer	Verbe	verbe 1er group
+23	CM2	constant	Adjectif	adjectif qualificatif
+23	CM2	continuel	Adjectif	adjectif qualificatif
+23	CM2	cordial	Nom	nom masculin
+23	CM2	corps	Nom	nom masculin
+23	CM2	corridor	Nom	nom masculin
+23	CM2	cours	Nom	nom masculin
+23	CM2	craquer	Verbe	verbe 1er group
+23	CM2	déjà	Invariable	adverbe
+23	CM2	désirer	Verbe	verbe 1er group
+23	CM2	destiner	Verbe	verbe 1er group
+23	CM2	dictionnaire	Nom	nom masculin
+23	CM2	divers	Adjectif	adjectif qualificatif
+23	CM2	dompteur	Nom	nom masculin
+23	CM2	écarter	Verbe	verbe 1er group
+23	CM2	éclaircir	Verbe	verbe 2ème group
+23	CM2	éclairer	Verbe	verbe 1er group
+23	CM2	édifier	Verbe	verbe 1er group
+23	CM2	effet	Nom	nom masculin
+23	CM2	élancer	Verbe	verbe 1er group
+23	CM2	emplacement	Nom	nom masculin
+23	CM2	enchanté	Adjectif	adjectif qualificatif
+23	CM2	ennemi	Nom	nom masculin
+23	CM2	entrain	Nom	nom masculin
+23	CM2	enveloppe	Nom	nom féminin
+23	CM2	envoyer	Verbe	verbe 1er group
+23	CM2	espérer	Verbe	verbe 1er group
+23	CM2	étirer	Verbe	verbe 1er group
+23	CM2	étonnement	Nom	nom masculin
+23	CM2	expérience	Nom	nom féminin
+23	CM2	exposer	Verbe	verbe 1er group
+23	CM2	exprès	Invariable	adverbe
+23	CM2	extraire	Verbe	verbe 3ème group
+23	CM2	fait	Nom	nom masculin
+23	CM2	falloir	Verbe	verbe 3ème group
+23	CM2	fauteuil	Nom	nom masculin
+23	CM2	féroce	Adjectif	adjectif qualificatif
+23	CM2	fièrement	Invariable	adverbe
+23	CM2	fixer	Verbe	verbe 1er group
+23	CM2	flamand	Adjectif	adjectif qualificatif
+23	CM2	flèche	Nom	nom féminin
+23	CM2	fourmi	Nom	nom féminin
+23	CM2	fraîcheur	Nom	nom féminin
+23	CM2	frayeur	Nom	nom féminin
+23	CM2	froisser	Verbe	verbe 1er group
+23	CM2	frotter	Verbe	verbe 1er group
+23	CM2	gâteau	Nom	nom masculin
+23	CM2	gémir	Verbe	verbe 2ème group
+23	CM2	givre	Nom	nom masculin
+23	CM2	gourmand	Adjectif	adjectif qualificatif
+23	CM2	goût	Nom	nom masculin
+23	CM2	graisse	Nom	nom féminin
+23	CM2	grimper	Verbe	verbe 1er group
+23	CM2	grossier	Adjectif	adjectif qualificatif
+23	CM2	guérir	Verbe	verbe 2ème group
+23	CM2	habiter	Verbe	verbe 1er group
+23	CM2	habitude	Nom	nom féminin
+23	CM2	hameau	Nom	nom masculin
+23	CM2	honorable	Adjectif	adjectif qualificatif
+23	CM2	ignorant	Adjectif	adjectif qualificatif
+23	CM2	illustrer	Verbe	verbe 1er group
+23	CM2	imaginer	Verbe	verbe 1er group
+23	CM2	immédiatement	Invariable	adverbe
+23	CM2	importance	Nom	nom féminin
+23	CM2	imposant	Adjectif	adjectif qualificatif
+23	CM2	imprévu	Adjectif	adjectif qualificatif
+23	CM2	influence	Nom	nom féminin
+23	CM2	ingrat	Adjectif	adjectif qualificatif
+23	CM2	interroger	Verbe	verbe 1er group
+23	CM2	laborieux	Adjectif	adjectif qualificatif
+23	CM2	laid	Adjectif	adjectif qualificatif
+23	CM2	lambeau	Nom	nom masculin
+23	CM2	langage	Nom	nom masculin
+23	CM2	limpide	Adjectif	adjectif qualificatif
+23	CM2	lors	Invariable	adverbe
+23	CM2	loyal	Adjectif	adjectif qualificatif
+23	CM2	lumineux	Adjectif	adjectif qualificatif
+23	CM2	manoeuvre	Nom	nom masculin
+23	CM2	manoeuvrer	Verbe	verbe 1er group
+23	CM2	marguerite	Nom	nom féminin
+23	CM2	matériel	Nom	nom masculin
+23	CM2	mendier	Verbe	verbe 1er group
+23	CM2	merveilleux	Adjectif	adjectif qualificatif
+23	CM2	mesurer	Verbe	verbe 1er group
+23	CM2	millier	Nom	nom masculin
+23	CM2	million	Nom	nom masculin
+23	CM2	miroir	Nom	nom masculin
+23	CM2	moitié	Nom	nom féminin
+23	CM2	mystérieux	Adjectif	adjectif qualificatif
+23	CM2	naturel	Adjectif	adjectif qualificatif
+23	CM2	négliger	Verbe	verbe 1er group
+23	CM2	notaire	Nom	nom masculin
+23	CM2	observer	Verbe	verbe 1er group
+23	CM2	occupation	Nom	nom féminin
+23	CM2	occuper	Verbe	verbe 1er group
+23	CM2	ordonner	Verbe	verbe 1er group
+23	CM2	pâlir	Verbe	verbe 2ème group
+23	CM2	parages	Nom	nom masculin
+23	CM2	parfumer	Verbe	verbe 1er group
+23	CM2	pâture	Nom	nom féminin
+23	CM2	paysan	Nom	nom masculin
+23	CM2	pénétrer	Verbe	verbe 1er group
+23	CM2	péril	Nom	nom masculin
+23	CM2	permission	Nom	nom féminin
+23	CM2	persuader	Verbe	verbe 1er group
+23	CM2	peu	Invariable	adverbe
+23	CM2	pin	Nom	nom masculin
+23	CM2	plusieurs	Déterminant	adjectif indéfini
+23	CM2	prêcher	Verbe	verbe 1er group
+23	CM2	près	Invariable	adverbe
+23	CM2	professeur	Nom	nom masculin
+23	CM2	profond	Adjectif	adjectif qualificatif
+23	CM2	quoique	Invariable	conjonction
+23	CM2	ravissant	Adjectif	adjectif qualificatif
+23	CM2	rejeter	Verbe	verbe 1er group
+23	CM2	relever	Verbe	verbe 1er group
+23	CM2	remerciement	Nom	nom masculin
+23	CM2	remporter	Verbe	verbe 1er group
+23	CM2	renouveler	Verbe	verbe 1er group
+23	CM2	repasser	Verbe	verbe 1er group
+23	CM2	reposer	Verbe	verbe 1er group
+23	CM2	réserver	Verbe	verbe 1er group
+23	CM2	résistance	Nom	nom féminin
+23	CM2	résultat	Nom	nom masculin
+23	CM2	réveil	Nom	nom masculin
+23	CM2	rhume	Nom	nom masculin
+23	CM2	ronce	Nom	nom féminin
+23	CM2	rusé	Adjectif	adjectif qualificatif
+23	CM2	s'agenouiller	Verbe	verbe 1er group
+23	CM2	saisir	Verbe	verbe 2ème group
+23	CM2	salut	Nom	nom masculin
+23	CM2	sautiller	Verbe	verbe 1er group
+23	CM2	sécurité	Nom	nom féminin
+23	CM2	seize	Déterminant	adjectif numéral
+23	CM2	sensible	Adjectif	adjectif qualificatif
+23	CM2	séparer	Verbe	verbe 1er group
+23	CM2	serrer	Verbe	verbe 1er group
+23	CM2	sillon	Nom	nom masculin
+23	CM2	sirène	Nom	nom féminin
+23	CM2	société	Nom	nom féminin
+23	CM2	souffle	Nom	nom masculin
+23	CM2	splendeur	Nom	nom féminin
+23	CM2	stationner	Verbe	verbe 1er group
+23	CM2	tantôt	Invariable	adverbe
+23	CM2	taquiner	Verbe	verbe 1er group
+23	CM2	tinter	Verbe	verbe 1er group
+23	CM2	tiroir	Nom	nom masculin
+23	CM2	tourment	Nom	nom masculin
+23	CM2	tournant	Nom	nom masculin
+23	CM2	treize	Déterminant	adjectif numéral
+23	CM2	triomphe	Nom	nom masculin
+23	CM2	tronc	Nom	nom masculin
+23	CM2	véhicule	Nom	nom masculin
+23	CM2	vêtement	Nom	nom masculin
+23	CM2	viser	Verbe	verbe 1er group
+23	CM2	voie	Nom	nom féminin
+24	Collège	abîme	Nom	nom masculin
+24	Collège	abord	Nom	nom masculin
+24	Collège	absence	Nom	nom féminin
+24	Collège	accompagner	Verbe	verbe 1er group
+24	Collège	accomplir	Verbe	verbe 2ème group
+24	Collège	accourir	Verbe	verbe 3ème group
+24	Collège	agiter	Verbe	verbe 1er group
+24	Collège	agréer	Verbe	verbe 1er group
+24	Collège	ainsi	Invariable	adverbe
+24	Collège	aisément	Invariable	adverbe
+24	Collège	alcool	Nom	nom masculin
+24	Collège	alentours	Nom	nom masculin
+24	Collège	amende	Nom	nom féminin
+24	Collège	amer	Adjectif	adjectif qualificatif
+24	Collège	anneau	Nom	nom masculin
+24	Collège	appétit	Nom	nom masculin
+24	Collège	assiette	Nom	nom féminin
+24	Collège	atteindre	Verbe	verbe 3ème group
+24	Collège	attente	Nom	nom féminin
+24	Collège	augmenter	Verbe	verbe 1er group
+24	Collège	aventurer	Verbe	verbe 1er group
+24	Collège	barreau	Nom	nom masculin
+24	Collège	basse-cour	Nom	nom féminin
+24	Collège	bateau	Nom	nom masculin
+24	Collège	bercer	Verbe	verbe 1er group
+24	Collège	bouleau	Nom	nom masculin
+24	Collège	boulevard	Nom	nom masculin
+24	Collège	bourgeois	Nom	nom masculin
+24	Collège	bousculer	Verbe	verbe 1er group
+24	Collège	brillant	Adjectif	adjectif qualificatif
+24	Collège	briller	Verbe	verbe 1er group
+24	Collège	bulletin	Nom	nom masculin
+24	Collège	catastrophe	Nom	nom féminin
+24	Collège	célèbre	Adjectif	adjectif qualificatif
+24	Collège	cependant	Invariable	adverbe
+24	Collège	cesse	Nom	nom féminin
+24	Collège	chariot	Nom	nom masculin
+24	Collège	charrue	Nom	nom féminin
+24	Collège	chaux	Nom	nom féminin
+24	Collège	chrétien	Adjectif	adjectif qualificatif
+24	Collège	circonstance	Nom	nom féminin
+24	Collège	cirer	Verbe	verbe 1er group
+24	Collège	communal	Adjectif	adjectif qualificatif
+24	Collège	compte	Nom	nom masculin
+24	Collège	condoléances	Nom	nom féminin
+24	Collège	connaissance	Nom	nom féminin
+24	Collège	connaître	Verbe	verbe 3ème group
+24	Collège	conseiller	Verbe	verbe 1er group
+24	Collège	courrier	Nom	nom masculin
+24	Collège	crêpe	Nom	nom féminin
+24	Collège	croiser	Verbe	verbe 1er group
+24	Collège	croître	Verbe	verbe 3ème group
+24	Collège	croquer	Verbe	verbe 1er group
+24	Collège	cruel	Adjectif	adjectif qualificatif
+24	Collège	d'abord	Invariable	adverbe
+24	Collège	défiler	Verbe	verbe 1er group
+24	Collège	dépasser	Verbe	verbe 1er group
+24	Collège	déployer	Verbe	verbe 1er group
+24	Collège	dérouler	Verbe	verbe 1er group
+24	Collège	désert	Adjectif	adjectif qualificatif
+24	Collège	désespoir	Nom	nom masculin
+24	Collège	dicter	Verbe	verbe 1er group
+24	Collège	distinguer	Verbe	verbe 1er group
+24	Collège	dorer	Verbe	verbe 1er group
+24	Collège	dortoir	Nom	nom masculin
+24	Collège	ébranler	Verbe	verbe 1er group
+24	Collège	écraser	Verbe	verbe 1er group
+24	Collège	écrivain	Nom	nom masculin
+24	Collège	élan	Nom	nom masculin
+24	Collège	empressement	Nom	nom masculin
+24	Collège	entasser	Verbe	verbe 1er group
+24	Collège	enterrement	Nom	nom masculin
+24	Collège	entourer	Verbe	verbe 1er group
+24	Collège	ériger	Verbe	verbe 1er group
+24	Collège	espiègle	Adjectif	adjectif qualificatif
+24	Collège	établissement	Nom	nom masculin
+24	Collège	évêque	Nom	nom masculin
+24	Collège	examiner	Verbe	verbe 1er group
+24	Collège	exécuter	Verbe	verbe 1er group
+24	Collège	exemplaire	Nom	nom masculin
+24	Collège	exercice	Nom	nom masculin
+24	Collège	exister	Verbe	verbe 1er group
+24	Collège	façade	Nom	nom féminin
+24	Collège	filer	Verbe	verbe 1er group
+24	Collège	flamber	Verbe	verbe 1er group
+24	Collège	fleurir	Verbe	verbe 2ème group
+24	Collège	français	Adjectif	adjectif qualificatif
+24	Collège	frêle	Adjectif	adjectif qualificatif
+24	Collège	fréquent	Adjectif	adjectif qualificatif
+24	Collège	glissoire	Nom	nom féminin
+24	Collège	gonfler	Verbe	verbe 1er group
+24	Collège	grand-père	Nom	nom masculin
+24	Collège	guêpe	Nom	nom féminin
+24	Collège	habituel	Adjectif	adjectif qualificatif
+24	Collège	hanneton	Nom	nom masculin
+24	Collège	humanité	Nom	nom féminin
+24	Collège	illusion	Nom	nom féminin
+24	Collège	immaculé	Adjectif	adjectif qualificatif
+24	Collège	importer	Verbe	verbe 1er group
+24	Collège	impression	Nom	nom féminin
+24	Collège	incident	Nom	nom masculin
+24	Collège	innocent	Adjectif	adjectif qualificatif
+24	Collège	insister	Verbe	verbe 1er group
+24	Collège	intellectuel	Adjectif	adjectif qualificatif
+24	Collège	intrigué	Adjectif	adjectif qualificatif
+24	Collège	kilogramme	Nom	nom masculin
+24	Collège	lancer	Verbe	verbe 1er group
+24	Collège	majestueux	Adjectif	adjectif qualificatif
+24	Collège	missionnaire	Nom	nom masculin
+24	Collège	mobilier	Nom	nom masculin
+24	Collège	mouiller	Verbe	verbe 1er group
+24	Collège	mûr	Adjectif	adjectif qualificatif
+24	Collège	mûrir	Verbe	verbe 2ème group
+24	Collège	naufrage	Nom	nom masculin
+24	Collège	nègre	Adjectif	adjectif qualificatif
+24	Collège	neveu	Nom	nom masculin
+24	Collège	obscur	Adjectif	adjectif qualificatif
+24	Collège	occasion	Nom	nom féminin
+24	Collège	oeil	Nom	nom masculin
+24	Collège	oh	Invariable	interjection
+24	Collège	opération	Nom	nom féminin
+24	Collège	orée	Nom	nom féminin
+24	Collège	paisiblement	Invariable	adverbe
+24	Collège	pardessus	Nom	nom masculin
+24	Collège	paresseux	Adjectif	adjectif qualificatif
+24	Collège	parsemer	Verbe	verbe 1er group
+24	Collège	passager	Nom	nom masculin
+24	Collège	patience	Nom	nom féminin
+24	Collège	penser	Verbe	verbe 1er group
+24	Collège	perdrix	Nom	nom féminin
+24	Collège	perpétuel	Adjectif	adjectif qualificatif
+24	Collège	perroquet	Nom	nom masculin
+24	Collège	peut-être	Invariable	adverbe
+24	Collège	photographie	Nom	nom féminin
+24	Collège	phrase	Nom	nom féminin
+24	Collège	pis	Invariable	adverbe
+24	Collège	plafond	Nom	nom masculin
+24	Collège	plupart	Nom	nom féminin
+24	Collège	posséder	Verbe	verbe 1er group
+24	Collège	poulain	Nom	nom masculin
+24	Collège	préférer	Verbe	verbe 1er group
+24	Collège	profession	Nom	nom féminin
+24	Collège	progrès	Nom	nom masculin
+24	Collège	promettre	Verbe	verbe 3ème group
+24	Collège	propice	Adjectif	adjectif qualificatif
+24	Collège	providence	Nom	nom féminin
+24	Collège	public	Adjectif	adjectif qualificatif
+24	Collège	quelqu'un	Pronom	pronom
+24	Collège	queue	Nom	nom féminin
+24	Collège	rapprocher	Verbe	verbe 1er group
+24	Collège	rassembler	Verbe	verbe 1er group
+24	Collège	réciter	Verbe	verbe 1er group
+24	Collège	recommencer	Verbe	verbe 1er group
+24	Collège	reconnaître	Verbe	verbe 3ème group
+24	Collège	réel	Adjectif	adjectif qualificatif
+24	Collège	regretter	Verbe	verbe 1er group
+24	Collège	renfermer	Verbe	verbe 1er group
+24	Collège	renvoyer	Verbe	verbe 1er group
+24	Collège	repousser	Verbe	verbe 1er group
+24	Collège	résigner	Verbe	verbe 1er group
+24	Collège	réussir	Verbe	verbe 2ème group
+24	Collège	rêver	Verbe	verbe 1er group
+24	Collège	ronronner	Verbe	verbe 1er group
+24	Collège	rôti	Nom	nom masculin
+24	Collège	ruisselet	Nom	nom masculin
+24	Collège	s'absenter	Verbe	verbe 1er group
+24	Collège	sauf	Invariable	préposition
+24	Collège	sécher	Verbe	verbe 1er group
+24	Collège	s'écrouler	Verbe	verbe 1er group
+24	Collège	s'éloigner	Verbe	verbe 1er group
+24	Collège	sévère	Adjectif	adjectif qualificatif
+24	Collège	sifflement	Nom	nom masculin
+24	Collège	siffler	Verbe	verbe 1er group
+24	Collège	sifflet	Nom	nom masculin
+24	Collège	simplicité	Nom	nom féminin
+24	Collège	sincérité	Nom	nom féminin
+24	Collège	soigneux	Adjectif	adjectif qualificatif
+24	Collège	sommeil	Nom	nom masculin
+24	Collège	souci	Nom	nom masculin
+24	Collège	spécial	Adjectif	adjectif qualificatif
+24	Collège	tacheter	Verbe	verbe 1er group
+24	Collège	télégramme	Nom	nom masculin
+24	Collège	téléphoner	Verbe	verbe 1er group
+24	Collège	témoignage	Nom	nom masculin
+24	Collège	terrasse	Nom	nom féminin
+24	Collège	torrent	Nom	nom masculin
+24	Collège	traîneau	Nom	nom masculin
+24	Collège	transmettre	Verbe	verbe 3ème group
+24	Collège	travers	Nom	nom masculin
+24	Collège	vagabond	Adjectif	adjectif qualificatif
+24	Collège	vainqueur	Nom	nom masculin
+24	Collège	vêtir	Verbe	verbe 3ème group
+24	Collège	vieillard	Nom	nom masculin
+24	Collège	villageois	Nom	nom masculin
+24	Collège	voilà	Invariable	préposition
+24	Collège	volaille	Nom	nom féminin
+24	Collège	vrai	Adjectif	adjectif qualificatif
+25	Collège	abandonner	Verbe	verbe 1er group
+25	Collège	aboyer	Verbe	verbe 1er group
+25	Collège	acide	Nom	nom masculin
+25	Collège	admettre	Verbe	verbe 3ème group
+25	Collège	affectueusement	Invariable	adverbe
+25	Collège	affliger	Verbe	verbe 1er group
+25	Collège	ah	Invariable	interjection
+25	Collège	allemand	Adjectif	adjectif qualificatif
+25	Collège	anniversaire	Nom	nom masculin
+25	Collège	annuel	Adjectif	adjectif qualificatif
+25	Collège	appliquer	Verbe	verbe 1er group
+25	Collège	approuver	Verbe	verbe 1er group
+25	Collège	argenter	Verbe	verbe 1er group
+25	Collège	arrondir	Verbe	verbe 2ème group
+25	Collège	attacher	Verbe	verbe 1er group
+25	Collège	attraper	Verbe	verbe 1er group
+25	Collège	baiser	Nom	nom masculin
+25	Collège	bicyclette	Nom	nom féminin
+25	Collège	bienfaisant	Adjectif	adjectif qualificatif
+25	Collège	bourdonner	Verbe	verbe 1er group
+25	Collège	bourgeonner	Verbe	verbe 1er group
+25	Collège	campagnard	Nom	nom masculin
+25	Collège	canot	Nom	nom masculin
+25	Collège	caresse	Nom	nom féminin
+25	Collège	céder	Verbe	verbe 1er group
+25	Collège	ceinture	Nom	nom féminin
+25	Collège	charrette	Nom	nom féminin
+25	Collège	chevet	Nom	nom masculin
+25	Collège	clos	Adjectif	adjectif qualificatif
+25	Collège	coller	Verbe	verbe 1er group
+25	Collège	combattre	Verbe	verbe 3ème group
+25	Collège	commandant	Nom	nom masculin
+25	Collège	commerçant	Nom	nom masculin
+25	Collège	commercial	Adjectif	adjectif qualificatif
+25	Collège	compléter	Verbe	verbe 1er group
+25	Collège	concert	Nom	nom masculin
+25	Collège	conquérir	Verbe	verbe 3ème group
+25	Collège	consentir	Verbe	verbe 3ème group
+25	Collège	considérer	Verbe	verbe 1er group
+25	Collège	conter	Verbe	verbe 1er group
+25	Collège	convaincre	Verbe	verbe 3ème group
+25	Collège	coquelicot	Nom	nom masculin
+25	Collège	corolle	Nom	nom féminin
+25	Collège	créer	Verbe	verbe 1er group
+25	Collège	darder	Verbe	verbe 1er group
+25	Collège	démontrer	Verbe	verbe 1er group
+25	Collège	derrière	Invariable	préposition
+25	Collège	désaltérer	Verbe	verbe 1er group
+25	Collège	diamant	Nom	nom masculin
+25	Collège	différence	Nom	nom féminin
+25	Collège	difficile	Adjectif	adjectif qualificatif
+25	Collège	disparaître	Verbe	verbe 3ème group
+25	Collège	distance	Nom	nom féminin
+25	Collège	domaine	Nom	nom masculin
+25	Collège	dommage	Nom	nom masculin
+25	Collège	don	Nom	nom masculin
+25	Collège	doyen	Nom	nom masculin
+25	Collège	dresser	Verbe	verbe 1er group
+25	Collège	échec	Nom	nom masculin
+25	Collège	éclabousser	Verbe	verbe 1er group
+25	Collège	effectuer	Verbe	verbe 1er group
+25	Collège	effrayer	Verbe	verbe 1er group
+25	Collège	égal	Adjectif	adjectif qualificatif
+25	Collège	égard	Nom	nom masculin
+25	Collège	embarquer	Verbe	verbe 1er group
+25	Collège	employé	Nom	nom masculin
+25	Collège	employer	Verbe	verbe 1er group
+25	Collège	entretien	Nom	nom masculin
+25	Collège	épargner	Verbe	verbe 1er group
+25	Collège	espèce	Nom	nom féminin
+25	Collège	éteindre	Verbe	verbe 3ème group
+25	Collège	étrennes	Nom	nom féminin
+25	Collège	examen	Nom	nom masculin
+25	Collège	excursion	Nom	nom féminin
+25	Collège	exécution	Nom	nom féminin
+25	Collège	existence	Nom	nom féminin
+25	Collège	fervent	Adjectif	adjectif qualificatif
+25	Collège	fiancé	Nom	nom masculin
+25	Collège	firmament	Nom	nom masculin
+25	Collège	flatter	Verbe	verbe 1er group
+25	Collège	frissonner	Verbe	verbe 1er group
+25	Collège	gai	Adjectif	adjectif qualificatif
+25	Collège	gâter	Verbe	verbe 1er group
+25	Collège	générosité	Nom	nom féminin
+25	Collège	gentiment	Invariable	adverbe
+25	Collège	goutte	Nom	nom féminin
+25	Collège	grouper	Verbe	verbe 1er group
+25	Collège	guichet	Nom	nom masculin
+25	Collège	guider	Verbe	verbe 1er group
+25	Collège	habitant	Nom	nom masculin
+25	Collège	hardi	Adjectif	adjectif qualificatif
+25	Collège	hasard	Nom	nom masculin
+25	Collège	hâter	Verbe	verbe 1er group
+25	Collège	honnête	Adjectif	adjectif qualificatif
+25	Collège	horizon	Nom	nom masculin
+25	Collège	hors	Invariable	préposition
+25	Collège	hôtel	Nom	nom masculin
+25	Collège	impatient	Adjectif	adjectif qualificatif
+25	Collège	impossible	Adjectif	adjectif qualificatif
+25	Collège	institut	Nom	nom masculin
+25	Collège	interruption	Nom	nom féminin
+25	Collège	jaillir	Verbe	verbe 2ème group
+25	Collège	jonquille	Nom	nom féminin
+25	Collège	lasser	Verbe	verbe 1er group
+25	Collège	lieue	Nom	nom féminin
+25	Collège	maîtresse	Nom	nom féminin
+25	Collège	mansarde	Nom	nom féminin
+25	Collège	marron	Nom	nom masculin
+25	Collège	maudire	Verbe	verbe 3ème group
+25	Collège	menacer	Verbe	verbe 1er group
+25	Collège	mérite	Nom	nom masculin
+25	Collège	messager	Nom	nom masculin
+25	Collège	missel	Nom	nom masculin
+25	Collège	moins	Invariable	adverbe
+25	Collège	monseigneur	Nom	nom masculin
+25	Collège	muguet	Nom	nom masculin
+25	Collège	national	Adjectif	adjectif qualificatif
+25	Collège	nerveux	Adjectif	adjectif qualificatif
+25	Collège	nettoyer	Verbe	verbe 1er group
+25	Collège	nourrir	Verbe	verbe 2ème group
+25	Collège	pâquerette	Nom	nom féminin
+25	Collège	pareil	Adjectif	adjectif qualificatif
+25	Collège	parrain	Nom	nom masculin
+25	Collège	paternel	Adjectif	adjectif qualificatif
+25	Collège	pâtisserie	Nom	nom féminin
+25	Collège	pécher	Verbe	verbe 1er group
+25	Collège	pensionnaire	Nom	nom masculin
+25	Collège	pourvu que	Invariable	conjonction
+25	Collège	précaution	Nom	nom féminin
+25	Collège	prêter	Verbe	verbe 1er group
+25	Collège	prodiguer	Verbe	verbe 1er group
+25	Collège	quai	Nom	nom masculin
+25	Collège	quantité	Nom	nom féminin
+25	Collège	quartier	Nom	nom masculin
+25	Collège	quelquefois	Invariable	adverbe
+25	Collège	ramasser	Verbe	verbe 1er group
+25	Collège	rapport	Nom	nom masculin
+25	Collège	rater	Verbe	verbe 1er group
+25	Collège	rayonner	Verbe	verbe 1er group
+25	Collège	réchauffer	Verbe	verbe 1er group
+25	Collège	récit	Nom	nom masculin
+25	Collège	redescendre	Verbe	verbe 3ème group
+25	Collège	refléter	Verbe	verbe 1er group
+25	Collège	renseigner	Verbe	verbe 1er group
+25	Collège	ressentir	Verbe	verbe 3ème group
+25	Collège	réveiller	Verbe	verbe 1er group
+25	Collège	révéler	Verbe	verbe 1er group
+25	Collège	rouiller	Verbe	verbe 1er group
+25	Collège	ruisseler	Verbe	verbe 1er group
+25	Collège	science	Nom	nom féminin
+25	Collège	scier	Verbe	verbe 1er group
+25	Collège	s'emparer	Verbe	verbe 1er group
+25	Collège	sens	Nom	nom masculin
+25	Collège	souffler	Verbe	verbe 1er group
+25	Collège	splendide	Adjectif	adjectif qualificatif
+25	Collège	suc	Nom	nom masculin
+25	Collège	supporter	Verbe	verbe 1er group
+25	Collège	tellement	Invariable	adverbe
+25	Collège	ténèbres	Nom	nom féminin
+25	Collège	tenter	Verbe	verbe 1er group
+25	Collège	tissu	Nom	nom masculin
+25	Collège	touffu	Adjectif	adjectif qualificatif
+25	Collège	tourmenter	Verbe	verbe 1er group
+25	Collège	tournoyer	Verbe	verbe 1er group
+25	Collège	trait	Nom	nom masculin
+25	Collège	transparent	Adjectif	adjectif qualificatif
+25	Collège	trotter	Verbe	verbe 1er group
+25	Collège	tuyau	Nom	nom masculin
+25	Collège	user	Verbe	verbe 1er group
+25	Collège	vain	Adjectif	adjectif qualificatif
+25	Collège	ver	Nom	nom masculin
+25	Collège	verdoyant	Adjectif	adjectif qualificatif
+25	Collège	vers	Invariable	préposition
+25	Collège	voix	Nom	nom féminin
+25	Collège	vulgaire	Adjectif	adjectif qualificatif
+26	Collège	abbé	Nom	nom masculin
+26	Collège	acheminer	Verbe	verbe 1er group
+26	Collège	administrer	Verbe	verbe 1er group
+26	Collège	affectionner	Verbe	verbe 1er group
+26	Collège	aire	Nom	nom féminin
+26	Collège	aisé	Adjectif	adjectif qualificatif
+26	Collège	allégresse	Nom	nom féminin
+26	Collège	amitié	Nom	nom féminin
+26	Collège	annoncer	Verbe	verbe 1er group
+26	Collège	apercevoir	Verbe	verbe 3ème group
+26	Collège	appeler	Verbe	verbe 1er group
+26	Collège	arranger	Verbe	verbe 1er group
+26	Collège	arrêter	Verbe	verbe 1er group
+26	Collège	atteler	Verbe	verbe 1er group
+26	Collège	au-dessus	Invariable	préposition
+26	Collège	avantageux	Adjectif	adjectif qualificatif
+26	Collège	azur	Nom	nom masculin
+26	Collège	bambin	Nom	nom masculin
+26	Collège	béret	Nom	nom masculin
+26	Collège	bibelot	Nom	nom masculin
+26	Collège	bien-aimé	Adjectif	adjectif qualificatif
+26	Collège	blesser	Verbe	verbe 1er group
+26	Collège	bouleverser	Verbe	verbe 1er group
+26	Collège	bûcheron	Nom	nom masculin
+26	Collège	calvaire	Nom	nom masculin
+26	Collège	caresser	Verbe	verbe 1er group
+26	Collège	catéchisme	Nom	nom masculin
+26	Collège	célébrer	Verbe	verbe 1er group
+26	Collège	certainement	Invariable	adverbe
+26	Collège	combattant	Nom	nom masculin
+26	Collège	commandement	Nom	nom masculin
+26	Collège	commode	Nom	nom féminin
+26	Collège	communiquer	Verbe	verbe 1er group
+26	Collège	condamner	Verbe	verbe 1er group
+26	Collège	cueillir	Verbe	verbe 3ème group
+26	Collège	débattre	Verbe	verbe 3ème group
+26	Collège	défunt	Nom	nom masculin
+26	Collège	dépôt	Nom	nom masculin
+26	Collège	dépouiller	Verbe	verbe 1er group
+26	Collège	descente	Nom	nom féminin
+26	Collège	désobéissance	Nom	nom féminin
+26	Collège	désormais	Invariable	adverbe
+26	Collège	difficilement	Invariable	adverbe
+26	Collège	dissiper	Verbe	verbe 1er group
+26	Collège	ébats	Nom	nom masculin
+26	Collège	écorce	Nom	nom féminin
+26	Collège	effroyable	Adjectif	adjectif qualificatif
+26	Collège	embaumer	Verbe	verbe 1er group
+26	Collège	ennui	Nom	nom masculin
+26	Collège	enquête	Nom	nom féminin
+26	Collège	environner	Verbe	verbe 1er group
+26	Collège	envoi	Nom	nom masculin
+26	Collège	épouvanter	Verbe	verbe 1er group
+26	Collège	exercer	Verbe	verbe 1er group
+26	Collège	exiger	Verbe	verbe 1er group
+26	Collège	expression	Nom	nom féminin
+26	Collège	faner	Verbe	verbe 1er group
+26	Collège	féliciter	Verbe	verbe 1er group
+26	Collège	filleul	Nom	nom masculin
+26	Collège	fréquenter	Verbe	verbe 1er group
+26	Collège	géranium	Nom	nom masculin
+26	Collège	gigantesque	Adjectif	adjectif qualificatif
+26	Collège	gîte	Nom	nom masculin
+26	Collège	glacer	Verbe	verbe 1er group
+26	Collège	gland	Nom	nom masculin
+26	Collège	goûter	Verbe	verbe 1er group
+26	Collège	grêle	Nom	nom féminin
+26	Collège	gymnastique	Nom	nom féminin
+26	Collège	héros	Nom	nom masculin
+26	Collège	hôte	Nom	nom masculin
+26	Collège	immense	Adjectif	adjectif qualificatif
+26	Collège	imposer	Verbe	verbe 1er group
+26	Collège	installer	Verbe	verbe 1er group
+26	Collège	laisser	Verbe	verbe 1er group
+26	Collège	logis	Nom	nom masculin
+26	Collège	mâchoire	Nom	nom féminin
+26	Collège	maire	Nom	nom masculin
+26	Collège	malle	Nom	nom féminin
+26	Collège	mêler	Verbe	verbe 1er group
+26	Collège	modérer	Verbe	verbe 1er group
+26	Collège	moral	Nom	nom masculin
+26	Collège	naître	Verbe	verbe 3ème group
+26	Collège	nécessaire	Adjectif	adjectif qualificatif
+26	Collège	négligence	Nom	nom féminin
+26	Collège	négligent	Adjectif	adjectif qualificatif
+26	Collège	oser	Verbe	verbe 1er group
+26	Collège	pan	Nom	nom masculin
+26	Collège	paraître	Verbe	verbe 3ème group
+26	Collège	parer	Verbe	verbe 1er group
+26	Collège	percer	Verbe	verbe 1er group
+26	Collège	poêle	Nom	nom féminin
+26	Collège	poing	Nom	nom masculin
+26	Collège	pré	Nom	nom masculin
+26	Collège	précisément	Invariable	adverbe
+26	Collège	projet	Nom	nom masculin
+26	Collège	prompt	Adjectif	adjectif qualificatif
+26	Collège	quelconque	Adjectif	adjectif qualificatif
+26	Collège	quinzaine	Nom	nom féminin
+26	Collège	rafraîchir	Verbe	verbe 2ème group
+26	Collège	rappeler	Verbe	verbe 1er group
+26	Collège	rapporter	Verbe	verbe 1er group
+26	Collège	reconnaissant	Adjectif	adjectif qualificatif
+26	Collège	redresser	Verbe	verbe 1er group
+26	Collège	régner	Verbe	verbe 1er group
+26	Collège	renaître	Verbe	verbe 3ème group
+26	Collège	représentant	Nom	nom masculin
+26	Collège	résonner	Verbe	verbe 1er group
+26	Collège	retrousser	Verbe	verbe 1er group
+26	Collège	séance	Nom	nom féminin
+26	Collège	souhaiter	Verbe	verbe 1er group
+26	Collège	sursaut	Nom	nom masculin
+26	Collège	tailler	Verbe	verbe 1er group
+26	Collège	taper	Verbe	verbe 1er group
+26	Collège	tapisser	Verbe	verbe 1er group
+26	Collège	toux	Nom	nom féminin
+26	Collège	tracer	Verbe	verbe 1er group
+26	Collège	universel	Adjectif	adjectif qualificatif
+26	Collège	vêpres	Nom	nom féminin
+26	Collège	vermeil	Nom	nom masculin
+26	Collège	FALSE	Adjectif	adjectif qualificatif
+27	Collège	acclamation	Nom	nom féminin
+27	Collège	âgé	Adjectif	adjectif qualificatif
+27	Collège	aigu	Adjectif	adjectif qualificatif
+27	Collège	aisance	Nom	nom féminin
+27	Collège	alcoolique	Adjectif	adjectif qualificatif
+27	Collège	américain	Adjectif	adjectif qualificatif
+27	Collège	août	Nom	nom masculin
+27	Collège	appétissant	Adjectif	adjectif qualificatif
+27	Collège	apprécier	Verbe	verbe 1er group
+27	Collège	assembler	Verbe	verbe 1er group
+27	Collège	atmosphère	Nom	nom féminin
+27	Collège	auparavant	Invariable	adverbe
+27	Collège	bien-être	Nom	nom masculin
+27	Collège	bienveillance	Nom	nom féminin
+27	Collège	boite	Nom	nom féminin
+27	Collège	brigand	Nom	nom masculin
+27	Collège	ça	Pronom	pronom
+27	Collège	chef-d'oeuvre	Nom	nom masculin
+27	Collège	ciseaux	Nom	nom masculin
+27	Collège	citer	Verbe	verbe 1er group
+27	Collège	citoyen	Nom	nom masculin
+27	Collège	civil	Adjectif	adjectif qualificatif
+27	Collège	colis	Nom	nom masculin
+27	Collège	collège	Nom	nom masculin
+27	Collège	colonne	Nom	nom féminin
+27	Collège	communiant	Nom	nom masculin
+27	Collège	communier	Verbe	verbe 1er group
+27	Collège	condition	Nom	nom féminin
+27	Collège	confectionner	Verbe	verbe 1er group
+27	Collège	confesser	Verbe	verbe 1er group
+27	Collège	coûter	Verbe	verbe 1er group
+27	Collège	crèche	Nom	nom féminin
+27	Collège	crème	Nom	nom féminin
+27	Collège	cueillette	Nom	nom féminin
+27	Collège	cycliste	Nom	nom masculin
+27	Collège	daigner	Verbe	verbe 1er group
+27	Collège	dater	Verbe	verbe 1er group
+27	Collège	débris	Nom	nom masculin
+27	Collège	déception	Nom	nom féminin
+27	Collège	décision	Nom	nom féminin
+27	Collège	désobéissant	Adjectif	adjectif qualificatif
+27	Collège	développer	Verbe	verbe 1er group
+27	Collège	difficulté	Nom	nom féminin
+27	Collège	dimension	Nom	nom féminin
+27	Collège	dossier	Nom	nom masculin
+27	Collège	écureuil	Nom	nom masculin
+27	Collège	encombrer	Verbe	verbe 1er group
+27	Collège	envahir	Verbe	verbe 2ème group
+27	Collège	envelopper	Verbe	verbe 1er group
+27	Collège	épi	Nom	nom masculin
+27	Collège	essuyer	Verbe	verbe 1er group
+27	Collège	extraordinaire	Adjectif	adjectif qualificatif
+27	Collège	extrême	Adjectif	adjectif qualificatif
+27	Collège	flûte	Nom	nom féminin
+27	Collège	foncer	Verbe	verbe 1er group
+27	Collège	gaiement	Invariable	adverbe
+27	Collège	gazouiller	Verbe	verbe 1er group
+27	Collège	genou	Nom	nom masculin
+27	Collège	haleine	Nom	nom féminin
+27	Collège	halte	Nom	nom féminin
+27	Collège	heurter	Verbe	verbe 1er group
+27	Collège	horrible	Adjectif	adjectif qualificatif
+27	Collège	jaloux	Adjectif	adjectif qualificatif
+27	Collège	joncher	Verbe	verbe 1er group
+27	Collège	lâcher	Verbe	verbe 1er group
+27	Collège	marraine	Nom	nom féminin
+27	Collège	narcisse	Nom	nom masculin
+27	Collège	nécéssité	Nom	nom féminin
+27	Collège	négociant	Nom	nom masculin
+27	Collège	nièce	Nom	nom féminin
+27	Collège	noircir	Verbe	verbe 2ème group
+27	Collège	obligeance	Nom	nom féminin
+27	Collège	paître	Verbe	verbe 3ème group
+27	Collège	pinceau	Nom	nom masculin
+27	Collège	pli	Nom	nom masculin
+27	Collège	poète	Nom	nom masculin
+27	Collège	pois	Nom	nom masculin
+27	Collège	quotidien	Adjectif	adjectif qualificatif
+27	Collège	reconnaissance	Nom	nom féminin
+27	Collège	reparaître	Verbe	verbe 3ème group
+27	Collège	resplendir	Verbe	verbe 2ème group
+27	Collège	ressort	Nom	nom masculin
+27	Collège	retardataire	Nom	nom masculin
+27	Collège	saigner	Verbe	verbe 1er group
+27	Collège	s'empresser	Verbe	verbe 1er group
+27	Collège	soyeux	Adjectif	adjectif qualificatif
+27	Collège	style	Nom	nom masculin
+27	Collège	suffisant	Adjectif	adjectif qualificatif
+27	Collège	symbole	Nom	nom masculin
+27	Collège	tonnerre	Nom	nom masculin
+27	Collège	tort	Nom	nom masculin
+27	Collège	toutefois	Invariable	adverbe
+27	Collège	traiter	Verbe	verbe 1er group
+27	Collège	trajet	Nom	nom masculin
+27	Collège	tremper	Verbe	verbe 1er group
+27	Collège	triompher	Verbe	verbe 1er group
+27	Collège	trottoir	Nom	nom masculin
+27	Collège	type	Nom	nom masculin
+27	Collège	univers	Nom	nom masculin
+27	Collège	vaisselle	Nom	nom féminin
+28	Collège	abaisser	Verbe	verbe 1er group
+28	Collège	abri	Nom	nom masculin
+28	Collège	acquérir	Verbe	verbe 3ème group
+28	Collège	ambulance	Nom	nom féminin
+28	Collège	assaut	Nom	nom masculin
+28	Collège	associer	Verbe	verbe 1er group
+28	Collège	attarder	Verbe	verbe 1er group
+28	Collège	baigner	Verbe	verbe 1er group
+28	Collège	balayer	Verbe	verbe 1er group
+28	Collège	barrage	Nom	nom masculin
+28	Collège	bosselé	Adjectif	adjectif qualificatif
+28	Collège	brûlant	Adjectif	adjectif qualificatif
+28	Collège	brûler	Verbe	verbe 1er group
+28	Collège	caillou	Nom	nom masculin
+28	Collège	catholique	Adjectif	adjectif qualificatif
+28	Collège	central	Adjectif	adjectif qualificatif
+28	Collège	chaîne	Nom	nom féminin
+28	Collège	cheveu	Nom	nom masculin
+28	Collège	choeur	Nom	nom masculin
+28	Collège	chou	Nom	nom masculin
+28	Collège	commettre	Verbe	verbe 3ème group
+28	Collège	communication	Nom	nom féminin
+28	Collège	compter	Verbe	verbe 1er group
+28	Collège	comte	Nom	nom masculin
+28	Collège	conscience	Nom	nom féminin
+28	Collège	conséquence	Nom	nom féminin
+28	Collège	consister	Verbe	verbe 1er group
+28	Collège	contact	Nom	nom masculin
+28	Collège	couronner	Verbe	verbe 1er group
+28	Collège	cuiller	Nom	nom féminin
+28	Collège	cuillère	Nom	nom féminin
+28	Collège	dépêcher	Verbe	verbe 1er group
+28	Collège	emploi	Nom	nom masculin
+28	Collège	endosser	Verbe	verbe 1er group
+28	Collège	ennuyer	Verbe	verbe 1er group
+28	Collège	envers	Nom	nom masculin
+28	Collège	essayer	Verbe	verbe 1er group
+28	Collège	étincelant	Adjectif	adjectif qualificatif
+28	Collège	excuser	Verbe	verbe 1er group
+28	Collège	fâcher	Verbe	verbe 1er group
+28	Collège	façonner	Verbe	verbe 1er group
+28	Collège	flanc	Nom	nom masculin
+28	Collège	fouiller	Verbe	verbe 1er group
+28	Collège	grand-maman	Nom	nom féminin
+28	Collège	gratter	Verbe	verbe 1er group
+28	Collège	habile	Adjectif	adjectif qualificatif
+28	Collège	habileté	Nom	nom féminin
+28	Collège	habiller	Verbe	verbe 1er group
+28	Collège	hausser	Verbe	verbe 1er group
+28	Collège	hermine	Nom	nom féminin
+28	Collège	impossibilité	Nom	nom féminin
+28	Collège	indifférent	Adjectif	adjectif qualificatif
+28	Collège	kermesse	Nom	nom féminin
+28	Collège	longtemps	Invariable	adverbe
+28	Collège	maint	Déterminant	adjectif indéfini
+28	Collège	match	Nom	nom masculin
+28	Collège	méthode	Nom	nom féminin
+28	Collège	moissonneur	Nom	nom masculin
+28	Collège	mystère	Nom	nom masculin
+28	Collège	occasionner	Verbe	verbe 1er group
+28	Collège	oisillon	Nom	nom masculin
+28	Collège	opposer	Verbe	verbe 1er group
+28	Collège	orgueil	Nom	nom masculin
+28	Collège	paletot	Nom	nom masculin
+28	Collège	parmi	Invariable	préposition
+28	Collège	parterre	Nom	nom masculin
+28	Collège	peiner	Verbe	verbe 1er group
+28	Collège	persévérer	Verbe	verbe 1er group
+28	Collège	poids	Nom	nom masculin
+28	Collège	précédent	Adjectif	adjectif qualificatif
+28	Collège	primevère	Nom	nom féminin
+28	Collège	principal	Adjectif	adjectif qualificatif
+28	Collège	procéder	Verbe	verbe 1er group
+28	Collège	récompenser	Verbe	verbe 1er group
+28	Collège	rendez-vous	Nom	nom masculin
+28	Collège	secours	Nom	nom masculin
+28	Collège	sermon	Nom	nom masculin
+28	Collège	sillonner	Verbe	verbe 1er group
+28	Collège	soutien	Nom	nom masculin
+28	Collège	sucer	Verbe	verbe 1er group
+28	Collège	tacher	Verbe	verbe 1er group
+28	Collège	tandis que	Invariable	conjonction
+28	Collège	tilleul	Nom	nom masculin
+28	Collège	vanter	Verbe	verbe 1er group
+28	Collège	végétation	Nom	nom féminin
+28	Collège	verdâtre	Adjectif	adjectif qualificatif
+28	Collège	vieillesse	Nom	nom féminin
+29	Collège	accepter	Verbe	verbe 1er group
+29	Collège	accrocher	Verbe	verbe 1er group
+29	Collège	aligner	Verbe	verbe 1er group
+29	Collège	ample	Adjectif	adjectif qualificatif
+29	Collège	apparaître	Verbe	verbe 3ème group
+29	Collège	applaudir	Verbe	verbe 2ème group
+29	Collège	assez	Invariable	adverbe
+29	Collège	attrister	Verbe	verbe 1er group
+29	Collège	bienveillant	Adjectif	adjectif qualificatif
+29	Collège	bourgmestre	Nom	nom masculin
+29	Collège	brèche	Nom	nom féminin
+29	Collège	buis	Nom	nom masculin
+29	Collège	cime	Nom	nom féminin
+29	Collège	concours	Nom	nom masculin
+29	Collège	condisciple	Nom	nom masculin
+29	Collège	contempler	Verbe	verbe 1er group
+29	Collège	correspondance	Nom	nom féminin
+29	Collège	cygne	Nom	nom masculin
+29	Collège	dédaigner	Verbe	verbe 1er group
+29	Collège	ensoleillé	Adjectif	adjectif qualificatif
+29	Collège	errer	Verbe	verbe 1er group
+29	Collège	essai	Nom	nom masculin
+29	Collège	étinceler	Verbe	verbe 1er group
+29	Collège	exquis	Adjectif	adjectif qualificatif
+29	Collège	familial	Adjectif	adjectif qualificatif
+29	Collège	favori	Adjectif	adjectif qualificatif
+29	Collège	flatteur	Nom	nom masculin
+29	Collège	fourrer	Verbe	verbe 1er group
+29	Collège	grelotter	Verbe	verbe 1er group
+29	Collège	grincer	Verbe	verbe 1er group
+29	Collège	guère	Invariable	adverbe
+29	Collège	guetter	Verbe	verbe 1er group
+29	Collège	habituer	Verbe	verbe 1er group
+29	Collège	haillon	Nom	nom masculin
+29	Collège	hangar	Nom	nom masculin
+29	Collège	hérissé	Adjectif	adjectif qualificatif
+29	Collège	horreur	Nom	nom féminin
+29	Collège	hygiène	Nom	nom féminin
+29	Collège	lierre	Nom	nom masculin
+29	Collège	maussade	Adjectif	adjectif qualificatif
+29	Collège	néanmoins	Invariable	adverbe
+29	Collège	oeillet	Nom	nom masculin
+29	Collège	périlleux	Adjectif	adjectif qualificatif
+29	Collège	photographier	Verbe	verbe 1er group
+29	Collège	portefeuille	Nom	nom masculin
+29	Collège	précéder	Verbe	verbe 1er group
+29	Collège	projeter	Verbe	verbe 1er group
+29	Collège	ranger	Verbe	verbe 1er group
+29	Collège	rattraper	Verbe	verbe 1er group
+29	Collège	recommandation	Nom	nom féminin
+29	Collège	recueillir	Verbe	verbe 3ème group
+29	Collège	répandre	Verbe	verbe 3ème group
+29	Collège	ressource	Nom	nom féminin
+29	Collège	rez-de-chaussée	Nom	nom masculin
+29	Collège	scène	Nom	nom féminin
+29	Collège	s'efforcer	Verbe	verbe 1er group
+29	Collège	sincèrement	Invariable	adverbe
+29	Collège	souterrain	Adjectif	adjectif qualificatif
+29	Collège	supposer	Verbe	verbe 1er group
+29	Collège	sûr	Adjectif	adjectif qualificatif
+29	Collège	tressaillir	Verbe	verbe 3ème group
+29	Collège	vieil	Adjectif	adjectif qualificatif
+29	Collège	voûte	Nom	nom féminin
+30	Collège	abîmer	Verbe	verbe 1er group
+30	Collège	accabler	Verbe	verbe 1er group
+30	Collège	apaiser	Verbe	verbe 1er group
+30	Collège	balançoire	Nom	nom féminin
+30	Collège	baptiser	Verbe	verbe 1er group
+30	Collège	bourrasque	Nom	nom féminin
+30	Collège	carrefour	Nom	nom masculin
+30	Collège	cathédrale	Nom	nom féminin
+30	Collège	commander	Verbe	verbe 1er group
+30	Collège	délaisser	Verbe	verbe 1er group
+30	Collège	différer	Verbe	verbe 1er group
+30	Collège	écho	Nom	nom masculin
+30	Collège	emballer	Verbe	verbe 1er group
+30	Collège	empêcher	Verbe	verbe 1er group
+30	Collège	étouffer	Verbe	verbe 1er group
+30	Collège	exact	Adjectif	adjectif qualificatif
+30	Collège	fâcheux	Adjectif	adjectif qualificatif
+30	Collège	fourmillière	Nom	nom féminin
+30	Collège	gambader	Verbe	verbe 1er group
+30	Collège	gêner	Verbe	verbe 1er group
+30	Collège	gibecière	Nom	nom féminin
+30	Collège	hésiter	Verbe	verbe 1er group
+30	Collège	inondation	Nom	nom féminin
+30	Collège	inonder	Verbe	verbe 1er group
+30	Collège	intense	Adjectif	adjectif qualificatif
+30	Collège	intéressant	Adjectif	adjectif qualificatif
+30	Collège	intérêt	Nom	nom masculin
+30	Collège	interpeller	Verbe	verbe 1er group
+30	Collège	interrompre	Verbe	verbe 3ème group
+30	Collège	noeud	Nom	nom masculin
+30	Collège	opinion	Nom	nom féminin
+30	Collège	orgueilleux	Adjectif	adjectif qualificatif
+30	Collège	ôter	Verbe	verbe 1er group
+30	Collège	pensionnat	Nom	nom masculin
+30	Collège	physique	Adjectif	adjectif qualificatif
+30	Collège	possession	Nom	nom féminin
+30	Collège	pourrir	Verbe	verbe 2ème group
+30	Collège	procession	Nom	nom féminin
+30	Collège	quant	Invariable	préposition
+30	Collège	réception	Nom	nom féminin
+30	Collège	sein	Nom	nom masculin
+30	Collège	souiller	Verbe	verbe 1er group
+30	Collège	tâcher	Verbe	verbe 1er group
+30	Collège	talus	Nom	nom masculin
+30	Collège	tourbillonner	Verbe	verbe 1er group
+30	Collège	turbulent	Adjectif	adjectif qualificatif
+31	Collège	accueil	Nom	nom masculin
+31	Collège	angoisse	Nom	nom féminin
+31	Collège	appui	Nom	nom masculin
+31	Collège	bruyant	Adjectif	adjectif qualificatif
+31	Collège	chaland	Nom	nom masculin
+31	Collège	déshabiller	Verbe	verbe 1er group
+31	Collège	dessein	Nom	nom masculin
+31	Collège	discours	Nom	nom masculin
+31	Collège	entraîner	Verbe	verbe 1er group
+31	Collège	exaucer	Verbe	verbe 1er group
+31	Collège	excellence	Nom	nom féminin
+31	Collège	exciter	Verbe	verbe 1er group
+31	Collège	ferraille	Nom	nom féminin
+31	Collège	gaieté	Nom	nom féminin
+31	Collège	harmonieux	Adjectif	adjectif qualificatif
+31	Collège	houille	Nom	nom féminin
+31	Collège	inquiéter	Verbe	verbe 1er group
+31	Collège	intéresser	Verbe	verbe 1er group
+31	Collège	obscurcir	Verbe	verbe 2ème group
+31	Collège	recommander	Verbe	verbe 1er group
+31	Collège	ressembler	Verbe	verbe 1er group
+31	Collège	rôder	Verbe	verbe 1er group
+31	Collège	soupçonner	Verbe	verbe 1er group
+31	Collège	taillis	Nom	nom masculin
+31	Collège	théâtre	Nom	nom masculin
+31	Collège	tunnel	Nom	nom masculin
+31	Collège	voeu	Nom	nom masculin
+32	Collège	agacer	Verbe	verbe 1er group
+32	Collège	aiguiser	Verbe	verbe 1er group
+32	Collège	aîné	Adjectif	adjectif qualificatif
+32	Collège	apprêter	Verbe	verbe 1er group
+32	Collège	attester	Verbe	verbe 1er group
+32	Collège	attrait	Nom	nom masculin
+32	Collège	bibliothèque	Nom	nom féminin
+32	Collège	charlatan	Nom	nom masculin
+32	Collège	chrysanthème	Nom	nom masculin
+32	Collège	compassion	Nom	nom féminin
+32	Collège	confus	Adjectif	adjectif qualificatif
+32	Collège	désespérer	Verbe	verbe 1er group
+32	Collège	embarrasser	Verbe	verbe 1er group
+32	Collège	familier	Adjectif	adjectif qualificatif
+32	Collège	genêt	Nom	nom masculin
+32	Collège	monnaie	Nom	nom féminin
+32	Collège	myosotis	Nom	nom masculin
+32	Collège	offenser	Verbe	verbe 1er group
+32	Collège	rapiécer	Verbe	verbe 1er group
+32	Collège	serein	Adjectif	adjectif qualificatif
+32	Collège	succulent	Adjectif	adjectif qualificatif
+32	Collège	supplier	Verbe	verbe 1er group
+32	Collège	volontiers	Invariable	adverbe
+33	Collège	abondamment	Invariable	adverbe
+33	Collège	accueillir	Verbe	verbe 3ème group
+33	Collège	acquitter	Verbe	verbe 1er group
+33	Collège	anxiété	Nom	nom féminin
+33	Collège	anxieux	Adjectif	adjectif qualificatif
+33	Collège	appuyer	Verbe	verbe 1er group
+33	Collège	asseoir	Verbe	verbe 3ème group
+33	Collège	baptême	Nom	nom masculin
+33	Collège	bizarre	Adjectif	adjectif qualificatif
+33	Collège	blottir	Verbe	verbe 2ème group
+33	Collège	déchaîner	Verbe	verbe 1er group
+33	Collège	emmener	Verbe	verbe 1er group
+33	Collège	enflammer	Verbe	verbe 1er group
+33	Collège	ennuyeux	Adjectif	adjectif qualificatif
+33	Collège	événement	Nom	nom masculin
+33	Collège	évidemment	Invariable	adverbe
+33	Collège	excellent	Adjectif	adjectif qualificatif
+33	Collège	gaufre	Nom	nom féminin
+33	Collège	goal	Nom	nom masculin
+33	Collège	hommage	Nom	nom masculin
+33	Collège	hypocrite	Adjectif	adjectif qualificatif
+33	Collège	jacinthe	Nom	nom féminin
+33	Collège	marronnier	Nom	nom masculin
+33	Collège	mât	Nom	nom masculin
+33	Collège	moelleux	Adjectif	adjectif qualificatif
+33	Collège	pittoresque	Adjectif	adjectif qualificatif
+33	Collège	raisonnable	Adjectif	adjectif qualificatif
+33	Collège	séminaire	Nom	nom masculin
+33	Collège	solennel	Adjectif	adjectif qualificatif
+33	Collège	successivement	Invariable	adverbe
+33	Collège	suffire	Verbe	verbe 3ème group
+33	Collège	traîner	Verbe	verbe 1er group
+33	Collège	velours	Nom	nom masculin
+34	Collège	affairé	Adjectif	adjectif qualificatif
+34	Collège	clown	Nom	nom masculin
+34	Collège	concerner	Verbe	verbe 1er group
+34	Collège	constamment	Invariable	adverbe
+34	Collège	crucifix	Nom	nom masculin
+34	Collège	disperser	Verbe	verbe 1er group
+34	Collège	groseillier	Nom	nom masculin
+34	Collège	impatience	Nom	nom féminin
+34	Collège	poulailler	Nom	nom masculin
+34	Collège	préoccuper	Verbe	verbe 1er group
+34	Collège	réflexion	Nom	nom féminin
+34	Collège	scintiller	Verbe	verbe 1er group
+34	Collège	sûrement	Invariable	adverbe
+35	Collège	ci-joint	Adjectif	adjectif qualificatif
+35	Collège	croûte	Nom	nom féminin
+35	Collège	discussion	Nom	nom féminin
+35	Collège	enthousiasme	Nom	nom masculin
+35	Collège	inconvénient	Nom	nom masculin
+35	Collège	malette	Nom	nom féminin
+35	Collège	recours	Nom	nom masculin
+35	Collège	solliciter	Verbe	verbe 1er group
+36	Collège	anticiper	Verbe	verbe 1er group
+36	Collège	bruyamment	Invariable	adverbe
+36	Collège	clin d'oeil	Nom	nom masculin
+36	Collège	dégât	Nom	nom masculin
+36	Collège	eh	Invariable	interjection
+36	Collège	embarras	Nom	nom masculin
+36	Collège	entrouvrir	Verbe	verbe 3ème group
+36	Collège	sympathie	Nom	nom féminin
+37	Collège	ailleurs	Invariable	adverbe
+37	Collège	certes	Invariable	adverbe
+37	Collège	davantage	Invariable	adverbe
+37	Collège	débarrasser	Verbe	verbe 1er group
+37	Collège	hôpital	Nom	nom masculin
+37	Collège	parcours	Nom	nom masculin
+37	Collège	puits	Nom	nom masculin
+37	Collège	randonnée	Nom	nom féminin
+38	Collège	commission	Nom	nom féminin
+38	Collège	faine	Nom	nom féminin
+38	Collège	fréquemment	Invariable	adverbe
+38	Collège	raccommoder	Verbe	verbe 1er group
+38	Collège	raccourcir	Verbe	verbe 2ème group
+38	Collège	suffisamment	Invariable	adverbe
+39	Collège	carrousel	Nom	nom masculin
+39	Collège	dépens	Nom	nom masculin
+39	Collège	football	Nom	nom masculin
+39	Collège	impatiemment	Invariable	adverbe
+41	Collège	remords	Nom	nom masculin
+42	Collège	exhaler	Verbe	verbe 1er group
+42	Collège	fonds	Nom	nom masculin
+43	Collège	bâiller	Verbe	verbe 1er group
+43	Collège	dahlia	Nom	nom masculin

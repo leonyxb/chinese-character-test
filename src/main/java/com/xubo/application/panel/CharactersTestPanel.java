@@ -1,7 +1,8 @@
 package com.xubo.application.panel;
 
+import com.xubo.application.ApplicationConfig;
 import com.xubo.application.ApplicationUtils;
-import com.xubo.application.ChineseMainFrame;
+import com.xubo.application.ApplicationMainFrame;
 import com.xubo.core.TestEngine;
 import com.xubo.data.book.Lesson;
 import com.xubo.data.character.Character;
@@ -14,16 +15,13 @@ import java.awt.*;
 import java.util.Collections;
 import java.util.List;
 
-import static com.xubo.application.ChineseMainFrame.FONT_NAME;
-
-/**
- * 这个class暂时不用
- */
 public class CharactersTestPanel extends JPanel {
 
     private TestEngine testEngine;
 
-    private ChineseMainFrame mainFrame;
+    private ApplicationMainFrame mainFrame;
+
+    private ApplicationConfig config;
 
     private JTextPane characterPane = new JTextPane();
     private JList<String> wordsList = new JList<>();
@@ -32,17 +30,17 @@ public class CharactersTestPanel extends JPanel {
     private JTextArea statisticArea = new JTextArea();
 
     private JButton knowButton = new JButton("认识");
-    private JButton unknowButton = new JButton("不认识");
+    private JButton unknownButton = new JButton("不认识");
     private JButton learnButton = new JButton("学习");
     private JButton endButton = new JButton("结束测试");
 
     private boolean learn;
 
-
-    public CharactersTestPanel(List<Lesson> lessons, boolean shuffle, boolean learn, boolean record, boolean unknownOnly, ChineseMainFrame mainFrame) {
+    public CharactersTestPanel(List<Lesson> lessons, boolean shuffle, boolean learn, boolean record, boolean unknownOnly, ApplicationMainFrame mainFrame) {
 
         this.testEngine = new TestEngine(lessons, shuffle, record, unknownOnly);
         this.mainFrame = mainFrame;
+        this.config = mainFrame.getConfig();
         this.learn = learn;
 
         initGui();
@@ -65,15 +63,15 @@ public class CharactersTestPanel extends JPanel {
 
         c.gridy = 0;
         c.weighty = 3;
-        add(buildShowPanel(), c);
+        add(buildTestRow(), c);
 
         c.gridy = 1;
         c.weighty = 2;
-        add(buildHistoryPanel(), c);
+        add(buildHistoryRow(), c);
 
     }
 
-    private JPanel buildShowPanel() {
+    private JPanel buildTestRow() {
 
         JPanel panel = new JPanel();
         panel.setLayout(new GridBagLayout());
@@ -86,9 +84,78 @@ public class CharactersTestPanel extends JPanel {
 
         c.gridx = 0;
         c.gridwidth = 1;
+        c.weightx = 3;
+        if (config.getLanguage() == ApplicationConfig.ApplicationLanguage.CHINESE) {
+            panel.add(buildShowSubPanelVertical(), c);
+        } else {
+            panel.add(buildShowSubPanelHorizontal(), c);
+        }
+
+        c.gridx = 1;
+        c.gridwidth = 1;
+        c.weightx = 2;
+        panel.add(buildActionSubPanel(), c);
+
+        return panel;
+    }
+
+    private JPanel buildShowSubPanelHorizontal() {
+        JPanel showPanel = new JPanel();
+
+        showPanel.setLayout(new GridBagLayout());
+        GridBagConstraints c = new GridBagConstraints();
+
+        c.gridwidth = 1;
+        c.weightx = 1;
+        c.fill = GridBagConstraints.BOTH;
+
+        //row 1
+        c.gridy = 0;
+        c.weighty = 1;
+        characterPane.setEditable(false);
+        characterPane.setFont(new Font(config.getFontName(), Font.PLAIN, 100));
+        characterPane.setBackground(Color.LIGHT_GRAY);
+        characterPane.setPreferredSize(new Dimension(500, 200));
+        characterPane.setBorder(BorderFactory.createEmptyBorder(40, 5, 5, 5));
+        StyledDocument doc = characterPane.getStyledDocument();
+        SimpleAttributeSet center = new SimpleAttributeSet();
+        StyleConstants.setAlignment(center, StyleConstants.ALIGN_CENTER);
+        doc.setParagraphAttributes(0, doc.getLength(), center, false);
+        showPanel.add(characterPane, c);
+
+        //row 2
+        c.gridy = 1;
+        c.weighty = 1;
+
+        c.fill = GridBagConstraints.BOTH;
+        wordsList.setFont(new Font(config.getFontName(), Font.PLAIN, 50));
+        wordsList.setBackground(new Color(149, 149, 149));
+        wordsList.setVisibleRowCount(-1);
+        JScrollPane scrollPane = new JScrollPane(wordsList);
+        scrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
+        scrollPane.setPreferredSize(new Dimension(500, 100));
+        showPanel.add(scrollPane, c);
+
+        showPanel.setPreferredSize(new Dimension(500, 300));
+        return showPanel;
+    }
+
+    private JPanel buildShowSubPanelVertical() {
+        JPanel showPanel = new JPanel();
+
+        showPanel.setLayout(new GridBagLayout());
+        GridBagConstraints c = new GridBagConstraints();
+
+        //row 1
+        c.gridy = 0;
+        c.weighty = 1;
+        c.fill = GridBagConstraints.BOTH;
+
+        c.gridx = 0;
+        c.gridwidth = 1;
         c.weightx = 1;
         characterPane.setEditable(false);
-        characterPane.setFont(new Font(FONT_NAME, Font.PLAIN, 350));
+        characterPane.setFont(new Font(config.getFontName(), Font.PLAIN, 350));
         characterPane.setBackground(Color.LIGHT_GRAY);
         characterPane.setPreferredSize(new Dimension(250, 250));
 
@@ -96,30 +163,25 @@ public class CharactersTestPanel extends JPanel {
         SimpleAttributeSet center = new SimpleAttributeSet();
         StyleConstants.setAlignment(center, StyleConstants.ALIGN_CENTER);
         doc.setParagraphAttributes(0, doc.getLength(), center, false);
-        panel.add(characterPane, c);
+        showPanel.add(characterPane, c);
 
         c.gridx = 1;
         c.gridwidth = 1;
-        c.weightx = 0.3;
+        c.weightx = 0.4;
         c.fill = GridBagConstraints.BOTH;
-        wordsList.setFont(new Font(FONT_NAME, Font.PLAIN, 50));
+        wordsList.setFont(new Font(config.getFontName(), Font.PLAIN, 50));
         wordsList.setBackground(new Color(149, 149, 149));
         wordsList.setVisibleRowCount(-1);
         JScrollPane scrollPane = new JScrollPane(wordsList);
         scrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
         scrollPane.setPreferredSize(new Dimension(200, 400));
-        panel.add(scrollPane, c);
+        showPanel.add(scrollPane, c);
 
-        c.gridx = 2;
-        c.gridwidth = 1;
-        c.weightx = 1;
-        c.fill = GridBagConstraints.BOTH;
-        panel.add(buildActionSubPanel(), c);
-
-        return panel;
+        return showPanel;
     }
 
     private JPanel buildActionSubPanel() {
+
         JPanel actionPanel = new JPanel();
         actionPanel.setBackground(Color.black);
 
@@ -144,7 +206,7 @@ public class CharactersTestPanel extends JPanel {
         ac.weighty = 1;
         ac.weightx = 1;
         ac.gridwidth = 3;
-        statisticArea.setFont(new Font(FONT_NAME, Font.PLAIN, 25));
+        statisticArea.setFont(new Font(config.getLabelFontName(), Font.PLAIN, 25));
         statisticArea.setEditable(false);
         actionPanel.add(statisticArea, ac);
 
@@ -157,25 +219,25 @@ public class CharactersTestPanel extends JPanel {
         ac.gridwidth = 1;
         knowButton.setBackground(new Color(4, 73, 18));
         knowButton.setForeground(Color.WHITE);
-        knowButton.setFont(new Font(FONT_NAME, Font.PLAIN, 30));
+        knowButton.setFont(new Font(config.getButtonFontName(), Font.PLAIN, 30));
         knowButton.setFocusPainted(false);
         actionPanel.add(knowButton, ac);
 
         ac.gridx = 1;
         ac.weightx = 1;
         ac.gridwidth = 1;
-        unknowButton.setBackground(new Color(129, 15, 11));
-        unknowButton.setForeground(Color.WHITE);
-        unknowButton.setFont(new Font(FONT_NAME, Font.PLAIN, 30));
-        unknowButton.setFocusPainted(false);
-        actionPanel.add(unknowButton, ac);
+        unknownButton.setBackground(new Color(129, 15, 11));
+        unknownButton.setForeground(Color.WHITE);
+        unknownButton.setFont(new Font(config.getButtonFontName(), Font.PLAIN, 30));
+        unknownButton.setFocusPainted(false);
+        actionPanel.add(unknownButton, ac);
 
         ac.gridx = 2;
         ac.weightx = 1;
         ac.gridwidth = 1;
         learnButton.setBackground(new Color(215, 96, 14));
         learnButton.setForeground(Color.WHITE);
-        learnButton.setFont(new Font(FONT_NAME, Font.PLAIN, 30));
+        learnButton.setFont(new Font(config.getButtonFontName(), Font.PLAIN, 30));
         learnButton.setFocusPainted(false);
         if (learn) {
             learnButton.setEnabled(true);
@@ -184,20 +246,25 @@ public class CharactersTestPanel extends JPanel {
         }
         actionPanel.add(learnButton, ac);
 
+        endButton.setFont(new Font(config.getButtonFontName(), Font.PLAIN, 30));
+
         return actionPanel;
     }
 
-    private JPanel buildHistoryPanel() {
+    private JPanel buildHistoryRow() {
 
+
+        String fontName = config.getFontName();
 
         JPanel panel = new JPanel();
         panel.setLayout(new GridLayout(1, 2));
 
         correctCharactersArea.setEditable(false);
-        correctCharactersArea.setFont(new Font(FONT_NAME, Font.PLAIN, 30));
+        correctCharactersArea.setFont(new Font(fontName, Font.PLAIN, 30));
         correctCharactersArea.setLineWrap(true);
-        correctCharactersArea.setWrapStyleWord(false);
+        correctCharactersArea.setWrapStyleWord(true);
         correctCharactersArea.setForeground(new Color(48, 143, 4));
+        correctCharactersArea.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
 
 
         JScrollPane scrollPane1 = new JScrollPane(correctCharactersArea);
@@ -207,10 +274,12 @@ public class CharactersTestPanel extends JPanel {
 
 
         incorrectCharactersArea.setEditable(false);
-        incorrectCharactersArea.setFont(new Font(FONT_NAME, Font.PLAIN, 30));
+        incorrectCharactersArea.setFont(new Font(fontName, Font.PLAIN, 30));
         incorrectCharactersArea.setLineWrap(true);
-        incorrectCharactersArea.setWrapStyleWord(false);
+        incorrectCharactersArea.setWrapStyleWord(true);
         incorrectCharactersArea.setForeground(Color.RED);
+        incorrectCharactersArea.setBorder(BorderFactory.createEmptyBorder(5, 10, 5, 10));
+
         JScrollPane scrollPane2 = new JScrollPane(incorrectCharactersArea);
         scrollPane2.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
         scrollPane2.setPreferredSize(new Dimension(500, 150));
@@ -228,7 +297,7 @@ public class CharactersTestPanel extends JPanel {
             setNextCharacterToTest();
         });
 
-        unknowButton.addActionListener(e -> {
+        unknownButton.addActionListener(e -> {
             testEngine.doNotKnowCurrentTestCharacter();
             updateStatistic();
             setNextCharacterToTest();
@@ -279,7 +348,7 @@ public class CharactersTestPanel extends JPanel {
         }
 
         if (stopTest) {
-            unknowButton.setEnabled(false);
+            unknownButton.setEnabled(false);
             knowButton.setEnabled(false);
             learnButton.setEnabled(false);
             characterPane.setText(testEngine.getTestResultSymbol());
@@ -294,7 +363,9 @@ public class CharactersTestPanel extends JPanel {
 
     private String[] getWordsToDisplay(Character character) {
         List<String> words = character.getWords();
-        Collections.shuffle(words);
+        if (config.getLanguage() == ApplicationConfig.ApplicationLanguage.CHINESE) {
+            Collections.shuffle(words);
+        }
         return words.stream().limit(8).toArray(String[]::new);
     }
 
