@@ -24,13 +24,15 @@ public class ApplicationStartingFrame extends JFrame {
     }
 
     private JButton buildFrenchButton() {
+        final ApplicationConfig config = ApplicationConfig.FRENCH_CONFIG;
+
         JButton button = new JButton("Français");
         button.setFocusPainted(false);
-        button.setFont(new Font("Leelawadee UI", Font.PLAIN, 30));
+        button.setFont(new Font(config.getFontName(), Font.PLAIN, 26));
 
         button.addActionListener(e -> {
             this.setEnabled(false);
-            ApplicationMainFrame mainFrame = new ApplicationMainFrame(new FrenchData(), ApplicationConfig.FRENCH_CONFIG);
+            ApplicationMainFrame mainFrame = new ApplicationMainFrame(new FrenchData(), config);
             this.setVisible(false);
             mainFrame.setVisible(true);
         });
@@ -38,12 +40,15 @@ public class ApplicationStartingFrame extends JFrame {
     }
 
     private JButton buildChineseButton() {
+        final ApplicationConfig config = ApplicationConfig.CHINESE_CONFIG;
+
         JButton button = new JButton("中文");
-        button.setFont(new Font("楷体", Font.PLAIN, 30));
+        button.setFont(new Font(config.getFontName(), Font.BOLD, 30));
         button.setFocusPainted(false);
+
         button.addActionListener(e -> {
             this.setEnabled(false);
-            ApplicationMainFrame mainFrame = new ApplicationMainFrame(new ChineseData(), ApplicationConfig.CHINESE_CONFIG);
+            ApplicationMainFrame mainFrame = new ApplicationMainFrame(new ChineseData(), config);
             this.setVisible(false);
             mainFrame.setVisible(true);
         });

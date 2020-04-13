@@ -14,9 +14,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static com.xubo.application.ApplicationMainFrame.FONT_NAME_PIN_YIN;
-
-public class CharactersDisplayDialog extends JDialog {
+public class CharactersBrowseDialog extends JDialog {
 
     private int boxHeight;
     private int boxWidth;
@@ -25,7 +23,7 @@ public class CharactersDisplayDialog extends JDialog {
 
     private ApplicationConfig config;
 
-    public CharactersDisplayDialog(List<Lesson> lessons, boolean shuffle, boolean unknownOnly, ApplicationConfig config, JFrame owner) {
+    public CharactersBrowseDialog(List<Lesson> lessons, boolean shuffle, boolean unknownOnly, ApplicationConfig config, JFrame owner) {
         super(owner);
 
         this.config = config;
@@ -145,7 +143,7 @@ public class CharactersDisplayDialog extends JDialog {
                 .distinct()
                 .forEach(py -> {
                     JMenuItem menuItem = new JMenuItem("  " + py);
-                    menuItem.setFont(new Font(FONT_NAME_PIN_YIN, Font.PLAIN, 24));
+                    menuItem.setFont(new Font("Arial", Font.PLAIN, 24));
                     menu.add(menuItem);
                 });
         return menu;

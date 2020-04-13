@@ -304,7 +304,7 @@ public class CharactersTestPanel extends JPanel {
         });
 
         learnButton.addActionListener(e -> {
-            mainFrame.showCharacterDetail(testEngine.currentCharacter());
+            mainFrame.displayLearnDialog(testEngine.currentCharacter());
             testEngine.doNotKnowCurrentTestCharacter();
             updateStatistic();
             setNextCharacterToTest();
@@ -312,7 +312,7 @@ public class CharactersTestPanel extends JPanel {
 
         endButton.addActionListener(e -> {
             mainFrame.remove(this);
-            mainFrame.selectCharacters();
+            mainFrame.displaySelectPanel();
         });
     }
 

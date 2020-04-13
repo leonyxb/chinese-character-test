@@ -121,7 +121,7 @@ public class CharactersSelectPanel extends JPanel {
 
             if (!lessons.isEmpty()) {
                 mainFrame.remove(this);
-                mainFrame.launchTest(
+                mainFrame.displayTestPanel(
                         lessons,
                         randomCheckbox.isSelected(),
                         learnCheckbox.isSelected(),
@@ -138,7 +138,7 @@ public class CharactersSelectPanel extends JPanel {
                     .collect(toList());
 
             if (!lessons.isEmpty()) {
-                mainFrame.showCharacters(lessons, randomCheckbox.isSelected(), testUnknownOnlyCheckbox.isSelected());
+                mainFrame.displayBrowseDialog(lessons, randomCheckbox.isSelected(), testUnknownOnlyCheckbox.isSelected());
             }
         });
     }
