@@ -88,10 +88,8 @@ public class CharactersBrowseDialog extends JDialog {
                 boxHeight
         );
         button.setFont(new Font(config.getFontName(), Font.PLAIN, fontSize));
-        button.setBackground(Color.LIGHT_GRAY);
         button.setBackground(ApplicationUtils.getDisplayedColor(character, true));
         button.setFocusPainted(false);
-        //button.setToolTipText(buildToolTipText(character));
 
         JPopupMenu menu = getPinyinMenu(character);
 
@@ -111,8 +109,8 @@ public class CharactersBrowseDialog extends JDialog {
             public void mouseReleased(MouseEvent e) {
                 if (e.getButton() == e.BUTTON1) {
                     Color currentColor = button.getBackground();
-                    if (currentColor != ApplicationUtils.COLOR_KNOWN_BACKGROUND) {
-                        button.setBackground(ApplicationUtils.COLOR_KNOWN_BACKGROUND);
+                    if (currentColor != ApplicationUtils.Colors.KNOWN.getBackground()) {
+                        button.setBackground(ApplicationUtils.Colors.KNOWN.getBackground());
                     } else {
                         button.setBackground(Color.LIGHT_GRAY);
                     }

@@ -5,44 +5,88 @@ import com.xubo.data.character.CharacterStatus;
 import com.xubo.data.character.CharacterTestRecord;
 
 import java.awt.*;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 public class ApplicationUtils {
 
-    public static final Color COLOR_UNKNOWN = new Color(178, 0, 0);
-    public static final Color COLOR_KNOWN = new Color(0, 138, 0);
-    public static final Color COLOR_KNOWN_BACKGROUND = new Color(142, 196, 142);
-    public static final Color COLOR_UNKNOWN_BACKGROUND = new Color(239, 166, 166);
+    private static final long MILLISECONDS_PER_DAY = 1000 * 3600 * 24;
 
     public static String getCssColor(Color color) {
         return String.format("rgb(%s, %s, %s)", color.getRed(), color.getGreen(), color.getBlue());
     }
 
-    public static Color getDisplayedColor(Character character, boolean isBackground) {
+    public static Colors getDisplayedColors(Character character) {
+
         List<CharacterTestRecord> records = character.getTestRecord().getRecords();
-        if (!records.isEmpty()) {
 
-            List<CharacterTestRecord> last3Records = getLastTestRecords(character, 3);
-            if (!last3Records.isEmpty()) {
+        if (records.isEmpty()) {
+            return Colors.DEFAULT;
+        }
 
-                long knownNum = (int) last3Records.stream()
-                        .filter(r -> r.getStatus() == CharacterStatus.KNOWN)
-                        .count();
+        if (isArchived(character)) {
+            return Colors.ARCHIVED;
+        }
 
-                if (knownNum == 3) {
-                    return isBackground ? COLOR_KNOWN_BACKGROUND : COLOR_KNOWN;
-                } else if (knownNum == 2) {
-                    return isBackground ? new Color(191, 191, 72) : new Color(187, 209, 4);
-                } else if (knownNum == 1) {
-                    return isBackground ? new Color(236, 190, 97) : new Color(236, 130, 4);
+        Colors colors = Colors.DEFAULT;
+        List<CharacterTestRecord> last3Records = getLastTestRecords(character, 3);
+        if (!last3Records.isEmpty()) {
+
+            long knownNum = (int) last3Records.stream()
+                    .filter(r -> r.getStatus() == CharacterStatus.KNOWN)
+                    .count();
+
+            if (knownNum == 3) {
+                if (isLongTimeNotTested(character)) {
+                    colors = Colors.NEED_RETEST;
                 } else {
-                    return isBackground ? COLOR_UNKNOWN_BACKGROUND : COLOR_UNKNOWN;
+                    colors = Colors.KNOWN;
                 }
+            } else if (knownNum == 2) {
+                colors = Colors.ALMOST_KNOWN;
+            } else if (knownNum == 1) {
+                colors = Colors.ALMOST_UNKNOWN;
+            } else {
+                colors = Colors.UNKNOWN;
             }
         }
 
-        return isBackground ? Color.LIGHT_GRAY : Color.BLACK;
+        return colors;
+    }
+
+    /**
+     * 一个字，如果满足下列条件，就认为这个字已经永久记住：
+     *  1 - 最近的，连续表示认识的次数大于7次
+     *  2 - 连续认识的时间跨度大于30天
+     */
+    private static boolean isArchived(Character character) {
+        List<CharacterTestRecord> lastKnownRecords = getLastConsecutiveKnownTestRecords(character);
+
+        if (lastKnownRecords.size() > 7) {
+            long lastKnownTime = lastKnownRecords.get(lastKnownRecords.size() - 1).getDate().getTime();
+            long firstKnownTime = lastKnownRecords.get(0).getDate().getTime();
+            if (lastKnownTime - firstKnownTime > MILLISECONDS_PER_DAY * 30) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * 超过15天没有测试
+     */
+    private static boolean isLongTimeNotTested(Character character) {
+        List<CharacterTestRecord> records = character.getTestRecord().getRecords();
+        CharacterTestRecord lastRecord = records.get(records.size() - 1);
+        long duration = System.currentTimeMillis() - lastRecord.getDate().getTime();
+        return duration > MILLISECONDS_PER_DAY * 15;
+    }
+
+
+    public static Color getDisplayedColor(Character character, boolean isBackground) {
+        Colors displayedColors = getDisplayedColors(character);
+        return isBackground ? displayedColors.getBackground() : displayedColors.getForeground();
     }
 
     public static List<CharacterTestRecord> getLastTestRecords(Character character, int num) {
@@ -53,7 +97,72 @@ public class ApplicationUtils {
         return Collections.emptyList();
     }
 
+    private static List<CharacterTestRecord> getLastConsecutiveKnownTestRecords(Character character) {
+        List<CharacterTestRecord> records = character.getTestRecord().getRecords();
+        List<CharacterTestRecord> knownRecords = new ArrayList<>();
+
+        for (int i = records.size() - 1; i >= 0; i--) {
+            CharacterTestRecord record = records.get(i);
+            if (record.getStatus() == CharacterStatus.KNOWN) {
+                knownRecords.add(record);
+            } else {
+                break;
+            }
+        }
+        Collections.reverse(knownRecords);
+
+        return knownRecords;
+    }
+
     public static boolean isKnown(Character character) {
-        return getDisplayedColor(character, false) == COLOR_KNOWN;
+        Colors colors = getDisplayedColors(character);
+        return colors == Colors.KNOWN || colors == Colors.ARCHIVED;
+    }
+
+    public enum Colors {
+        DEFAULT(
+                Color.BLACK,
+                Color.LIGHT_GRAY
+        ),
+        NEED_RETEST(
+                new Color(193, 1, 162),
+                new Color(196, 125, 187)
+        ),
+        KNOWN(
+                new Color(0, 138, 0),
+                new Color(142, 196, 142)
+        ),
+        ALMOST_KNOWN(
+                new Color(187, 209, 4),
+                new Color(191, 191, 72)
+        ),
+        ALMOST_UNKNOWN(
+                new Color(236, 130, 4),
+                new Color(236, 190, 97)
+        ),
+        UNKNOWN(
+                new Color(178, 0, 0),
+                new Color(239, 166, 166)
+        ),
+        ARCHIVED(
+                new Color(0, 33, 136),
+                new Color(170, 199, 239)
+        );
+
+        private final Color foreground;
+        private final Color background;
+
+        Colors(Color foreground, Color background) {
+            this.foreground = foreground;
+            this.background = background;
+        }
+
+        public Color getForeground() {
+            return foreground;
+    }
+
+        public Color getBackground() {
+            return background;
+        }
     }
 }
