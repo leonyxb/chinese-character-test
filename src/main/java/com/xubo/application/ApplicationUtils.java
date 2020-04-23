@@ -47,11 +47,11 @@ public class ApplicationUtils {
                 List<CharacterTestRecord> lastKnownRecords = getLastConsecutiveKnownTestRecords(records);
                 if (lastKnownRecords.size() <= 3) {
                     limitDaysNum = 2;
-                } else if (lastKnownRecords.size() <= 5) {
+                } else if (lastKnownRecords.size() <= 4) {
                     limitDaysNum = 3;
-                } else if (lastKnownRecords.size() <= 8) {
+                } else if (lastKnownRecords.size() <= 5) {
                     limitDaysNum = 5;
-                } else if (lastKnownRecords.size() <= 13) {
+                } else if (lastKnownRecords.size() <= 6) {
                     limitDaysNum = 8;
                 }
 
