@@ -26,7 +26,11 @@ public class ApplicationUtils {
         }
 
         if (isArchived(records)) {
-            return Colors.ARCHIVED;
+            if (isLongTimeNotTested(records, 100)) {
+                return Colors.NEED_RETEST;
+            } else {
+                return Colors.ARCHIVED;
+            }
         }
 
         Colors colors = Colors.DEFAULT;
@@ -38,7 +42,20 @@ public class ApplicationUtils {
                     .count();
 
             if (knownNum == 3) {
-                if (isLongTimeNotTested(records)) {
+
+                int limitDaysNum = 15;
+                List<CharacterTestRecord> lastKnownRecords = getLastConsecutiveKnownTestRecords(records);
+                if (lastKnownRecords.size() <= 3) {
+                    limitDaysNum = 2;
+                } else if (lastKnownRecords.size() <= 5) {
+                    limitDaysNum = 3;
+                } else if (lastKnownRecords.size() <= 8) {
+                    limitDaysNum = 5;
+                } else if (lastKnownRecords.size() <= 13) {
+                    limitDaysNum = 8;
+                }
+
+                if (isLongTimeNotTested(records, limitDaysNum)) {
                     colors = Colors.NEED_RETEST;
                 } else {
                     colors = Colors.KNOWN;
@@ -76,10 +93,10 @@ public class ApplicationUtils {
     /**
      * 超过15天没有测试
      */
-    private static boolean isLongTimeNotTested(List<CharacterTestRecord> records) {
+    private static boolean isLongTimeNotTested(List<CharacterTestRecord> records, int limitDaysNum) {
         CharacterTestRecord lastRecord = records.get(0);
         long duration = System.currentTimeMillis() - lastRecord.getDate().getTime();
-        return duration > MILLISECONDS_PER_DAY * 15;
+        return duration > MILLISECONDS_PER_DAY * limitDaysNum;
     }
 
 
