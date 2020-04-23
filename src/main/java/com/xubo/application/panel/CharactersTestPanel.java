@@ -6,14 +6,20 @@ import com.xubo.application.ApplicationMainFrame;
 import com.xubo.core.TestEngine;
 import com.xubo.data.book.Lesson;
 import com.xubo.data.character.Character;
+import com.xubo.data.character.TestStatus;
+import com.xubo.data.character.CharacterTestRecord;
 
 import javax.swing.*;
 import javax.swing.text.SimpleAttributeSet;
 import javax.swing.text.StyleConstants;
 import javax.swing.text.StyledDocument;
 import java.awt.*;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
+import static com.xubo.application.ApplicationUtils.oneRecordPerDay;
 
 public class CharactersTestPanel extends JPanel {
 
@@ -28,6 +34,7 @@ public class CharactersTestPanel extends JPanel {
     private JTextArea correctCharactersArea = new JTextArea();
     private JTextArea incorrectCharactersArea = new JTextArea();
     private JTextArea statisticArea = new JTextArea();
+    private JList<String> testRecordList = new JList<>();
 
     private JButton knowButton = new JButton("认识");
     private JButton unknownButton = new JButton("不认识");
@@ -201,14 +208,14 @@ public class CharactersTestPanel extends JPanel {
 
         //action row 2
         ac.gridy = 1;
+        ac.weighty = 1;
 
         ac.gridx = 0;
-        ac.weighty = 1;
         ac.weightx = 1;
         ac.gridwidth = 3;
-        statisticArea.setFont(new Font(config.getLabelFontName(), Font.PLAIN, 25));
-        statisticArea.setEditable(false);
-        actionPanel.add(statisticArea, ac);
+        actionPanel.add(buildStatisticPanel(), ac);
+        //actionPanel.add(new JPanel(), ac);
+
 
         //action row 3
         ac.gridy = 2;
@@ -249,6 +256,43 @@ public class CharactersTestPanel extends JPanel {
         endButton.setFont(new Font(config.getButtonFontName(), Font.PLAIN, 30));
 
         return actionPanel;
+    }
+
+    private Panel buildStatisticPanel() {
+        Panel panel = new Panel();
+        panel.setLayout(new GridBagLayout());
+        panel.setPreferredSize(new Dimension(300, 200));
+
+        testRecordList.setFont(new Font(config.getLabelFontName(), Font.PLAIN, 20));
+        //testRecordList.setPreferredSize(new Dimension(100, 200));
+
+        statisticArea.setFont(new Font(config.getLabelFontName(), Font.PLAIN, 25));
+        statisticArea.setEditable(false);
+
+
+        GridBagConstraints c = new GridBagConstraints();
+        c.fill = GridBagConstraints.BOTH;
+
+        c.gridy = 0;
+        c.gridheight = 1;
+        c.weighty = 1;
+
+        c.gridx = 0;
+        c.gridwidth = 1;
+        c.weightx = 2;
+        panel.add(statisticArea, c);
+
+
+        c.gridx = 1;
+        c.gridwidth = 1;
+        c.weightx = 2;
+        JScrollPane scrollPane = new JScrollPane(testRecordList);
+        scrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
+        scrollPane.setBorder(BorderFactory.createEmptyBorder());
+        scrollPane.setPreferredSize(new Dimension(200, 300));
+
+        panel.add(scrollPane, c);
+        return panel;
     }
 
     private JPanel buildHistoryRow() {
@@ -328,8 +372,10 @@ public class CharactersTestPanel extends JPanel {
             characterPane.setBackground(ApplicationUtils.getDisplayedColor(character, true));
             characterPane.revalidate();
             wordsList.setListData(getWordsToDisplay(character));
+            testRecordList.setListData(getTestRecordsToDisplay(character));
         }
     }
+
 
     private void performNoMoreCharacterToTestActions() {
 
@@ -367,6 +413,39 @@ public class CharactersTestPanel extends JPanel {
             Collections.shuffle(words);
         }
         return words.stream().limit(8).toArray(String[]::new);
+    }
+
+
+    private String[] getTestRecordsToDisplay(Character character) {
+
+        List<String> history = new ArrayList<>();
+
+        List<CharacterTestRecord> records = oneRecordPerDay(character.getTestRecord().getRecords());
+        if (!records.isEmpty()) {
+            history.add("<html><span style=\"font-size:18px;\">历史记录:</span></html>");
+            records.stream()
+                    .sorted()
+                    .map(this::buildTestRecordHtml)
+                    .forEach(history::add);
+        }
+
+        return history.toArray(new String[0]);
+
+    }
+
+    private String buildTestRecordHtml(CharacterTestRecord testRecord) {
+
+        SimpleDateFormat format = new SimpleDateFormat("yyyy/MM/dd");
+
+        StringBuilder builder = new StringBuilder();
+        builder.append("<html>");
+        ApplicationUtils.Colors colors = testRecord.getStatus() == TestStatus.KNOWN ? ApplicationUtils.Colors.KNOWN : ApplicationUtils.Colors.UNKNOWN;
+        String cssColor = ApplicationUtils.getCssColor(colors.getForeground());
+        builder.append(String.format("<span style=\" color:%s; font-size:18px; \">", cssColor));
+        builder.append(format.format(testRecord.getDate()));
+        builder.append("</span>");
+        builder.append("</html>");
+        return builder.toString();
     }
 
 }

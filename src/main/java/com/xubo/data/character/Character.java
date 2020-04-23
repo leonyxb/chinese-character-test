@@ -22,11 +22,11 @@ public class Character {
 
     private final List<String> words = new ArrayList<>();
 
-    private CharacterStatus status;
+    private TestStatus status;
 
     public Character(String text) {
         this.text = text;
-        this.status = CharacterStatus.NOT_TESTED;
+        this.status = TestStatus.NOT_TESTED;
         this.testRecord = readTestRecords();
     }
 
@@ -34,11 +34,11 @@ public class Character {
         return text;
     }
 
-    public CharacterStatus getStatus() {
+    public TestStatus getStatus() {
         return status;
     }
 
-    public void setStatus(CharacterStatus status) {
+    public void setStatus(TestStatus status) {
         this.status = status;
     }
 
@@ -79,7 +79,7 @@ public class Character {
         }
     }
 
-    public void addNewRecord(CharacterStatus status) {
+    public void addNewRecord(TestStatus status) {
         this.testRecord.getRecords().add(new CharacterTestRecord(new Date(), status));
         writeTestRecords();
     }

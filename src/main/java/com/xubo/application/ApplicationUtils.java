@@ -1,13 +1,13 @@
 package com.xubo.application;
 
 import com.xubo.data.character.Character;
-import com.xubo.data.character.CharacterStatus;
+import com.xubo.data.character.TestStatus;
 import com.xubo.data.character.CharacterTestRecord;
 
 import java.awt.*;
-import java.util.ArrayList;
-import java.util.Collections;
+import java.util.*;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class ApplicationUtils {
 
@@ -19,26 +19,26 @@ public class ApplicationUtils {
 
     public static Colors getDisplayedColors(Character character) {
 
-        List<CharacterTestRecord> records = character.getTestRecord().getRecords();
+        List<CharacterTestRecord> records = oneRecordPerDay(character.getTestRecord().getRecords());
 
         if (records.isEmpty()) {
             return Colors.DEFAULT;
         }
 
-        if (isArchived(character)) {
+        if (isArchived(records)) {
             return Colors.ARCHIVED;
         }
 
         Colors colors = Colors.DEFAULT;
-        List<CharacterTestRecord> last3Records = getLastTestRecords(character, 3);
+        List<CharacterTestRecord> last3Records = getLastTestRecords(records, 3);
         if (!last3Records.isEmpty()) {
 
             long knownNum = (int) last3Records.stream()
-                    .filter(r -> r.getStatus() == CharacterStatus.KNOWN)
+                    .filter(r -> r.getStatus() == TestStatus.KNOWN)
                     .count();
 
             if (knownNum == 3) {
-                if (isLongTimeNotTested(character)) {
+                if (isLongTimeNotTested(records)) {
                     colors = Colors.NEED_RETEST;
                 } else {
                     colors = Colors.KNOWN;
@@ -57,15 +57,15 @@ public class ApplicationUtils {
 
     /**
      * 一个字，如果满足下列条件，就认为这个字已经永久记住：
-     *  1 - 最近的，连续表示认识的次数大于7次
+     *  1 - 最近的，连续表示至少7次认识
      *  2 - 连续认识的时间跨度大于30天
      */
-    private static boolean isArchived(Character character) {
-        List<CharacterTestRecord> lastKnownRecords = getLastConsecutiveKnownTestRecords(character);
+    private static boolean isArchived(List<CharacterTestRecord> records) {
+        List<CharacterTestRecord> lastKnownRecords = getLastConsecutiveKnownTestRecords(records);
 
-        if (lastKnownRecords.size() > 7) {
-            long lastKnownTime = lastKnownRecords.get(lastKnownRecords.size() - 1).getDate().getTime();
-            long firstKnownTime = lastKnownRecords.get(0).getDate().getTime();
+        if (lastKnownRecords.size() >= 7) {
+            long firstKnownTime = lastKnownRecords.get(lastKnownRecords.size() - 1).getDate().getTime();
+            long lastKnownTime = lastKnownRecords.get(0).getDate().getTime();
             if (lastKnownTime - firstKnownTime > MILLISECONDS_PER_DAY * 30) {
                 return true;
             }
@@ -76,9 +76,8 @@ public class ApplicationUtils {
     /**
      * 超过15天没有测试
      */
-    private static boolean isLongTimeNotTested(Character character) {
-        List<CharacterTestRecord> records = character.getTestRecord().getRecords();
-        CharacterTestRecord lastRecord = records.get(records.size() - 1);
+    private static boolean isLongTimeNotTested(List<CharacterTestRecord> records) {
+        CharacterTestRecord lastRecord = records.get(0);
         long duration = System.currentTimeMillis() - lastRecord.getDate().getTime();
         return duration > MILLISECONDS_PER_DAY * 15;
     }
@@ -89,27 +88,24 @@ public class ApplicationUtils {
         return isBackground ? displayedColors.getBackground() : displayedColors.getForeground();
     }
 
-    public static List<CharacterTestRecord> getLastTestRecords(Character character, int num) {
-        List<CharacterTestRecord> records = character.getTestRecord().getRecords();
-        if (records.size() >= num) {
-            return records.subList(records.size() - num, records.size());
+    private static List<CharacterTestRecord> getLastTestRecords(List<CharacterTestRecord> records, int num) {
+        if (num > 0 && records.size() >= num) {
+            return records.subList(0, num);
         }
         return Collections.emptyList();
     }
 
-    private static List<CharacterTestRecord> getLastConsecutiveKnownTestRecords(Character character) {
-        List<CharacterTestRecord> records = character.getTestRecord().getRecords();
+    private static List<CharacterTestRecord> getLastConsecutiveKnownTestRecords(List<CharacterTestRecord> records) {
         List<CharacterTestRecord> knownRecords = new ArrayList<>();
 
-        for (int i = records.size() - 1; i >= 0; i--) {
+        for (int i = 0; i < records.size(); i++) {
             CharacterTestRecord record = records.get(i);
-            if (record.getStatus() == CharacterStatus.KNOWN) {
+            if (record.getStatus() == TestStatus.KNOWN) {
                 knownRecords.add(record);
             } else {
                 break;
             }
         }
-        Collections.reverse(knownRecords);
 
         return knownRecords;
     }
@@ -165,4 +161,37 @@ public class ApplicationUtils {
             return background;
         }
     }
+
+    private static long getTimeMillisWithDateOnly(Date date) {
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(date);
+        cal.set(Calendar.HOUR_OF_DAY, 0);
+        cal.set(Calendar.MINUTE, 0);
+        cal.set(Calendar.SECOND, 0);
+        cal.set(Calendar.MILLISECOND, 0);
+        return cal.getTimeInMillis();
+    }
+
+    public static List<CharacterTestRecord> oneRecordPerDay(List<CharacterTestRecord> records) {
+        List<CharacterTestRecord> oneRecordPerDay = new ArrayList<>();
+
+        Map<Long, List<CharacterTestRecord>> recordsPerDay = records.stream().collect(Collectors.groupingBy(r -> getTimeMillisWithDateOnly(r.getDate())));
+        recordsPerDay.forEach((k, v) -> {
+            oneRecordPerDay.add(new CharacterTestRecord(new Date(k), getOneTestResult(v)));
+        });
+
+        Collections.sort(oneRecordPerDay);
+        return oneRecordPerDay;
+    }
+
+    private static TestStatus getOneTestResult(List<CharacterTestRecord> records) {
+
+        long unknownCount = records.stream().filter(r -> r.getStatus() == TestStatus.UNKNOWN).count();
+        if (unknownCount > 0) {
+            return TestStatus.UNKNOWN;
+        }
+
+        return TestStatus.KNOWN;
+    }
+
 }

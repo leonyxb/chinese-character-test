@@ -31,4 +31,5 @@ public class CharacterTestRecords {
     public void setRecords(List<CharacterTestRecord> records) {
         this.records = records;
     }
+
 }

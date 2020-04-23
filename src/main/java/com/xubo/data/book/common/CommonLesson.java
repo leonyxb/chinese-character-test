@@ -10,7 +10,6 @@ import java.util.stream.Collectors;
 
 public class CommonLesson implements Lesson {
 
-
     private String rawline;
 
     private String title;

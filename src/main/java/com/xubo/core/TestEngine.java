@@ -2,7 +2,7 @@ package com.xubo.core;
 
 import com.xubo.application.ApplicationUtils;
 import com.xubo.data.character.Character;
-import com.xubo.data.character.CharacterStatus;
+import com.xubo.data.character.TestStatus;
 import com.xubo.data.book.Lesson;
 
 import java.util.Collections;
@@ -37,7 +37,7 @@ public class TestEngine {
         }
 
 
-        this.characters.forEach(character -> character.setStatus(CharacterStatus.NOT_TESTED));
+        this.characters.forEach(character -> character.setStatus(TestStatus.NOT_TESTED));
 
 
         this.record = record;
@@ -63,7 +63,7 @@ public class TestEngine {
 
     private Iterator<Character> getTestCharactersIterator() {
         List<Character> wordsToTest = characters.stream()
-                .filter(character -> character.getStatus() == CharacterStatus.NOT_TESTED || character.getStatus() == CharacterStatus.UNKNOWN)
+                .filter(character -> character.getStatus() == TestStatus.NOT_TESTED || character.getStatus() == TestStatus.UNKNOWN)
                 .collect(toList());
 
         return wordsToTest.iterator();
@@ -75,35 +75,35 @@ public class TestEngine {
     }
 
     public void knowCurrentTestCharacter() {
-        if (currentTestCharacter.getStatus() == CharacterStatus.NOT_TESTED) {
-            currentTestCharacter.setStatus(CharacterStatus.KNOWN);
+        if (currentTestCharacter.getStatus() == TestStatus.NOT_TESTED) {
+            currentTestCharacter.setStatus(TestStatus.KNOWN);
             if (record) {
-                currentTestCharacter.addNewRecord(CharacterStatus.KNOWN);
+                currentTestCharacter.addNewRecord(TestStatus.KNOWN);
             }
         } else {
-            currentTestCharacter.setStatus(CharacterStatus.LEARNED);
+            currentTestCharacter.setStatus(TestStatus.LEARNED);
         }
     }
 
     public void doNotKnowCurrentTestCharacter() {
-        if (currentTestCharacter.getStatus() == CharacterStatus.NOT_TESTED) {
+        if (currentTestCharacter.getStatus() == TestStatus.NOT_TESTED) {
             if (record) {
-                currentTestCharacter.addNewRecord(CharacterStatus.UNKNOWN);
+                currentTestCharacter.addNewRecord(TestStatus.UNKNOWN);
             }
         }
-        currentTestCharacter.setStatus(CharacterStatus.UNKNOWN);
+        currentTestCharacter.setStatus(TestStatus.UNKNOWN);
     }
 
 
     public String statistic() {
         StringBuilder message = new StringBuilder();
 
-        Map<CharacterStatus, List<Character>> groupedWords = characters.stream()
+        Map<TestStatus, List<Character>> groupedWords = characters.stream()
                 .collect(groupingBy(Character::getStatus));
 
-        int knowWordsNum = groupedWords.containsKey(CharacterStatus.KNOWN) ? groupedWords.get(CharacterStatus.KNOWN).size() : 0;
-        int unknowWordsNum = groupedWords.containsKey(CharacterStatus.UNKNOWN) ? groupedWords.get(CharacterStatus.UNKNOWN).size() : 0;
-        int learnedNum = groupedWords.containsKey(CharacterStatus.LEARNED) ? groupedWords.get(CharacterStatus.LEARNED).size() : 0;
+        int knowWordsNum = groupedWords.containsKey(TestStatus.KNOWN) ? groupedWords.get(TestStatus.KNOWN).size() : 0;
+        int unknowWordsNum = groupedWords.containsKey(TestStatus.UNKNOWN) ? groupedWords.get(TestStatus.UNKNOWN).size() : 0;
+        int learnedNum = groupedWords.containsKey(TestStatus.LEARNED) ? groupedWords.get(TestStatus.LEARNED).size() : 0;
 
         int alreadyTested = knowWordsNum + unknowWordsNum + learnedNum;
         int currentIndex = alreadyTested == characters.size() ? alreadyTested : alreadyTested + 1;
@@ -120,14 +120,14 @@ public class TestEngine {
 
     public List<String> getKnownCharacters() {
         return characters.stream()
-                .filter(character -> character.getStatus() == CharacterStatus.KNOWN || character.getStatus() == CharacterStatus.LEARNED)
+                .filter(character -> character.getStatus() == TestStatus.KNOWN || character.getStatus() == TestStatus.LEARNED)
                 .map(Character::getText)
                 .collect(toList());
     }
 
     public List<String> getUnknownCharacters() {
         return characters.stream()
-                .filter(character -> character.getStatus() == CharacterStatus.UNKNOWN)
+                .filter(character -> character.getStatus() == TestStatus.UNKNOWN)
                 .map(Character::getText)
                 .collect(toList());
     }

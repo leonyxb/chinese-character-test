@@ -4,15 +4,15 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.util.Date;
 
-public class CharacterTestRecord {
+public class CharacterTestRecord implements Comparable<CharacterTestRecord> {
 
     private Date date;
-    private CharacterStatus status;
+    private TestStatus status;
 
     public CharacterTestRecord() {
     }
 
-    public CharacterTestRecord(Date date, CharacterStatus status) {
+    public CharacterTestRecord(Date date, TestStatus status) {
         this.date = date;
         this.status = status;
     }
@@ -26,11 +26,24 @@ public class CharacterTestRecord {
         this.date = date;
     }
 
-    public CharacterStatus getStatus() {
+    public TestStatus getStatus() {
         return status;
     }
 
-    public void setStatus(CharacterStatus status) {
+    public void setStatus(TestStatus status) {
         this.status = status;
+    }
+
+    @Override
+    public int compareTo(CharacterTestRecord o) {
+        return o.getDate().compareTo(this.getDate());
+    }
+
+    @Override
+    public String toString() {
+        return "CharacterTestRecord{" +
+                "date=" + date +
+                ", status=" + status +
+                '}';
     }
 }
