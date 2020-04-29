@@ -6,14 +6,15 @@ import com.xubo.application.ApplicationMainFrame;
 import com.xubo.data.DataSource;
 import com.xubo.data.book.Book;
 import com.xubo.data.book.Lesson;
+import com.xubo.data.book.common.InMemoryBook;
 import com.xubo.data.character.Character;
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.Collections;
+import java.util.*;
 import java.util.List;
-import java.util.Objects;
 
+import static java.util.stream.Collectors.groupingBy;
 import static java.util.stream.Collectors.toList;
 
 
@@ -50,25 +51,49 @@ public class CharactersSelectPanel extends JPanel {
 
         initGui();
         setActions();
+        fillData(data);
+        updateStatistic();
+    }
 
-        Book[] options = data.getBooks().stream()
-                .filter(Book::display)
-                .toArray(Book[]::new);
+    private void fillData(DataSource data) {
 
+        Map<ApplicationUtils.Colors, List<Character>> colorsListMap = data.getBooks().stream()
+                .flatMap(book -> book.getLessons().stream())
+                .flatMap(lesson -> lesson.getCharacters().stream())
+                .distinct()
+                .collect(groupingBy(ApplicationUtils::getDisplayedColors));
+
+        long knownNum = colorsListMap.getOrDefault(ApplicationUtils.Colors.KNOWN, Collections.emptyList()).size();
+        long archiveNum = colorsListMap.getOrDefault(ApplicationUtils.Colors.ARCHIVED, Collections.emptyList()).size();
+
+        totalNumLabel.setText("总识字数：" + (knownNum + archiveNum));
+
+        List<Book> books = new ArrayList<>();
+
+        List<Character> needReTest = colorsListMap.getOrDefault(ApplicationUtils.Colors.NEED_RETEST, Collections.emptyList());
+        if (needReTest.size() > 0) {
+            books.add(new InMemoryBook("<自动> 有没有忘掉？", needReTest));
+        }
+
+        List<Character> almostKnown = colorsListMap.getOrDefault(ApplicationUtils.Colors.ALMOST_KNOWN, Collections.emptyList());
+        if (almostKnown.size() > 0) {
+            books.add(new InMemoryBook("<自动> 就要学会啦！", almostKnown));
+        }
+
+        List<Character> almostUnknown = colorsListMap.getOrDefault(ApplicationUtils.Colors.ALMOST_UNKNOWN, Collections.emptyList());
+        if (almostUnknown.size() > 0) {
+            books.add(new InMemoryBook("<自动> 再试一试吧！", almostUnknown));
+        }
+
+        data.getBooks().stream()
+                .filter(Book::display).forEach(books::add);
+
+        Book[] options =  books.toArray(new Book[0]);
         bookList.setListData(options);
         bookList.setVisibleRowCount(options.length);
         bookList.setSelectedIndex(0);
 
-        long totalKnownNum = data.getBooks().stream()
-                .flatMap(book -> book.getLessons().stream())
-                .flatMap(lesson -> lesson.getCharacters().stream())
-                .distinct()
-                .filter(ApplicationUtils::isKnown)
-                .count();
 
-        totalNumLabel.setText("总识字数：" + totalKnownNum);
-
-        updateStatistic();
     }
 
     private void setActions() {
