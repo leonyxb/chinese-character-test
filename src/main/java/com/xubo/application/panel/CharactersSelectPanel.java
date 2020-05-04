@@ -31,10 +31,11 @@ public class CharactersSelectPanel extends JPanel {
 
     private JLabel selectInfoLabel = new JLabel();
     private JLabel totalNumLabel = new JLabel();
+    private JLabel archiveNumLabel = new JLabel();
+    private JLabel knownNumLabel = new JLabel();
     private JCheckBox randomCheckbox = new JCheckBox("打乱测试顺序");
     private JCheckBox learnCheckbox = new JCheckBox("允许学习");
     private JCheckBox testUnknownOnlyCheckbox = new JCheckBox("仅测试不认识的字");
-    private JLabel guideLabel = new JLabel("请从上方的<书本|课文>列表中\n选择汉字到下方列表");
 
     private JCheckBox recordCheckbox = new JCheckBox("记录本次测试");
 
@@ -67,6 +68,8 @@ public class CharactersSelectPanel extends JPanel {
         long archiveNum = colorsListMap.getOrDefault(ApplicationUtils.Colors.ARCHIVED, Collections.emptyList()).size();
 
         totalNumLabel.setText("总识字数：" + (knownNum + archiveNum));
+        archiveNumLabel.setText("永久记忆：" +  archiveNum);
+        knownNumLabel.setText("临时记忆：" +  knownNum);
 
         List<Book> books = new ArrayList<>();
 
@@ -243,11 +246,13 @@ public class CharactersSelectPanel extends JPanel {
     private JPanel buildRow2() {
 
         totalNumLabel.setFont(new Font(config.getLabelFontName(), Font.PLAIN, 24));
-        totalNumLabel.setForeground(new Color(0, 138, 0));
-        totalNumLabel.setBorder(BorderFactory.createEmptyBorder(5,10, 5, 5));
+        totalNumLabel.setBorder(BorderFactory.createEmptyBorder(0,10, 0, 0));
 
-        guideLabel.setFont(new Font(config.getLabelFontName(), Font.PLAIN, 24));
-        guideLabel.setForeground(new Color(87, 81, 80, 181));
+        archiveNumLabel.setFont(new Font(config.getLabelFontName(), Font.PLAIN, 24));
+        archiveNumLabel.setForeground(new Color(0, 30, 111));
+
+        knownNumLabel.setFont(new Font(config.getLabelFontName(), Font.PLAIN, 24));
+        knownNumLabel.setForeground(new Color(0, 138, 0));
 
         addButton.setFont(new Font(config.getButtonFontName(), Font.PLAIN, 25));
         addButton.setFocusPainted(false);
@@ -265,14 +270,25 @@ public class CharactersSelectPanel extends JPanel {
         c.weighty = 1;
 
         c.gridx = 0;
-        c.gridwidth = 2;
-        c.weightx = 2;
+        c.gridwidth = 1;
+        c.weightx = 1;
         panel.add(totalNumLabel, c);
 
+        c.gridx = 1;
+        c.gridwidth = 1;
+        c.weightx = 1;
+        panel.add(archiveNumLabel, c);
+
         c.gridx = 2;
-        c.gridwidth = 4;
-        c.weightx = 4;
-        panel.add(guideLabel, c);
+        c.gridwidth = 1;
+        c.weightx = 1;
+        panel.add(knownNumLabel, c);
+
+        c.gridx = 3;
+        c.gridwidth = 3;
+        c.weightx = 3;
+        panel.add(new JPanel(), c);
+
 
         c.gridx = 6;
         c.gridwidth = 1;
