@@ -16,15 +16,36 @@ public class CommonBook implements Book {
     private List<String> rawLines = new ArrayList<>();
     
     public CommonBook(List<String> bookLines) {
-        this.rawLines.addAll(bookLines);
-        this.title = bookLines.get(0).replace("Book:", "").trim();
-        this.lessons = bookLines
-                .subList(1, bookLines.size())
+        this.rawLines.addAll(normalized(bookLines));
+
+        this.title = rawLines.get(0).replace("Book:", "").trim();
+        this.lessons = rawLines
+                .subList(1, rawLines.size())
                 .stream()
                 .map(String::trim)
                 .filter(line -> !line.isEmpty())
                 .map(line -> new CommonLesson(line, this))
                 .collect(Collectors.toList());
+    }
+
+    private List<String> normalized(List<String> bookLines) {
+        List<String> lines = new ArrayList<>();
+
+        bookLines.forEach(l -> {
+
+            if (!l.contains(":")) {
+                l = l.replaceAll("[：|,|，|#|;|；|。|.]", ":");
+                if (!l.contains(":")) {
+                    l = l.replaceFirst(" ", ":");
+                }
+                lines.add(l);
+            } else {
+                lines.add(l);
+            }
+
+        });
+
+        return lines;
     }
 
     @Override

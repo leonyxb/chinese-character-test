@@ -1,6 +1,8 @@
 package com.xubo.data.word;
 
 import com.xubo.utils.ChineseResourceReader;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.nio.charset.StandardCharsets;
 import java.util.*;
@@ -8,15 +10,19 @@ import java.util.stream.Collectors;
 
 public class WordsRepository {
 
+    private static final Logger logger = LogManager.getLogger(WordsRepository.class);
+
     private Map<String, Set<String>> words = new HashMap<>();
 
     public WordsRepository() {
 
+        logger.info("Start loading chinese words...");
+
         List<String>  rawLines = new ArrayList<>();
 
-        rawLines.addAll(ChineseResourceReader.readLines("/words/沪教版小学1-5年级词语表.txt", StandardCharsets.UTF_8.toString()));
-        rawLines.addAll(ChineseResourceReader.readLines("/words/人教版小学语文一至六年级生字词语汇总.txt", StandardCharsets.UTF_8.toString()));
-        rawLines.addAll(ChineseResourceReader.readLines("/words/手动添加.txt", StandardCharsets.UTF_8.toString()));
+        rawLines.addAll(ChineseResourceReader.readLinesFromResources("/words/沪教版小学1-5年级词语表.txt", StandardCharsets.UTF_8.toString()));
+        rawLines.addAll(ChineseResourceReader.readLinesFromResources("/words/人教版小学语文一至六年级生字词语汇总.txt", StandardCharsets.UTF_8.toString()));
+        rawLines.addAll(ChineseResourceReader.readLinesFromResources("/words/手动添加.txt", StandardCharsets.UTF_8.toString()));
 
         List<String> wordsFound = rawLines.stream()
                 .map(String::trim)
@@ -27,7 +33,7 @@ public class WordsRepository {
                 .distinct()
                 .collect(Collectors.toList());
 
-        System.out.println("一共载入" + wordsFound.size() + "个词语");
+        logger.info(wordsFound.size() + " words loaded.");
 
         wordsFound.forEach(word -> {
             word.chars().forEach(c -> {
@@ -37,6 +43,8 @@ public class WordsRepository {
             });
         });
 
+
+        logger.info("End loading chinese words...");
     }
 
     public Set<String> getWords(String character) {

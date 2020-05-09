@@ -22,7 +22,7 @@ public class ApplicationMainFrame extends JFrame {
         this.data = data;
         this.config = config;
 
-        setTitle("识字测试");
+        setTitle("识字测试 版本：王晶 私人定制 豪华 VIP 至尊 1.1 版");
         setSize(1400, 800);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);

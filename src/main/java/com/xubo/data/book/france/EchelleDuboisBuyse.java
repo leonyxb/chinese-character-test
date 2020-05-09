@@ -1,17 +1,17 @@
 package com.xubo.data.book.france;
 
 import com.xubo.data.book.Book;
-import com.xubo.data.book.BookSource;
+import com.xubo.data.book.BookSourceInternal;
 
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class EchelleDuboisBuyse extends BookSource {
+public class EchelleDuboisBuyse extends BookSourceInternal {
 
     @Override
-    protected List<Book> readBooks(List<String> rawLines) {
+    protected List<Book> buildBooks(List<String> rawLines) {
         Map<String, List<String>> lines = rawLines.stream()
                 .collect(Collectors.groupingBy(
                         line -> line.split("\t")[0])

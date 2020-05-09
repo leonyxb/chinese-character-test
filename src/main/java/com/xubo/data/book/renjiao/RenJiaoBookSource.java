@@ -1,17 +1,17 @@
 package com.xubo.data.book.renjiao;
 
 import com.xubo.data.book.Book;
-import com.xubo.data.book.BookSource;
+import com.xubo.data.book.BookSourceInternal;
 
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RenJiaoBookSource extends BookSource {
+public class RenJiaoBookSource extends BookSourceInternal {
 
     @Override
-    protected List<Book> readBooks(List<String> rawLines) {
+    protected List<Book> buildBooks(List<String> rawLines) {
         List<Book> books = new ArrayList<>();
 
         List<String> bookLines = new ArrayList<>();

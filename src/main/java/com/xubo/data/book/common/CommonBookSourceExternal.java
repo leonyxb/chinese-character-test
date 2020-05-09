@@ -1,19 +1,17 @@
 package com.xubo.data.book.common;
 
 import com.xubo.data.book.Book;
-import com.xubo.data.book.BookSourceInternal;
-import com.xubo.data.book.common.CommonBook;
+import com.xubo.data.book.BookSourceExternal;
 
-import java.nio.charset.Charset;
-import java.nio.charset.StandardCharsets;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CommonBookSource extends BookSourceInternal {
+public class CommonBookSourceExternal extends BookSourceExternal {
 
-    private String bookPath;
-    
-    public CommonBookSource(String bookPath) {
+    private Path bookPath;
+
+    public CommonBookSourceExternal(Path bookPath) {
         this.bookPath = bookPath;
     }
 
@@ -39,12 +37,8 @@ public class CommonBookSource extends BookSourceInternal {
     }
 
     @Override
-    protected String getBookPath() {
+    protected Path getBookPath() {
         return bookPath;
     }
 
-    @Override
-    protected Charset getCharset() {
-        return StandardCharsets.UTF_8;
-    }
 }

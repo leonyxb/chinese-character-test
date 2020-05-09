@@ -1,14 +1,16 @@
 package com.xubo.application;
 
-import com.xubo.data.ChineseData;
-import com.xubo.data.FrenchData;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
-import javax.swing.*;
 import java.awt.EventQueue;
 
 public class Application {
 
+    private static final Logger logger = LogManager.getLogger(Application.class);
+
     public static void main(String[] args) {
+        logger.info("Staring Application ...");
 
         EventQueue.invokeLater(() -> {
             ApplicationStartingFrame startingFrame = new ApplicationStartingFrame();

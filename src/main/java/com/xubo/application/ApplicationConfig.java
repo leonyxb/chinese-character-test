@@ -1,6 +1,5 @@
 package com.xubo.application;
 
-
 public class ApplicationConfig {
 
     public static final ApplicationConfig FRENCH_CONFIG

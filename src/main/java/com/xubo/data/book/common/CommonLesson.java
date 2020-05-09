@@ -1,14 +1,19 @@
 package com.xubo.data.book.common;
 
+import com.xubo.application.Application;
 import com.xubo.data.character.Character;
 import com.xubo.data.book.Book;
 import com.xubo.data.book.Lesson;
 import com.xubo.data.character.CharacterFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class CommonLesson implements Lesson {
+
+    private static final Logger logger = LogManager.getLogger(CommonLesson.class);
 
     private String rawline;
 
@@ -22,9 +27,14 @@ public class CommonLesson implements Lesson {
         this.rawline = rawline;
         this.parentBook = parentBook;
 
-        String[] elements = rawline.split(":");
-        this.title = elements[0].trim();
-        this.characters = buildCharacters(elements[1].trim());
+        try {
+            String[] elements = rawline.split(":");
+            this.title = elements[0].trim();
+            this.characters = buildCharacters(elements[1].trim());
+        } catch (Exception e) {
+            logger.error("Exception when processing line: " + rawline);
+            throw e;
+        }
         
     }
 

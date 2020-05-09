@@ -3,6 +3,8 @@ package com.xubo.data.character;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.xubo.data.dictionary.DictionaryEntry;
 import com.xubo.data.book.Lesson;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.File;
 import java.io.IOException;
@@ -11,6 +13,8 @@ import java.util.Date;
 import java.util.List;
 
 public class Character {
+
+    private static final Logger logger = LogManager.getLogger(Character.class);
 
     private final String text;
 
@@ -64,7 +68,7 @@ public class Character {
             try {
                 return new ObjectMapper().readValue(json, CharacterTestRecords.class);
             } catch (IOException e) {
-                System.out.println("Error: Can not read the test record from " + json.getAbsolutePath());
+                logger.error("Error: Can not read the test record from " + json.getAbsolutePath());
             }
         }
         return new CharacterTestRecords(text);
@@ -75,7 +79,7 @@ public class Character {
         try {
             new ObjectMapper().writeValue(json, testRecord);
         } catch (IOException e) {
-            System.out.println("Error: Can not write the test record to " + json.getAbsolutePath());
+            logger.error("Error: Can not write the test record to " + json.getAbsolutePath());
         }
     }
 

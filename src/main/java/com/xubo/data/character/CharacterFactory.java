@@ -4,6 +4,8 @@ import com.xubo.data.book.Lesson;
 import com.xubo.data.dictionary.Dictionary;
 import com.xubo.data.dictionary.DictionaryEntry;
 import com.xubo.data.word.WordsRepository;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.HashMap;
 import java.util.List;
@@ -11,6 +13,8 @@ import java.util.Map;
 import java.util.Set;
 
 public class CharacterFactory {
+
+    private static final Logger logger = LogManager.getLogger(CharacterFactory.class);
 
     private static Map<String, Character> characters = new HashMap<>();
 
@@ -38,7 +42,7 @@ public class CharacterFactory {
     private static void linkDictionary(Character character) {
         List<DictionaryEntry> entries = dictionary.getEntries(character.getText());
         if (entries == null) {
-            System.out.println("Entry not found for " + character.getText());
+            logger.warn("Entry not found for " + character.getText());
         } else {
             character.getDictionaryEntries().addAll(entries);
         }

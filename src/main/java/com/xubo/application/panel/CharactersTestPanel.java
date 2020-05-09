@@ -23,6 +23,8 @@ import static com.xubo.application.ApplicationUtils.oneRecordPerDay;
 
 public class CharactersTestPanel extends JPanel {
 
+    public static final int MAX_WORDS_DISPLAYED = 5;
+
     private TestEngine testEngine;
 
     private ApplicationMainFrame mainFrame;
@@ -383,7 +385,7 @@ public class CharactersTestPanel extends JPanel {
         boolean hasNextRound = testEngine.prepareNextTestRound();
 
         if (hasNextRound) {
-            int result = JOptionPane.showConfirmDialog(mainFrame,"测试完成，是否重新测试不认识的字?", "测试完成",
+            int result = JOptionPane.showConfirmDialog(mainFrame,"测试完成，是否学习不认识的字?", "测试完成",
                     JOptionPane.YES_NO_OPTION,
                     JOptionPane.QUESTION_MESSAGE);
             if (result != 0) {
@@ -412,7 +414,7 @@ public class CharactersTestPanel extends JPanel {
         if (config.getLanguage() == ApplicationConfig.ApplicationLanguage.CHINESE) {
             Collections.shuffle(words);
         }
-        return words.stream().limit(8).toArray(String[]::new);
+        return words.stream().limit(MAX_WORDS_DISPLAYED).toArray(String[]::new);
     }
 
 

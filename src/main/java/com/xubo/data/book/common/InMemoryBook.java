@@ -58,6 +58,6 @@ public class InMemoryBook implements Book {
 
     @Override
     public String toString() {
-        return getTitle() + " " + characters.size() + "字";
+        return getTitle() + " " + characters.size();
     }
 }

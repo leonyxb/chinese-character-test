@@ -1,6 +1,8 @@
 package com.xubo.data.dictionary;
 
 import com.xubo.utils.ChineseResourceReader;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.List;
 import java.util.Map;
@@ -10,6 +12,8 @@ import static java.util.stream.Collectors.groupingBy;
 
 public class Dictionary {
 
+    private static final Logger logger = LogManager.getLogger(Dictionary.class);
+
     private List<String> rawLines;
 
     private List<DictionaryEntry> entries;
@@ -17,8 +21,10 @@ public class Dictionary {
     private Map<String, List<DictionaryEntry>> groupedEntries;
 
     public Dictionary() {
-        rawLines = ChineseResourceReader.readLines("/dictionary.txt", "Unicode");
+        logger.info("Start loading chinese dictionary...");
+        rawLines = ChineseResourceReader.readLinesFromResources("/dictionary.txt", "Unicode");
         entries = buildEntries(rawLines);
+        logger.info("End loading chinese dictionary...");
     }
 
     private List<DictionaryEntry> buildEntries(List<String> rawLines) {

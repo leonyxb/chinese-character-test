@@ -11,6 +11,8 @@ import com.xubo.data.character.Character;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.util.*;
 import java.util.List;
 
@@ -73,19 +75,17 @@ public class CharactersSelectPanel extends JPanel {
 
         List<Book> books = new ArrayList<>();
 
-        List<Character> needReTest = colorsListMap.getOrDefault(ApplicationUtils.Colors.NEED_RETEST, Collections.emptyList());
-        if (needReTest.size() > 0) {
-            books.add(new InMemoryBook("<自动> 有没有忘掉？", needReTest));
-        }
+        if (config.getLanguage() == ApplicationConfig.ApplicationLanguage.CHINESE) {
+            addBook(colorsListMap, books, ApplicationUtils.Colors.NEED_RETEST, "<自动> 有没有忘掉？");
+            addBook(colorsListMap, books, ApplicationUtils.Colors.ALMOST_KNOWN, "<自动> 就要学会啦！");
+            addBook(colorsListMap, books, ApplicationUtils.Colors.ALMOST_UNKNOWN, "<自动> 再试一试吧！");
+            addBook(colorsListMap, books, ApplicationUtils.Colors.UNKNOWN, "<自动> 好难记住啊！");
+        } else {
+            addBook(colorsListMap, books, ApplicationUtils.Colors.NEED_RETEST, "<auto> Presque oublié?");
+            addBook(colorsListMap, books, ApplicationUtils.Colors.ALMOST_KNOWN, "<auto> Bientôt l'apprendre!");
+            addBook(colorsListMap, books, ApplicationUtils.Colors.ALMOST_UNKNOWN, "<auto> Réessayer encore?");
+            addBook(colorsListMap, books, ApplicationUtils.Colors.UNKNOWN, "<auto> Difficile à retenir");
 
-        List<Character> almostKnown = colorsListMap.getOrDefault(ApplicationUtils.Colors.ALMOST_KNOWN, Collections.emptyList());
-        if (almostKnown.size() > 0) {
-            books.add(new InMemoryBook("<自动> 就要学会啦！", almostKnown));
-        }
-
-        List<Character> almostUnknown = colorsListMap.getOrDefault(ApplicationUtils.Colors.ALMOST_UNKNOWN, Collections.emptyList());
-        if (almostUnknown.size() > 0) {
-            books.add(new InMemoryBook("<自动> 再试一试吧！", almostUnknown));
         }
 
         data.getBooks().stream()
@@ -96,7 +96,13 @@ public class CharactersSelectPanel extends JPanel {
         bookList.setVisibleRowCount(options.length);
         bookList.setSelectedIndex(0);
 
+    }
 
+    private void addBook(Map<ApplicationUtils.Colors, List<Character>> colorsListMap, List<Book> books, ApplicationUtils.Colors colors, String title) {
+        List<Character> needReTest = colorsListMap.getOrDefault(colors, Collections.emptyList());
+        if (needReTest.size() > 0) {
+            books.add(new InMemoryBook(title, needReTest));
+        }
     }
 
     private void setActions() {
@@ -112,19 +118,38 @@ public class CharactersSelectPanel extends JPanel {
             lessonList.setSelectedIndex(0);
         });
 
+        bookList.addMouseListener(new MouseAdapter() {
+            public void mouseClicked(MouseEvent evt) {
+                JList<Book> source = (JList<Book>) evt.getSource();
+                if (evt.getClickCount() == 2) {
+                    // Double-click detected
+                    Book book = source.getSelectedValue();
+                    book.getLessons().forEach(lesson -> {
+                        SelectedLesson selectedLesson = new SelectedLesson(new DisplayedLesson(lesson));
+                        addToTestList(selectedLesson);
+                    });
+                    updateStatistic();
+                }
+            }
+        });
+
+        lessonList.addMouseListener(new MouseAdapter() {
+            public void mouseClicked(MouseEvent evt) {
+                JList<DisplayedLesson> source = (JList<DisplayedLesson>) evt.getSource();
+                if (evt.getClickCount() == 2) {
+                    // Double-click detected
+                    DisplayedLesson displayedLesson = source.getSelectedValue();
+                    addToTestList(new SelectedLesson(displayedLesson));
+                    updateStatistic();
+                }
+            }
+        });
+
+
         addButton.addActionListener(e -> {
             lessonList.getSelectedValuesList().forEach(displayedLesson -> {
                 SelectedLesson selectedLesson = new SelectedLesson(displayedLesson);
-                if (!selectedLessons.contains(selectedLesson)) {
-                    selectedLessons.add(0, selectedLesson);
-                    selectedLesson.lesson.getLesson().getCharacters().forEach(
-                            c -> {
-                                if (c.getWords().size() == 0) {
-                                    System.out.println(c.getText() + " 没有关联词语");
-                                }
-                            }
-                    );
-                }
+                addToTestList(selectedLesson);
             });
             updateStatistic();
         });
@@ -169,6 +194,12 @@ public class CharactersSelectPanel extends JPanel {
                 mainFrame.displayBrowseDialog(lessons, randomCheckbox.isSelected(), testUnknownOnlyCheckbox.isSelected());
             }
         });
+    }
+
+    synchronized private void addToTestList(SelectedLesson selectedLesson) {
+        if (!selectedLessons.contains(selectedLesson)) {
+            selectedLessons.add(0, selectedLesson);
+        }
     }
 
 
@@ -473,6 +504,19 @@ public class CharactersSelectPanel extends JPanel {
         @Override
         public String toString() {
             return "<html>" + getHtmlContent() + "</html>";
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            DisplayedLesson that = (DisplayedLesson) o;
+            return Objects.equals(lesson, that.lesson);
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(lesson);
         }
     }
 
