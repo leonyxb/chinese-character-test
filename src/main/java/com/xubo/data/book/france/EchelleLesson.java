@@ -3,6 +3,7 @@ package com.xubo.data.book.france;
 import com.xubo.data.book.Book;
 import com.xubo.data.book.Lesson;
 import com.xubo.data.character.Character;
+import com.xubo.data.character.FrenchCharacter;
 import com.xubo.data.dictionary.DictionaryEntry;
 
 import java.util.ArrayList;
@@ -34,9 +35,13 @@ public class EchelleLesson implements Lesson {
 
     private Character buildCharacter(String line) {
         String[] elements = line.split("\t");
-        Character character = new Character(elements[2]);
-        character.getWords().add("Catégorie: " + elements[3]);
-        character.getWords().add("Nature: " + elements[4]);
+        FrenchCharacter character = new FrenchCharacter(elements[2]);
+
+        character.setCategory(elements[3]);
+        character.setGenre(elements[4]);
+
+        character.getWords().add(elements[4]);
+
         character.getLessons().add(this);
 
         return character;

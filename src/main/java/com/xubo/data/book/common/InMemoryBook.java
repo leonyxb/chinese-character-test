@@ -12,15 +12,18 @@ import java.util.stream.IntStream;
 
 public class InMemoryBook implements Book {
 
-    private static final int CHARACTER_NUM_OF_LESSON = 10;
-
     private String title;
 
     private List<Character> characters;
 
     private List<Lesson> lessons = new ArrayList<>();
 
+
     public InMemoryBook(String title, List<Character> characters) {
+        this(title, characters, 10);
+    }
+
+    public InMemoryBook(String title, List<Character> characters, int charactersPerLesson) {
         this.title = title;
         this.characters = characters;
 
@@ -28,7 +31,7 @@ public class InMemoryBook implements Book {
                 .boxed()
                 .collect(
                         Collectors.groupingBy(
-                                i -> i / CHARACTER_NUM_OF_LESSON + 1,
+                                i -> i / charactersPerLesson + 1,
                                 Collectors.mapping(
                                         characters::get,
                                         Collectors.toList()
