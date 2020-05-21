@@ -6,6 +6,10 @@ public class FrenchCharacter extends Character {
 
     private String genre;
 
+    private String classe;
+
+    private Integer echelle;
+
     public FrenchCharacter(String text) {
         super(text);
     }
@@ -24,5 +28,21 @@ public class FrenchCharacter extends Character {
 
     public void setGenre(String genre) {
         this.genre = genre;
+    }
+
+    public String getClasse() {
+        return classe;
+    }
+
+    public void setClasse(String classe) {
+        this.classe = classe;
+    }
+
+    public Integer getEchelle() {
+        return echelle;
+    }
+
+    public void setEchelle(Integer echelle) {
+        this.echelle = echelle;
     }
 }

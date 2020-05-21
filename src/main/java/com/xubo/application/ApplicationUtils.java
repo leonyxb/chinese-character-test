@@ -26,7 +26,7 @@ public class ApplicationUtils {
         }
 
         if (isArchived(records)) {
-            if (isLongTimeNotTested(records, 45)) {
+            if (isLongTimeNotTested(records, 30)) {
                 return Colors.NEED_RETEST;
             } else {
                 return Colors.ARCHIVED;

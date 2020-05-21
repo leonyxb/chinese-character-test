@@ -26,7 +26,6 @@ public class CharactersSelectPanel extends JPanel {
     private ApplicationConfig config;
 
     private JButton addButton = new JButton("添加");
-    private JButton removeButton = new JButton("移除");
     private JButton removeAllButton = new JButton("全部移除");
     private JButton startButton = new JButton("测试");
     private JButton displayButton = new JButton("浏览");
@@ -76,16 +75,15 @@ public class CharactersSelectPanel extends JPanel {
         List<Book> books = new ArrayList<>();
 
         if (config.getLanguage() == ApplicationConfig.ApplicationLanguage.CHINESE) {
-            addBook(colorsListMap, books, ApplicationUtils.Colors.NEED_RETEST, "<自动> 有没有忘掉？");
-            addBook(colorsListMap, books, ApplicationUtils.Colors.ALMOST_KNOWN, "<自动> 就要学会啦！");
-            addBook(colorsListMap, books, ApplicationUtils.Colors.ALMOST_UNKNOWN, "<自动> 再试一试吧！");
-            addBook(colorsListMap, books, ApplicationUtils.Colors.UNKNOWN, "<自动> 好难记住啊！");
+            addBook(colorsListMap, books, ApplicationUtils.Colors.NEED_RETEST, "<自动> 有没有忘掉？", 10);
+            addBook(colorsListMap, books, ApplicationUtils.Colors.ALMOST_KNOWN, "<自动> 就要学会啦！", 10);
+            addBook(colorsListMap, books, ApplicationUtils.Colors.ALMOST_UNKNOWN, "<自动> 再试一试吧！", 10);
+            addBook(colorsListMap, books, ApplicationUtils.Colors.UNKNOWN, "<自动> 好难记住啊！", 10);
         } else {
-            addBook(colorsListMap, books, ApplicationUtils.Colors.NEED_RETEST, "<auto> Presque oublié?");
-            addBook(colorsListMap, books, ApplicationUtils.Colors.ALMOST_KNOWN, "<auto> Bientôt l'apprendre!");
-            addBook(colorsListMap, books, ApplicationUtils.Colors.ALMOST_UNKNOWN, "<auto> Réessayer encore?");
-            addBook(colorsListMap, books, ApplicationUtils.Colors.UNKNOWN, "<auto> Difficile à retenir");
-
+            addBook(colorsListMap, books, ApplicationUtils.Colors.NEED_RETEST, "<auto> Presque oublié?", 5);
+            addBook(colorsListMap, books, ApplicationUtils.Colors.ALMOST_KNOWN, "<auto> Bientôt l'apprendre!", 5);
+            addBook(colorsListMap, books, ApplicationUtils.Colors.ALMOST_UNKNOWN, "<auto> Réessayer encore?", 5);
+            addBook(colorsListMap, books, ApplicationUtils.Colors.UNKNOWN, "<auto> Difficile à retenir", 5);
         }
 
         data.getBooks().stream()
@@ -98,10 +96,10 @@ public class CharactersSelectPanel extends JPanel {
 
     }
 
-    private void addBook(Map<ApplicationUtils.Colors, List<Character>> colorsListMap, List<Book> books, ApplicationUtils.Colors colors, String title) {
+    private void addBook(Map<ApplicationUtils.Colors, List<Character>> colorsListMap, List<Book> books, ApplicationUtils.Colors colors, String title, int charactersPerLesson) {
         List<Character> needReTest = colorsListMap.getOrDefault(colors, Collections.emptyList());
         if (needReTest.size() > 0) {
-            books.add(new InMemoryBook(title, needReTest));
+            books.add(new InMemoryBook(title, needReTest, charactersPerLesson));
         }
     }
 
@@ -121,7 +119,7 @@ public class CharactersSelectPanel extends JPanel {
         bookList.addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent evt) {
                 JList<Book> source = (JList<Book>) evt.getSource();
-                if (evt.getClickCount() == 2) {
+                if (evt.getClickCount() >= 2) {
                     // Double-click detected
                     Book book = source.getSelectedValue();
                     book.getLessons().forEach(lesson -> {
@@ -136,10 +134,22 @@ public class CharactersSelectPanel extends JPanel {
         lessonList.addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent evt) {
                 JList<DisplayedLesson> source = (JList<DisplayedLesson>) evt.getSource();
-                if (evt.getClickCount() == 2) {
+                if (evt.getClickCount() >= 2) {
                     // Double-click detected
                     DisplayedLesson displayedLesson = source.getSelectedValue();
                     addToTestList(new SelectedLesson(displayedLesson));
+                    updateStatistic();
+                }
+            }
+        });
+
+        selectedList.addMouseListener(new MouseAdapter() {
+            public void mouseClicked(MouseEvent evt) {
+                JList<SelectedLesson> source = (JList<SelectedLesson>) evt.getSource();
+                if (evt.getClickCount() >= 2) {
+                    // Double-click detected
+                    SelectedLesson selectedLesson = source.getSelectedValue();
+                    selectedLessons.removeElement(selectedLesson);
                     updateStatistic();
                 }
             }
@@ -150,13 +160,6 @@ public class CharactersSelectPanel extends JPanel {
             lessonList.getSelectedValuesList().forEach(displayedLesson -> {
                 SelectedLesson selectedLesson = new SelectedLesson(displayedLesson);
                 addToTestList(selectedLesson);
-            });
-            updateStatistic();
-        });
-
-        removeButton.addActionListener(e -> {
-            selectedList.getSelectedValuesList().forEach(selectedLesson -> {
-                selectedLessons.removeElement(selectedLesson);
             });
             updateStatistic();
         });
@@ -288,8 +291,7 @@ public class CharactersSelectPanel extends JPanel {
         addButton.setFont(new Font(config.getButtonFontName(), Font.PLAIN, 25));
         addButton.setFocusPainted(false);
         addButton.setPreferredSize(new Dimension(400, 100));
-        removeButton.setFont(new Font(config.getButtonFontName(), Font.PLAIN, 25));
-        removeButton.setFocusPainted(false);
+
         removeAllButton.setFont(new Font(config.getButtonFontName(), Font.PLAIN, 25));
         removeAllButton.setFocusPainted(false);
 
@@ -316,20 +318,16 @@ public class CharactersSelectPanel extends JPanel {
         panel.add(knownNumLabel, c);
 
         c.gridx = 3;
-        c.gridwidth = 3;
-        c.weightx = 3;
+        c.gridwidth = 4;
+        c.weightx = 4;
         panel.add(new JPanel(), c);
 
 
-        c.gridx = 6;
-        c.gridwidth = 1;
-        c.weightx = 1;
-        panel.add(addButton, c);
 
         c.gridx = 7;
         c.gridwidth = 1;
         c.weightx = 1;
-        panel.add(removeButton, c);
+        panel.add(addButton, c);
 
         c.gridx = 8;
         c.gridwidth = 1;

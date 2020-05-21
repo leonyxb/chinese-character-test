@@ -2,54 +2,65 @@ package com.xubo.data.book.france;
 
 import com.xubo.data.book.Book;
 import com.xubo.data.book.Lesson;
+import com.xubo.data.book.common.InMemoryLesson;
+import com.xubo.data.character.Character;
+import com.xubo.data.character.FrenchCharacter;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class EchelleBook implements Book {
 
-    private Integer echelle;
-
     private String classe;
 
-    private List<String> rawLines;
+    private List<FrenchCharacter> characters;
 
     private List<Lesson> lessons;
 
-
-    public EchelleBook(Integer echelle, List<String> rawLines) {
-        this.echelle = echelle;
-        this.classe = rawLines.get(0).split("\t")[1];
-        this.rawLines = rawLines;
-        this.lessons = buildLessons(rawLines);
+    public EchelleBook(String classe, List<FrenchCharacter> characters) {
+        this.classe = classe;
+        this.characters = characters;
+        this.lessons = buildLessons(characters);
     }
 
-    private List<Lesson> buildLessons(List<String> rawLines) {
+    private List<Lesson> buildLessons(List<FrenchCharacter> characters) {
+        List<Lesson> lessons = new ArrayList<>();
+        Map<Integer, List<FrenchCharacter>> charactersByEchelle = characters.stream().collect(Collectors.groupingBy(c -> c.getEchelle()));
+
+        charactersByEchelle.keySet().stream().sorted().forEach(k -> {
+            lessons.addAll(buildEchelleLessons(k, charactersByEchelle.get(k)));
+        });
+        return lessons;
+    }
+
+    private List<Lesson> buildEchelleLessons(Integer echelle, List<FrenchCharacter> characters) {
         List<Lesson> lessons = new ArrayList<>();
 
-        List<String> lines = new ArrayList<>();
+        Map<Integer, List<Character>> groupedList = IntStream.range(0, characters.size())
+                .boxed()
+                .collect(
+                        Collectors.groupingBy(
+                                i -> i / 5 + 1,
+                                Collectors.mapping(
+                                        characters::get,
+                                        Collectors.toList()
+                                )
+                        )
+                );
 
-        rawLines.sort(Comparator.comparingInt(String::hashCode));
+        groupedList.forEach((k, v) -> {
+            lessons.add(new InMemoryLesson( echelle + "-" + k, v, this));
+        });
 
-        int index = 1;
-        for (String rawLine : rawLines) {
-            lines.add(rawLine);
-            if (lines.size() == 5) {
-                lessons.add(new EchelleLesson(index++, lines, this));
-                lines.clear();
-            }
-        }
-        if (!lines.isEmpty()) {
-            lessons.add(new EchelleLesson(index, lines, this));
-        }
         return lessons;
     }
 
     @Override
     public String getTitle() {
-        return "Echelle " + echelle + ":  " + classe + ",  " + rawLines.size() + " mots";
+        return "Echelle: " + classe + ",  " + characters.size() + " mots";
     }
 
     @Override
@@ -60,10 +71,6 @@ public class EchelleBook implements Book {
     @Override
     public boolean display() {
         return true;
-    }
-
-    public Integer getEchelle() {
-        return echelle;
     }
 
     @Override

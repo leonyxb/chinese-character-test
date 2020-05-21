@@ -15,39 +15,39 @@ public class EchelleDuboisBuyse extends BookSourceInternal {
 
     @Override
     protected List<Book> buildBooks(List<String> rawLines) {
-        Map<String, List<String>> lines = rawLines.stream()
-                .collect(Collectors.groupingBy(
-                        line -> line.split("\t")[0])
-                );
-
         List<Book> books = new ArrayList<>();
-        lines.forEach((k, v) -> {
-            books.add(new EchelleBook(Integer.parseInt(k), v));
-        });
 
-        books.sort((o1, o2) -> {
-            EchelleBook eb1 = (EchelleBook) o1;
-            EchelleBook eb2 = (EchelleBook) o2;
-            return eb1.getEchelle().compareTo(eb2.getEchelle());
-        });
+        List<FrenchCharacter> frenchCharacters = rawLines.stream()
+                .map(this::buildCharacter).collect(Collectors.toList());
 
-        Map<String, List<FrenchCharacter>> frenchWords = books.stream()
-                .flatMap(book -> book.getLessons().stream())
-                .flatMap(lesson -> lesson.getCharacters().stream())
-                .map(character -> (FrenchCharacter) character)
+        Map<String, List<FrenchCharacter>> frenchCharactersByClasse = frenchCharacters.stream()
+                .collect(Collectors.groupingBy(FrenchCharacter::getClasse));
+
+        books.add(new EchelleBook("CP", frenchCharactersByClasse.get("CP")));
+        books.add(new EchelleBook("CE1", frenchCharactersByClasse.get("CE1")));
+        books.add(new EchelleBook("CE2", frenchCharactersByClasse.get("CE2")));
+        books.add(new EchelleBook("CM1", frenchCharactersByClasse.get("CM1")));
+        books.add(new EchelleBook("Collège", frenchCharactersByClasse.get("Collège")));
+
+
+        Map<String, List<FrenchCharacter>> frenchCharactersByGenre = frenchCharacters.stream()
                 .collect(Collectors.groupingBy(FrenchCharacter::getGenre));
 
-        frenchWords.keySet().stream().sorted().forEach(k -> {
-            List<Character> characters = new ArrayList<>();
-            characters.addAll(frenchWords.get(k));
-            books.add(new InMemoryBook("Echelle: " + getShortGenre(k) , characters, 5));
-        });
+        books.add(buildInMemoryBook("Genre <nom féminin> ", frenchCharactersByGenre.get("nom féminin")));
+        books.add(buildInMemoryBook("Genre <nom masculin> ", frenchCharactersByGenre.get("nom masculin")));
+        books.add(buildInMemoryBook("Genre <adjectif> ", frenchCharactersByGenre.get("adjectif qualificatif")));
+        books.add(buildInMemoryBook("Genre <verbe 1er group> ", frenchCharactersByGenre.get("verbe 1er group")));
+        books.add(buildInMemoryBook("Genre <verbe 2ème group> ", frenchCharactersByGenre.get("verbe 2ème group")));
+        books.add(buildInMemoryBook("Genre <verbe 3ème group> ", frenchCharactersByGenre.get("verbe 3ème group")));
+        books.add(buildInMemoryBook("Genre <adverbe> ", frenchCharactersByGenre.get("adverbe")));
 
         return books;
     }
 
-    private String getShortGenre(String k) {
-        return k.replace("adjectif", "adj.");
+    private InMemoryBook buildInMemoryBook(String title, List<FrenchCharacter> c) {
+        List<Character> characters = new ArrayList<>();
+        characters.addAll(c);
+        return new InMemoryBook(title, characters, 5);
     }
 
     @Override
@@ -58,5 +58,20 @@ public class EchelleDuboisBuyse extends BookSourceInternal {
     @Override
     protected Charset getCharset() {
         return StandardCharsets.UTF_8;
+    }
+
+
+    private FrenchCharacter buildCharacter(String line) {
+        String[] elements = line.split("\t");
+        FrenchCharacter character = new FrenchCharacter(elements[2]);
+
+        character.setEchelle(Integer.valueOf(elements[0]));
+        character.setClasse(elements[1]);
+        character.setCategory(elements[3]);
+        character.setGenre(elements[4]);
+
+        character.getWords().add(elements[4]);
+
+        return character;
     }
 }
