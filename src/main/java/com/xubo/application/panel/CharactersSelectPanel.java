@@ -218,7 +218,7 @@ public class CharactersSelectPanel extends JPanel {
 
         //row 1
         c.gridy = 0;
-        c.weighty = 1;
+        c.weighty = 1.5;
         c.gridheight = 1;
         add(buildRow1(), c);
 

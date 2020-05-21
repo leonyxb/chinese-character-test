@@ -27,6 +27,7 @@ public class EchelleDuboisBuyse extends BookSourceInternal {
         books.add(new EchelleBook("CE1", frenchCharactersByClasse.get("CE1")));
         books.add(new EchelleBook("CE2", frenchCharactersByClasse.get("CE2")));
         books.add(new EchelleBook("CM1", frenchCharactersByClasse.get("CM1")));
+        books.add(new EchelleBook("CM2", frenchCharactersByClasse.get("CM2")));
         books.add(new EchelleBook("Collège", frenchCharactersByClasse.get("Collège")));
 
 

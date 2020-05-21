@@ -7,6 +7,7 @@ import com.xubo.data.character.Character;
 import com.xubo.data.character.FrenchCharacter;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -38,6 +39,8 @@ public class EchelleBook implements Book {
 
     private List<Lesson> buildEchelleLessons(Integer echelle, List<FrenchCharacter> characters) {
         List<Lesson> lessons = new ArrayList<>();
+
+        characters.sort(Comparator.comparingInt(Object::hashCode));
 
         Map<Integer, List<Character>> groupedList = IntStream.range(0, characters.size())
                 .boxed()
