@@ -1,9 +1,6 @@
 package com.xubo.application;
 
-import com.xubo.application.panel.CharactersBrowseDialog;
-import com.xubo.application.panel.CharactersLearnDialog;
-import com.xubo.application.panel.CharactersSelectPanel;
-import com.xubo.application.panel.CharactersTestPanel;
+import com.xubo.application.panel.*;
 import com.xubo.data.DataSource;
 import com.xubo.data.book.Lesson;
 import com.xubo.data.character.Character;
@@ -42,13 +39,18 @@ public class ApplicationMainFrame extends JFrame {
     }
 
     public void displayLearnDialog(Character character) {
-        CharactersLearnDialog charactersLearnDialog = new CharactersLearnDialog(character, this);
-        charactersLearnDialog.setVisible(true);
+        CharactersLearnDialog dialog = new CharactersLearnDialog(character, this);
+        dialog.setVisible(true);
     }
 
     public void displayBrowseDialog(List<Lesson> lessons, boolean shuffle, boolean unknownOnly) {
-        CharactersBrowseDialog charactersBrowseDialog = new CharactersBrowseDialog(lessons, shuffle, unknownOnly, this.config, this);
-        charactersBrowseDialog.setVisible(true);
+        CharactersBrowseDialog dialog = new CharactersBrowseDialog(lessons, shuffle, unknownOnly, this.config, this);
+        dialog.setVisible(true);
+    }
+
+    public void displayHistoryDialog() {
+        CharactersHistoryDialog dialog = new CharactersHistoryDialog(this.config, this);
+        dialog.setVisible(true);
     }
 
     public ApplicationConfig getConfig() {

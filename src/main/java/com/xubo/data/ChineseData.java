@@ -6,13 +6,11 @@ import com.xubo.data.book.BookSource;
 import com.xubo.data.book.common.CommonBookSource;
 import com.xubo.data.book.common.CommonBookSourceExternal;
 import com.xubo.data.book.renjiao.RenJiaoBookSource;
-import com.xubo.data.dictionary.Dictionary;
-import com.xubo.data.word.WordsRepository;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.NoSuchFileException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -48,7 +46,8 @@ public class ChineseData implements DataSource {
             Files.list(folderToScan).forEach(
                     path -> bookSources.add(new CommonBookSourceExternal(path))
             );
-
+        } catch (NoSuchFileException e) {
+            logger.info("Chinese external books folder does not exist.");
         } catch (Exception e) {
             logger.error("Exception when scanning folder", e);
         }

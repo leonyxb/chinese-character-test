@@ -13,6 +13,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.net.URL;
 import java.util.*;
 import java.util.List;
 
@@ -25,8 +26,9 @@ public class CharactersSelectPanel extends JPanel {
     private ApplicationMainFrame mainFrame;
     private ApplicationConfig config;
 
+    private JButton historyButton = new JButton("历史");
     private JButton addButton = new JButton("添加");
-    private JButton removeAllButton = new JButton("全部移除");
+    private JButton removeAllButton = new JButton("清空");
     private JButton startButton = new JButton("测试");
     private JButton displayButton = new JButton("浏览");
 
@@ -197,6 +199,10 @@ public class CharactersSelectPanel extends JPanel {
                 mainFrame.displayBrowseDialog(lessons, randomCheckbox.isSelected(), testUnknownOnlyCheckbox.isSelected());
             }
         });
+
+        historyButton.addActionListener(e -> {
+            mainFrame.displayHistoryDialog();
+        });
     }
 
     synchronized private void addToTestList(SelectedLesson selectedLesson) {
@@ -292,6 +298,12 @@ public class CharactersSelectPanel extends JPanel {
         addButton.setFocusPainted(false);
         addButton.setPreferredSize(new Dimension(400, 100));
 
+        historyButton.setFont(new Font(config.getButtonFontName(), Font.PLAIN, 25));
+        historyButton.setFocusPainted(false);
+        historyButton.setPreferredSize(new Dimension(400, 100));
+        //ImageIcon image = new ImageIcon(getClass().getClassLoader().getResource("images/history.png"));
+        //historyButton.setIcon(new ImageIcon(image.getImage().getScaledInstance(30, 30, Image.SCALE_SMOOTH)));
+
         removeAllButton.setFont(new Font(config.getButtonFontName(), Font.PLAIN, 25));
         removeAllButton.setFocusPainted(false);
 
@@ -305,24 +317,27 @@ public class CharactersSelectPanel extends JPanel {
         c.gridx = 0;
         c.gridwidth = 1;
         c.weightx = 1;
-        panel.add(totalNumLabel, c);
+        panel.add(historyButton, c);
 
         c.gridx = 1;
         c.gridwidth = 1;
         c.weightx = 1;
-        panel.add(archiveNumLabel, c);
+        panel.add(totalNumLabel, c);
 
         c.gridx = 2;
         c.gridwidth = 1;
         c.weightx = 1;
-        panel.add(knownNumLabel, c);
+        panel.add(archiveNumLabel, c);
 
         c.gridx = 3;
-        c.gridwidth = 4;
-        c.weightx = 4;
+        c.gridwidth = 1;
+        c.weightx = 1;
+        panel.add(knownNumLabel, c);
+
+        c.gridx = 4;
+        c.gridwidth = 3;
+        c.weightx = 3;
         panel.add(new JPanel(), c);
-
-
 
         c.gridx = 7;
         c.gridwidth = 1;

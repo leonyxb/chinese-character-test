@@ -180,13 +180,17 @@ public class ApplicationUtils {
     }
 
     private static long getTimeMillisWithDateOnly(Date date) {
+        return getDateWithoutTimes(date).getTime();
+    }
+
+    public static Date getDateWithoutTimes(Date date) {
         Calendar cal = Calendar.getInstance();
         cal.setTime(date);
         cal.set(Calendar.HOUR_OF_DAY, 0);
         cal.set(Calendar.MINUTE, 0);
         cal.set(Calendar.SECOND, 0);
         cal.set(Calendar.MILLISECOND, 0);
-        return cal.getTimeInMillis();
+        return cal.getTime();
     }
 
     public static List<CharacterTestRecord> oneRecordPerDay(List<CharacterTestRecord> records) {

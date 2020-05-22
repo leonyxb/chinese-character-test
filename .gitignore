@@ -1,5 +1,5 @@
-.idea
-target
-records
-logs
-books
+.idea/
+target/
+records/
+logs/
+books/
