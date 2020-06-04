@@ -53,7 +53,7 @@ public class CharactersHistoryDialog extends JDialog {
         });
 
         HistoryItem[] dates = items.stream()
-                .sorted(Comparator.comparing(i -> i.date))
+                .sorted(Comparator.reverseOrder())
                 .toArray(HistoryItem[]::new);
 
         datesJList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
@@ -226,7 +226,7 @@ public class CharactersHistoryDialog extends JDialog {
         return jPanel;
     }
 
-    private static class HistoryItem {
+    private static class HistoryItem implements Comparable<HistoryItem> {
 
         Date date;
         List<String> correct = new ArrayList<>();
@@ -245,6 +245,11 @@ public class CharactersHistoryDialog extends JDialog {
         @Override
         public String toString() {
             return dateFormat.format(date) + "  " + (correct.size() + incorrect.size());
+        }
+
+        @Override
+        public int compareTo(HistoryItem o) {
+            return date.compareTo(o.date);
         }
     }
 

@@ -9,11 +9,11 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CommonBookSource extends BookSourceInternal {
+public class CommonBookSourceInternal extends BookSourceInternal {
 
     private String bookPath;
     
-    public CommonBookSource(String bookPath) {
+    public CommonBookSourceInternal(String bookPath) {
         this.bookPath = bookPath;
     }
 

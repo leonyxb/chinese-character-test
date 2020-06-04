@@ -18,9 +18,17 @@ public class CharacterFactory {
 
     private static Map<String, Character> characters = new HashMap<>();
 
-    private static Dictionary dictionary = new Dictionary();
+    private static Dictionary dictionary;
 
-    private static WordsRepository wordsRepository = new WordsRepository();
+    private static WordsRepository wordsRepository;
+
+    public static void setDictionary(Dictionary dictionary) {
+        CharacterFactory.dictionary = dictionary;
+    }
+
+    public static void setWordsRepository(WordsRepository wordsRepository) {
+        CharacterFactory.wordsRepository = wordsRepository;
+    }
 
     public static Character getCharacter(String text, Lesson lesson) {
         Character c;
@@ -40,18 +48,22 @@ public class CharacterFactory {
     }
 
     private static void linkDictionary(Character character) {
-        List<DictionaryEntry> entries = dictionary.getEntries(character.getText());
-        if (entries == null) {
-            logger.warn("Entry not found for " + character.getText());
-        } else {
-            character.getDictionaryEntries().addAll(entries);
+        if (dictionary != null) {
+            List<DictionaryEntry> entries = dictionary.getEntries(character.getText());
+            if (entries == null) {
+                logger.warn("    无法找到词条：" + character.getText());
+            } else {
+                character.getDictionaryEntries().addAll(entries);
+            }
         }
     }
 
     private static void linkWords(Character character) {
-        Set<String> words = wordsRepository.getWords(character.getText());
-        if (words != null) {
-            character.getWords().addAll(words);
+        if (wordsRepository != null) {
+            Set<String> words = wordsRepository.getWords(character.getText());
+            if (words != null) {
+                character.getWords().addAll(words);
+            }
         }
     }
 }

@@ -16,7 +16,7 @@ public class WordsRepository {
 
     public WordsRepository() {
 
-        logger.info("Start loading chinese words...");
+        logger.info("载入小学词汇...");
 
         List<String>  rawLines = new ArrayList<>();
 
@@ -33,7 +33,7 @@ public class WordsRepository {
                 .distinct()
                 .collect(Collectors.toList());
 
-        logger.info(wordsFound.size() + " words loaded.");
+        logger.info("    成功载入" + wordsFound.size() + " 个小学词汇.");
 
         wordsFound.forEach(word -> {
             word.chars().forEach(c -> {
@@ -43,8 +43,6 @@ public class WordsRepository {
             });
         });
 
-
-        logger.info("End loading chinese words...");
     }
 
     public Set<String> getWords(String character) {

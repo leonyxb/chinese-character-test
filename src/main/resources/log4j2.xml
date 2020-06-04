@@ -9,15 +9,18 @@
                 <Pattern>%d %p %c [%t] %m%n</Pattern>
             </PatternLayout>
         </File>
+        <TextPaneAppender name="TextPaneAppender" />
     </Appenders>
     <Loggers>
         <Logger name="com.xubo" level="info" additivity="false">
             <AppenderRef ref="LogToConsole"/>
             <AppenderRef ref="LogToFile"/>
+            <AppenderRef ref="TextPaneAppender"/>
         </Logger>
         <Root level="error">
             <AppenderRef ref="LogToConsole"/>
             <AppenderRef ref="LogToFile"/>
+            <AppenderRef ref="TextPaneAppender"/>
         </Root>
     </Loggers>
 </Configuration>

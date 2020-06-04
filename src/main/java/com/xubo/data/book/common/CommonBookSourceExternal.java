@@ -32,7 +32,9 @@ public class CommonBookSourceExternal extends BookSourceExternal {
                             bookLines.add(line);
                         }
                 );
-        books.add(new CommonBook(bookLines));
+        if (!bookLines.isEmpty()) {
+            books.add(new CommonBook(bookLines));
+        }
         return books;
     }
 

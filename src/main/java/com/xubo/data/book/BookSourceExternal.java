@@ -19,14 +19,14 @@ public abstract class BookSourceExternal implements BookSource {
     public List<Book> getBooks() {
         if (books == null) {
             List<String> rawLines = ChineseResourceReader.readLines(getBookPath(), StandardCharsets.UTF_8);
-            logger.info("Loading external book source: " + getBookPath().toAbsolutePath());
+            logger.info("载入扩展书文件：" + getBookPath());
             try {
                 this.books = buildBooks(rawLines);
             } catch (Exception e) {
-                logger.error("Exception when processing file: " + getBookPath().toAbsolutePath(), e);
-                this.books = Collections.emptyList();
+                logger.error("扩展书文件载入异常: " + e.getMessage(), e);
+                throw e;
             }
-            this.books.forEach(book -> logger.info("    Book loaded: " + book.getTitle()));
+            this.books.forEach(book -> logger.info("    扩展书成功载入: " + book.getTitle()));
         }
         return books;
     }

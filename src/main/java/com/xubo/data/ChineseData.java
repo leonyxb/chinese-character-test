@@ -3,9 +3,12 @@ package com.xubo.data;
 import com.xubo.application.ApplicationConfig;
 import com.xubo.data.book.Book;
 import com.xubo.data.book.BookSource;
-import com.xubo.data.book.common.CommonBookSource;
+import com.xubo.data.book.common.CommonBookSourceInternal;
 import com.xubo.data.book.common.CommonBookSourceExternal;
 import com.xubo.data.book.renjiao.RenJiaoBookSource;
+import com.xubo.data.character.CharacterFactory;
+import com.xubo.data.dictionary.Dictionary;
+import com.xubo.data.word.WordsRepository;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -28,33 +31,38 @@ public class ChineseData implements DataSource {
     }
 
     public ChineseData() {
-        logger.info("Start Loading chinese data");
+        logger.info("开始载入中文数据...");
+
+        CharacterFactory.setDictionary(new Dictionary());
+        CharacterFactory.setWordsRepository(new WordsRepository());
+
         books = getBookSources().stream()
                 .flatMap(s -> s.getBooks().stream())
                 .collect(Collectors.toList());
-        logger.info("End Loading chinese data");
-    }
 
+        logger.info("结束载入中文数据");
+    }
 
     private List<BookSource> getBookSources() {
 
         List<BookSource> bookSources = new ArrayList<>();
 
+        logger.info("载入扩展书...");
         try {
             Path folderToScan = Paths.get("", "books", ApplicationConfig.ApplicationLanguage.CHINESE.toString().toLowerCase());
-            logger.info("Scan external book on folder: " + folderToScan.toAbsolutePath());
+            logger.info("    扫描文件夹: " + folderToScan.toAbsolutePath());
             Files.list(folderToScan).forEach(
                     path -> bookSources.add(new CommonBookSourceExternal(path))
             );
         } catch (NoSuchFileException e) {
-            logger.info("Chinese external books folder does not exist.");
+            logger.info("    文件夹不存在");
         } catch (Exception e) {
-            logger.error("Exception when scanning folder", e);
+            logger.error("    扩展书载入异常！", e);
         }
 
         bookSources.add(new RenJiaoBookSource());
-        bookSources.add(new CommonBookSource("/book/character_commonly_used.txt"));
-        bookSources.add(new CommonBookSource("/book/character_similar.txt"));
+        bookSources.add(new CommonBookSourceInternal("/book/character_commonly_used.txt"));
+        bookSources.add(new CommonBookSourceInternal("/book/character_similar.txt"));
 
         return bookSources;
     }

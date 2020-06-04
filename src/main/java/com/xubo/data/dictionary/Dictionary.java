@@ -21,10 +21,10 @@ public class Dictionary {
     private Map<String, List<DictionaryEntry>> groupedEntries;
 
     public Dictionary() {
-        logger.info("Start loading chinese dictionary...");
+        logger.info("载入《现代汉语词典》第五版全本...");
         rawLines = ChineseResourceReader.readLinesFromResources("/dictionary.txt", "Unicode");
         entries = buildEntries(rawLines);
-        logger.info("End loading chinese dictionary...");
+        logger.info("    成功载入" + entries.size() + "个词条");
     }
 
     private List<DictionaryEntry> buildEntries(List<String> rawLines) {

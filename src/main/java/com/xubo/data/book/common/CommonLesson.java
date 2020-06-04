@@ -1,13 +1,14 @@
 package com.xubo.data.book.common;
 
-import com.xubo.application.Application;
-import com.xubo.data.character.Character;
 import com.xubo.data.book.Book;
 import com.xubo.data.book.Lesson;
+import com.xubo.data.character.Character;
 import com.xubo.data.character.CharacterFactory;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -30,9 +31,14 @@ public class CommonLesson implements Lesson {
         try {
             String[] elements = rawline.split(":");
             this.title = elements[0].trim();
-            this.characters = buildCharacters(elements[1].trim());
+            if (elements.length >= 2) {
+                this.characters = buildCharacters(elements[1].trim());
+            } else {
+                logger.error("    此行只有标题: " + rawline);
+                this.characters = Collections.emptyList();
+            }
         } catch (Exception e) {
-            logger.error("Exception when processing line: " + rawline);
+            logger.error("    处理此行时遇到异常: " + rawline);
             throw e;
         }
         
@@ -55,8 +61,8 @@ public class CommonLesson implements Lesson {
 
     private List<Character> buildCharacters(String line) {
 
-        List<String> tokens = line.chars()
-                .mapToObj(num -> String.valueOf((char) num).trim())
+        List<String> tokens = Arrays.stream(line.split(" "))
+                .map(String::trim)
                 .filter(c -> !c.isEmpty())
                 .collect(Collectors.toList());
 

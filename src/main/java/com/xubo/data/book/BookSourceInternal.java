@@ -15,10 +15,10 @@ public abstract class BookSourceInternal implements BookSource {
     
     public List<Book> getBooks() {
         if (books == null) {
-            logger.info("Loading internal book source: " + getBookPath());
+            logger.info("载入内置书文件: " + getBookPath());
             List<String> rawLines = ChineseResourceReader.readLinesFromResources(getBookPath(), getCharset().toString());
             this.books = buildBooks(rawLines);
-            this.books.forEach(book -> logger.info("    Book loaded: " + book.getTitle()));
+            //this.books.forEach(book -> logger.info("    内置书成功载入: " + book.getTitle()));
         }
         return books;
     }

@@ -99,9 +99,9 @@ public class CharactersSelectPanel extends JPanel {
     }
 
     private void addBook(Map<ApplicationUtils.Colors, List<Character>> colorsListMap, List<Book> books, ApplicationUtils.Colors colors, String title, int charactersPerLesson) {
-        List<Character> needReTest = colorsListMap.getOrDefault(colors, Collections.emptyList());
-        if (needReTest.size() > 0) {
-            books.add(new InMemoryBook(title, needReTest, charactersPerLesson));
+        List<Character> characters = colorsListMap.getOrDefault(colors, Collections.emptyList());
+        if (characters.size() > 0) {
+            books.add(new InMemoryBook(title, characters, charactersPerLesson));
         }
     }
 
