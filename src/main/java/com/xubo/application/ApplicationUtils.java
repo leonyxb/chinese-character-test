@@ -26,7 +26,7 @@ public class ApplicationUtils {
         }
 
         if (isArchived(records)) {
-            if (isLongTimeNotTested(records, 30)) {
+            if (isLongTimeNotTested(records, 21)) {
                 return Colors.NEED_RETEST;
             } else {
                 return Colors.ARCHIVED;
@@ -43,7 +43,7 @@ public class ApplicationUtils {
 
             if (knownNum == 3) {
 
-                int limitDaysNum = 15;
+                int limitDaysNum;
                 List<CharacterTestRecord> lastKnownRecords = getLastConsecutiveKnownTestRecords(records);
                 if (lastKnownRecords.size() <= 3) {
                     limitDaysNum = 2;
@@ -53,6 +53,8 @@ public class ApplicationUtils {
                     limitDaysNum = 5;
                 } else if (lastKnownRecords.size() <= 6) {
                     limitDaysNum = 8;
+                } else {
+                    limitDaysNum = 13;
                 }
 
                 if (isLongTimeNotTested(records, limitDaysNum)) {

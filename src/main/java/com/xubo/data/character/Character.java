@@ -9,6 +9,7 @@ import org.apache.logging.log4j.Logger;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
 public class Character {
 
@@ -64,4 +65,19 @@ public class Character {
         TestRecordManager.getInstance().addRecord(text, new CharacterTestRecord(new Date(), status));
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+
+        // DO NOT CHECK THE CLASS (a FrenchCharacter should equals Character)
+        // if (o == null || getClass() != o.getClass()) return false;
+
+        Character character = (Character) o;
+        return Objects.equals(text, character.text);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(text);
+    }
 }
