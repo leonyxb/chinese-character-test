@@ -91,7 +91,7 @@ public class CharactersBrowseDialog extends JDialog {
         button.setBackground(ApplicationUtils.getDisplayedColor(character, true));
         button.setFocusPainted(false);
 
-        JPopupMenu menu = getPinyinMenu(character);
+        JPopupMenu menu = ApplicationUtils.getPinyinMenu(character);
 
         button.addMouseListener(new MouseListener() {
             @Override
@@ -132,19 +132,6 @@ public class CharactersBrowseDialog extends JDialog {
         return button;
     }
 
-    private JPopupMenu getPinyinMenu(Character character) {
-        JPopupMenu menu = new JPopupMenu();
-        character.getDictionaryEntries()
-                .stream()
-                .map(DictionaryEntry::getPinyin)
-                .map(String::toLowerCase)
-                .distinct()
-                .forEach(py -> {
-                    JMenuItem menuItem = new JMenuItem("  " + py);
-                    menuItem.setFont(new Font("Arial", Font.PLAIN, 24));
-                    menu.add(menuItem);
-                });
-        return menu;
-    }
+
 
 }

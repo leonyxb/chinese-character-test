@@ -1,5 +1,8 @@
 package com.xubo.application;
 
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
 public class ApplicationConfig {
 
     public static final ApplicationConfig FRENCH_CONFIG
@@ -16,9 +19,13 @@ public class ApplicationConfig {
 
     private ApplicationLanguage language;
 
+    private Path resourceFolder;
+
     private ApplicationConfig(String fontName, ApplicationLanguage language) {
         this.fontName = fontName;
         this.language = language;
+        this.resourceFolder = Paths.get("", "books", language.toString().toLowerCase());
+
     }
 
     public String getFontName() {
@@ -35,6 +42,10 @@ public class ApplicationConfig {
 
     public String getLabelFontName() {
         return labelFontName;
+    }
+
+    public Path getResourceFolder() {
+        return resourceFolder;
     }
 
     public enum ApplicationLanguage {

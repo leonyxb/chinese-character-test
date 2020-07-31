@@ -22,6 +22,8 @@ public class ApplicationStartingFrame extends JFrame {
 
     private JButton frenchButton = buildFrenchButton();
 
+    private JButton chineseBookButton = buildChineseBookButton();
+
     public ApplicationStartingFrame()  {
         initGui();
         initActions();
@@ -31,6 +33,7 @@ public class ApplicationStartingFrame extends JFrame {
         frenchButton.addActionListener(e -> {
             frenchButton.setEnabled(false);
             chineseButton.setEnabled(false);
+            chineseBookButton.setEnabled(false);
             CompletableFuture.runAsync(() -> {
                 try {
                     FrenchData data = new FrenchData();
@@ -41,6 +44,7 @@ public class ApplicationStartingFrame extends JFrame {
                     logger.info("载入数据异常，请尝试修复后，重新点击按钮");
                     chineseButton.setEnabled(true);
                     frenchButton.setEnabled(true);
+                    chineseBookButton.setEnabled(true);
                 }
                 logger.info("--------------------------------------------------------------------------");
                 logger.info("");
@@ -50,6 +54,7 @@ public class ApplicationStartingFrame extends JFrame {
         chineseButton.addActionListener(e -> {
             chineseButton.setEnabled(false);
             frenchButton.setEnabled(false);
+            chineseBookButton.setEnabled(false);
             CompletableFuture.runAsync(() -> {
                 try {
                     ChineseData data = new ChineseData();
@@ -60,6 +65,28 @@ public class ApplicationStartingFrame extends JFrame {
                     logger.info("载入数据异常，请尝试修复后，重新点击按钮");
                     chineseButton.setEnabled(true);
                     frenchButton.setEnabled(true);
+                    chineseBookButton.setEnabled(true);
+                }
+                logger.info("--------------------------------------------------------------------------");
+                logger.info("");
+            });
+        });
+
+        chineseBookButton.addActionListener(e -> {
+            chineseButton.setEnabled(false);
+            frenchButton.setEnabled(false);
+            chineseBookButton.setEnabled(false);
+            CompletableFuture.runAsync(() -> {
+                try {
+                    ChineseData data = new ChineseData();
+                    ApplicationReadingFrame mainFrame = new ApplicationReadingFrame(data, ApplicationConfig.CHINESE_CONFIG);
+                    this.setVisible(false);
+                    mainFrame.setVisible(true);
+                } catch (Exception ex) {
+                    logger.info("载入数据异常，请尝试修复后，重新点击按钮");
+                    chineseButton.setEnabled(true);
+                    frenchButton.setEnabled(true);
+                    chineseBookButton.setEnabled(true);
                 }
                 logger.info("--------------------------------------------------------------------------");
                 logger.info("");
@@ -96,6 +123,7 @@ public class ApplicationStartingFrame extends JFrame {
         JPanel jPanel = new JPanel();
         jPanel.setLayout(new GridLayout(8, 1));
         jPanel.add(chineseButton);
+        jPanel.add(chineseBookButton);
         jPanel.add(frenchButton);
         return jPanel;
     }
@@ -135,6 +163,16 @@ public class ApplicationStartingFrame extends JFrame {
         final ApplicationConfig config = ApplicationConfig.CHINESE_CONFIG;
 
         JButton button = new JButton("中文");
+        button.setFont(new Font(config.getFontName(), Font.BOLD, 30));
+        button.setFocusPainted(false);
+
+        return button;
+    }
+
+    private JButton buildChineseBookButton() {
+        final ApplicationConfig config = ApplicationConfig.CHINESE_CONFIG;
+
+        JButton button = new JButton("阅读");
         button.setFont(new Font(config.getFontName(), Font.BOLD, 30));
         button.setFocusPainted(false);
 

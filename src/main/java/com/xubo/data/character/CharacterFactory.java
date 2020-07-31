@@ -42,7 +42,9 @@ public class CharacterFactory {
             linkWords(c);
         }
 
-        c.getLessons().add(lesson);
+        if (lesson != null) {
+            c.getLessons().add(lesson);
+        }
 
         return c;
     }

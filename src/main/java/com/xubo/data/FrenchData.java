@@ -5,13 +5,13 @@ import com.xubo.data.book.Book;
 import com.xubo.data.book.BookSource;
 import com.xubo.data.book.common.CommonBookSourceExternal;
 import com.xubo.data.book.france.EchelleDuboisBuyse;
+import com.xubo.data.dictionary.Dictionary;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.nio.file.Files;
 import java.nio.file.NoSuchFileException;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -21,6 +21,8 @@ public class FrenchData implements DataSource {
     private static final Logger logger = LogManager.getLogger(FrenchData.class);
 
     private List<Book> books;
+
+
 
     public FrenchData() {
         logger.info("开始载入法语数据...");
@@ -37,11 +39,13 @@ public class FrenchData implements DataSource {
         List<BookSource> bookSources = new ArrayList<>();
 
         try {
-            Path folderToScan = Paths.get("", "books", ApplicationConfig.ApplicationLanguage.FRENCH.toString().toLowerCase());
+            Path folderToScan = ApplicationConfig.FRENCH_CONFIG.getResourceFolder();
             logger.info("在这个位置扫描扩展书文件: " + folderToScan.toAbsolutePath());
-            Files.list(folderToScan).forEach(
-                    path -> bookSources.add(new CommonBookSourceExternal(path))
-            );
+            Files.list(folderToScan)
+                    .filter(f-> f.toFile().isFile())
+                    .forEach(path ->
+                            bookSources.add(new CommonBookSourceExternal(path))
+                    );
         } catch (NoSuchFileException e) {
             logger.info("没有找到任何扩展书");
         } catch (Exception e) {
@@ -56,6 +60,11 @@ public class FrenchData implements DataSource {
     @Override
     public List<Book> getBooks() {
         return books;
+    }
+
+    @Override
+    public Dictionary getDictionary() {
+        return null;
     }
 
 }

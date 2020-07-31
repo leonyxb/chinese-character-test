@@ -3,7 +3,9 @@ package com.xubo.application;
 import com.xubo.data.character.Character;
 import com.xubo.data.character.TestStatus;
 import com.xubo.data.character.CharacterTestRecord;
+import com.xubo.data.dictionary.DictionaryEntry;
 
+import javax.swing.*;
 import java.awt.*;
 import java.util.*;
 import java.util.List;
@@ -215,6 +217,21 @@ public class ApplicationUtils {
         }
 
         return TestStatus.KNOWN;
+    }
+
+    public static JPopupMenu getPinyinMenu(Character character) {
+        JPopupMenu menu = new JPopupMenu();
+        character.getDictionaryEntries()
+                .stream()
+                .map(DictionaryEntry::getPinyin)
+                .map(String::toLowerCase)
+                .distinct()
+                .forEach(py -> {
+                    JMenuItem menuItem = new JMenuItem("  " + py);
+                    menuItem.setFont(new Font("Arial", Font.PLAIN, 24));
+                    menu.add(menuItem);
+                });
+        return menu;
     }
 
 }

@@ -3,8 +3,8 @@ package com.xubo.data;
 import com.xubo.application.ApplicationConfig;
 import com.xubo.data.book.Book;
 import com.xubo.data.book.BookSource;
-import com.xubo.data.book.common.CommonBookSourceInternal;
 import com.xubo.data.book.common.CommonBookSourceExternal;
+import com.xubo.data.book.common.CommonBookSourceInternal;
 import com.xubo.data.book.renjiao.RenJiaoBookSource;
 import com.xubo.data.character.CharacterFactory;
 import com.xubo.data.dictionary.Dictionary;
@@ -15,7 +15,6 @@ import org.apache.logging.log4j.Logger;
 import java.nio.file.Files;
 import java.nio.file.NoSuchFileException;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -26,14 +25,24 @@ public class ChineseData implements DataSource {
 
     private List<Book> books;
 
+    private Dictionary dictionary;
+
     public List<Book> getBooks() {
         return books;
     }
 
+    @Override
+    public Dictionary getDictionary() {
+        return dictionary;
+    }
+
+
     public ChineseData() {
         logger.info("开始载入中文数据...");
 
-        CharacterFactory.setDictionary(new Dictionary());
+        this.dictionary = new Dictionary();
+
+        CharacterFactory.setDictionary(dictionary);
         CharacterFactory.setWordsRepository(new WordsRepository());
 
         books = getBookSources().stream()
@@ -49,11 +58,13 @@ public class ChineseData implements DataSource {
 
         logger.info("载入扩展书...");
         try {
-            Path folderToScan = Paths.get("", "books", ApplicationConfig.ApplicationLanguage.CHINESE.toString().toLowerCase());
+            Path folderToScan = ApplicationConfig.CHINESE_CONFIG.getResourceFolder();
             logger.info("    扫描文件夹: " + folderToScan.toAbsolutePath());
-            Files.list(folderToScan).forEach(
-                    path -> bookSources.add(new CommonBookSourceExternal(path))
-            );
+            Files.list(folderToScan)
+                    .filter(f-> f.toFile().isFile())
+                    .forEach(path ->
+                            bookSources.add(new CommonBookSourceExternal(path))
+                    );
         } catch (NoSuchFileException e) {
             logger.info("    文件夹不存在");
         } catch (Exception e) {

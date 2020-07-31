@@ -301,8 +301,6 @@ public class CharactersSelectPanel extends JPanel {
         historyButton.setFont(new Font(config.getButtonFontName(), Font.PLAIN, 25));
         historyButton.setFocusPainted(false);
         historyButton.setPreferredSize(new Dimension(400, 100));
-        //ImageIcon image = new ImageIcon(getClass().getClassLoader().getResource("images/history.png"));
-        //historyButton.setIcon(new ImageIcon(image.getImage().getScaledInstance(30, 30, Image.SCALE_SMOOTH)));
 
         removeAllButton.setFont(new Font(config.getButtonFontName(), Font.PLAIN, 25));
         removeAllButton.setFocusPainted(false);
