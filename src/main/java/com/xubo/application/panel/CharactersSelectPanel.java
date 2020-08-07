@@ -71,7 +71,7 @@ public class CharactersSelectPanel extends JPanel {
         long archiveNum = colorsListMap.getOrDefault(ApplicationUtils.Colors.ARCHIVED, Collections.emptyList()).size();
 
         totalNumLabel.setText("总识字数：" + (knownNum + archiveNum));
-        archiveNumLabel.setText("永久记忆：" +  archiveNum);
+        archiveNumLabel.setText("长期记忆：" +  archiveNum);
         knownNumLabel.setText("临时记忆：" +  knownNum);
 
         List<Book> books = new ArrayList<>();

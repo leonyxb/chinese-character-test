@@ -23,7 +23,7 @@ import static com.xubo.application.ApplicationUtils.oneRecordPerDay;
 
 public class CharactersTestPanel extends JPanel {
 
-    public static final int MAX_WORDS_DISPLAYED = 5;
+    public static final int MAX_WORDS_DISPLAYED = 8;
 
     private TestEngine testEngine;
 

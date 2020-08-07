@@ -27,12 +27,23 @@ public class ApplicationUtils {
             return Colors.DEFAULT;
         }
 
-        if (isArchived(records)) {
-            if (isLongTimeNotTested(records, 21)) {
-                return Colors.NEED_RETEST;
-            } else {
-                return Colors.ARCHIVED;
+        List<CharacterTestRecord> lastKnownRecords = getLastConsecutiveKnownTestRecords(records);
+
+        // 长期记忆的字
+        if (isArchived(lastKnownRecords)) {
+            //超过180天没有错误，就每60天重新测试
+            if (getDays(lastKnownRecords) > 180) {
+                if (isLongTimeNotTested(records, 60)) {
+                    return Colors.NEED_RETEST;
+                }
             }
+
+            //默认每30天重新测试
+            if (isLongTimeNotTested(records, 30)) {
+                return Colors.NEED_RETEST;
+            }
+
+            return Colors.ARCHIVED;
         }
 
         Colors colors = Colors.DEFAULT;
@@ -46,7 +57,6 @@ public class ApplicationUtils {
             if (knownNum == 3) {
 
                 int limitDaysNum;
-                List<CharacterTestRecord> lastKnownRecords = getLastConsecutiveKnownTestRecords(records);
                 if (lastKnownRecords.size() <= 3) {
                     limitDaysNum = 2;
                 } else if (lastKnownRecords.size() <= 4) {
@@ -77,25 +87,25 @@ public class ApplicationUtils {
     }
 
     /**
-     * 一个字，如果满足下列条件，就认为这个字已经永久记住：
-     *  1 - 最近的，连续表示至少7次认识
-     *  2 - 连续认识的时间跨度大于30天
+     * 一个字，如果满足下列条件，就认为这个字属于长期记忆：
+     *  1 - 最近的，连续表示至少10次认识
+     *  2 - 连续认识的时间跨度大于60天
      */
-    private static boolean isArchived(List<CharacterTestRecord> records) {
-        List<CharacterTestRecord> lastKnownRecords = getLastConsecutiveKnownTestRecords(records);
+    private static boolean isArchived(List<CharacterTestRecord> lastKnownRecords) {
+        return lastKnownRecords.size() >= 10 && getDays(lastKnownRecords) > 60;
+    }
 
-        if (lastKnownRecords.size() >= 7) {
-            long firstKnownTime = lastKnownRecords.get(lastKnownRecords.size() - 1).getDate().getTime();
-            long lastKnownTime = lastKnownRecords.get(0).getDate().getTime();
-            if (lastKnownTime - firstKnownTime > MILLISECONDS_PER_DAY * 30) {
-                return true;
-            }
-        }
-        return false;
+    //返回时间跨度 in days
+    private static long getDays(List<CharacterTestRecord> lastKnownRecords) {
+        long firstKnownTime = lastKnownRecords.get(lastKnownRecords.size() - 1).getDate().getTime();
+        long lastKnownTime = lastKnownRecords.get(0).getDate().getTime();
+        long duration = lastKnownTime - firstKnownTime;
+
+        return duration / MILLISECONDS_PER_DAY;
     }
 
     /**
-     * 超过15天没有测试
+     * 超过N天没有测试
      */
     private static boolean isLongTimeNotTested(List<CharacterTestRecord> records, int limitDaysNum) {
         CharacterTestRecord lastRecord = records.get(0);

@@ -266,14 +266,20 @@ public class ApplicationReadingFrame extends JFrame {
                 .collect(groupingBy(c -> colors.getOrDefault(c, Color.BLACK)));
 
 
-        long knownNum = colorsListMap.getOrDefault(ApplicationUtils.Colors.KNOWN.getForeground(), Collections.emptyList()).size();
-        long archiveNum = colorsListMap.getOrDefault(ApplicationUtils.Colors.ARCHIVED.getForeground(), Collections.emptyList()).size();
-        long needRetestNum = colorsListMap.getOrDefault(ApplicationUtils.Colors.NEED_RETEST.getForeground(), Collections.emptyList()).size();
+        List<String> knownDistinct =   colorsListMap.getOrDefault(ApplicationUtils.Colors.KNOWN.getForeground(), Collections.emptyList());
+        List<String> archiveDistinct = colorsListMap.getOrDefault(ApplicationUtils.Colors.ARCHIVED.getForeground(), Collections.emptyList());
+        List<String> reTestDistinct =  colorsListMap.getOrDefault(ApplicationUtils.Colors.NEED_RETEST.getForeground(), Collections.emptyList());
 
 
-        long unknownNum = totalNum - knownNum - archiveNum - needRetestNum;
+        long knownCharactersNum = validCharacters.stream()
+                .filter(c -> knownDistinct.contains(c) || archiveDistinct.contains(c) || reTestDistinct.contains(c))
+                .count();
 
-        return String.format("<<%s>> 总字数 %d, 汉字 %d 个, 不认识 %d 个", bookName, validCharactersNum, totalNum, unknownNum);
+        long knownPercent = knownCharactersNum * 100 / validCharactersNum;
+
+        long knownNum = knownDistinct.size() + archiveDistinct.size() + reTestDistinct.size();
+
+        return String.format("<<%s>> 总字数 %d, 使用汉字 %d 个, 认识 %d 个 (覆盖率%d%%)", bookName, validCharactersNum, totalNum, knownNum, knownPercent);
     }
 
     private List<String> getCharacters(Path path) throws IOException {
