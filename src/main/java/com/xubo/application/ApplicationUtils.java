@@ -7,6 +7,7 @@ import com.xubo.data.dictionary.DictionaryEntry;
 
 import javax.swing.*;
 import java.awt.*;
+import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -14,6 +15,8 @@ import java.util.stream.Collectors;
 public class ApplicationUtils {
 
     private static final long MILLISECONDS_PER_DAY = 1000 * 3600 * 24;
+
+    private static final String CURRENT_DATE_STR = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
 
     public static String getCssColor(Color color) {
         return String.format("rgb(%s, %s, %s)", color.getRed(), color.getGreen(), color.getBlue());
@@ -32,14 +35,15 @@ public class ApplicationUtils {
         // 长期记忆的字
         if (isArchived(lastKnownRecords)) {
             //超过180天没有错误，就每60天重新测试
+            int adjustDays = ApplicationUtils.getRandomDays(character.getText(), 15);
             if (getDays(lastKnownRecords) > 180) {
-                if (isLongTimeNotTested(records, 60)) {
+                if (isLongTimeNotTested(records, 60 + adjustDays)) {
                     return Colors.NEED_RETEST;
                 }
             }
 
             //默认每30天重新测试
-            if (isLongTimeNotTested(records, 30)) {
+            if (isLongTimeNotTested(records, 30 + adjustDays)) {
                 return Colors.NEED_RETEST;
             }
 
@@ -84,6 +88,17 @@ public class ApplicationUtils {
         }
 
         return colors;
+    }
+
+    /**
+     * get random days number between 0 and range according the given text and current date.
+     * @param text the given text
+     * @param maxDays max days
+     * @return a random number between 0 and maxDays
+     */
+    static int getRandomDays(String text, int maxDays) {
+        int i = (CURRENT_DATE_STR.concat(text)).hashCode() % maxDays;
+        return (i + maxDays) % maxDays;
     }
 
     /**
