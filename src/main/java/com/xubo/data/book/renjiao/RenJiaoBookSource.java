@@ -6,13 +6,18 @@ import com.xubo.data.book.BookSourceInternal;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class RenJiaoBookSource extends BookSourceInternal {
 
     @Override
     protected List<Book> buildBooks(List<String> rawLines) {
         List<Book> books = new ArrayList<>();
+        List<Book> booksForWrite = new ArrayList<>();
+
 
         List<String> bookLines = new ArrayList<>();
 
@@ -21,16 +26,24 @@ public class RenJiaoBookSource extends BookSourceInternal {
                 line -> {
                     if (line.startsWith("人教版")) {
                         if (!bookLines.isEmpty()) {
-                            books.addAll(get2Books(bookLines));
+                            List<RenJiaoBook> book2 = get2Books(bookLines);
+                            books.add(book2.get(0));
+                            if (book2.size() > 1) {
+                                booksForWrite.add(book2.get(1));
+                            }
                             bookLines.clear();
                         }
                     }
                     bookLines.add(line);
                 }
         );
-        books.addAll(get2Books(bookLines));
+        List<RenJiaoBook> book2 = get2Books(bookLines);
+        books.add(book2.get(0));
+        if (book2.size() > 1) {
+            booksForWrite.add(book2.get(1));
+        }
 
-        return books;
+        return Stream.of(books, booksForWrite).flatMap(Collection::stream).collect(Collectors.toList());
     }
 
     @Override
