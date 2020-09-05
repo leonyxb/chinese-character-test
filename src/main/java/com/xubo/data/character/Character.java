@@ -7,7 +7,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
-import java.util.Date;
+import java.util.Calendar;
 import java.util.List;
 import java.util.Objects;
 
@@ -62,7 +62,32 @@ public class Character {
     }
 
     public void addNewRecord(TestStatus status) {
-        TestRecordManager.getInstance().addRecord(text, new CharacterTestRecord(new Date(), status));
+        Calendar cal = Calendar.getInstance();
+        TestRecordManager.getInstance().addRecord(text, new CharacterTestRecord(cal.getTime(), status));
+
+        // for special test
+        if (status == TestStatus.KNOWN && false) {
+            cal.add(Calendar.DATE, -1);
+            TestRecordManager.getInstance().addRecord(text, new CharacterTestRecord(cal.getTime(), status));
+            cal.add(Calendar.DATE, -2);
+            TestRecordManager.getInstance().addRecord(text, new CharacterTestRecord(cal.getTime(), status));
+            cal.add(Calendar.DATE, -3);
+            TestRecordManager.getInstance().addRecord(text, new CharacterTestRecord(cal.getTime(), status));
+            cal.add(Calendar.DATE, -5);
+            TestRecordManager.getInstance().addRecord(text, new CharacterTestRecord(cal.getTime(), status));
+            cal.add(Calendar.DATE, -8);
+            TestRecordManager.getInstance().addRecord(text, new CharacterTestRecord(cal.getTime(), status));
+            cal.add(Calendar.DATE, -13);
+            TestRecordManager.getInstance().addRecord(text, new CharacterTestRecord(cal.getTime(), status));
+            cal.add(Calendar.DATE, -21);
+            TestRecordManager.getInstance().addRecord(text, new CharacterTestRecord(cal.getTime(), status));
+            cal.add(Calendar.DATE, -34);
+            TestRecordManager.getInstance().addRecord(text, new CharacterTestRecord(cal.getTime(), status));
+            cal.add(Calendar.DATE, -55);
+            TestRecordManager.getInstance().addRecord(text, new CharacterTestRecord(cal.getTime(), status));
+            cal.add(Calendar.DATE, -89);
+            TestRecordManager.getInstance().addRecord(text, new CharacterTestRecord(cal.getTime(), status));
+        }
     }
 
     @Override
