@@ -64,7 +64,7 @@ public class TestRecordManager {
         if (!baseDir.exists() || !baseDir.isDirectory()) {
             baseDir.mkdirs();
         }
-        return new File("records" + File.separator + text + ".json");
+        return new File("records" + File.separator + text + ".json").getAbsoluteFile();
     }
 
     public Map<Date, List<CharacterTestRecords>> getHistoryByDate() {

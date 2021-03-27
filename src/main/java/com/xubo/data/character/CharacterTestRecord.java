@@ -2,6 +2,7 @@ package com.xubo.data.character;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class CharacterTestRecord implements Comparable<CharacterTestRecord> {
@@ -41,8 +42,9 @@ public class CharacterTestRecord implements Comparable<CharacterTestRecord> {
 
     @Override
     public String toString() {
-        return "CharacterTestRecord{" +
-                "date=" + date +
+        String format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(date);
+        return "Record{" +
+                "date=" + format +
                 ", status=" + status +
                 '}';
     }

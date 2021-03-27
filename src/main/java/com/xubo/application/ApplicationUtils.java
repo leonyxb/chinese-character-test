@@ -34,17 +34,17 @@ public class ApplicationUtils {
 
         // 长期记忆的字
         if (isArchived(lastKnownRecords)) {
-            //超过180天没有错误，就每60天重新测试
+            //超过180天没有错误，就每90天重新测试
             int adjustDays = ApplicationUtils.getRandomDays(character.getText(), 15);
             if (getDays(lastKnownRecords) > 180) {
-                if (isLongTimeNotTested(records, 60 + adjustDays)) {
+                if (isLongTimeNotTested(records, 90 + adjustDays)) {
                     return Colors.NEED_RETEST;
                 }
-            }
-
-            //默认每30天重新测试
-            if (isLongTimeNotTested(records, 30 + adjustDays)) {
-                return Colors.NEED_RETEST;
+            } else {
+                //默认每30天重新测试
+                if (isLongTimeNotTested(records, 30 + adjustDays)) {
+                    return Colors.NEED_RETEST;
+                }
             }
 
             return Colors.ARCHIVED;
