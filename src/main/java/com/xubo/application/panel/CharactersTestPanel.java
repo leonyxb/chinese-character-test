@@ -371,7 +371,13 @@ public class CharactersTestPanel extends JPanel {
         if (testEngine.hasNextCharacter()) {
             Character character = testEngine.nextCharacter();
             characterPane.setText(character.getText());
-            characterPane.setBackground(ApplicationUtils.getDisplayedColor(character, true));
+            ApplicationUtils.Colors displayedColors = ApplicationUtils.getDisplayedColors(character);
+            characterPane.setBackground(displayedColors.getBackground());
+            if (displayedColors == ApplicationUtils.Colors.EXCLUDED) {
+                characterPane.setForeground(displayedColors.getForeground());
+            } else {
+                characterPane.setForeground(Color.BLACK);
+            }
             characterPane.revalidate();
             wordsList.setListData(getWordsToDisplay(character));
             testRecordList.setListData(getTestRecordsToDisplay(character));

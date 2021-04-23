@@ -61,7 +61,7 @@ public class CommonLesson implements Lesson {
 
     private List<Character> buildCharacters(String line) {
 
-        List<String> tokens = Arrays.stream(line.split(" "))
+        List<String> tokens = Arrays.stream(line.trim().split(" "))
                 .map(String::trim)
                 .filter(c -> !c.isEmpty())
                 .collect(Collectors.toList());

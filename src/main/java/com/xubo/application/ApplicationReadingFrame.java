@@ -269,10 +269,11 @@ public class ApplicationReadingFrame extends JFrame {
         List<String> knownDistinct =   colorsListMap.getOrDefault(ApplicationUtils.Colors.KNOWN.getForeground(), Collections.emptyList());
         List<String> archiveDistinct = colorsListMap.getOrDefault(ApplicationUtils.Colors.ARCHIVED.getForeground(), Collections.emptyList());
         List<String> reTestDistinct =  colorsListMap.getOrDefault(ApplicationUtils.Colors.NEED_RETEST.getForeground(), Collections.emptyList());
+        List<String> excludedDistinct =  colorsListMap.getOrDefault(ApplicationUtils.Colors.EXCLUDED.getForeground(), Collections.emptyList());
 
 
         long knownCharactersNum = validCharacters.stream()
-                .filter(c -> knownDistinct.contains(c) || archiveDistinct.contains(c) || reTestDistinct.contains(c))
+                .filter(c -> knownDistinct.contains(c) || archiveDistinct.contains(c) || reTestDistinct.contains(c) || excludedDistinct.contains(c))
                 .count();
 
         long knownPercent = knownCharactersNum * 100 / validCharactersNum;

@@ -32,7 +32,8 @@ public class CommonBook implements Book {
         List<String> lines = new ArrayList<>();
 
         bookLines.forEach(l -> {
-
+            l = l.trim();
+            l = l.replaceAll("　", "  ");
             if (!l.contains(":")) {
                 l = l.replaceAll("[：|,|，|#|;|；|。|.]", ":");
                 if (!l.contains(":")) {

@@ -13,7 +13,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.net.URL;
 import java.util.*;
 import java.util.List;
 
@@ -36,6 +35,8 @@ public class CharactersSelectPanel extends JPanel {
     private JLabel totalNumLabel = new JLabel();
     private JLabel archiveNumLabel = new JLabel();
     private JLabel knownNumLabel = new JLabel();
+    private JLabel retestNumLabel = new JLabel();
+    private JLabel excludedNumLabel = new JLabel();
     private JCheckBox randomCheckbox = new JCheckBox("打乱测试顺序");
     private JCheckBox learnCheckbox = new JCheckBox("允许学习");
     private JCheckBox testUnknownOnlyCheckbox = new JCheckBox("仅测试不认识的字");
@@ -69,10 +70,15 @@ public class CharactersSelectPanel extends JPanel {
 
         long knownNum = colorsListMap.getOrDefault(ApplicationUtils.Colors.KNOWN, Collections.emptyList()).size();
         long archiveNum = colorsListMap.getOrDefault(ApplicationUtils.Colors.ARCHIVED, Collections.emptyList()).size();
+        long excludedNum = colorsListMap.getOrDefault(ApplicationUtils.Colors.EXCLUDED, Collections.emptyList()).size();
+        long retestNum = colorsListMap.getOrDefault(ApplicationUtils.Colors.NEED_RETEST, Collections.emptyList()).size();
 
-        totalNumLabel.setText("总识字数：" + (knownNum + archiveNum));
+        totalNumLabel.setText("总识字数：" + (knownNum + archiveNum + excludedNum + retestNum));
         archiveNumLabel.setText("长期记忆：" +  archiveNum);
         knownNumLabel.setText("临时记忆：" +  knownNum);
+        knownNumLabel.setText("临时记忆：" +  knownNum);
+        excludedNumLabel.setText("永久：" +  excludedNum);
+        retestNumLabel.setText("提醒：" +  retestNum);
 
         List<Book> books = new ArrayList<>();
 
@@ -81,6 +87,7 @@ public class CharactersSelectPanel extends JPanel {
             addBook(colorsListMap, books, ApplicationUtils.Colors.ALMOST_KNOWN, "<自动> 就要学会啦！", 10);
             addBook(colorsListMap, books, ApplicationUtils.Colors.ALMOST_UNKNOWN, "<自动> 再试一试吧！", 10);
             addBook(colorsListMap, books, ApplicationUtils.Colors.UNKNOWN, "<自动> 好难记住啊！", 10);
+            addBook(colorsListMap, books, ApplicationUtils.Colors.EXCLUDED, "<自动> 不再自动测试！", 10);
         } else {
             addBook(colorsListMap, books, ApplicationUtils.Colors.NEED_RETEST, "<auto> Presque oublié?", 5);
             addBook(colorsListMap, books, ApplicationUtils.Colors.ALMOST_KNOWN, "<auto> Bientôt l'apprendre!", 5);
@@ -294,6 +301,12 @@ public class CharactersSelectPanel extends JPanel {
         knownNumLabel.setFont(new Font(config.getLabelFontName(), Font.PLAIN, 24));
         knownNumLabel.setForeground(new Color(0, 138, 0));
 
+        excludedNumLabel.setFont(new Font(config.getLabelFontName(), Font.PLAIN, 24));
+        excludedNumLabel.setForeground(new Color(104, 104, 104));
+
+        retestNumLabel.setFont(new Font(config.getLabelFontName(), Font.PLAIN, 24));
+        retestNumLabel.setForeground(ApplicationUtils.Colors.NEED_RETEST.getForeground());
+
         addButton.setFont(new Font(config.getButtonFontName(), Font.PLAIN, 25));
         addButton.setFocusPainted(false);
         addButton.setPreferredSize(new Dimension(400, 100));
@@ -325,16 +338,26 @@ public class CharactersSelectPanel extends JPanel {
         c.gridx = 2;
         c.gridwidth = 1;
         c.weightx = 1;
-        panel.add(archiveNumLabel, c);
+        panel.add(excludedNumLabel, c);
 
         c.gridx = 3;
         c.gridwidth = 1;
         c.weightx = 1;
-        panel.add(knownNumLabel, c);
+        panel.add(archiveNumLabel, c);
 
         c.gridx = 4;
-        c.gridwidth = 3;
-        c.weightx = 3;
+        c.gridwidth = 1;
+        c.weightx = 1;
+        panel.add(knownNumLabel, c);
+
+        c.gridx = 5;
+        c.gridwidth = 1;
+        c.weightx = 1;
+        panel.add(retestNumLabel, c);
+
+        c.gridx = 6;
+        c.gridwidth = 1;
+        c.weightx = 1;
         panel.add(new JPanel(), c);
 
         c.gridx = 7;

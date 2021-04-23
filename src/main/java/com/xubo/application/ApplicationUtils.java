@@ -34,9 +34,15 @@ public class ApplicationUtils {
 
         // 长期记忆的字
         if (isArchived(lastKnownRecords)) {
-            //超过180天没有错误，就每90天重新测试
+
+            long days = getDays(lastKnownRecords);
             int adjustDays = ApplicationUtils.getRandomDays(character.getText(), 15);
-            if (getDays(lastKnownRecords) > 180) {
+
+            if (days > 365) {
+                return Colors.EXCLUDED;
+            }
+            //超过180天没有错误，就每90天重新测试
+            if (days > 180) {
                 if (isLongTimeNotTested(records, 90 + adjustDays)) {
                     return Colors.NEED_RETEST;
                 }
@@ -158,7 +164,7 @@ public class ApplicationUtils {
 
     public static boolean isKnown(Character character) {
         Colors colors = getDisplayedColors(character);
-        return colors == Colors.KNOWN || colors == Colors.ARCHIVED;
+        return colors == Colors.KNOWN || colors == Colors.ARCHIVED || colors == Colors.EXCLUDED;
     }
 
     public enum Colors {
@@ -189,6 +195,10 @@ public class ApplicationUtils {
         ARCHIVED(
                 new Color(0, 33, 136),
                 new Color(170, 199, 239)
+        ),
+        EXCLUDED(
+                new Color(125, 125, 125),
+                new Color(184, 184, 184)
         );
 
         private final Color foreground;
