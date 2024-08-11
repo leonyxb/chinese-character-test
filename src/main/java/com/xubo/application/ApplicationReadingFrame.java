@@ -278,7 +278,7 @@ public class ApplicationReadingFrame extends JFrame {
 
         long knownPercent = knownCharactersNum * 100 / validCharactersNum;
 
-        long knownNum = knownDistinct.size() + archiveDistinct.size() + reTestDistinct.size();
+        long knownNum = knownDistinct.size() + archiveDistinct.size() + reTestDistinct.size() + excludedDistinct.size();
 
         return String.format("<<%s>> 总字数 %d, 使用汉字 %d 个, 认识 %d 个 (覆盖率%d%%)", bookName, validCharactersNum, totalNum, knownNum, knownPercent);
     }
