@@ -1,5 +1,6 @@
 package com.xubo.data.character;
 
+import com.xubo.application.ApplicationConfig;
 import com.xubo.data.book.Lesson;
 import com.xubo.data.dictionary.DictionaryEntry;
 import com.xubo.data.record.TestRecordManager;
@@ -69,7 +70,7 @@ public class Character {
         TestRecordManager.getInstance().addRecord(text, language, new CharacterTestRecord(cal.getTime(), status));
 
         // for special test
-        if (status == TestStatus.KNOWN) {
+        if (ApplicationConfig.isAdmin && status == TestStatus.KNOWN) {
             cal.add(Calendar.DATE, -1);
             TestRecordManager.getInstance().addRecord(text, language, new CharacterTestRecord(cal.getTime(), status));
             cal.add(Calendar.DATE, -2);

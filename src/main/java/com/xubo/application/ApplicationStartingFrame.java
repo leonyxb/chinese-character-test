@@ -174,7 +174,8 @@ public class ApplicationStartingFrame extends JFrame {
                 "          ===========================================",
                 "          |            欢迎使用 <名字没想好>        |",
                 "          ===========================================",
-                ""
+                "",
+                ApplicationConfig.isAdmin ? "        >>> 这是特殊版， 请慎重使用 !!! <<<" : ""
         );
 
         loggerArea.setText(StringUtils.join(welcome, "\n"));

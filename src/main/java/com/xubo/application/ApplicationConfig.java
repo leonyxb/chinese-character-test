@@ -5,6 +5,8 @@ import java.nio.file.Paths;
 
 public class ApplicationConfig {
 
+    public static final boolean isAdmin = false;
+
     public static final ApplicationConfig FRENCH_CONFIG
             = new ApplicationConfig("Comic Sans MS", ApplicationLanguage.FRENCH);
 
