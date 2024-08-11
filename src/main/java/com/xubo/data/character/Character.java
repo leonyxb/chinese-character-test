@@ -25,12 +25,15 @@ public class Character {
 
     private final List<String> words = new ArrayList<>();
 
+    private final String language;
+
     private TestStatus status;
 
-    public Character(String text) {
+    public Character(String text, String language) {
         this.text = text;
         this.status = TestStatus.NOT_TESTED;
-        this.testRecord = TestRecordManager.getInstance().getFullRecords(text);
+        this.language = language;
+        this.testRecord = TestRecordManager.getInstance().getFullRecords(text, language);
     }
 
     public String getText() {
@@ -63,30 +66,30 @@ public class Character {
 
     public void addNewRecord(TestStatus status) {
         Calendar cal = Calendar.getInstance();
-        TestRecordManager.getInstance().addRecord(text, new CharacterTestRecord(cal.getTime(), status));
+        TestRecordManager.getInstance().addRecord(text, language, new CharacterTestRecord(cal.getTime(), status));
 
         // for special test
         if (status == TestStatus.KNOWN && false) {
             cal.add(Calendar.DATE, -1);
-            TestRecordManager.getInstance().addRecord(text, new CharacterTestRecord(cal.getTime(), status));
+            TestRecordManager.getInstance().addRecord(text, language, new CharacterTestRecord(cal.getTime(), status));
             cal.add(Calendar.DATE, -2);
-            TestRecordManager.getInstance().addRecord(text, new CharacterTestRecord(cal.getTime(), status));
+            TestRecordManager.getInstance().addRecord(text, language, new CharacterTestRecord(cal.getTime(), status));
             cal.add(Calendar.DATE, -3);
-            TestRecordManager.getInstance().addRecord(text, new CharacterTestRecord(cal.getTime(), status));
+            TestRecordManager.getInstance().addRecord(text, language, new CharacterTestRecord(cal.getTime(), status));
             cal.add(Calendar.DATE, -5);
-            TestRecordManager.getInstance().addRecord(text, new CharacterTestRecord(cal.getTime(), status));
+            TestRecordManager.getInstance().addRecord(text, language, new CharacterTestRecord(cal.getTime(), status));
             cal.add(Calendar.DATE, -8);
-            TestRecordManager.getInstance().addRecord(text, new CharacterTestRecord(cal.getTime(), status));
+            TestRecordManager.getInstance().addRecord(text, language, new CharacterTestRecord(cal.getTime(), status));
             cal.add(Calendar.DATE, -13);
-            TestRecordManager.getInstance().addRecord(text, new CharacterTestRecord(cal.getTime(), status));
+            TestRecordManager.getInstance().addRecord(text, language, new CharacterTestRecord(cal.getTime(), status));
             cal.add(Calendar.DATE, -21);
-            TestRecordManager.getInstance().addRecord(text, new CharacterTestRecord(cal.getTime(), status));
+            TestRecordManager.getInstance().addRecord(text, language, new CharacterTestRecord(cal.getTime(), status));
             cal.add(Calendar.DATE, -34);
-            TestRecordManager.getInstance().addRecord(text, new CharacterTestRecord(cal.getTime(), status));
+            TestRecordManager.getInstance().addRecord(text, language, new CharacterTestRecord(cal.getTime(), status));
             cal.add(Calendar.DATE, -55);
-            TestRecordManager.getInstance().addRecord(text, new CharacterTestRecord(cal.getTime(), status));
+            TestRecordManager.getInstance().addRecord(text, language, new CharacterTestRecord(cal.getTime(), status));
             cal.add(Calendar.DATE, -89);
-            TestRecordManager.getInstance().addRecord(text, new CharacterTestRecord(cal.getTime(), status));
+            TestRecordManager.getInstance().addRecord(text, language, new CharacterTestRecord(cal.getTime(), status));
         }
     }
 

@@ -27,7 +27,7 @@ public class RenJiaoBookSourceTest {
 
         Assert.assertNotNull(perDay);
 
-        Character character = new Character("妈");
+        Character character = new Character("妈", "CN");
         List<CharacterTestRecord> records = character.getTestRecord().getRecords();
         records.clear();
         records.addAll(testRecord.getRecords());

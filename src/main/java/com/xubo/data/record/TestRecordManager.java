@@ -28,18 +28,18 @@ public class TestRecordManager {
 
     private Map<String, CharacterTestRecords> history = new HashMap<>();
 
-    public CharacterTestRecords getFullRecords(String text) {
-        history.putIfAbsent(text, readTestRecordsFile(text));
-        return history.get(text);
+    public CharacterTestRecords getFullRecords(String text, String language) {
+        history.putIfAbsent(language + "-" + text, readTestRecordsFile(text, language));
+        return history.get(language + "-" + text);
     }
 
-    public void addRecord(String text, CharacterTestRecord record) {
-        history.get(text).getRecords().add(record);
-        writeTestRecordsFile(text);
+    public void addRecord(String text, String language, CharacterTestRecord record) {
+        history.get(language + "-" + text).getRecords().add(record);
+        writeTestRecordsFile(text, language);
     }
 
-    private CharacterTestRecords readTestRecordsFile(String text) {
-        File json = getJsonFile(text);
+    private CharacterTestRecords readTestRecordsFile(String text, String language) {
+        File json = getJsonFile(text, language);
         if (json.exists()) {
             try {
                 return new ObjectMapper().readValue(json, CharacterTestRecords.class);
@@ -50,21 +50,21 @@ public class TestRecordManager {
         return new CharacterTestRecords(text);
     }
 
-    public void writeTestRecordsFile(String text) {
-        File json = getJsonFile(text);
+    public void writeTestRecordsFile(String text, String language) {
+        File json = getJsonFile(text, language);
         try {
-            new ObjectMapper().writeValue(json, history.get(text));
+            new ObjectMapper().writeValue(json, history.get(language + "-" + text));
         } catch (IOException e) {
             logger.error("Error: Can not write the test record to " + json.getAbsolutePath());
         }
     }
 
-    private File getJsonFile(String text) {
-        File baseDir = new File("records");
+    private File getJsonFile(String text, String language) {
+        File baseDir = new File("records", language);
         if (!baseDir.exists() || !baseDir.isDirectory()) {
             baseDir.mkdirs();
         }
-        return new File("records" + File.separator + text + ".json").getAbsoluteFile();
+        return new File(baseDir, text + ".json").getAbsoluteFile();
     }
 
     public Map<Date, List<CharacterTestRecords>> getHistoryByDate() {

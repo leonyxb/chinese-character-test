@@ -1,7 +1,9 @@
 package com.xubo.application;
 
 import com.xubo.data.ChineseData;
+import com.xubo.data.EnglishData;
 import com.xubo.data.FrenchData;
+import com.xubo.data.GermanyData;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -22,6 +24,10 @@ public class ApplicationStartingFrame extends JFrame {
 
     private JButton frenchButton = buildFrenchButton();
 
+    private JButton englishButton = buildEnglishButton();
+
+    private JButton germanyButton = buildGermanyButton();
+
     private JButton chineseBookButton = buildChineseBookButton();
 
     public ApplicationStartingFrame()  {
@@ -30,10 +36,43 @@ public class ApplicationStartingFrame extends JFrame {
     }
 
     private void initActions() {
+
+        germanyButton.addActionListener(e -> {
+            setEnableLanguageButtons(false);
+            CompletableFuture.runAsync(() -> {
+                try {
+                    GermanyData data = new GermanyData();
+                    ApplicationMainFrame mainFrame = new ApplicationMainFrame(data, ApplicationConfig.GERMANY_CONFIG);
+                    this.setVisible(false);
+                    mainFrame.setVisible(true);
+                } catch (Exception ex) {
+                    logger.info("载入数据异常，请尝试修复后，重新点击按钮");
+                    setEnableLanguageButtons(true);
+                }
+                logger.info("--------------------------------------------------------------------------");
+                logger.info("");
+            });
+        });
+
+        englishButton.addActionListener(e -> {
+            setEnableLanguageButtons(false);
+            CompletableFuture.runAsync(() -> {
+                try {
+                    EnglishData data = new EnglishData();
+                    ApplicationMainFrame mainFrame = new ApplicationMainFrame(data, ApplicationConfig.ENGLISH_CONFIG);
+                    this.setVisible(false);
+                    mainFrame.setVisible(true);
+                } catch (Exception ex) {
+                    logger.info("载入数据异常，请尝试修复后，重新点击按钮");
+                    setEnableLanguageButtons(true);
+                }
+                logger.info("--------------------------------------------------------------------------");
+                logger.info("");
+            });
+        });
+
         frenchButton.addActionListener(e -> {
-            frenchButton.setEnabled(false);
-            chineseButton.setEnabled(false);
-            chineseBookButton.setEnabled(false);
+            setEnableLanguageButtons(false);
             CompletableFuture.runAsync(() -> {
                 try {
                     FrenchData data = new FrenchData();
@@ -42,9 +81,7 @@ public class ApplicationStartingFrame extends JFrame {
                     mainFrame.setVisible(true);
                 } catch (Exception ex) {
                     logger.info("载入数据异常，请尝试修复后，重新点击按钮");
-                    chineseButton.setEnabled(true);
-                    frenchButton.setEnabled(true);
-                    chineseBookButton.setEnabled(true);
+                    setEnableLanguageButtons(true);
                 }
                 logger.info("--------------------------------------------------------------------------");
                 logger.info("");
@@ -52,9 +89,7 @@ public class ApplicationStartingFrame extends JFrame {
         });
 
         chineseButton.addActionListener(e -> {
-            chineseButton.setEnabled(false);
-            frenchButton.setEnabled(false);
-            chineseBookButton.setEnabled(false);
+            setEnableLanguageButtons(false);
             CompletableFuture.runAsync(() -> {
                 try {
                     ChineseData data = new ChineseData();
@@ -63,9 +98,7 @@ public class ApplicationStartingFrame extends JFrame {
                     mainFrame.setVisible(true);
                 } catch (Exception ex) {
                     logger.info("载入数据异常，请尝试修复后，重新点击按钮");
-                    chineseButton.setEnabled(true);
-                    frenchButton.setEnabled(true);
-                    chineseBookButton.setEnabled(true);
+                    setEnableLanguageButtons(true);
                 }
                 logger.info("--------------------------------------------------------------------------");
                 logger.info("");
@@ -73,9 +106,7 @@ public class ApplicationStartingFrame extends JFrame {
         });
 
         chineseBookButton.addActionListener(e -> {
-            chineseButton.setEnabled(false);
-            frenchButton.setEnabled(false);
-            chineseBookButton.setEnabled(false);
+            setEnableLanguageButtons(false);
             CompletableFuture.runAsync(() -> {
                 try {
                     ChineseData data = new ChineseData();
@@ -84,14 +115,20 @@ public class ApplicationStartingFrame extends JFrame {
                     mainFrame.setVisible(true);
                 } catch (Exception ex) {
                     logger.info("载入数据异常，请尝试修复后，重新点击按钮");
-                    chineseButton.setEnabled(true);
-                    frenchButton.setEnabled(true);
-                    chineseBookButton.setEnabled(true);
+                    setEnableLanguageButtons(true);
                 }
                 logger.info("--------------------------------------------------------------------------");
                 logger.info("");
             });
         });
+    }
+
+    private void setEnableLanguageButtons(boolean enable) {
+        germanyButton.setEnabled(enable);
+        englishButton.setEnabled(enable);
+        frenchButton.setEnabled(enable);
+        chineseButton.setEnabled(enable);
+        chineseBookButton.setEnabled(enable);
     }
 
     private void initGui() {
@@ -125,6 +162,8 @@ public class ApplicationStartingFrame extends JFrame {
         jPanel.add(chineseButton);
         jPanel.add(chineseBookButton);
         jPanel.add(frenchButton);
+        jPanel.add(englishButton);
+        jPanel.add(germanyButton);
         return jPanel;
     }
 
@@ -156,6 +195,26 @@ public class ApplicationStartingFrame extends JFrame {
         JButton button = new JButton("Français");
         button.setFocusPainted(false);
         button.setFont(new Font(config.getFontName(), Font.PLAIN, 26));
+        return button;
+    }
+
+    private JButton buildEnglishButton() {
+        final ApplicationConfig config = ApplicationConfig.ENGLISH_CONFIG;
+
+        JButton button = new JButton("English");
+        button.setFont(new Font(config.getFontName(), Font.PLAIN, 26));
+        button.setFocusPainted(false);
+
+        return button;
+    }
+
+    private JButton buildGermanyButton() {
+        final ApplicationConfig config = ApplicationConfig.GERMANY_CONFIG;
+
+        JButton button = new JButton("Deutsche");
+        button.setFont(new Font(config.getFontName(), Font.PLAIN, 26));
+        button.setFocusPainted(false);
+
         return button;
     }
 

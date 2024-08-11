@@ -35,7 +35,7 @@ public class CharacterFactory {
         if (characters.containsKey(text)) {
             c = characters.get(text);
         } else {
-            c = new Character(text);
+            c = new Character(text, "CN");
             characters.put(text, c);
 
             linkDictionary(c);

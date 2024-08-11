@@ -19,7 +19,7 @@ public class ApplicationMainFrame extends JFrame {
         this.data = data;
         this.config = config;
 
-        setTitle("识字测试 版本：叶泉璘 豪华 VIP 99级 尊享 私人定制 1.0 版");
+        setTitle("识字测试 版本： 多语言版");
         setSize(1400, 800);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);

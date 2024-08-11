@@ -11,6 +11,12 @@ public class ApplicationConfig {
     public static final ApplicationConfig CHINESE_CONFIG
             = new ApplicationConfig("楷体", ApplicationLanguage.CHINESE);
 
+    public static final ApplicationConfig ENGLISH_CONFIG
+            = new ApplicationConfig("Comic Sans MS", ApplicationLanguage.ENGLISH);
+
+    public static final ApplicationConfig GERMANY_CONFIG
+            = new ApplicationConfig("Comic Sans MS", ApplicationLanguage.GERMANY);
+
     private String fontName;
 
     private String buttonFontName = "楷体";
@@ -50,6 +56,8 @@ public class ApplicationConfig {
 
     public enum ApplicationLanguage {
         FRENCH,
-        CHINESE
+        CHINESE,
+        ENGLISH,
+        GERMANY
     }
 }

@@ -11,7 +11,7 @@ public class FrenchCharacter extends Character {
     private Integer echelle;
 
     public FrenchCharacter(String text) {
-        super(text);
+        super(text, "FR");
     }
 
     public String getCategory() {
