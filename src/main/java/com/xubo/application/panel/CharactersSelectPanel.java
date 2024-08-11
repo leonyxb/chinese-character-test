@@ -88,11 +88,24 @@ public class CharactersSelectPanel extends JPanel {
             addBook(colorsListMap, books, ApplicationUtils.Colors.ALMOST_UNKNOWN, "<自动> 再试一试吧！", 10);
             addBook(colorsListMap, books, ApplicationUtils.Colors.UNKNOWN, "<自动> 好难记住啊！", 10);
             addBook(colorsListMap, books, ApplicationUtils.Colors.EXCLUDED, "<自动> 不再自动测试！", 10);
-        } else {
+        } else if (config.getLanguage() == ApplicationConfig.ApplicationLanguage.FRENCH) {
             addBook(colorsListMap, books, ApplicationUtils.Colors.NEED_RETEST, "<auto> Presque oublié?", 5);
             addBook(colorsListMap, books, ApplicationUtils.Colors.ALMOST_KNOWN, "<auto> Bientôt l'apprendre!", 5);
             addBook(colorsListMap, books, ApplicationUtils.Colors.ALMOST_UNKNOWN, "<auto> Réessayer encore?", 5);
             addBook(colorsListMap, books, ApplicationUtils.Colors.UNKNOWN, "<auto> Difficile à retenir", 5);
+            addBook(colorsListMap, books, ApplicationUtils.Colors.EXCLUDED, "<auto> Ne test plus", 10);
+        } else if (config.getLanguage() == ApplicationConfig.ApplicationLanguage.ENGLISH) {
+            addBook(colorsListMap, books, ApplicationUtils.Colors.NEED_RETEST, "<auto> Almost forget?", 5);
+            addBook(colorsListMap, books, ApplicationUtils.Colors.ALMOST_KNOWN, "<auto> Almost known!", 5);
+            addBook(colorsListMap, books, ApplicationUtils.Colors.ALMOST_UNKNOWN, "<auto> Try again?", 5);
+            addBook(colorsListMap, books, ApplicationUtils.Colors.UNKNOWN, "<auto> Hard to remember!", 5);
+            addBook(colorsListMap, books, ApplicationUtils.Colors.EXCLUDED, "<auto> No more test!", 10);
+        } else if (config.getLanguage() == ApplicationConfig.ApplicationLanguage.GERMANY) {
+            addBook(colorsListMap, books, ApplicationUtils.Colors.NEED_RETEST, "<auto> fast vergessen！", 5);
+            addBook(colorsListMap, books, ApplicationUtils.Colors.ALMOST_KNOWN, "<auto> studieren", 5);
+            addBook(colorsListMap, books, ApplicationUtils.Colors.ALMOST_UNKNOWN, "<auto> versuchen Sie es erneut?", 5);
+            addBook(colorsListMap, books, ApplicationUtils.Colors.UNKNOWN, "<auto> schwer zu merken", 5);
+            addBook(colorsListMap, books, ApplicationUtils.Colors.EXCLUDED, "<auto> Kein Testen mehr", 10);
         }
 
         data.getBooks().stream()

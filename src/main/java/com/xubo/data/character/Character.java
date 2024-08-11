@@ -69,7 +69,7 @@ public class Character {
         TestRecordManager.getInstance().addRecord(text, language, new CharacterTestRecord(cal.getTime(), status));
 
         // for special test
-        if (status == TestStatus.KNOWN && false) {
+        if (status == TestStatus.KNOWN) {
             cal.add(Calendar.DATE, -1);
             TestRecordManager.getInstance().addRecord(text, language, new CharacterTestRecord(cal.getTime(), status));
             cal.add(Calendar.DATE, -2);

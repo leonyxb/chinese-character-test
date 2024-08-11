@@ -15,7 +15,7 @@ public class ApplicationConfig {
             = new ApplicationConfig("Comic Sans MS", ApplicationLanguage.ENGLISH);
 
     public static final ApplicationConfig GERMANY_CONFIG
-            = new ApplicationConfig("Comic Sans MS", ApplicationLanguage.GERMANY);
+            = new ApplicationConfig("Arial", ApplicationLanguage.GERMANY);
 
     private String fontName;
 
