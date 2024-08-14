@@ -18,7 +18,7 @@ public class CharactersLearnDialog extends JDialog {
 
         this.setSize(1000, 600);
         this.setLocationRelativeTo(null);
-        this.setTitle(character.getText());
+        this.setTitle(character.getDisplayText());
         this.setModal(true);
 
         JEditorPane mainPanel = new JEditorPane();

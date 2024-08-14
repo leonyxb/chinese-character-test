@@ -78,7 +78,7 @@ public class CharactersBrowseDialog extends JDialog {
     }
 
     private JButton buildButton(int index, Character character) {
-        JButton button = new JButton(character.getText());
+        JButton button = new JButton(character.getDisplayText());
         int row = index / boxNumPerRow;
         int col = index % boxNumPerRow;
         button.setBounds(

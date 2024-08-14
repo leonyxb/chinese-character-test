@@ -370,7 +370,7 @@ public class CharactersTestPanel extends JPanel {
 
         if (testEngine.hasNextCharacter()) {
             Character character = testEngine.nextCharacter();
-            characterPane.setText(character.getText());
+            characterPane.setText(character.getDisplayText());
             ApplicationUtils.Colors displayedColors = ApplicationUtils.getDisplayedColors(character);
             characterPane.setBackground(displayedColors.getBackground());
             if (displayedColors == ApplicationUtils.Colors.EXCLUDED) {
@@ -410,8 +410,8 @@ public class CharactersTestPanel extends JPanel {
     }
 
     private void updateStatistic() {
-        correctCharactersArea.setText(String.join(" ", testEngine.getKnownCharacters()));
-        incorrectCharactersArea.setText(String.join(" ", testEngine.getUnknownCharacters()));
+        correctCharactersArea.setText(String.join(", ", testEngine.getKnownCharacters()));
+        incorrectCharactersArea.setText(String.join(", ", testEngine.getUnknownCharacters()));
         statisticArea.setText(testEngine.statistic());
     }
 

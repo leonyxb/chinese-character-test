@@ -542,7 +542,8 @@ public class CharactersSelectPanel extends JPanel {
             html.append("<span>&lt;" + lesson.getTitle() + "&gt;&nbsp;</span>");
             lesson.getCharacters().forEach(character -> {
                 String cssColor = ApplicationUtils.getCssColor(ApplicationUtils.getDisplayedColor(character, false));
-                html.append(String.format("<span style=\" color:%s; font-size:24px; \">&nbsp;%s&nbsp;</span>", cssColor, character.getText()));
+                String separator = "CN".equals(character.getLanguage()) ? "": ",";
+                html.append(String.format("<span style=\" color:%s; font-size:24px; \">&nbsp;%s%s&nbsp;</span>", cssColor, character.getDisplayText(), separator));
             });
 
             return html.toString();

@@ -54,7 +54,17 @@ public class EnglishFrequencyList extends BookSourceInternal {
         //books.add(new InMemoryBook("5000: Frequency List", words.subList(4000, 5000), 10));
 
         List<Character> verbs = words.subList(0, 1000).stream().filter(w -> w.getPartOfSpeech().equals("v")).map(w -> (Character) w).collect(Collectors.toList());
-        books.add(new InMemoryBook("Verbs:Frequency List", verbs, 5));
+        books.add(new InMemoryBook("Verb:Frequency List", verbs, 5));
+
+
+        List<Character> nouns = words.subList(0, 1000).stream().filter(w -> w.getPartOfSpeech().equals("n")).map(w -> (Character) w).collect(Collectors.toList());
+        books.add(new InMemoryBook("Noun:Frequency List", nouns, 5));
+
+        List<Character> funcWords = words.subList(0, 1000).stream().filter(w -> w.getPartOfSpeech().equals("fw")).map(w -> (Character) w).collect(Collectors.toList());
+        books.add(new InMemoryBook("Function:Frequency List", funcWords, 5));
+
+        List<Character> adjWords = words.subList(0, 1000).stream().filter(w -> w.getPartOfSpeech().equals("j")).map(w -> (Character) w).collect(Collectors.toList());
+        books.add(new InMemoryBook("Adjective:Frequency List", adjWords, 5));
 
         return books;
     }

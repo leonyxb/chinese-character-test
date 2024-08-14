@@ -64,7 +64,12 @@ public class CommonLesson implements Lesson {
 
     private List<Character> buildCharacters(String line) {
 
-        List<String> tokens = Arrays.stream(line.trim().split(" "))
+        String separator = " ";
+        if (line.contains(",")) {
+            separator = ",";
+        }
+
+        List<String> tokens = Arrays.stream(line.trim().split(separator))
                 .map(String::trim)
                 .filter(c -> !c.isEmpty())
                 .collect(Collectors.toList());
@@ -77,6 +82,6 @@ public class CommonLesson implements Lesson {
 
     @Override
     public String toString() {
-        return "<" + getTitle() + "> " + getCharacters().stream().map(Character::getText).collect(Collectors.joining(", "));
+        return "<" + getTitle() + "> " + getCharacters().stream().map(Character::getDisplayText).collect(Collectors.joining(", "));
     }
 }

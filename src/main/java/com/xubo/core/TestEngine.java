@@ -121,14 +121,14 @@ public class TestEngine {
     public List<String> getKnownCharacters() {
         return characters.stream()
                 .filter(character -> character.getStatus() == TestStatus.KNOWN || character.getStatus() == TestStatus.LEARNED)
-                .map(Character::getText)
+                .map(Character::getDisplayText)
                 .collect(toList());
     }
 
     public List<String> getUnknownCharacters() {
         return characters.stream()
                 .filter(character -> character.getStatus() == TestStatus.UNKNOWN)
-                .map(Character::getText)
+                .map(Character::getDisplayText)
                 .collect(toList());
     }
 

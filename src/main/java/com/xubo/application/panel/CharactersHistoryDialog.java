@@ -46,7 +46,7 @@ public class CharactersHistoryDialog extends JDialog {
         historyByDate.forEach( (k, v) -> {
             Map<TestStatus, List<String>> namesByStatus = v.stream().collect(Collectors.groupingBy(
                     r -> r.getRecords().get(0).getStatus(),
-                    Collectors.mapping(CharacterTestRecords::getName, Collectors.toList())));
+                    Collectors.mapping(CharacterTestRecords::getDisplayName, Collectors.toList())));
 
             items.add(new HistoryItem(k, namesByStatus.get(TestStatus.KNOWN), namesByStatus.get(TestStatus.UNKNOWN)));
 

@@ -41,6 +41,14 @@ public class Character {
         return text;
     }
 
+    public String getDisplayText() {
+        return text.replaceAll("_", " ");
+    }
+
+    public String getLanguage() {
+        return language;
+    }
+
     public TestStatus getStatus() {
         return status;
     }

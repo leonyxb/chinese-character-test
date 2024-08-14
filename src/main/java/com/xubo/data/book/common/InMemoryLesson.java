@@ -36,6 +36,6 @@ public class InMemoryLesson implements Lesson {
 
     @Override
     public String toString() {
-        return "<" + getTitle() + "> " + getCharacters().stream().map(Character::getText).collect(Collectors.joining(", "));
+        return "<" + getTitle() + "> " + getCharacters().stream().map(Character::getDisplayText).collect(Collectors.joining(", "));
     }
 }

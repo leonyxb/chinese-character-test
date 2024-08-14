@@ -1,7 +1,7 @@
-Book: Indefinite Pronouns
+Book: Pronouns
 
-pronoun: some any no every
-people: someone anyone no_one everyone
+indefinite pronoun: some any no every
+people: someone ,anyone ,no one, everyone
 people: somebody anybody nobody everybody
 thing: something anything nothing everything
 place: somewhere anywhere nowhere everywhere
@@ -22,9 +22,14 @@ Most Common:  off on onto opposite out outside
 Most Common:  over past round since than through
 Most Common:  to towards under underneath unlike until
 Most Common:  up upon via with within without
+Most Common: ahead of , apart from , as for , as well as , because of
+Most Common: due to , except for , in addition to , in front of , in place of
+Most Common: in spite of	, inside of, instead of, near to, on account of,
+Most Common: on top of, out of, outside of, owing to, such as, thanks to, up to
 
 For time:  after  at     before during for    in      on     since  until
 For place: above    against    along    around    at      behind
-For place: below    beside    between    by     in     in_front_of
+For place: below,    beside  ,  between  ,  by ,    in    , in front of
+
 For place: near next_to    on        over    under
 For movement: across along from into onto over through to toward

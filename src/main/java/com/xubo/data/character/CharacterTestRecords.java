@@ -1,5 +1,7 @@
 package com.xubo.data.character;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,6 +20,11 @@ public class CharacterTestRecords {
 
     public String getName() {
         return name;
+    }
+
+    @JsonIgnore
+    public String getDisplayName() {
+        return name.replace("_", " ");
     }
 
     public void setName(String name) {
