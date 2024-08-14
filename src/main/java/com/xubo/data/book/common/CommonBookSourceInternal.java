@@ -12,9 +12,12 @@ import java.util.List;
 public class CommonBookSourceInternal extends BookSourceInternal {
 
     private String bookPath;
+
+    private String language;
     
-    public CommonBookSourceInternal(String bookPath) {
+    public CommonBookSourceInternal(String bookPath, String language) {
         this.bookPath = bookPath;
+        this.language = language;
     }
 
     @Override
@@ -27,14 +30,14 @@ public class CommonBookSourceInternal extends BookSourceInternal {
                         line -> {
                             if (line.startsWith("Book")) {
                                 if (!bookLines.isEmpty()) {
-                                    books.add(new CommonBook(bookLines));
+                                    books.add(new CommonBook(bookLines, language));
                                     bookLines.clear();
                                 }
                             }
                             bookLines.add(line);
                         }
                 );
-        books.add(new CommonBook(bookLines));
+        books.add(new CommonBook(bookLines, language));
         return books;
     }
 

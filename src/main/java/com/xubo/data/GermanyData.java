@@ -44,7 +44,7 @@ public class GermanyData implements DataSource {
             Files.list(folderToScan)
                     .filter(f-> f.toFile().isFile())
                     .forEach(path ->
-                            bookSources.add(new CommonBookSourceExternal(path))
+                            bookSources.add(new CommonBookSourceExternal(path, "DE"))
                     );
         } catch (NoSuchFileException e) {
             logger.info("没有找到任何扩展书");

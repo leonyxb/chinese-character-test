@@ -4,8 +4,8 @@ import com.xubo.application.ApplicationConfig;
 import com.xubo.data.book.Book;
 import com.xubo.data.book.BookSource;
 import com.xubo.data.book.common.CommonBookSourceExternal;
+import com.xubo.data.book.common.CommonBookSourceInternal;
 import com.xubo.data.book.english.EnglishFrequencyList;
-import com.xubo.data.book.france.EchelleDuboisBuyse;
 import com.xubo.data.dictionary.Dictionary;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -44,7 +44,7 @@ public class EnglishData implements DataSource {
             Files.list(folderToScan)
                     .filter(f-> f.toFile().isFile())
                     .forEach(path ->
-                            bookSources.add(new CommonBookSourceExternal(path))
+                            bookSources.add(new CommonBookSourceExternal(path, "EN"))
                     );
         } catch (NoSuchFileException e) {
             logger.info("没有找到任何扩展书");
@@ -53,6 +53,7 @@ public class EnglishData implements DataSource {
         }
 
         bookSources.add(new EnglishFrequencyList());
+        bookSources.add(new CommonBookSourceInternal("/book/english/common_books.txt", "EN"));
 
         return bookSources;
     }

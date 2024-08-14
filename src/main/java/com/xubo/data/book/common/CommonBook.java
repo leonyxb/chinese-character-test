@@ -15,7 +15,7 @@ public class CommonBook implements Book {
     
     private List<String> rawLines = new ArrayList<>();
     
-    public CommonBook(List<String> bookLines) {
+    public CommonBook(List<String> bookLines, String language) {
         this.rawLines.addAll(normalized(bookLines));
 
         this.title = rawLines.get(0).replace("Book:", "").trim();
@@ -24,7 +24,7 @@ public class CommonBook implements Book {
                 .stream()
                 .map(String::trim)
                 .filter(line -> !line.isEmpty())
-                .map(line -> new CommonLesson(line, this))
+                .map(line -> new CommonLesson(line, language, this))
                 .collect(Collectors.toList());
     }
 

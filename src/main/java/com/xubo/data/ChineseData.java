@@ -63,7 +63,7 @@ public class ChineseData implements DataSource {
             Files.list(folderToScan)
                     .filter(f-> f.toFile().isFile())
                     .forEach(path ->
-                            bookSources.add(new CommonBookSourceExternal(path))
+                            bookSources.add(new CommonBookSourceExternal(path, "CN"))
                     );
         } catch (NoSuchFileException e) {
             logger.info("    文件夹不存在");
@@ -72,8 +72,8 @@ public class ChineseData implements DataSource {
         }
 
         bookSources.add(new RenJiaoBookSource());
-        bookSources.add(new CommonBookSourceInternal("/book/character_commonly_used.txt"));
-        bookSources.add(new CommonBookSourceInternal("/book/character_similar.txt"));
+        bookSources.add(new CommonBookSourceInternal("/book/character_commonly_used.txt", "CN"));
+        bookSources.add(new CommonBookSourceInternal("/book/character_similar.txt", "CN"));
 
         return bookSources;
     }

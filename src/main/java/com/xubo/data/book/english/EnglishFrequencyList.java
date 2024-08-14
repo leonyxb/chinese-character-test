@@ -29,25 +29,32 @@ public class EnglishFrequencyList extends BookSourceInternal {
         POS_MAP.put("m", "number");
         POS_MAP.put("u", "interjection");
         POS_MAP.put("n", "noun");
+        POS_MAP.put("k", "proper noun");
     }
 
     @Override
     protected List<Book> buildBooks(List<String> rawLines) {
         List<Book> books = new ArrayList<>();
 
-        List<Character> words = rawLines.stream()
+        List<EnglishWord> words = rawLines.stream()
                 .map(this::buildWord).collect(Collectors.toList());
 
+        books.add(new InMemoryBook("100:  Frequency List", new ArrayList<>(words.subList(0, 100)), 5));
+        books.add(new InMemoryBook("200:  Frequency List", new ArrayList<>(words.subList(100, 200)), 5));
+        books.add(new InMemoryBook("300:  Frequency List", new ArrayList<>(words.subList(200, 300)), 5));
+        books.add(new InMemoryBook("400:  Frequency List", new ArrayList<>(words.subList(300, 400)), 5));
+        books.add(new InMemoryBook("500:  Frequency List", new ArrayList<>(words.subList(400, 500)), 5));
+        books.add(new InMemoryBook("600:  Frequency List", new ArrayList<>(words.subList(500, 600)), 5));
+        books.add(new InMemoryBook("800:  Frequency List", new ArrayList<>(words.subList(600, 800)), 5));
+        books.add(new InMemoryBook("1000: Frequency List", new ArrayList<>(words.subList(800, 1000)), 5));
+        //books.add(new InMemoryBook("1500: Frequency List", words.subList(1000, 1500), 5));
+        //books.add(new InMemoryBook("2000: Frequency List", words.subList(1500, 2000), 10));
+        //books.add(new InMemoryBook("3000: Frequency List", words.subList(2000, 3000), 10));
+        //books.add(new InMemoryBook("4000: Frequency List", words.subList(3000, 4000), 10));
+        //books.add(new InMemoryBook("5000: Frequency List", words.subList(4000, 5000), 10));
 
-        books.add(new InMemoryBook("100:  Frequency List", words.subList(0, 100), 5));
-        books.add(new InMemoryBook("200:  Frequency List", words.subList(100, 200), 5));
-        books.add(new InMemoryBook("500:  Frequency List", words.subList(200, 500), 5));
-        books.add(new InMemoryBook("1000: Frequency List", words.subList(500, 1000), 5));
-        books.add(new InMemoryBook("1500: Frequency List", words.subList(1000, 1500), 5));
-        books.add(new InMemoryBook("2000: Frequency List", words.subList(1500, 2000), 10));
-        books.add(new InMemoryBook("3000: Frequency List", words.subList(2000, 3000), 10));
-        books.add(new InMemoryBook("4000: Frequency List", words.subList(3000, 4000), 10));
-        books.add(new InMemoryBook("5000: Frequency List", words.subList(4000, 5000), 10));
+        List<Character> verbs = words.subList(0, 1000).stream().filter(w -> w.getPartOfSpeech().equals("v")).map(w -> (Character) w).collect(Collectors.toList());
+        books.add(new InMemoryBook("Verbs:Frequency List", verbs, 5));
 
         return books;
     }
@@ -62,7 +69,7 @@ public class EnglishFrequencyList extends BookSourceInternal {
         return StandardCharsets.UTF_8;
     }
 
-    private Character buildWord(String line) {
+    private EnglishWord buildWord(String line) {
         String[] elements = line.split(",");
         EnglishWord character = new EnglishWord(elements[1]);
 

@@ -189,7 +189,7 @@ public class ApplicationReadingFrame extends JFrame {
                     bookPane.select(rightClickPosition, rightClickPosition + 1);
                     String text = bookPane.getSelectedText();
 
-                    JPopupMenu menu = ApplicationUtils.getPinyinMenu(CharacterFactory.getCharacter(text, null));
+                    JPopupMenu menu = ApplicationUtils.getPinyinMenu(CharacterFactory.getCharacter(text, "CN",null));
                     menu.show(bookPane, e.getX(), e.getY() + 20);
 
             }

@@ -1,0 +1,30 @@
+Book: Indefinite Pronouns
+
+pronoun: some any no every
+people: someone anyone no_one everyone
+people: somebody anybody nobody everybody
+thing: something anything nothing everything
+place: somewhere anywhere nowhere everywhere
+
+Book：Words by Themes
+
+questions： who what where when why how which whose whom
+
+
+Book: Prepositions
+
+Most Common:  about  above  across  after  against along
+Most Common:  among  around  as     at     before  behind
+Most Common:  below  beneath beside  between beyond  by
+Most Common:  despite down  during  except  for from
+Most Common:  in inside  into like near of
+Most Common:  off on onto opposite out outside
+Most Common:  over past round since than through
+Most Common:  to towards under underneath unlike until
+Most Common:  up upon via with within without
+
+For time:  after  at     before during for    in      on     since  until
+For place: above    against    along    around    at      behind
+For place: below    beside    between    by     in     in_front_of
+For place: near next_to    on        over    under
+For movement: across along from into onto over through to toward

@@ -20,13 +20,16 @@ public class CommonLesson implements Lesson {
 
     private String title;
 
+    private String language;
+
     private Book parentBook;
 
     private List<Character> characters;
 
-    public CommonLesson(String rawline, Book parentBook) {
+    public CommonLesson(String rawline, String language, Book parentBook) {
         this.rawline = rawline;
         this.parentBook = parentBook;
+        this.language = language;
 
         try {
             String[] elements = rawline.split(":");
@@ -67,7 +70,7 @@ public class CommonLesson implements Lesson {
                 .collect(Collectors.toList());
 
         return tokens.stream()
-                .map(token -> CharacterFactory.getCharacter(token, this))
+                .map(token -> CharacterFactory.getCharacter(token, language,this))
                 .collect(Collectors.toList());
     }
 

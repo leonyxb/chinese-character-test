@@ -11,8 +11,11 @@ public class CommonBookSourceExternal extends BookSourceExternal {
 
     private Path bookPath;
 
-    public CommonBookSourceExternal(Path bookPath) {
+    private String language;
+
+    public CommonBookSourceExternal(Path bookPath, String language) {
         this.bookPath = bookPath;
+        this.language = language;
     }
 
     @Override
@@ -25,7 +28,7 @@ public class CommonBookSourceExternal extends BookSourceExternal {
                         line -> {
                             if (line.startsWith("Book")) {
                                 if (!bookLines.isEmpty()) {
-                                    books.add(new CommonBook(bookLines));
+                                    books.add(new CommonBook(bookLines, language));
                                     bookLines.clear();
                                 }
                             }
@@ -33,7 +36,7 @@ public class CommonBookSourceExternal extends BookSourceExternal {
                         }
                 );
         if (!bookLines.isEmpty()) {
-            books.add(new CommonBook(bookLines));
+            books.add(new CommonBook(bookLines, language));
         }
         return books;
     }

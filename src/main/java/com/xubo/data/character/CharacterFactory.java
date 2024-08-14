@@ -30,12 +30,12 @@ public class CharacterFactory {
         CharacterFactory.wordsRepository = wordsRepository;
     }
 
-    public static Character getCharacter(String text, Lesson lesson) {
+    public static Character getCharacter(String text, String language, Lesson lesson) {
         Character c;
         if (characters.containsKey(text)) {
             c = characters.get(text);
         } else {
-            c = new Character(text, "CN");
+            c = new Character(text, language);
             characters.put(text, c);
 
             linkDictionary(c);

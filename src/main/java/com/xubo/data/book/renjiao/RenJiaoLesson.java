@@ -59,7 +59,7 @@ public class RenJiaoLesson implements Lesson {
                 .collect(Collectors.toList());
 
         return tokens.stream()
-                .map(token -> CharacterFactory.getCharacter(token, this))
+                .map(token -> CharacterFactory.getCharacter(token, "CN",this))
                 .collect(Collectors.toList());
     }
 }
