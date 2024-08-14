@@ -66,6 +66,10 @@ public class EnglishFrequencyList extends BookSourceInternal {
         List<Character> adjWords = words.subList(0, 1000).stream().filter(w -> w.getPartOfSpeech().equals("j")).map(w -> (Character) w).collect(Collectors.toList());
         books.add(new InMemoryBook("Adjective:Frequency List", adjWords, 5));
 
+        List<Character> advWords = words.subList(0, 1000).stream().filter(w -> w.getPartOfSpeech().equals("r")).map(w -> (Character) w).collect(Collectors.toList());
+        books.add(new InMemoryBook("Adverb:Frequency List", advWords, 5));
+
+
         return books;
     }
 
