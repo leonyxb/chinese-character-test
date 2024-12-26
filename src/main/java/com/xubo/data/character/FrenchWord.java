@@ -1,6 +1,6 @@
 package com.xubo.data.character;
 
-public class FrenchCharacter extends Character {
+public class FrenchWord extends Character {
 
     private String category;
 
@@ -10,7 +10,7 @@ public class FrenchCharacter extends Character {
 
     private Integer echelle;
 
-    public FrenchCharacter(String text) {
+    public FrenchWord(String text) {
         super(text, "FR");
     }
 

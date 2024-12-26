@@ -137,7 +137,7 @@ public class CharactersTestPanel extends JPanel {
         c.weighty = 1;
 
         c.fill = GridBagConstraints.BOTH;
-        wordsList.setFont(new Font(config.getFontName(), Font.PLAIN, 50));
+        wordsList.setFont(new Font(config.getFontName(), Font.PLAIN, 40));
         wordsList.setBackground(new Color(149, 149, 149));
         wordsList.setVisibleRowCount(-1);
         JScrollPane scrollPane = new JScrollPane(wordsList);

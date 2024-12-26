@@ -4,7 +4,7 @@ import com.xubo.data.book.Book;
 import com.xubo.data.book.Lesson;
 import com.xubo.data.book.common.InMemoryLesson;
 import com.xubo.data.character.Character;
-import com.xubo.data.character.FrenchCharacter;
+import com.xubo.data.character.FrenchWord;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -17,19 +17,19 @@ public class EchelleBook implements Book {
 
     private String classe;
 
-    private List<FrenchCharacter> characters;
+    private List<FrenchWord> characters;
 
     private List<Lesson> lessons;
 
-    public EchelleBook(String classe, List<FrenchCharacter> characters) {
+    public EchelleBook(String classe, List<FrenchWord> characters) {
         this.classe = classe;
         this.characters = characters;
         this.lessons = buildLessons(characters);
     }
 
-    private List<Lesson> buildLessons(List<FrenchCharacter> characters) {
+    private List<Lesson> buildLessons(List<FrenchWord> characters) {
         List<Lesson> lessons = new ArrayList<>();
-        Map<Integer, List<FrenchCharacter>> charactersByEchelle = characters.stream().collect(Collectors.groupingBy(c -> c.getEchelle()));
+        Map<Integer, List<FrenchWord>> charactersByEchelle = characters.stream().collect(Collectors.groupingBy(c -> c.getEchelle()));
 
         charactersByEchelle.keySet().stream().sorted().forEach(k -> {
             lessons.addAll(buildEchelleLessons(k, charactersByEchelle.get(k)));
@@ -37,7 +37,7 @@ public class EchelleBook implements Book {
         return lessons;
     }
 
-    private List<Lesson> buildEchelleLessons(Integer echelle, List<FrenchCharacter> characters) {
+    private List<Lesson> buildEchelleLessons(Integer echelle, List<FrenchWord> characters) {
         List<Lesson> lessons = new ArrayList<>();
 
         characters.sort(Comparator.comparingInt(Object::hashCode));

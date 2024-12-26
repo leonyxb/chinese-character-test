@@ -4,7 +4,7 @@ import com.xubo.data.book.Book;
 import com.xubo.data.book.BookSourceInternal;
 import com.xubo.data.book.common.InMemoryBook;
 import com.xubo.data.character.Character;
-import com.xubo.data.character.FrenchCharacter;
+import com.xubo.data.character.FrenchWord;
 
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
@@ -17,11 +17,11 @@ public class EchelleDuboisBuyse extends BookSourceInternal {
     protected List<Book> buildBooks(List<String> rawLines) {
         List<Book> books = new ArrayList<>();
 
-        List<FrenchCharacter> frenchCharacters = rawLines.stream()
+        List<FrenchWord> frenchWords = rawLines.stream()
                 .map(this::buildCharacter).collect(Collectors.toList());
 
-        Map<String, List<FrenchCharacter>> frenchCharactersByClasse = frenchCharacters.stream()
-                .collect(Collectors.groupingBy(FrenchCharacter::getClasse));
+        Map<String, List<FrenchWord>> frenchCharactersByClasse = frenchWords.stream()
+                .collect(Collectors.groupingBy(FrenchWord::getClasse));
 
         books.add(new EchelleBook("CP", frenchCharactersByClasse.get("CP")));
         books.add(new EchelleBook("CE1", frenchCharactersByClasse.get("CE1")));
@@ -31,8 +31,8 @@ public class EchelleDuboisBuyse extends BookSourceInternal {
         books.add(new EchelleBook("Collège", frenchCharactersByClasse.get("Collège")));
 
 
-        Map<String, List<FrenchCharacter>> frenchCharactersByGenre = frenchCharacters.stream()
-                .collect(Collectors.groupingBy(FrenchCharacter::getGenre));
+        Map<String, List<FrenchWord>> frenchCharactersByGenre = frenchWords.stream()
+                .collect(Collectors.groupingBy(FrenchWord::getGenre));
 
         books.add(buildInMemoryBook("Genre <nom féminin> ", frenchCharactersByGenre.get("nom féminin")));
         books.add(buildInMemoryBook("Genre <nom masculin> ", frenchCharactersByGenre.get("nom masculin")));
@@ -45,7 +45,7 @@ public class EchelleDuboisBuyse extends BookSourceInternal {
         return books;
     }
 
-    private InMemoryBook buildInMemoryBook(String title, List<FrenchCharacter> c) {
+    private InMemoryBook buildInMemoryBook(String title, List<FrenchWord> c) {
         List<Character> characters = new ArrayList<>();
         characters.addAll(c);
         return new InMemoryBook(title, characters, 5);
@@ -62,9 +62,9 @@ public class EchelleDuboisBuyse extends BookSourceInternal {
     }
 
 
-    private FrenchCharacter buildCharacter(String line) {
+    private FrenchWord buildCharacter(String line) {
         String[] elements = line.split("\t");
-        FrenchCharacter character = new FrenchCharacter(elements[2]);
+        FrenchWord character = new FrenchWord(elements[2]);
 
         character.setEchelle(Integer.valueOf(elements[0]));
         character.setClasse(elements[1]);

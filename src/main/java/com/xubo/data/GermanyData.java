@@ -4,7 +4,7 @@ import com.xubo.application.ApplicationConfig;
 import com.xubo.data.book.Book;
 import com.xubo.data.book.BookSource;
 import com.xubo.data.book.common.CommonBookSourceExternal;
-import com.xubo.data.book.france.EchelleDuboisBuyse;
+import com.xubo.data.book.germany.VocabeoCom;
 import com.xubo.data.dictionary.Dictionary;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -52,7 +52,7 @@ public class GermanyData implements DataSource {
             logger.error("扩展书载入异常！", e);
         }
 
-        //bookSources.add(new EchelleDuboisBuyse());
+        bookSources.add(new VocabeoCom());
 
         return bookSources;
     }

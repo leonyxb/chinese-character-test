@@ -47,26 +47,31 @@ public class EnglishFrequencyList extends BookSourceInternal {
         books.add(new InMemoryBook("600:  Frequency List", new ArrayList<>(words.subList(500, 600)), 5));
         books.add(new InMemoryBook("800:  Frequency List", new ArrayList<>(words.subList(600, 800)), 5));
         books.add(new InMemoryBook("1000: Frequency List", new ArrayList<>(words.subList(800, 1000)), 5));
+        books.add(new InMemoryBook("1200: Frequency List", new ArrayList<>(words.subList(1000, 1200)), 5));
+        books.add(new InMemoryBook("1400: Frequency List", new ArrayList<>(words.subList(1200, 1400)), 5));
+        books.add(new InMemoryBook("1600: Frequency List", new ArrayList<>(words.subList(1400, 1600)), 5));
+        books.add(new InMemoryBook("1800: Frequency List", new ArrayList<>(words.subList(1600, 1800)), 5));
+        books.add(new InMemoryBook("2000: Frequency List", new ArrayList<>(words.subList(1800, 2000)), 5));
         //books.add(new InMemoryBook("1500: Frequency List", words.subList(1000, 1500), 5));
         //books.add(new InMemoryBook("2000: Frequency List", words.subList(1500, 2000), 10));
         //books.add(new InMemoryBook("3000: Frequency List", words.subList(2000, 3000), 10));
         //books.add(new InMemoryBook("4000: Frequency List", words.subList(3000, 4000), 10));
         //books.add(new InMemoryBook("5000: Frequency List", words.subList(4000, 5000), 10));
 
-        List<Character> verbs = words.subList(0, 1000).stream().filter(w -> w.getPartOfSpeech().equals("v")).map(w -> (Character) w).collect(Collectors.toList());
+        List<Character> verbs = words.subList(0, 2000).stream().filter(w -> w.getPartOfSpeech().equals("v")).map(w -> (Character) w).collect(Collectors.toList());
         books.add(new InMemoryBook("Verb:Frequency List", verbs, 5));
 
 
-        List<Character> nouns = words.subList(0, 1000).stream().filter(w -> w.getPartOfSpeech().equals("n")).map(w -> (Character) w).collect(Collectors.toList());
+        List<Character> nouns = words.subList(0, 2000).stream().filter(w -> w.getPartOfSpeech().equals("n")).map(w -> (Character) w).collect(Collectors.toList());
         books.add(new InMemoryBook("Noun:Frequency List", nouns, 5));
 
-        List<Character> funcWords = words.subList(0, 1000).stream().filter(w -> w.getPartOfSpeech().equals("fw")).map(w -> (Character) w).collect(Collectors.toList());
+        List<Character> funcWords = words.subList(0, 2000).stream().filter(w -> w.getPartOfSpeech().equals("fw")).map(w -> (Character) w).collect(Collectors.toList());
         books.add(new InMemoryBook("Function:Frequency List", funcWords, 5));
 
-        List<Character> adjWords = words.subList(0, 1000).stream().filter(w -> w.getPartOfSpeech().equals("j")).map(w -> (Character) w).collect(Collectors.toList());
+        List<Character> adjWords = words.subList(0, 2000).stream().filter(w -> w.getPartOfSpeech().equals("j")).map(w -> (Character) w).collect(Collectors.toList());
         books.add(new InMemoryBook("Adjective:Frequency List", adjWords, 5));
 
-        List<Character> advWords = words.subList(0, 1000).stream().filter(w -> w.getPartOfSpeech().equals("r")).map(w -> (Character) w).collect(Collectors.toList());
+        List<Character> advWords = words.subList(0, 2000).stream().filter(w -> w.getPartOfSpeech().equals("r")).map(w -> (Character) w).collect(Collectors.toList());
         books.add(new InMemoryBook("Adverb:Frequency List", advWords, 5));
 
 

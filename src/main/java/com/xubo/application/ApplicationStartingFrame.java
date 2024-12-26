@@ -172,7 +172,7 @@ public class ApplicationStartingFrame extends JFrame {
         List<String> welcome = Arrays.asList(
                 "",
                 "          ===========================================",
-                "          |            欢迎使用 <名字没想好>        |",
+                "          |            欢迎使用 <多语言学习小霸王>       |",
                 "          ===========================================",
                 "",
                 ApplicationConfig.isAdmin ? "        >>> 这是特殊版， 请慎重使用 !!! <<<" : ""
