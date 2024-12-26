@@ -3,7 +3,7 @@ package com.xubo.data.book.germany;
 import com.xubo.data.book.Book;
 import com.xubo.data.book.BookSourceInternal;
 import com.xubo.data.book.common.InMemoryBook;
-import com.xubo.data.character.GermanWord;
+import com.xubo.data.character.GermanyWord;
 import org.apache.commons.lang3.StringUtils;
 
 import java.nio.charset.Charset;
@@ -20,7 +20,7 @@ public class VocabeoCom extends BookSourceInternal {
         String fullContent = StringUtils.join(rawLines, " ");
         String[] elements = fullContent.split("div slot=");
 
-        Map<String, GermanWord> germanyWordsMap = new LinkedHashMap<>();
+        Map<String, GermanyWord> germanyWordsMap = new LinkedHashMap<>();
         for (String element: elements) {
             if (element.contains("cell word")) {
                 String wordClass = StringUtils.substringBetween(element, "--color-accent: var(--color-", ");");
@@ -34,7 +34,7 @@ public class VocabeoCom extends BookSourceInternal {
                 String wordLevel = StringUtils.substringBetween(element, "<div class=\"cell level svelte-37mltv\">", "</div>");
                 String wordFreq = StringUtils.substringBetween(element, "<div class=\"cell frequency svelte-37mltv\">", "</div>");
 
-                GermanWord word = new GermanWord(wordText);
+                GermanyWord word = new GermanyWord(wordText);
                 word.setWordClass(wordClass);
                 word.setFrequency(wordFreq);
                 word.setGenre(genre);
@@ -53,7 +53,7 @@ public class VocabeoCom extends BookSourceInternal {
             }
         }
 
-        List<GermanWord> germanyWords = new ArrayList<>();
+        List<GermanyWord> germanyWords = new ArrayList<>();
         germanyWords.addAll(germanyWordsMap.values());
         books.add(new InMemoryBook("100:  Frequency List", new ArrayList<>(germanyWords.subList(0, 100)), 5));
         books.add(new InMemoryBook("200:  Frequency List", new ArrayList<>(germanyWords.subList(100, 200)), 5));

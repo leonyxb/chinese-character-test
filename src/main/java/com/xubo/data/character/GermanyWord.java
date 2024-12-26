@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class GermanWord extends Character {
+public class GermanyWord extends Character {
 
     private String url;
 
@@ -18,7 +18,7 @@ public class GermanWord extends Character {
 
     private String originalText;
 
-    public GermanWord(String text) {
+    public GermanyWord(String text) {
         super(text, "DE");
     }
 
@@ -82,12 +82,12 @@ public class GermanWord extends Character {
         this.originalText = originalText;
     }
 
-    public List<GermanWord> split() {
-        List<GermanWord> words = new ArrayList<>();
+    public List<GermanyWord> split() {
+        List<GermanyWord> words = new ArrayList<>();
         if (this.getText().contains(",")) {
 
             Arrays.stream(this.getText().split(",")).forEach(k -> {
-                GermanWord newWord = new GermanWord(k.trim());
+                GermanyWord newWord = new GermanyWord(k.trim());
                 newWord.setWordClass(this.getWordClass());
                 newWord.setLevel(this.getLevel());
                 newWord.setFrequency(this.getFrequency());
@@ -105,7 +105,7 @@ public class GermanWord extends Character {
         return words;
     }
 
-    public void merge(GermanWord word) {
+    public void merge(GermanyWord word) {
         this.setWordClass(this.getWordClass() + ", " + word.getWordClass());
         this.generateDescription();
     }
